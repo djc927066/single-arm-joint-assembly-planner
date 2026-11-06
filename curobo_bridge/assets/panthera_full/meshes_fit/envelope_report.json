@@ -1,0 +1,42 @@
+{
+  "pitch": 0.0015,
+  "dilation_voxels": 1,
+  "links": {
+    "base_link": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "link1": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "link2": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "link3": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "link4": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "link5": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "gripper_palm": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "finger_left": {
+      "faces": 6000,
+      "watertight": true
+    },
+    "finger_right": {
+      "faces": 6000,
+      "watertight": true
+    }
+  }
+}

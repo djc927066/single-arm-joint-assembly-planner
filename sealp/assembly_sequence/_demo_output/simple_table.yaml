@@ -1,0 +1,248 @@
+name: SimpleTable
+description: A small table with 2 legs and a cross-bar.
+parts:
+- part_id: table_top
+  name: Table Top
+  model_path: models/table_top.stl
+  init_pos:
+  - 0.5
+  - !!float '0'
+  - 0.1
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.4
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: !!float '2'
+  color_rgba:
+  - 0.82
+  - 0.71
+  - 0.55
+  - !!float '1'
+  metadata: {}
+- part_id: leg_a
+  name: Front-Left Leg
+  model_path: models/leg.stl
+  init_pos:
+  - 0.6
+  - -0.2
+  - 0.1
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - -0.15
+  - -0.1
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.5
+  color_rgba:
+  - 0.55
+  - 0.37
+  - 0.24
+  - !!float '1'
+  metadata: {}
+- part_id: leg_b
+  name: Front-Right Leg
+  model_path: models/leg.stl
+  init_pos:
+  - 0.6
+  - 0.2
+  - 0.1
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.15
+  - -0.1
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.5
+  color_rgba:
+  - 0.55
+  - 0.37
+  - 0.24
+  - !!float '1'
+  metadata: {}
+- part_id: cross_bar
+  name: Cross Bar
+  model_path: models/cross_bar.stl
+  init_pos:
+  - 0.7
+  - !!float '0'
+  - 0.1
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - !!float '0'
+  - -0.1
+  - 0.15
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - 6.12323e-17
+    - !!float '-1'
+  - - !!float '-0'
+    - !!float '1'
+    - 6.12323e-17
+  mass: 0.3
+  color_rgba:
+  - 0.6
+  - 0.6
+  - 0.6
+  - !!float '1'
+  metadata: {}
+steps:
+- step_id: 0
+  part_id: table_top
+  parent_part_id: fixture
+  assembly_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.4
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies: []
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Place the table top on the fixture upside-down.
+  metadata: {}
+- step_id: 1
+  part_id: leg_a
+  parent_part_id: table_top
+  assembly_pos:
+  - -0.15
+  - -0.1
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert front-left leg.
+  metadata: {}
+- step_id: 2
+  part_id: leg_b
+  parent_part_id: table_top
+  assembly_pos:
+  - 0.15
+  - -0.1
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert front-right leg (can be parallel with leg_a).
+  metadata: {}
+- step_id: 3
+  part_id: cross_bar
+  parent_part_id: leg_a
+  assembly_pos:
+  - !!float '0'
+  - -0.1
+  - 0.15
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - 6.12323e-17
+    - !!float '-1'
+  - - !!float '-0'
+    - !!float '1'
+    - 6.12323e-17
+  dependencies:
+  - 1
+  - 2
+  primitive_type: dual_arm_cooperative
+  grasp_id: null
+  notes: Bridge the two legs with the cross bar.
+  metadata: {}

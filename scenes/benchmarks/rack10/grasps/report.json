@@ -1,0 +1,82 @@
+{
+  "params": {
+    "model": "rack10",
+    "only": null,
+    "max_samples": 100,
+    "rotation_deg": 15.0,
+    "normal_angle_deg": 175.0,
+    "seed": 0
+  },
+  "parts": {
+    "lp_1": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "lp_2": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "lp_3": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "lp_4": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "shelf_1": {
+      "grasps": 2128,
+      "top_down": 0,
+      "width_min": 0.026000000517815355,
+      "width_max": 0.03200000103563095,
+      "seconds": 1.2
+    },
+    "up_1": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.2
+    },
+    "up_2": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "up_3": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "up_4": {
+      "grasps": 1584,
+      "top_down": 594,
+      "width_min": 0.04400000020861626,
+      "width_max": 0.04400000020861633,
+      "seconds": 0.3
+    },
+    "shelf_2": {
+      "grasps": 2280,
+      "top_down": 0,
+      "width_min": 0.03200000103563071,
+      "width_max": 0.032000001035631345,
+      "seconds": 1.1
+    }
+  }
+}

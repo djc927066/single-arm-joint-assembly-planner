@@ -1,0 +1,5 @@
+step_id,part_id,part_name,parent_part_id,primitive_type,dependencies,assembly_pos,model_path,notes
+0,table_top,Table Top,fixture,single_arm_transport,,"[0.0000, 0.0000, 0.4000]",models/table_top.stl,Place the table top on the fixture upside-down.
+1,leg_a,Front-Left Leg,table_top,single_arm_transport,0,"[-0.1500, -0.1000, 0.0000]",models/leg.stl,Insert front-left leg.
+2,leg_b,Front-Right Leg,table_top,single_arm_transport,0,"[0.1500, -0.1000, 0.0000]",models/leg.stl,Insert front-right leg (can be parallel with leg_a).
+3,cross_bar,Cross Bar,leg_a,dual_arm_cooperative,1;2,"[0.0000, -0.1000, 0.1500]",models/cross_bar.stl,Bridge the two legs with the cross bar.

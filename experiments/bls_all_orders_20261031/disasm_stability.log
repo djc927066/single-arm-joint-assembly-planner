@@ -1,0 +1,59 @@
+﻿装好的框架: 稳定 True, S = 0.0027
+
+== 第 1 步拆卸（= 倒数第 1 个装）：1 种当前状态
+  现有 A+AB+B+BC+C+CA 拆 beam_AB  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0027
+  现有 A+AB+B+BC+C+CA 拆 beam_BC  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0027
+  现有 A+AB+B+BC+C+CA 拆 beam_CA  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0029
+  现有 A+AB+B+BC+C+CA 拆 post_A   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+BC+C+CA 拆 post_B   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+BC+C+CA 拆 post_C   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+
+== 第 2 步拆卸（= 倒数第 2 个装）：3 种当前状态
+  现有 A+B+BC+C+CA    拆 beam_BC  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0027
+  现有 A+B+BC+C+CA    拆 beam_CA  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0029
+  现有 A+B+BC+C+CA    拆 post_A   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+B+BC+C+CA    拆 post_B   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+B+BC+C+CA    拆 post_C   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+C+CA    拆 beam_AB  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0027
+  现有 A+AB+B+C+CA    拆 beam_CA  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0035
+  现有 A+AB+B+C+CA    拆 post_A   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+C+CA    拆 post_B   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+C+CA    拆 post_C   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+BC+C    拆 beam_AB  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0029
+  现有 A+AB+B+BC+C    拆 beam_BC  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0035
+  现有 A+AB+B+BC+C    拆 post_A   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+BC+C    拆 post_B   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+  现有 A+AB+B+BC+C    拆 post_C   -> 剩下的会倒   剩余稳定 False  竖直拔出 False  剩余 S = 0.0000
+
+== 第 3 步拆卸（= 倒数第 3 个装）：3 种当前状态
+  现有 A+B+C+CA       拆 beam_CA  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+B+C+CA       拆 post_B   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0027
+  现有 A+B+BC+C       拆 beam_BC  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+B+BC+C       拆 post_A   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0029
+  现有 A+AB+B+C       拆 beam_AB  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+AB+B+C       拆 post_C   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0035
+  （另有 6 个候选不能拆：剩下会倒 6，路径被挡 0）
+
+== 第 4 步拆卸（= 倒数第 4 个装）：4 种当前状态
+  现有 A+B+C          拆 post_A   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0462
+  现有 A+B+C          拆 post_B   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+B+C          拆 post_C   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+C+CA         拆 beam_CA  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 B+BC+C         拆 beam_BC  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0462
+  现有 A+AB+B         拆 beam_AB  -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  （另有 6 个候选不能拆：剩下会倒 6，路径被挡 0）
+
+== 第 5 步拆卸（= 倒数第 5 个装）：3 种当前状态
+  现有 B+C            拆 post_B   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0462
+  现有 B+C            拆 post_C   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0486
+  现有 A+C            拆 post_A   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0462
+  现有 A+C            拆 post_C   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+  现有 A+B            拆 post_A   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0486
+  现有 A+B            拆 post_B   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = 0.0416
+
+== 第 6 步拆卸（= 倒数第 6 个装）：3 种当前状态
+  现有 C              拆 post_C   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = nan
+  现有 B              拆 post_B   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = nan
+  现有 A              拆 post_A   -> 可以拆     剩余稳定 True   竖直拔出 True   剩余 S = nan
+
+完整拆卸序列数 = 48（= 可行装配顺序数）；场景里记录的装配顺序数 = 48

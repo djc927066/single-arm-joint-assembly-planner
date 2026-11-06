@@ -1,0 +1,2153 @@
+﻿python.exe : Mesh already in cache, reusing existing instance: base
+At line:1 char:447
++ ... ython.exe'; & $py -X utf8 -m idea.bls_all_orders_20261031.joint --mod ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Mesh already in... instance: base:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: shelf_2@goal
+Mesh already in cache, reusing existing instance: base
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+options: lp_1 128 poses / 966 (pose, grasp) / 92 grasps, lp_2 122 poses / 949 (pose, grasp) / 92 grasps, lp_3 131 poses / 1001 (pose, grasp) / 60 grasps, lp_4 131 poses / 1009 (pose, grasp) / 62 grasps, shelf_1 40 poses / 320 (pose, grasp) / 27 grasps, up_1 134 poses / 1031 (pose, grasp) / 74 grasps, up_2 134 poses / 1036 (pose, grasp) / 75 grasps, up_3 149 poses / 1156 (pose, grasp) / 68 grasps, up_4 141 poses / 1096 (pose, grasp) / 74 grasps, shelf_2 40 poses / 320 (pose, grasp) / 41 grasps
+Mesh already in cache, reusing existing instance: base
+E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\run.py:135: UserWarning: index_reduce() is i
+n beta and the API may change at any time. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\ate
+n\src\ATen\native\cuda\Indexing.cu:1469.)
+  lo.index_reduce_(0, o, a, "amin")
+setup 31s; 576 stable orders; options + footprints + row AABBs 8s
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: shelf_1@goal
+Mesh already in cache, reusing existing instance: up_1@goal
+Mesh already in cache, reusing existing instance: up_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_3@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_4@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: lp_1@goal
+Mesh already in cache, reusing existing instance: lp_2@goal
+relaxation: 66 installed-set domains (S, p), 67 (S, last) states, root bound 5.1737, 19.6s (gpu so far 0s)
+[1] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[2] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[3] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[4] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[5] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[6] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[7] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[8] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[9] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[10] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[11] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[12] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[13] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[14] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[15] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[16] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[17] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[18] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[19] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[20] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[21] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[22] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[23] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[24] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_3 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[25] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[26] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[27] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[28] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[29] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[30] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[31] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[32] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[33] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[34] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[35] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[36] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[37] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[38] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[39] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[40] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[41] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[42] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[43] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[44] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[45] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[46] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[47] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[48] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_4 up_2 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[49] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[50] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[51] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[52] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[53] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[54] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[55] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[56] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[57] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[58] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[59] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[60] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[61] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[62] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[63] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[64] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[65] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[66] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[67] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[68] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[69] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[70] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[71] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[72] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_2 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[73] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[74] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[75] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[76] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[77] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[78] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[79] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[80] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[81] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[82] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[83] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[84] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[85] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[86] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[87] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[88] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[89] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[90] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[91] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[92] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[93] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[94] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[95] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[96] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_4 up_3 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[97] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[98] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[99] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[100] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[101] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[102] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[103] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[104] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[105] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[106] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[107] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[108] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[109] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[110] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[111] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[112] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[113] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[114] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[115] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[116] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[117] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[118] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[119] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[120] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_2 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[121] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[122] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[123] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[124] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[125] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[126] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[127] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[128] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[129] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[130] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[131] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[132] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[133] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[134] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[135] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[136] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[137] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[138] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[139] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[140] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[141] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[142] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[143] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[144] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_3 up_4 up_1 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[145] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[146] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[147] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[148] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[149] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[150] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[151] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[152] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[153] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[154] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[155] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[156] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[157] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[158] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[159] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[160] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[161] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[162] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[163] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[164] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[165] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[166] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[167] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+[168] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_3 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent inf  nodes 0  (0.0s; gpu 0s)
+Mesh already in cache, reusing existing instance: base
+[169] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.4137  exact 5.9447  incumbent 5.9447  nodes 38046  (250.6s; gpu 192s)
+[170] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.3906  exact 5.6520  incumbent 5.6520  nodes 512  (7.8s; gpu 199s)
+[171] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.3939  exact 5.9591  incumbent 5.6520  nodes 70192  (138.3s; gpu 235s)
+[172] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.2567  exact 5.7657  incumbent 5.6520  nodes 27284  (44.3s; gpu 242s)
+[173] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 242s)
+[174] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 242s)
+[175] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.3728  exact 5.8671  incumbent 5.6520  nodes 28393  (78.8s; gpu 278s)
+[176] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.4207  exact 5.7581  incumbent 5.6520  nodes 2303  (11.6s; gpu 287s)
+[177] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 287s)
+[178] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 287s)
+[179] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.4146  exact 5.7848  incumbent 5.6520  nodes 3873  (9.5s; gpu 291s)
+[180] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed 5.2864  exact 5.6567  incumbent 5.6520  nodes 3645  (13.5s; gpu 299s)
+[181] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[182] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[183] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[184] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[185] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[186] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[187] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[188] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[189] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[190] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[191] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[192] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_4 up_1 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[193] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[194] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[195] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[196] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[197] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[198] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[199] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[200] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[201] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[202] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[203] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[204] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[205] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[206] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[207] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[208] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[209] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[210] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[211] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[212] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[213] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[214] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[215] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[216] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_1 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[217] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[218] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[219] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[220] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[221] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[222] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[223] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[224] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[225] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[226] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[227] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[228] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[229] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[230] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[231] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[232] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[233] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[234] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[235] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[236] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[237] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[238] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[239] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[240] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_4 up_3 up_2 shelf_2  relaxed inf  exact -  incumbent 5.6520  nodes 0  (0.0s; gpu 299s)
+[241] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.3306  exact 5.8694  incumbent 5.6520  nodes 15661  (29.3s; gpu 306s)
+[242] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.3075  exact 5.5767  incumbent 5.5767  nodes 233  (0.8s; gpu 307s)
+[243] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.3108  exact 5.9202  incumbent 5.5767  nodes 41752  (66.8s; gpu 310s)
+[244] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.1737  exact 5.7268  incumbent 5.5767  nodes 16319  (24.3s; gpu 311s)
+[245] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 311s)
+[246] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 311s)
+[247] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.2897  exact 5.8605  incumbent 5.5767  nodes 30510  (60.7s; gpu 314s)
+[248] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.3376  exact 5.6829  incumbent 5.5767  nodes 652  (1.2s; gpu 315s)
+[249] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 315s)
+[250] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 315s)
+[251] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.3315  exact 5.7329  incumbent 5.5767  nodes 1782  (2.8s; gpu 315s)
+[252] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed 5.2033  exact 5.6048  incumbent 5.5767  nodes 1605  (2.4s; gpu 316s)
+[253] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[254] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[255] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[256] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[257] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[258] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[259] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[260] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[261] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[262] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[263] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[264] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_1 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 316s)
+[265] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.3931  exact 5.9792  incumbent 5.5767  nodes 49479  (124.9s; gpu 347s)
+[266] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.3701  exact 5.7100  incumbent 5.5767  nodes 1081  (3.0s; gpu 349s)
+[267] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.3734  exact 6.0015  incumbent 5.5767  nodes 96981  (181.0s; gpu 363s)
+[268] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.2362  exact 5.8292  incumbent 5.5767  nodes 49603  (95.4s; gpu 368s)
+[269] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 368s)
+[270] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 368s)
+[271] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.3522  exact 5.9297  incumbent 5.5767  nodes 56291  (130.0s; gpu 381s)
+[272] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.4002  exact 5.7920  incumbent 5.5767  nodes 2869  (7.7s; gpu 384s)
+[273] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 384s)
+[274] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 384s)
+[275] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.3940  exact 5.7656  incumbent 5.5767  nodes 2148  (4.8s; gpu 385s)
+[276] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed 5.2659  exact 5.6375  incumbent 5.5767  nodes 1520  (4.5s; gpu 386s)
+[277] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[278] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[279] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[280] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[281] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[282] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[283] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[284] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[285] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[286] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[287] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[288] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_3 up_4 up_2 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[289] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[290] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[291] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[292] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[293] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[294] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[295] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[296] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[297] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[298] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[299] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[300] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[301] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[302] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[303] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[304] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[305] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[306] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[307] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[308] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[309] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[310] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[311] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[312] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_2 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[313] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[314] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[315] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[316] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[317] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[318] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[319] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[320] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[321] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[322] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[323] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[324] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[325] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[326] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[327] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[328] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[329] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[330] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[331] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[332] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[333] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[334] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[335] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[336] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_4 up_1 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[337] lp_4 lp_3 lp_2 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[338] lp_3 lp_4 lp_2 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[339] lp_4 lp_2 lp_3 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[340] lp_2 lp_4 lp_3 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[341] lp_3 lp_2 lp_4 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[342] lp_2 lp_3 lp_4 lp_1 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[343] lp_4 lp_3 lp_1 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[344] lp_3 lp_4 lp_1 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[345] lp_4 lp_1 lp_3 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[346] lp_1 lp_4 lp_3 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[347] lp_3 lp_1 lp_4 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[348] lp_1 lp_3 lp_4 lp_2 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[349] lp_4 lp_2 lp_1 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[350] lp_2 lp_4 lp_1 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[351] lp_4 lp_1 lp_2 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[352] lp_1 lp_4 lp_2 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[353] lp_2 lp_1 lp_4 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[354] lp_1 lp_2 lp_4 lp_3 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[355] lp_3 lp_2 lp_1 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[356] lp_2 lp_3 lp_1 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[357] lp_3 lp_1 lp_2 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[358] lp_1 lp_3 lp_2 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[359] lp_2 lp_1 lp_3 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[360] lp_1 lp_2 lp_3 lp_4 shelf_1 up_4 up_1 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[361] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[362] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[363] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[364] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[365] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[366] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[367] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[368] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[369] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[370] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[371] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[372] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[373] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[374] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[375] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[376] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[377] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[378] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[379] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[380] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[381] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[382] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[383] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[384] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_4 up_2 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[385] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[386] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[387] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[388] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[389] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[390] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[391] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[392] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[393] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[394] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[395] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[396] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[397] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[398] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[399] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[400] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[401] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[402] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[403] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[404] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[405] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[406] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[407] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[408] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_1 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[409] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[410] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[411] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[412] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[413] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[414] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[415] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[416] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[417] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[418] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[419] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[420] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[421] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[422] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[423] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[424] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[425] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[426] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[427] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[428] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[429] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[430] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[431] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[432] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_2 up_4 up_3 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[433] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[434] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[435] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[436] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[437] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[438] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[439] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[440] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[441] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[442] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[443] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[444] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[445] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[446] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[447] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[448] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[449] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[450] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[451] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[452] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[453] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[454] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[455] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[456] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_2 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[457] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[458] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[459] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[460] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[461] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[462] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[463] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[464] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[465] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[466] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[467] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[468] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[469] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[470] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[471] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[472] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[473] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[474] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[475] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[476] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[477] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[478] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[479] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[480] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_3 up_1 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[481] lp_4 lp_3 lp_2 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[482] lp_3 lp_4 lp_2 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[483] lp_4 lp_2 lp_3 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[484] lp_2 lp_4 lp_3 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[485] lp_3 lp_2 lp_4 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[486] lp_2 lp_3 lp_4 lp_1 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[487] lp_4 lp_3 lp_1 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[488] lp_3 lp_4 lp_1 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[489] lp_4 lp_1 lp_3 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[490] lp_1 lp_4 lp_3 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[491] lp_3 lp_1 lp_4 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[492] lp_1 lp_3 lp_4 lp_2 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[493] lp_4 lp_2 lp_1 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[494] lp_2 lp_4 lp_1 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[495] lp_4 lp_1 lp_2 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[496] lp_1 lp_4 lp_2 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[497] lp_2 lp_1 lp_4 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[498] lp_1 lp_2 lp_4 lp_3 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[499] lp_3 lp_2 lp_1 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[500] lp_2 lp_3 lp_1 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[501] lp_3 lp_1 lp_2 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[502] lp_1 lp_3 lp_2 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[503] lp_2 lp_1 lp_3 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[504] lp_1 lp_2 lp_3 lp_4 shelf_1 up_3 up_1 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[505] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[506] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[507] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[508] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[509] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[510] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[511] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[512] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[513] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[514] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[515] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[516] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[517] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[518] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[519] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[520] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[521] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[522] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[523] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[524] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[525] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[526] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[527] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[528] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_3 up_2 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[529] lp_4 lp_3 lp_2 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[530] lp_3 lp_4 lp_2 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[531] lp_4 lp_2 lp_3 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[532] lp_2 lp_4 lp_3 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[533] lp_3 lp_2 lp_4 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[534] lp_2 lp_3 lp_4 lp_1 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[535] lp_4 lp_3 lp_1 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[536] lp_3 lp_4 lp_1 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[537] lp_4 lp_1 lp_3 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[538] lp_1 lp_4 lp_3 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[539] lp_3 lp_1 lp_4 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[540] lp_1 lp_3 lp_4 lp_2 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[541] lp_4 lp_2 lp_1 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[542] lp_2 lp_4 lp_1 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[543] lp_4 lp_1 lp_2 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[544] lp_1 lp_4 lp_2 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[545] lp_2 lp_1 lp_4 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[546] lp_1 lp_2 lp_4 lp_3 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[547] lp_3 lp_2 lp_1 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[548] lp_2 lp_3 lp_1 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[549] lp_3 lp_1 lp_2 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[550] lp_1 lp_3 lp_2 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[551] lp_2 lp_1 lp_3 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[552] lp_1 lp_2 lp_3 lp_4 shelf_1 up_2 up_1 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[553] lp_4 lp_3 lp_2 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[554] lp_3 lp_4 lp_2 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[555] lp_4 lp_2 lp_3 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[556] lp_2 lp_4 lp_3 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[557] lp_3 lp_2 lp_4 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[558] lp_2 lp_3 lp_4 lp_1 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[559] lp_4 lp_3 lp_1 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[560] lp_3 lp_4 lp_1 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[561] lp_4 lp_1 lp_3 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[562] lp_1 lp_4 lp_3 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[563] lp_3 lp_1 lp_4 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[564] lp_1 lp_3 lp_4 lp_2 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[565] lp_4 lp_2 lp_1 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[566] lp_2 lp_4 lp_1 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[567] lp_4 lp_1 lp_2 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[568] lp_1 lp_4 lp_2 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[569] lp_2 lp_1 lp_4 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[570] lp_1 lp_2 lp_4 lp_3 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[571] lp_3 lp_2 lp_1 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[572] lp_2 lp_3 lp_1 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[573] lp_3 lp_1 lp_2 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[574] lp_1 lp_3 lp_2 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[575] lp_2 lp_1 lp_3 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+[576] lp_1 lp_2 lp_3 lp_4 shelf_1 up_1 up_2 up_3 up_4 shelf_2  relaxed inf  exact -  incumbent 5.5767  nodes 0  (0.0s; gpu 386s)
+{
+ "model": "rack10_tall",
+ "mode": "chain",
+ "strategy": "all",
+ "n_orders": 576,
+ "searched": 576,
+ "best": 5.576731807621456,
+ "best_order": [
+  "lp_3",
+  "lp_4",
+  "lp_2",
+  "lp_1",
+  "shelf_1",
+  "up_3",
+  "up_1",
+  "up_4",
+  "up_2",
+  "shelf_2"
+ ],
+ "best_layout": {
+  "shelf_2": "0.234,-0.153,yaw0",
+  "up_2": "0.340,0.137,yaw0,rot90_12",
+  "up_4": "0.340,-0.183,yaw0,rot90_12",
+  "up_1": "0.447,-0.214,yaw0,identity",
+  "up_3": "0.508,-0.153,yaw0,identity",
+  "shelf_1": "0.371,-0.122,yaw0",
+  "lp_1": "0.234,-0.076,yaw0,identity",
+  "lp_2": "0.295,0.076,yaw0,identity",
+  "lp_4": "0.371,0.046,yaw0,rot90_12",
+  "lp_3": "0.249,0.000,yaw0,identity"
+ },
+ "root_bound": 5.1736548764307075,
+ "total_s": 1354.9466462000273,
+ "setup_s": 31.21684139998979,
+ "prep_s": 7.602174800005741,
+ "relax_s": 19.63928629999282,
+ "search_s": 1294.9720203999896,
+ "nodes": 542734,
+ "installed_sp": 66,
+ "gpu_calls": 11280,
+ "pairs": 693015,
+ "pick_queries": 88078,
+ "goal_queries": 2325,
+ "gpu_s": 386.3158461015555,
+ "cached_pose_queries": 88078,
+ "placed_obstacles": 406
+}
+-> E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\_out\joint_all_chain_rack10_tall_k8.json

@@ -1,0 +1,317 @@
+name: YuanChair
+description: 'Round chair assembly: 1 seat + 4 identical legs. Legs share the same
+  3D model (yuanchair-part2.stl).'
+parts:
+- part_id: seat
+  name: Seat
+  model_path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part1.stl
+  init_pos:
+  - 0.3
+  - !!float '0'
+  - !!float '0'
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.3
+  - !!float '0'
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 1.5
+  color_rgba:
+  - 0.55
+  - 0.45
+  - 0.35
+  - !!float '1'
+  metadata: {}
+- part_id: leg_fl
+  name: Front-Left Leg
+  model_path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl
+  init_pos:
+  - 0.1
+  - 0.2
+  - !!float '0'
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.19
+  - 0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.3
+  color_rgba:
+  - 0.4
+  - 0.76
+  - 0.96
+  - !!float '1'
+  metadata:
+    shared_model: yuanchair-part2.stl
+    leg_index: 0
+- part_id: leg_fr
+  name: Front-Right Leg
+  model_path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl
+  init_pos:
+  - 0.05
+  - -0.24
+  - !!float '0'
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.19
+  - -0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.3
+  color_rgba:
+  - 0.96
+  - 0.65
+  - 0.35
+  - !!float '1'
+  metadata:
+    shared_model: yuanchair-part2.stl
+    leg_index: 1
+- part_id: leg_bl
+  name: Back-Left Leg
+  model_path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl
+  init_pos:
+  - 0.25
+  - 0.24
+  - !!float '0'
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.41
+  - -0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.3
+  color_rgba:
+  - 0.55
+  - 0.85
+  - 0.5
+  - !!float '1'
+  metadata:
+    shared_model: yuanchair-part2.stl
+    leg_index: 2
+- part_id: leg_br
+  name: Back-Right Leg
+  model_path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl
+  init_pos:
+  - 0.25
+  - -0.24
+  - !!float '0'
+  init_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  assembly_pos:
+  - 0.41
+  - 0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  mass: 0.3
+  color_rgba:
+  - 0.95
+  - 0.5
+  - 0.5
+  - !!float '1'
+  metadata:
+    shared_model: yuanchair-part2.stl
+    leg_index: 3
+steps:
+- step_id: 0
+  part_id: seat
+  parent_part_id: fixture
+  assembly_pos:
+  - 0.3
+  - !!float '0'
+  - !!float '0'
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies: []
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Place the seat at the assembly station.
+  metadata: {}
+- step_id: 1
+  part_id: leg_fl
+  parent_part_id: seat
+  assembly_pos:
+  - 0.19
+  - 0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert Front-Left Leg into the seat.
+  metadata: {}
+- step_id: 2
+  part_id: leg_fr
+  parent_part_id: seat
+  assembly_pos:
+  - 0.19
+  - -0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert Front-Right Leg into the seat.
+  metadata: {}
+- step_id: 3
+  part_id: leg_bl
+  parent_part_id: seat
+  assembly_pos:
+  - 0.41
+  - -0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert Back-Left Leg into the seat.
+  metadata: {}
+- step_id: 4
+  part_id: leg_br
+  parent_part_id: seat
+  assembly_pos:
+  - 0.41
+  - 0.11
+  - 0.02
+  assembly_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  dependencies:
+  - 0
+  primitive_type: single_arm_transport
+  grasp_id: null
+  notes: Insert Back-Right Leg into the seat.
+  metadata: {}

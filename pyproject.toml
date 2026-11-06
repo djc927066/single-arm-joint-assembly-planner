@@ -1,0 +1,36 @@
+[build-system]
+requires = ['setuptools>=68', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'single-arm-joint-assembly-planner'
+version = '0.1.0'
+description = '单臂 Panthera-HT 的装配顺序 x 初始布局 联合反向搜索'
+readme = 'README.md'
+requires-python = '>=3.11'
+# 这里只声明 asmcore 的依赖 (已由 tests/test_asmcore_standalone.py 验证)。
+#
+# 地基 WRS1 不是 pip 包, 而是仓库根目录下的 wrs/ 目录, 靠 sys.path 生效
+# (见 conftest.py 与 README)。它的第三方依赖用 `python wrs\install_package.py` 安装:
+# panda3d / opencv / open3d / shapely / networkx / pyserial / matplotlib 等。
+#
+# 注意: WRS2-assembly-planner 的 wrs 包同名且是第三代重写 (要求 Python>=3.12),
+# 绝不要把它 pip 安装进同一环境, 会遮蔽本仓库的 wrs/。
+dependencies = [
+    'numpy',
+    'scipy',
+]
+
+[project.optional-dependencies]
+# motion/directions.py 的 method="socp"。联合搜索用 asmdef 给定的 mating axis,
+# 走不到这条路径; 只有要独立求解装配方向锥时才需要。
+directions-socp = ['clarabel>=0.11.1']
+# geometry/sdf.py 的 SDF 接触后端。默认的网格后端不需要。
+sdf = ['open3d>=0.19']
+dev = ['pytest>=8']
+
+[tool.setuptools.packages.find]
+include = ['lattice_joint*', 'joint_search*', 'lazy_cost*', 'curobo_bridge*', 'asmcore*', 'jbls*', 'adapters*', 'tasks*']
+
+[tool.pytest.ini_options]
+testpaths = ['tests']

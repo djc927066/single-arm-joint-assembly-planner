@@ -1,0 +1,133 @@
+﻿  -              + post_A   S_after 0.0416  S_left nan  G  356  A 10   (4s)
+  -              + post_B   S_after 0.0486  S_left nan  G  296  A 10   (9s)
+  -              + post_C   S_after 0.0462  S_left nan  G  431  A 10   (14s)
+  A              + post_B   S_after 0.0416  S_left 0.0416  G  269  A 10   (15s)
+  A              + post_C   S_after 0.0416  S_left 0.0416  G  427  A 10   (17s)
+  B              + post_A   S_after 0.0416  S_left 0.0486  G  356  A 10   (18s)
+  B              + post_C   S_after 0.0462  S_left 0.0486  G  400  A 10   (20s)
+  C              + post_A   S_after 0.0416  S_left 0.0462  G  345  A 10   (21s)
+  C              + post_B   S_after 0.0462  S_left 0.0462  G  296  A 10   (22s)
+python.exe : 
+At line:1 char:447
++ ... ython.exe'; & $py -X utf8 -m idea.bls_all_orders_20261031.sga_orders  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+  A+B            + beam_AB  S_after 0.0035  S_left 0.0416  G  130  A 10   (26s)
+  A+B            + post_C   S_after 0.0416  S_left 0.0416  G  400  A 10   (28s)
+  A+C            + beam_CA  S_after 0.0027  S_left 0.0416  G  184  A 10   (31s)
+  A+C            + post_B   S_after 0.0416  S_left 0.0416  G  269  A 10   (33s)
+  B+C            + beam_BC  S_after 0.0029  S_left 0.0462  G  211  A 10   (36s)
+  B+C            + post_A   S_after 0.0416  S_left 0.0462  G  345  A 10   (37s)
+  AB+A+B         + post_C   S_after 0.0035  S_left 0.0035  G  392  A 10   (40s)
+  BC+B+C         + post_A   S_after 0.0029  S_left 0.0029  G  345  A 10   (42s)
+  CA+A+C         + post_B   S_after 0.0027  S_left 0.0027  G  261  A 10   (44s)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+  A+B+C          + beam_AB  S_after 0.0035  S_left 0.0416  G  122  A 10   (45s)
+  A+B+C          + beam_BC  S_after 0.0029  S_left 0.0416  G  179  A 10   (47s)
+  A+B+C          + beam_CA  S_after 0.0027  S_left 0.0416  G  184  A 10   (48s)
+  AB+A+B+C       + beam_BC  S_after 0.0029  S_left 0.0035  G  177  A 10   (51s)
+  AB+A+B+C       + beam_CA  S_after 0.0027  S_left 0.0035  G  130  A 10   (54s)
+  BC+A+B+C       + beam_AB  S_after 0.0029  S_left 0.0029  G  119  A 10   (55s)
+  BC+A+B+C       + beam_CA  S_after 0.0027  S_left 0.0029  G  181  A 10   (58s)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+  CA+A+B+C       + beam_AB  S_after 0.0027  S_left 0.0027  G   81  A 10   (59s)
+  CA+A+B+C       + beam_BC  S_after 0.0027  S_left 0.0027  G  106  A 10   (60s)
+  AB+BC+A+B+C    + beam_CA  S_after 0.0027  S_left 0.0029  G  127  A 10   (64s)
+  AB+CA+A+B+C    + beam_BC  S_after 0.0027  S_left 0.0027  G  104  A 10   (65s)
+  BC+CA+A+B+C    + beam_AB  S_after 0.0027  S_left 0.0027  G   78  A 10   (66s)
+
+== greedy, S_left
+    from {AB, BC, CA, A, B, C}: beam_CA 3.657, beam_BC 2.761, beam_AB 2.071  -> remove beam_CA
+    from {AB, BC, A, B, C}: beam_BC 6.227, beam_AB 3.426  -> remove beam_BC
+    from {AB, A, B, C}: beam_AB 50.795, post_C 13.792  -> remove beam_AB
+    from {A, B, C}: post_C 166.539, post_A 159.327, post_B 111.998  -> remove post_C
+    from {A, B}: post_A 173.164, post_B 111.998  -> remove post_A
+    from {B}: post_B 2960.000  -> remove post_B
+  order: post_B -> post_A -> post_C -> beam_AB -> beam_BC -> beam_CA   xi = 3.2391
+
+== greedy, S_after
+    from {AB, BC, CA, A, B, C}: beam_CA 3.372, beam_BC 2.761, beam_AB 2.071  -> remove beam_CA
+    from {AB, BC, A, B, C}: beam_BC 5.096, beam_AB 3.426  -> remove beam_BC
+    from {AB, A, B, C}: post_C 13.792, beam_AB 4.292  -> remove post_C
+    from {AB, A, B}: beam_AB 4.574  -> remove beam_AB
+    from {A, B}: post_A 148.220, post_B 111.998  -> remove post_A
+    from {B}: post_B 143.979  -> remove post_B
+  order: post_B -> post_A -> beam_AB -> post_C -> beam_BC -> beam_CA   xi = 3.3719
+
+== Chen Eq.(2) over all 48 orders: best xi = 3.3719, reached by 2 order(s):
+  post_A -> post_B -> beam_AB -> post_C -> beam_BC -> beam_CA
+  post_B -> post_A -> beam_AB -> post_C -> beam_BC -> beam_CA
+  top xi values: 3.3719, 3.3719, 3.2391, 3.2391, 3.2391, 3.2391, 3.2391, 3.2391
+  greedy, S_left: xi 3.2391, rank 3 of 48
+  greedy, S_after: xi 3.3719, rank 1 of 48

@@ -1,0 +1,1363 @@
+{
+  "mesh_checks": {
+    "table": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.007199999999999999,
+      "vertices": 8,
+      "faces": 12
+    },
+    "base": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.0007228057599999999,
+      "vertices": 172,
+      "faces": 340
+    },
+    "post_A": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.000324,
+      "vertices": 8,
+      "faces": 12
+    },
+    "post_B": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.00035960000000000007,
+      "vertices": 8,
+      "faces": 12
+    },
+    "post_C": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.00034720000000000004,
+      "vertices": 8,
+      "faces": 12
+    },
+    "beam_AB": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 5.016e-05,
+      "vertices": 8,
+      "faces": 12
+    },
+    "beam_BC": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 4.334139616173253e-05,
+      "vertices": 8,
+      "faces": 12
+    },
+    "beam_CA": {
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 4.434812753647907e-05,
+      "vertices": 8,
+      "faces": 12
+    }
+  },
+  "beam_pair_clearances_m": {
+    "beam_AB|beam_BC": 0.007066686801184557,
+    "beam_AB|beam_CA": 0.003978827439024559,
+    "beam_BC|beam_CA": 0.006162255682840476
+  },
+  "subset_count": 64,
+  "subset_results": {
+    "0": {
+      "parts": [],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "1": {
+      "parts": [
+        "post_A"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "2": {
+      "parts": [
+        "post_B"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "3": {
+      "parts": [
+        "post_A",
+        "post_B"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "4": {
+      "parts": [
+        "post_C"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "5": {
+      "parts": [
+        "post_A",
+        "post_C"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "6": {
+      "parts": [
+        "post_B",
+        "post_C"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "7": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "8": {
+      "parts": [
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "9": {
+      "parts": [
+        "post_A",
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "10": {
+      "parts": [
+        "post_B",
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "11": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_AB"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "12": {
+      "parts": [
+        "post_C",
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "13": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "14": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_AB"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "15": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_AB"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "16": {
+      "parts": [
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "17": {
+      "parts": [
+        "post_A",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "18": {
+      "parts": [
+        "post_B",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "19": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "20": {
+      "parts": [
+        "post_C",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "21": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "22": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_BC"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "23": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_BC"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "24": {
+      "parts": [
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "25": {
+      "parts": [
+        "post_A",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "26": {
+      "parts": [
+        "post_B",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "27": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "28": {
+      "parts": [
+        "post_C",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "29": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "30": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "31": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "32": {
+      "parts": [
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "33": {
+      "parts": [
+        "post_A",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "34": {
+      "parts": [
+        "post_B",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "35": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "36": {
+      "parts": [
+        "post_C",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "37": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_CA"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "38": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "39": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_CA"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "40": {
+      "parts": [
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "41": {
+      "parts": [
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "42": {
+      "parts": [
+        "post_B",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "43": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "44": {
+      "parts": [
+        "post_C",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "45": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "46": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "47": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "48": {
+      "parts": [
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "49": {
+      "parts": [
+        "post_A",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "50": {
+      "parts": [
+        "post_B",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "51": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "52": {
+      "parts": [
+        "post_C",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "53": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "54": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "55": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    },
+    "56": {
+      "parts": [
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "57": {
+      "parts": [
+        "post_A",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "58": {
+      "parts": [
+        "post_B",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "59": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "60": {
+      "parts": [
+        "post_C",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "61": {
+      "parts": [
+        "post_A",
+        "post_C",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "62": {
+      "parts": [
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "infeasible",
+      "nominal_static_feasible": false
+    },
+    "63": {
+      "parts": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_AB",
+        "beam_BC",
+        "beam_CA"
+      ],
+      "status": "feasible",
+      "nominal_static_feasible": true
+    }
+  },
+  "nominal_stable_subset_count": 18,
+  "support_rule_mismatches": [],
+  "nominal_static_order_count": 48,
+  "nominal_static_orders": [
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "beam_AB",
+      "post_C",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "beam_AB",
+      "post_C",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "post_B",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "beam_CA",
+      "post_B",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_C",
+      "beam_CA",
+      "post_B",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "post_C",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "beam_AB",
+      "post_C",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_A",
+      "beam_AB",
+      "post_C",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "post_A",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "beam_BC",
+      "post_A",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_B",
+      "post_C",
+      "beam_BC",
+      "post_A",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "post_B",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "beam_CA",
+      "post_B",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_C",
+      "post_A",
+      "beam_CA",
+      "post_B",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_BC",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_CA",
+      "beam_AB",
+      "beam_BC"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "post_A",
+      "beam_CA",
+      "beam_BC",
+      "beam_AB"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "beam_BC",
+      "post_A",
+      "beam_AB",
+      "beam_CA"
+    ],
+    [
+      "post_C",
+      "post_B",
+      "beam_BC",
+      "post_A",
+      "beam_CA",
+      "beam_AB"
+    ]
+  ],
+  "example_orders": [
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_BC",
+      "beam_CA",
+      "beam_AB"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_AB",
+      "beam_CA",
+      "beam_BC"
+    ],
+    [
+      "post_A",
+      "post_B",
+      "post_C",
+      "beam_AB",
+      "beam_BC",
+      "beam_CA"
+    ]
+  ],
+  "object_removal_checks": {
+    "post_A>post_A": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.7627870000433177,
+              "intervals": 160,
+              "triangle_tests": 58017,
+              "certificates": {
+                "swept_aabb": 164,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 74
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.7629423000616953
+      }
+    },
+    "post_A|post_B>post_B": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.8657746999524534,
+              "intervals": 155,
+              "triangle_tests": 52698,
+              "certificates": {
+                "swept_aabb": 238,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 69
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.8658941000467166
+      }
+    },
+    "post_A|post_B|post_C>post_C": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.5263571999967098,
+              "intervals": 155,
+              "triangle_tests": 53002,
+              "certificates": {
+                "swept_aabb": 314,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 69
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.5265465000411496
+      }
+    },
+    "beam_BC|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 4,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0009878999553620815,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 3,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002054199925623834,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_BC|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001284099998883903,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002717799972742796,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_AB": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0011356999166309834,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002355300006456673,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|post_A|post_B|post_C>beam_AB": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 4,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.000989199965260923,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 3,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002017199993133545,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001057000015862286,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.0023250000085681677,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001240600016899407,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002589500043541193,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0010660000843927264,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002319099963642657,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0012937999563291669,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.0026279999874532223,
+        "outside": "directional_support_plane"
+      }
+    }
+  },
+  "validation_s": 139.1111322999932,
+  "full_robot_motion_verified": false,
+  "G_force_closure_verified": false,
+  "A_direction_space_computed": false,
+  "S_directional_robustness_computed": false,
+  "safe_to_execute": false
+}

@@ -1,0 +1,327 @@
+STLs exported 7
+static subsets 0 /64
+static subsets 16 /64
+static subsets 32 /64
+static subsets 48 /64
+object removal post_A>post_A unknown
+object removal post_A|post_B>post_B unknown
+object removal post_A|post_B|post_C>post_C unknown
+object removal beam_BC|post_A|post_B|post_C>beam_BC success
+object removal beam_BC|beam_CA|post_A|post_B|post_C>beam_CA success
+object removal beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_AB success
+object removal beam_AB|post_A|post_B|post_C>beam_AB success
+object removal beam_AB|beam_CA|post_A|post_B|post_C>beam_CA success
+object removal beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_BC success
+object removal beam_AB|beam_BC|post_A|post_B|post_C>beam_BC success
+object removal beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_CA success
+nominal grasp file post_A 28
+nominal grasp file post_B 28
+nominal grasp file post_C 28
+nominal grasp file beam_AB 14
+nominal grasp file beam_BC 14
+nominal grasp file beam_CA 14
+{
+  "states": 18,
+  "orders": 48,
+  "support_mismatches": [],
+  "object_checks": {
+    "post_A>post_A": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.7627870000433177,
+              "intervals": 160,
+              "triangle_tests": 58017,
+              "certificates": {
+                "swept_aabb": 164,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 74
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.7629423000616953
+      }
+    },
+    "post_A|post_B>post_B": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.8657746999524534,
+              "intervals": 155,
+              "triangle_tests": 52698,
+              "certificates": {
+                "swept_aabb": 238,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 69
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.8658941000467166
+      }
+    },
+    "post_A|post_B|post_C>post_C": {
+      "status": "unknown",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 0,
+      "diagnostics": {
+        "reason": "bounded_search_exhausted",
+        "attempts": [
+          {
+            "status": "unknown",
+            "reason": "unresolved_clearance_or_unpermitted_contact",
+            "diagnostics": {
+              "elapsed_s": 0.5263571999967098,
+              "intervals": 155,
+              "triangle_tests": 53002,
+              "certificates": {
+                "swept_aabb": 314,
+                "separating_plane": 0,
+                "allowed_surface": 0,
+                "distance_bound": 69
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.5265465000411496
+      }
+    },
+    "beam_BC|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 4,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0009878999553620815,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 3,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002054199925623834,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_BC|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001284099998883903,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002717799972742796,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_AB": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0011356999166309834,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002355300006456673,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|post_A|post_B|post_C>beam_AB": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 4,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.000989199965260923,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 3,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002017199993133545,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001057000015862286,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.0023250000085681677,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.001240600016899407,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002589500043541193,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|post_A|post_B|post_C>beam_BC": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0010660000843927264,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 4,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.002319099963642657,
+        "outside": "directional_support_plane"
+      }
+    },
+    "beam_AB|beam_BC|beam_CA|post_A|post_B|post_C>beam_CA": {
+      "status": "success",
+      "scope": "object-only removal, no gripper or arm",
+      "sampled_pose_count": 5,
+      "diagnostics": {
+        "attempts": [
+          {
+            "status": "valid",
+            "reason": "all_intervals_certified",
+            "diagnostics": {
+              "elapsed_s": 0.0012937999563291669,
+              "intervals": 1,
+              "triangle_tests": 0,
+              "certificates": {
+                "swept_aabb": 5,
+                "separating_plane": 0,
+                "allowed_surface": 2,
+                "distance_bound": 0
+              },
+              "clearance_m": 0.0001
+            }
+          }
+        ],
+        "elapsed_s": 0.0026279999874532223,
+        "outside": "directional_support_plane"
+      }
+    }
+  },
+  "wall_s": 143.93061200005468
+}

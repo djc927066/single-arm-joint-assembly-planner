@@ -1,0 +1,1 @@
+"""Assembly Sequence Editor package."""

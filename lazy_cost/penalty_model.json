@@ -1,0 +1,26 @@
+{
+  "w": [
+    0.0,
+    0.0,
+    1.0931328405863237,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "b": 0.24310400864215737,
+  "features": [
+    "frac",
+    "span",
+    "depth",
+    "depth_mean",
+    "held",
+    "part",
+    "z_low_inv"
+  ],
+  "n": 1342,
+  "files": [
+    "exp_rack10_feat2_parts_20261016_175950.jsonl",
+    "exp_triangular_frame6_feat2_parts_20261016_174607.jsonl"
+  ]
+}

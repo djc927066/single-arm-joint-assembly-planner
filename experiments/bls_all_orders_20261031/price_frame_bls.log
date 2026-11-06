@@ -1,0 +1,294 @@
+﻿python.exe : Mesh already in cache, reusing existing instance: base
+At line:1 char:479
++ ... n','bls') { & $py -X utf8 -m idea.bls_all_orders_20261031.price --mod ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Mesh already in... instance: base:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Mesh already in cache, reusing existing instance: base
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+options: post_A 145 poses / 1058 (pose, grasp) / 123 grasps, post_B 133 poses / 1048 (pose, grasp) / 66 grasps, post_C 103 poses / 816 (pose, grasp) / 80 grasps, beam_AB 219 poses / 1669 (pose, grasp) / 102 grasps, beam_BC 245 poses / 1779 (pose, grasp) / 131 grasps, beam_CA 164 poses / 1015 (pose, grasp) / 84 grasps
+Mesh already in cache, reusing existing instance: base
+E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\run.py:135: UserWarning: index_reduce() is i
+n beta and the API may change at any time. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\ate
+n\src\ATen\native\cuda\Indexing.cu:1469.)
+  lo.index_reduce_(0, o, a, "amin")
+setup 18s; 48 stable orders; options + footprints + row AABBs 4s
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+conflict-free bound 3.5549; optimum 3.8341353245123284
+Mesh already in cache, reusing existing instance: base
+  it 0: L 3.5549  best 3.5549  conflicts hit 20  constraints 20  theta 2  (3.8s)
+  it 20: L 2.1572  best 3.5549  conflicts hit 29  constraints 165  theta 1  (13.4s)
+  it 40: L 3.3423  best 3.5549  conflicts hit 23  constraints 271  theta 0.5  (15.9s)
+  it 60: L 3.4902  best 3.5549  conflicts hit 25  constraints 324  theta 0.25  (16.3s)
+  it 80: L 3.5412  best 3.5549  conflicts hit 24  constraints 377  theta 0.125  (16.8s)
+  it 100: L 3.5580  best 3.5652  conflicts hit 24  constraints 397  theta 0.125  (16.8s)
+  it 120: L 3.5675  best 3.5698  conflicts hit 24  constraints 412  theta 0.0625  (17.1s)
+  it 140: L 3.5695  best 3.5710  conflicts hit 26  constraints 425  theta 0.0625  (17.1s)
+  it 160: L 3.5719  best 3.5729  conflicts hit 27  constraints 430  theta 0.0312  (17.1s)
+  it 180: L 3.5715  best 3.5735  conflicts hit 25  constraints 432  theta 0.0312  (17.2s)
+  it 200: L 3.5741  best 3.5741  conflicts hit 26  constraints 444  theta 0.0156  (17.2s)
+  it 220: L 3.5742  best 3.5747  conflicts hit 26  constraints 445  theta 0.0156  (17.3s)
+  it 240: L 3.5739  best 3.5749  conflicts hit 25  constraints 445  theta 0.0156  (17.3s)
+  it 260: L 3.5755  best 3.5755  conflicts hit 24  constraints 445  theta 0.00781  (17.3s)
+  it 280: L 3.5751  best 3.5756  conflicts hit 25  constraints 448  theta 0.00781  (17.3s)
+{
+ "model": "triangular_frame6",
+ "mode": "bls",
+ "optimum": 3.8341353245123284,
+ "conflict_free_bound": 3.5548517313830374,
+ "price_bound": 3.575550577771324,
+ "gap_conflict_free": 0.0728413500023799,
+ "gap_price": 0.06744278040679079,
+ "gap_closed": 0.07411407937130117,
+ "best_iter": 277,
+ "iters": 300,
+ "constraints": 449,
+ "seconds": 17.31286419997923,
+ "gpu_s": 17.074440199998207,
+ "pairs": 22915
+}

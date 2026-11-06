@@ -1,0 +1,303 @@
+﻿python.exe : Mesh already in cache, reusing existing instance: base
+At line:1 char:447
++ ... ython.exe'; & $py -X utf8 -m idea.bls_all_orders_20261031.sga --model ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Mesh already in... instance: base:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Mesh already in cache, reusing existing instance: base
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+[INFO] flatsurface loaded: wrs.manipulation.placement.flatsurface
+options: post_A 145 poses / 1058 (pose, grasp) / 123 grasps, post_B 133 poses / 1048 (pose, grasp) / 66 grasps, post_C 103 poses / 816 (pose, grasp) / 80 grasps, beam_AB 219 poses / 1669 (pose, grasp) / 102 grasps, beam_BC 245 poses / 1779 (pose, grasp) / 131 grasps, beam_CA 164 poses / 1015 (pose, grasp) / 84 grasps
+Mesh already in cache, reusing existing instance: base
+E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\run.py:135: UserWarning: index_reduce() is i
+n beta and the API may change at any time. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\ate
+n\src\ATen\native\cuda\Indexing.cu:1469.)
+  lo.index_reduce_(0, o, a, "amin")
+setup 18s; 48 stable orders; options + footprints + row AABBs 4s
+post_A: 123 joint goal grasps -> 123 seated on the pads, 116 force-closed without self-collision
+post_B: 66 joint goal grasps -> 66 seated on the pads, 63 force-closed without self-collision
+post_C: 80 joint goal grasps -> 80 seated on the pads, 75 force-closed without self-collision
+beam_AB: 102 joint goal grasps -> 102 seated on the pads, 96 force-closed without self-collision
+beam_BC: 131 joint goal grasps -> 131 seated on the pads, 130 force-closed without self-collision
+beam_CA: 84 joint goal grasps -> 84 seated on the pads, 83 force-closed without self-collision
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+-                + post_A    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/123 (partial)  joint G 123/123  both 116 paper-only 0 joint-only 7  (4.4s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+-                + post_B    S  0.049 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/66 (partial)  joint G 66/66  both 63 paper-only 0 joint-only 3  (1.9s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+-                + post_C    S  0.046 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/80 (partial)  joint G 80/80  both 75 paper-only 0 joint-only 5  (1.8s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+A                + post_B    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/66 (partial)  joint G 42/66  both 37 paper-only 0 joint-only 5  (5.7s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+A                + post_C    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/80 (partial)  joint G 80/80  both 61 paper-only 0 joint-only 19  (2.5s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+B                + post_A    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/123 (partial)  joint G 123/123  both 116 paper-only 0 joint-only 7  (0.9s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+B                + post_C    S  0.046 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/80 (partial)  joint G 79/80  both 61 paper-only 0 joint-only 18  (2.6s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+C                + post_A    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/123 (partial)  joint G 118/123  both 105 paper-only 1 joint-only 13  (1.6s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+C                + post_B    S  0.046 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/66 (partial)  joint G 66/66  both 63 paper-only 0 joint-only 3  (0.9s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+A+B              + beam_AB   S  0.004 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/102 (partial)  joint G 51/102  both 49 paper-only 16 joint-only 2  (7.9s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+A+B              + post_C    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/80 (partial)  joint G 79/80  both 61 paper-only 0 joint-only 18  (1.7s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+A+C              + beam_CA   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/84 (partial)  joint G 54/84  both 49 paper-only 2 joint-only 5  (3.1s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+A+C              + post_B    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/66 (partial)  joint G 42/66  both 37 paper-only 0 joint-only 5  (0.6s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+B+C              + beam_BC   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/131 (partial)  joint G 56/131  both 54 paper-only 13 joint-only 2  (5.1s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+B+C              + post_A    S  0.042 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/123 (partial)  joint G 118/123  both 105 paper-only 1 joint-only 13  (0.6s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+AB+A+B           + post_C    S  0.004 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/80 (partial)  joint G 68/80  both 59 paper-only 0 joint-only 9  (4.2s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+BC+B+C           + post_A    S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/123 (partial)  joint G 118/123  both 105 paper-only 1 joint-only 13  (2.4s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+CA+A+C           + post_B    S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/66 (partial)  joint G 37/66  both 27 paper-only 1 joint-only 10  (119.7s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+A+B+C            + beam_AB   S  0.004 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/102 (partial)  joint G 48/102  both 46 paper-only 16 joint-only 2  (0.7s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+A+B+C            + beam_BC   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/131 (partial)  joint G 42/131  both 40 paper-only 4 joint-only 2  (4.3s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+A+B+C            + beam_CA   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/84 (partial)  joint G 54/84  both 49 paper-only 2 joint-only 5  (0.4s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+AB+A+B+C         + beam_BC   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/131 (partial)  joint G 37/131  both 35 paper-only 9 joint-only 2  (4.6s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+AB+A+B+C         + beam_CA   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/84 (partial)  joint G 20/84  both 20 paper-only 13 joint-only 0  (4.3s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+BC+A+B+C         + beam_AB   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/102 (partial)  joint G 40/102  both 39 paper-only 21 joint-only 1  (2.3s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+BC+A+B+C         + beam_CA   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/84 (partial)  joint G 47/84  both 42 paper-only 9 joint-only 5  (2.5s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+CA+A+B+C         + beam_AB   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/102 (partial)  joint G 20/102  both 20 paper-only 12 joint-only 0  (208.4s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+CA+A+B+C         + beam_BC   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/131 (partial)  joint G 13/131  both 13 paper-only 5 joint-only 0  (175.0s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+AB+BC+A+B+C      + beam_CA   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/84 (partial)  joint G 13/84  both 13 paper-only 20 joint-only 0  (3.2s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_AB@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_BC@goal
+AB+CA+A+B+C      + beam_BC   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/131 (partial)  joint G 8/131  both 8 paper-only 10 joint-only 0  (0.4s)
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: base
+Mesh already in cache, reusing existing instance: beam_BC@goal
+Mesh already in cache, reusing existing instance: beam_CA@goal
+Mesh already in cache, reusing existing instance: post_A@goal
+Mesh already in cache, reusing existing instance: post_B@goal
+Mesh already in cache, reusing existing instance: post_C@goal
+Mesh already in cache, reusing existing instance: beam_AB@goal
+BC+CA+A+B+C      + beam_AB   S  0.003 (scene stable True)  A 10 [a/area] insert dir [-0.0, -0.0, -1.0] (scene insertable True)  G None/102 (partial)  joint G 13/102  both 13 paper-only 17 joint-only 0  (0.5s)
+{
+ "edges": 30,
+ "S_agrees_with_scene": 30,
+ "A_agrees_with_insertable": 30,
+ "G_paper_vs_joint_corr": null
+}

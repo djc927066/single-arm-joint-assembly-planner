@@ -1,0 +1,50 @@
+﻿assembled frame: S = 0.0027
+python.exe : 
+At line:1 char:447
++ ... ython.exe'; & $py -X utf8 -m idea.bls_all_orders_20261031.beam_first  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+remove beam_AB first (= install it last):
+   S of what is left = 0.0027   (assembled frame 0.0027)
+   G = 330 of 1630 pickle grasps free at the goal with the other 5 parts installed   (base only: 1387)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (18s)
+remove beam_BC first (= install it last):
+   S of what is left = 0.0027   (assembled frame 0.0027)
+   G = 317 of 1560 pickle grasps free at the goal with the other 5 parts installed   (base only: 1266)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (11s)
+remove beam_CA first (= install it last):
+   S of what is left = 0.0029   (assembled frame 0.0027)
+   G = 347 of 1756 pickle grasps free at the goal with the other 5 parts installed   (base only: 1455)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (3s)
+E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\beam_first.py:177: UserWarning: Glyph 10003 
+(\N{CHECK MARK}) missing from current font.
+  fig.savefig(f, dpi=120, facecolor=SURF)
+E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\beam_first.py:177: UserWarning: Glyph 10007 
+(\N{BALLOT X}) missing from current font.
+  fig.savefig(f, dpi=120, facecolor=SURF)
+-> E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\_out\beam_first_sga.png
