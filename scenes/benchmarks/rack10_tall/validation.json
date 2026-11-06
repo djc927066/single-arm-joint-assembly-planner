@@ -1,0 +1,130 @@
+{
+  "parts": 10,
+  "grasp_catalogue": {
+    "lp_1": 28,
+    "lp_2": 28,
+    "lp_3": 28,
+    "lp_4": 28,
+    "shelf_1": 14,
+    "up_1": 28,
+    "up_2": 28,
+    "up_3": 28,
+    "up_4": 28,
+    "shelf_2": 14
+  },
+  "goal_ik_grasps": {
+    "lp_1": 8,
+    "lp_2": 8,
+    "lp_3": 2,
+    "lp_4": 2,
+    "shelf_1": 2,
+    "up_1": 1,
+    "up_2": 1,
+    "up_3": 3,
+    "up_4": 3,
+    "shelf_2": 3
+  },
+  "grasps_alone": {
+    "lp_1": 8,
+    "lp_2": 8,
+    "lp_3": 2,
+    "lp_4": 2,
+    "shelf_1": 2,
+    "up_1": 1,
+    "up_2": 1,
+    "up_3": 3,
+    "up_4": 3,
+    "shelf_2": 2
+  },
+  "levels": {
+    "static": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 0.0006576999876415357
+    },
+    "insertion": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 0.01958909998938907
+    },
+    "full": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 11.45583859999897
+    }
+  },
+  "precedence_full": [
+    [
+      "lp_1",
+      "shelf_1"
+    ],
+    [
+      "lp_2",
+      "shelf_1"
+    ],
+    [
+      "lp_3",
+      "shelf_1"
+    ],
+    [
+      "lp_4",
+      "shelf_1"
+    ],
+    [
+      "shelf_1",
+      "up_1"
+    ],
+    [
+      "shelf_1",
+      "up_2"
+    ],
+    [
+      "shelf_1",
+      "up_3"
+    ],
+    [
+      "shelf_1",
+      "up_4"
+    ],
+    [
+      "up_1",
+      "shelf_2"
+    ],
+    [
+      "up_2",
+      "shelf_2"
+    ],
+    [
+      "up_3",
+      "shelf_2"
+    ],
+    [
+      "up_4",
+      "shelf_2"
+    ]
+  ],
+  "precedence_from_occlusion": [],
+  "grasp_occlusion": {
+    "transitions_checked": 66,
+    "partially_occluded": 0,
+    "fully_blocked": 0,
+    "blocker_pairs": {
+      "up_1 -> shelf_2": 1,
+      "up_2 -> shelf_2": 1
+    }
+  },
+  "insertion_cover": {},
+  "equilibrium_check": {
+    "checked": 33,
+    "infeasible": 0,
+    "examples": [],
+    "seconds": 17.7796978999977,
+    "total_states": 33
+  },
+  "ik_s": 9.448162299988326,
+  "total_s": 39.12215730000753,
+  "scope": "static rule + asmcore equilibrium cross-check; box-cell insertion sweep; Panthera palm/finger boxes + cuRobo goal IK. No transport motion, no staging-side IK."
+}

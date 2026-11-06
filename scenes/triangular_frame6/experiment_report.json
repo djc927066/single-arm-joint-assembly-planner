@@ -1,0 +1,3994 @@
+{
+  "experiment": "triangular_frame6_joint_search_coarse_grid_v1",
+  "units": "metre",
+  "model": "6 movable parts plus fixed pocketed base",
+  "limits": [
+    "70-mm XY grid, yaw fixed at 0 for staging",
+    "AABB checks only; no mesh collision or robot/gripper motion",
+    "Euclidean objective is a proxy, not cuRobo/RRT duration",
+    "beam truncation does not prove global optimum"
+  ],
+  "candidate_counts": {
+    "post_A": 40,
+    "post_B": 48,
+    "post_C": 40,
+    "beam_AB": 36,
+    "beam_BC": 40,
+    "beam_CA": 36
+  },
+  "static_reversal_comparison": {
+    "forward": {
+      "reachable_states": 18,
+      "transition_tests": 54,
+      "stable_transitions": 30,
+      "pruned_transitions": 24,
+      "states_by_depth": {
+        "1": 3,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 3
+      }
+    },
+    "reverse": {
+      "reachable_states": 18,
+      "transition_tests": 54,
+      "stable_transitions": 30,
+      "pruned_transitions": 24,
+      "states_by_depth": {
+        "1": 3,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6,
+        "6": 3
+      }
+    }
+  },
+  "beam_ablation": [
+    {
+      "beam_width": 1,
+      "coarse_staging_collision_filter": true,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.008502400014549494
+        },
+        {
+          "depth": 2,
+          "parents": 1,
+          "structure_attempts": 5,
+          "placement_attempts": 76,
+          "accepted": 70,
+          "rejected": {
+            "staging_part_collision": 6,
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.079666475281102,
+          "elapsed_s": 0.01687970000784844
+        },
+        {
+          "depth": 3,
+          "parents": 1,
+          "structure_attempts": 4,
+          "placement_attempts": 80,
+          "accepted": 68,
+          "rejected": {
+            "staging_part_collision": 12,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.3002851437780585,
+          "elapsed_s": 0.02353690005838871
+        },
+        {
+          "depth": 4,
+          "parents": 1,
+          "structure_attempts": 3,
+          "placement_attempts": 128,
+          "accepted": 107,
+          "rejected": {
+            "staging_part_collision": 21
+          },
+          "retained": 1,
+          "best_score_m": 1.508045367933464,
+          "elapsed_s": 0.036350199952721596
+        },
+        {
+          "depth": 5,
+          "parents": 1,
+          "structure_attempts": 2,
+          "placement_attempts": 88,
+          "accepted": 72,
+          "rejected": {
+            "staging_part_collision": 16
+          },
+          "retained": 1,
+          "best_score_m": 1.816405546944957,
+          "elapsed_s": 0.04677729995455593
+        },
+        {
+          "depth": 6,
+          "parents": 1,
+          "structure_attempts": 1,
+          "placement_attempts": 40,
+          "accepted": 31,
+          "rejected": {
+            "staging_part_collision": 9
+          },
+          "retained": 1,
+          "best_score_m": 2.179900893663743,
+          "elapsed_s": 0.052696699975058436
+        }
+      ],
+      "wall_s": 0.05270979995839298,
+      "placement_checks": {
+        "calls": 524,
+        "base_collision": 0,
+        "part_collision": 64
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "beam_CA",
+            "beam_AB"
+          ],
+          "cost_proxy_m": 2.179900893663743,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.24500000000000005,
+                0.05
+              ],
+              "key": "0.385,0.245,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 1,
+      "coarse_staging_collision_filter": false,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.006348000024445355
+        },
+        {
+          "depth": 2,
+          "parents": 1,
+          "structure_attempts": 5,
+          "placement_attempts": 76,
+          "accepted": 76,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.079666475281102,
+          "elapsed_s": 0.012629400007426739
+        },
+        {
+          "depth": 3,
+          "parents": 1,
+          "structure_attempts": 4,
+          "placement_attempts": 80,
+          "accepted": 80,
+          "rejected": {
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.292427491447128,
+          "elapsed_s": 0.018905699951574206
+        },
+        {
+          "depth": 4,
+          "parents": 1,
+          "structure_attempts": 3,
+          "placement_attempts": 128,
+          "accepted": 128,
+          "rejected": {},
+          "retained": 1,
+          "best_score_m": 1.399856537798662,
+          "elapsed_s": 0.029389999923296273
+        },
+        {
+          "depth": 5,
+          "parents": 1,
+          "structure_attempts": 2,
+          "placement_attempts": 88,
+          "accepted": 88,
+          "rejected": {},
+          "retained": 1,
+          "best_score_m": 1.6392014771644234,
+          "elapsed_s": 0.03629149997141212
+        },
+        {
+          "depth": 6,
+          "parents": 1,
+          "structure_attempts": 1,
+          "placement_attempts": 40,
+          "accepted": 40,
+          "rejected": {},
+          "retained": 1,
+          "best_score_m": 2.0026968238832095,
+          "elapsed_s": 0.040488399914465845
+        }
+      ],
+      "wall_s": 0.04050100001040846,
+      "placement_checks": {
+        "calls": 524,
+        "base_collision": 0,
+        "part_collision": 0
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "beam_CA",
+            "beam_AB"
+          ],
+          "cost_proxy_m": 2.0026968238832095,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 4,
+      "coarse_staging_collision_filter": true,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 4,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.006892499979585409
+        },
+        {
+          "depth": 2,
+          "parents": 4,
+          "structure_attempts": 20,
+          "placement_attempts": 300,
+          "accepted": 276,
+          "rejected": {
+            "staging_part_collision": 24,
+            "remainder_unstable": 12
+          },
+          "retained": 4,
+          "best_score_m": 1.079666475281102,
+          "elapsed_s": 0.03789239993784577
+        },
+        {
+          "depth": 3,
+          "parents": 4,
+          "structure_attempts": 16,
+          "placement_attempts": 316,
+          "accepted": 274,
+          "rejected": {
+            "staging_part_collision": 42,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.2948148588593638,
+          "elapsed_s": 0.07305039989296347
+        },
+        {
+          "depth": 4,
+          "parents": 4,
+          "structure_attempts": 12,
+          "placement_attempts": 328,
+          "accepted": 269,
+          "rejected": {
+            "staging_part_collision": 59,
+            "remainder_unstable": 4
+          },
+          "retained": 4,
+          "best_score_m": 1.508045367933464,
+          "elapsed_s": 0.11458269995637238
+        },
+        {
+          "depth": 5,
+          "parents": 4,
+          "structure_attempts": 8,
+          "placement_attempts": 352,
+          "accepted": 286,
+          "rejected": {
+            "staging_part_collision": 66
+          },
+          "retained": 4,
+          "best_score_m": 1.816405546944957,
+          "elapsed_s": 0.16266249993350357
+        },
+        {
+          "depth": 6,
+          "parents": 4,
+          "structure_attempts": 4,
+          "placement_attempts": 184,
+          "accepted": 148,
+          "rejected": {
+            "staging_part_collision": 36
+          },
+          "retained": 4,
+          "best_score_m": 2.179900893663743,
+          "elapsed_s": 0.1940651999320835
+        }
+      ],
+      "wall_s": 0.19408599997404963,
+      "placement_checks": {
+        "calls": 1592,
+        "base_collision": 0,
+        "part_collision": 227
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "beam_CA",
+            "beam_AB"
+          ],
+          "cost_proxy_m": 2.179900893663743,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.24500000000000005,
+                0.05
+              ],
+              "key": "0.385,0.245,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "beam_CA",
+            "beam_AB"
+          ],
+          "cost_proxy_m": 2.215967615356649,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.24500000000000005,
+                0.05
+              ],
+              "key": "0.385,0.245,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "beam_CA",
+            "beam_AB"
+          ],
+          "cost_proxy_m": 2.21724286715361,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.10499999999999998,
+                0.05
+              ],
+              "key": "0.175,-0.105,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.24500000000000005,
+                0.05
+              ],
+              "key": "0.385,0.245,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 4,
+      "coarse_staging_collision_filter": false,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 4,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.006851699901744723
+        },
+        {
+          "depth": 2,
+          "parents": 4,
+          "structure_attempts": 20,
+          "placement_attempts": 300,
+          "accepted": 300,
+          "rejected": {
+            "remainder_unstable": 12
+          },
+          "retained": 4,
+          "best_score_m": 1.073841969013092,
+          "elapsed_s": 0.035873199929483235
+        },
+        {
+          "depth": 3,
+          "parents": 4,
+          "structure_attempts": 16,
+          "placement_attempts": 316,
+          "accepted": 316,
+          "rejected": {
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.1866260287245616,
+          "elapsed_s": 0.06397529994137585
+        },
+        {
+          "depth": 4,
+          "parents": 4,
+          "structure_attempts": 12,
+          "placement_attempts": 144,
+          "accepted": 144,
+          "rejected": {
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.4332147551497572,
+          "elapsed_s": 0.0774350999854505
+        },
+        {
+          "depth": 5,
+          "parents": 4,
+          "structure_attempts": 8,
+          "placement_attempts": 352,
+          "accepted": 352,
+          "rejected": {},
+          "retained": 4,
+          "best_score_m": 1.5649948750465004,
+          "elapsed_s": 0.11178229993674904
+        },
+        {
+          "depth": 6,
+          "parents": 4,
+          "structure_attempts": 4,
+          "placement_attempts": 176,
+          "accepted": 176,
+          "rejected": {},
+          "retained": 4,
+          "best_score_m": 1.9284902217652864,
+          "elapsed_s": 0.13782279996667057
+        }
+      ],
+      "wall_s": 0.13783459994010627,
+      "placement_checks": {
+        "calls": 1400,
+        "base_collision": 0,
+        "part_collision": 0
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_BC",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 1.9284902217652864,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_CA",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 1.9325008537140118,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_BC",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 1.9645569434581927,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.05
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 8,
+      "coarse_staging_collision_filter": true,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 8,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.007929099956527352
+        },
+        {
+          "depth": 2,
+          "parents": 8,
+          "structure_attempts": 40,
+          "placement_attempts": 596,
+          "accepted": 550,
+          "rejected": {
+            "staging_part_collision": 46,
+            "remainder_unstable": 24
+          },
+          "retained": 8,
+          "best_score_m": 1.079666475281102,
+          "elapsed_s": 0.07380200002808124
+        },
+        {
+          "depth": 3,
+          "parents": 8,
+          "structure_attempts": 32,
+          "placement_attempts": 636,
+          "accepted": 548,
+          "rejected": {
+            "staging_part_collision": 88,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.279319062874622,
+          "elapsed_s": 0.14911999995820224
+        },
+        {
+          "depth": 4,
+          "parents": 8,
+          "structure_attempts": 24,
+          "placement_attempts": 840,
+          "accepted": 685,
+          "rejected": {
+            "staging_part_collision": 155,
+            "remainder_unstable": 4
+          },
+          "retained": 8,
+          "best_score_m": 1.4746147709869857,
+          "elapsed_s": 0.2564606999512762
+        },
+        {
+          "depth": 5,
+          "parents": 8,
+          "structure_attempts": 16,
+          "placement_attempts": 672,
+          "accepted": 536,
+          "rejected": {
+            "staging_part_collision": 136
+          },
+          "retained": 8,
+          "best_score_m": 1.6962384993888124,
+          "elapsed_s": 0.34693180001340806
+        },
+        {
+          "depth": 6,
+          "parents": 8,
+          "structure_attempts": 8,
+          "placement_attempts": 320,
+          "accepted": 244,
+          "rejected": {
+            "staging_part_collision": 76
+          },
+          "retained": 8,
+          "best_score_m": 2.162075110021723,
+          "elapsed_s": 0.40076290001161397
+        }
+      ],
+      "wall_s": 0.4007774000056088,
+      "placement_checks": {
+        "calls": 3176,
+        "base_collision": 0,
+        "part_collision": 501
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_C",
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "beam_CA",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 2.162075110021723,
+          "layout": {
+            "post_C": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.31500000000000006,
+                -0.245,
+                0.05
+              ],
+              "key": "0.315,-0.245,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.01
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_C",
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "beam_CA",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 2.1620751100217235,
+          "layout": {
+            "post_C": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.245,
+                0.05
+              ],
+              "key": "0.385,-0.245,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.01
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_C",
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "beam_CA",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 2.1858876754456924,
+          "layout": {
+            "post_C": {
+              "position_m": [
+                0.24500000000000002,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.245,0.175,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.31500000000000006,
+                -0.245,
+                0.05
+              ],
+              "key": "0.315,-0.245,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.45500000000000007,
+                -0.175,
+                0.01
+              ],
+              "key": "0.455,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                -0.175,
+                0.01
+              ],
+              "key": "0.315,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 8,
+      "coarse_staging_collision_filter": false,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 8,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.00824070000089705
+        },
+        {
+          "depth": 2,
+          "parents": 8,
+          "structure_attempts": 40,
+          "placement_attempts": 596,
+          "accepted": 596,
+          "rejected": {
+            "remainder_unstable": 24
+          },
+          "retained": 8,
+          "best_score_m": 1.073841969013092,
+          "elapsed_s": 0.06426499993540347
+        },
+        {
+          "depth": 3,
+          "parents": 8,
+          "structure_attempts": 32,
+          "placement_attempts": 620,
+          "accepted": 620,
+          "rejected": {
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.181653041378433,
+          "elapsed_s": 0.11818859993945807
+        },
+        {
+          "depth": 4,
+          "parents": 8,
+          "structure_attempts": 24,
+          "placement_attempts": 288,
+          "accepted": 288,
+          "rejected": {
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.4282417678036288,
+          "elapsed_s": 0.1435349000385031
+        },
+        {
+          "depth": 5,
+          "parents": 8,
+          "structure_attempts": 16,
+          "placement_attempts": 704,
+          "accepted": 704,
+          "rejected": {},
+          "retained": 8,
+          "best_score_m": 1.560021887700372,
+          "elapsed_s": 0.21105689997784793
+        },
+        {
+          "depth": 6,
+          "parents": 8,
+          "structure_attempts": 8,
+          "placement_attempts": 352,
+          "accepted": 352,
+          "rejected": {},
+          "retained": 8,
+          "best_score_m": 1.8741472985619532,
+          "elapsed_s": 0.2576854999642819
+        }
+      ],
+      "wall_s": 0.2577022999757901,
+      "placement_checks": {
+        "calls": 2672,
+        "base_collision": 0,
+        "part_collision": 0
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_BC",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 1.8741472985619532,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_BC",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 1.9102140202548594,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_B",
+            "beam_AB",
+            "post_C",
+            "beam_BC",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 1.9114892720518202,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.10499999999999998,
+                0.05
+              ],
+              "key": "0.175,-0.105,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 16,
+      "coarse_staging_collision_filter": true,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 16,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.01024069997947663
+        },
+        {
+          "depth": 2,
+          "parents": 16,
+          "structure_attempts": 80,
+          "placement_attempts": 1192,
+          "accepted": 1102,
+          "rejected": {
+            "staging_part_collision": 90,
+            "remainder_unstable": 48
+          },
+          "retained": 16,
+          "best_score_m": 1.0718824764652943,
+          "elapsed_s": 0.1540343000087887
+        },
+        {
+          "depth": 3,
+          "parents": 16,
+          "structure_attempts": 64,
+          "placement_attempts": 1284,
+          "accepted": 1118,
+          "rejected": {
+            "staging_part_collision": 166,
+            "remainder_unstable": 32
+          },
+          "retained": 16,
+          "best_score_m": 1.208684555722662,
+          "elapsed_s": 0.32616189995314926
+        },
+        {
+          "depth": 4,
+          "parents": 16,
+          "structure_attempts": 48,
+          "placement_attempts": 980,
+          "accepted": 809,
+          "rejected": {
+            "staging_part_collision": 171,
+            "remainder_unstable": 24
+          },
+          "retained": 16,
+          "best_score_m": 1.4060271434171079,
+          "elapsed_s": 0.4460540999425575
+        },
+        {
+          "depth": 5,
+          "parents": 16,
+          "structure_attempts": 32,
+          "placement_attempts": 1392,
+          "accepted": 1120,
+          "rejected": {
+            "staging_part_collision": 272
+          },
+          "retained": 16,
+          "best_score_m": 1.6019134020414774,
+          "elapsed_s": 0.6469479999504983
+        },
+        {
+          "depth": 6,
+          "parents": 16,
+          "structure_attempts": 16,
+          "placement_attempts": 768,
+          "accepted": 610,
+          "rejected": {
+            "staging_part_collision": 158
+          },
+          "retained": 16,
+          "best_score_m": 2.148197994973249,
+          "elapsed_s": 0.7933845999650657
+        }
+      ],
+      "wall_s": 0.7934084999142215,
+      "placement_checks": {
+        "calls": 5728,
+        "base_collision": 0,
+        "part_collision": 857
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "post_A",
+            "beam_AB",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 2.148197994973249,
+          "layout": {
+            "post_B": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.24500000000000002,
+                -0.175,
+                0.01
+              ],
+              "key": "0.245,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "post_A",
+            "beam_AB",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 2.163542784103311,
+          "layout": {
+            "post_B": {
+              "position_m": [
+                0.17500000000000002,
+                0.03500000000000003,
+                0.05
+              ],
+              "key": "0.175,0.035,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.24500000000000002,
+                -0.175,
+                0.01
+              ],
+              "key": "0.245,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        },
+        {
+          "order": [
+            "post_B",
+            "post_C",
+            "beam_BC",
+            "post_A",
+            "beam_AB",
+            "beam_CA"
+          ],
+          "cost_proxy_m": 2.1654895879906753,
+          "layout": {
+            "post_B": {
+              "position_m": [
+                0.17500000000000002,
+                -0.10499999999999998,
+                0.05
+              ],
+              "key": "0.175,-0.105,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.45500000000000007,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.455,0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.24500000000000002,
+                -0.175,
+                0.01
+              ],
+              "key": "0.245,-0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": true
+        }
+      ],
+      "full_robot_motion_verified": false
+    },
+    {
+      "beam_width": 16,
+      "coarse_staging_collision_filter": false,
+      "status": "candidates_found",
+      "candidate_domains": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 112,
+          "accepted": 112,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 16,
+          "best_score_m": 0.8664359662070016,
+          "elapsed_s": 0.006608900032006204
+        },
+        {
+          "depth": 2,
+          "parents": 16,
+          "structure_attempts": 80,
+          "placement_attempts": 1192,
+          "accepted": 1192,
+          "rejected": {
+            "remainder_unstable": 48
+          },
+          "retained": 16,
+          "best_score_m": 1.0437737201275237,
+          "elapsed_s": 0.11530920001678169
+        },
+        {
+          "depth": 3,
+          "parents": 16,
+          "structure_attempts": 64,
+          "placement_attempts": 1296,
+          "accepted": 1296,
+          "rejected": {
+            "remainder_unstable": 32
+          },
+          "retained": 16,
+          "best_score_m": 1.1755538400242669,
+          "elapsed_s": 0.23331300006248057
+        },
+        {
+          "depth": 4,
+          "parents": 16,
+          "structure_attempts": 48,
+          "placement_attempts": 604,
+          "accepted": 604,
+          "rejected": {
+            "remainder_unstable": 32
+          },
+          "retained": 16,
+          "best_score_m": 1.3890466201651308,
+          "elapsed_s": 0.29075349995400757
+        },
+        {
+          "depth": 5,
+          "parents": 16,
+          "structure_attempts": 32,
+          "placement_attempts": 1320,
+          "accepted": 1320,
+          "rejected": {},
+          "retained": 16,
+          "best_score_m": 1.5058413118253258,
+          "elapsed_s": 0.4212159999879077
+        },
+        {
+          "depth": 6,
+          "parents": 16,
+          "structure_attempts": 16,
+          "placement_attempts": 680,
+          "accepted": 680,
+          "rejected": {},
+          "retained": 16,
+          "best_score_m": 1.9010231901398036,
+          "elapsed_s": 0.509444099967368
+        }
+      ],
+      "wall_s": 0.5094681000337005,
+      "placement_checks": {
+        "calls": 5204,
+        "base_collision": 0,
+        "part_collision": 0
+      },
+      "solutions": [
+        {
+          "order": [
+            "post_A",
+            "post_C",
+            "beam_CA",
+            "post_B",
+            "beam_AB",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 1.9010231901398036,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_C",
+            "beam_CA",
+            "post_B",
+            "beam_AB",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 1.902932851416575,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        },
+        {
+          "order": [
+            "post_A",
+            "post_C",
+            "beam_CA",
+            "post_B",
+            "beam_AB",
+            "beam_BC"
+          ],
+          "cost_proxy_m": 1.9131221315109201,
+          "layout": {
+            "post_A": {
+              "position_m": [
+                0.17500000000000002,
+                -0.034999999999999976,
+                0.05
+              ],
+              "key": "0.175,-0.035,yaw0"
+            },
+            "post_C": {
+              "position_m": [
+                0.385,
+                0.17500000000000004,
+                0.05
+              ],
+              "key": "0.385,0.175,yaw0"
+            },
+            "beam_CA": {
+              "position_m": [
+                0.31500000000000006,
+                0.17500000000000004,
+                0.01
+              ],
+              "key": "0.315,0.175,yaw0"
+            },
+            "post_B": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.05
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_AB": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            },
+            "beam_BC": {
+              "position_m": [
+                0.385,
+                -0.175,
+                0.01
+              ],
+              "key": "0.385,-0.175,yaw0"
+            }
+          },
+          "coarse_geometry_certified": false
+        }
+      ],
+      "full_robot_motion_verified": false
+    }
+  ],
+  "grid_resolution_ablation": [
+    {
+      "grid_spacing_m": 0.1,
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 16,
+        "post_B": 21,
+        "post_C": 16,
+        "beam_AB": 19,
+        "beam_BC": 19,
+        "beam_CA": 19
+      },
+      "status": "candidates_found",
+      "wall_s": 0.09464210004080087,
+      "placement_checks": {
+        "calls": 788,
+        "base_collision": 0,
+        "part_collision": 116
+      },
+      "best_cost_proxy_m": 2.1722135278604213,
+      "best_order": [
+        "post_B",
+        "post_C",
+        "post_A",
+        "beam_CA",
+        "beam_BC",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_B": [
+          0.265,
+          0.15500000000000003,
+          0.05
+        ],
+        "post_C": [
+          0.46499999999999997,
+          0.15500000000000003,
+          0.05
+        ],
+        "post_A": [
+          0.165,
+          0.05500000000000005,
+          0.05
+        ],
+        "beam_CA": [
+          0.165,
+          -0.044999999999999984,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          0.15500000000000003,
+          0.01
+        ],
+        "beam_AB": [
+          0.365,
+          -0.145,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.1,
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 16,
+        "post_B": 21,
+        "post_C": 16,
+        "beam_AB": 19,
+        "beam_BC": 19,
+        "beam_CA": 19
+      },
+      "status": "candidates_found",
+      "wall_s": 0.20577150001190603,
+      "placement_checks": {
+        "calls": 1469,
+        "base_collision": 0,
+        "part_collision": 213
+      },
+      "best_cost_proxy_m": 1.9476532832459068,
+      "best_order": [
+        "post_A",
+        "post_C",
+        "post_B",
+        "beam_AB",
+        "beam_CA",
+        "beam_BC"
+      ],
+      "best_layout": {
+        "post_A": [
+          0.165,
+          -0.044999999999999984,
+          0.05
+        ],
+        "post_C": [
+          0.265,
+          0.15500000000000003,
+          0.05
+        ],
+        "post_B": [
+          0.46499999999999997,
+          0.15500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.46499999999999997,
+          -0.145,
+          0.01
+        ],
+        "beam_CA": [
+          0.265,
+          -0.145,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          0.15500000000000003,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.1,
+      "beam_width": 16,
+      "domain_counts": {
+        "post_A": 16,
+        "post_B": 21,
+        "post_C": 16,
+        "beam_AB": 19,
+        "beam_BC": 19,
+        "beam_CA": 19
+      },
+      "status": "candidates_found",
+      "wall_s": 0.3519989000633359,
+      "placement_checks": {
+        "calls": 2542,
+        "base_collision": 0,
+        "part_collision": 408
+      },
+      "best_cost_proxy_m": 1.9476532832459068,
+      "best_order": [
+        "post_A",
+        "post_C",
+        "post_B",
+        "beam_AB",
+        "beam_CA",
+        "beam_BC"
+      ],
+      "best_layout": {
+        "post_A": [
+          0.165,
+          -0.044999999999999984,
+          0.05
+        ],
+        "post_C": [
+          0.265,
+          0.15500000000000003,
+          0.05
+        ],
+        "post_B": [
+          0.46499999999999997,
+          0.15500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.46499999999999997,
+          -0.145,
+          0.01
+        ],
+        "beam_CA": [
+          0.265,
+          -0.145,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          0.15500000000000003,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.07,
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "status": "candidates_found",
+      "wall_s": 0.21969209995586425,
+      "placement_checks": {
+        "calls": 1592,
+        "base_collision": 0,
+        "part_collision": 227
+      },
+      "best_cost_proxy_m": 2.179900893663743,
+      "best_order": [
+        "post_A",
+        "post_B",
+        "post_C",
+        "beam_BC",
+        "beam_CA",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_A": [
+          0.17500000000000002,
+          -0.034999999999999976,
+          0.05
+        ],
+        "post_B": [
+          0.45500000000000007,
+          -0.175,
+          0.05
+        ],
+        "post_C": [
+          0.385,
+          0.24500000000000005,
+          0.05
+        ],
+        "beam_BC": [
+          0.45500000000000007,
+          0.17500000000000004,
+          0.01
+        ],
+        "beam_CA": [
+          0.31500000000000006,
+          0.17500000000000004,
+          0.01
+        ],
+        "beam_AB": [
+          0.31500000000000006,
+          -0.175,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.07,
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "status": "candidates_found",
+      "wall_s": 0.35900009993929416,
+      "placement_checks": {
+        "calls": 3176,
+        "base_collision": 0,
+        "part_collision": 501
+      },
+      "best_cost_proxy_m": 2.162075110021723,
+      "best_order": [
+        "post_C",
+        "post_A",
+        "post_B",
+        "beam_AB",
+        "beam_CA",
+        "beam_BC"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.17500000000000002,
+          0.03500000000000003,
+          0.05
+        ],
+        "post_A": [
+          0.17500000000000002,
+          -0.034999999999999976,
+          0.05
+        ],
+        "post_B": [
+          0.31500000000000006,
+          -0.245,
+          0.05
+        ],
+        "beam_AB": [
+          0.45500000000000007,
+          -0.175,
+          0.01
+        ],
+        "beam_CA": [
+          0.31500000000000006,
+          -0.175,
+          0.01
+        ],
+        "beam_BC": [
+          0.385,
+          0.17500000000000004,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.07,
+      "beam_width": 16,
+      "domain_counts": {
+        "post_A": 40,
+        "post_B": 48,
+        "post_C": 40,
+        "beam_AB": 36,
+        "beam_BC": 40,
+        "beam_CA": 36
+      },
+      "status": "candidates_found",
+      "wall_s": 0.7209594999440014,
+      "placement_checks": {
+        "calls": 5728,
+        "base_collision": 0,
+        "part_collision": 857
+      },
+      "best_cost_proxy_m": 2.148197994973249,
+      "best_order": [
+        "post_B",
+        "post_C",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_B": [
+          0.17500000000000002,
+          0.03500000000000003,
+          0.05
+        ],
+        "post_C": [
+          0.45500000000000007,
+          0.17500000000000004,
+          0.05
+        ],
+        "beam_BC": [
+          0.31500000000000006,
+          0.17500000000000004,
+          0.01
+        ],
+        "post_A": [
+          0.17500000000000002,
+          -0.034999999999999976,
+          0.05
+        ],
+        "beam_AB": [
+          0.24500000000000002,
+          -0.175,
+          0.01
+        ],
+        "beam_CA": [
+          0.385,
+          -0.175,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.05,
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 64,
+        "post_B": 74,
+        "post_C": 64,
+        "beam_AB": 70,
+        "beam_BC": 70,
+        "beam_CA": 70
+      },
+      "status": "candidates_found",
+      "wall_s": 0.3849227000027895,
+      "placement_checks": {
+        "calls": 2942,
+        "base_collision": 0,
+        "part_collision": 281
+      },
+      "best_cost_proxy_m": 2.119479306422095,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "post_A",
+        "beam_CA",
+        "beam_BC",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.265,
+          0.15499999999999992,
+          0.05
+        ],
+        "post_B": [
+          0.41500000000000004,
+          -0.195,
+          0.05
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          0.15499999999999992,
+          0.01
+        ],
+        "beam_AB": [
+          0.365,
+          -0.14500000000000002,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.05,
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 64,
+        "post_B": 74,
+        "post_C": 64,
+        "beam_AB": 70,
+        "beam_BC": 70,
+        "beam_CA": 70
+      },
+      "status": "candidates_found",
+      "wall_s": 1.2073813000461087,
+      "placement_checks": {
+        "calls": 5624,
+        "base_collision": 0,
+        "part_collision": 560
+      },
+      "best_cost_proxy_m": 1.9505178041928883,
+      "best_order": [
+        "post_C",
+        "post_A",
+        "post_B",
+        "beam_AB",
+        "beam_CA",
+        "beam_BC"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.265,
+          0.15499999999999992,
+          0.05
+        ],
+        "post_A": [
+          0.165,
+          0.004999999999999949,
+          0.05
+        ],
+        "post_B": [
+          0.365,
+          -0.195,
+          0.05
+        ],
+        "beam_AB": [
+          0.46499999999999997,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.31500000000000006,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          0.15499999999999992,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    },
+    {
+      "grid_spacing_m": 0.05,
+      "beam_width": 16,
+      "domain_counts": {
+        "post_A": 64,
+        "post_B": 74,
+        "post_C": 64,
+        "beam_AB": 70,
+        "beam_BC": 70,
+        "beam_CA": 70
+      },
+      "status": "candidates_found",
+      "wall_s": 1.294614400016144,
+      "placement_checks": {
+        "calls": 9136,
+        "base_collision": 0,
+        "part_collision": 1139
+      },
+      "best_cost_proxy_m": 1.947432261990048,
+      "best_order": [
+        "post_A",
+        "post_C",
+        "beam_CA",
+        "post_B",
+        "beam_AB",
+        "beam_BC"
+      ],
+      "best_layout": {
+        "post_A": [
+          0.165,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_C": [
+          0.41500000000000004,
+          0.15499999999999992,
+          0.05
+        ],
+        "beam_CA": [
+          0.31500000000000006,
+          0.15499999999999992,
+          0.01
+        ],
+        "post_B": [
+          0.46499999999999997,
+          -0.195,
+          0.05
+        ],
+        "beam_AB": [
+          0.365,
+          -0.195,
+          0.01
+        ],
+        "beam_BC": [
+          0.365,
+          -0.14500000000000002,
+          0.01
+        ]
+      },
+      "coarse_geometry_certified": true
+    }
+  ],
+  "crowded_domain_propagation": [
+    {
+      "mode": "none",
+      "beam_width": 1,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 0.027539099915884435,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.0075286999344825745
+        },
+        {
+          "depth": 2,
+          "parents": 1,
+          "structure_attempts": 5,
+          "placement_attempts": 46,
+          "accepted": 40,
+          "rejected": {
+            "staging_part_collision": 6,
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.4566404640201909,
+          "elapsed_s": 0.012140100006945431
+        },
+        {
+          "depth": 3,
+          "parents": 1,
+          "structure_attempts": 4,
+          "placement_attempts": 45,
+          "accepted": 36,
+          "rejected": {
+            "staging_part_collision": 9,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.5768585251030107,
+          "elapsed_s": 0.01662070001475513
+        },
+        {
+          "depth": 4,
+          "parents": 1,
+          "structure_attempts": 3,
+          "placement_attempts": 23,
+          "accepted": 15,
+          "rejected": {
+            "staging_part_collision": 8,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.8732154547432807,
+          "elapsed_s": 0.01914639992173761
+        },
+        {
+          "depth": 5,
+          "parents": 1,
+          "structure_attempts": 2,
+          "placement_attempts": 49,
+          "accepted": 33,
+          "rejected": {
+            "staging_part_collision": 16
+          },
+          "retained": 1,
+          "best_score_m": 2.160978939019291,
+          "elapsed_s": 0.02499449998140335
+        },
+        {
+          "depth": 6,
+          "parents": 1,
+          "structure_attempts": 1,
+          "placement_attempts": 22,
+          "accepted": 12,
+          "rejected": {
+            "staging_part_collision": 10
+          },
+          "retained": 1,
+          "best_score_m": 2.833840976387269,
+          "elapsed_s": 0.027530499966815114
+        }
+      ],
+      "counters": {
+        "calls": 254,
+        "fixed_base": 0,
+        "selected_part": 0,
+        "base_collision": 0,
+        "part_collision": 49,
+        "domain_scans": 0,
+        "domain_candidates_examined": 0,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.833840976387269,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_CA",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "none",
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 0.09173260000534356,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 4,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.008220499963499606
+        },
+        {
+          "depth": 2,
+          "parents": 4,
+          "structure_attempts": 20,
+          "placement_attempts": 184,
+          "accepted": 160,
+          "rejected": {
+            "staging_part_collision": 24,
+            "remainder_unstable": 12
+          },
+          "retained": 4,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.026325699989683926
+        },
+        {
+          "depth": 3,
+          "parents": 4,
+          "structure_attempts": 16,
+          "placement_attempts": 185,
+          "accepted": 148,
+          "rejected": {
+            "staging_part_collision": 37,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 0.05099550005979836
+        },
+        {
+          "depth": 4,
+          "parents": 4,
+          "structure_attempts": 12,
+          "placement_attempts": 92,
+          "accepted": 60,
+          "rejected": {
+            "staging_part_collision": 32,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 0.059143500053323805
+        },
+        {
+          "depth": 5,
+          "parents": 4,
+          "structure_attempts": 8,
+          "placement_attempts": 196,
+          "accepted": 128,
+          "rejected": {
+            "staging_part_collision": 68
+          },
+          "retained": 4,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 0.08075870003085583
+        },
+        {
+          "depth": 6,
+          "parents": 4,
+          "structure_attempts": 4,
+          "placement_attempts": 88,
+          "accepted": 44,
+          "rejected": {
+            "staging_part_collision": 44
+          },
+          "retained": 4,
+          "best_score_m": 2.829242095803438,
+          "elapsed_s": 0.09172160003799945
+        }
+      ],
+      "counters": {
+        "calls": 814,
+        "fixed_base": 0,
+        "selected_part": 0,
+        "base_collision": 0,
+        "part_collision": 205,
+        "domain_scans": 0,
+        "domain_candidates_examined": 0,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.829242095803438,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "none",
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 0.19254119996912777,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 8,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.006722699967212975
+        },
+        {
+          "depth": 2,
+          "parents": 8,
+          "structure_attempts": 40,
+          "placement_attempts": 368,
+          "accepted": 320,
+          "rejected": {
+            "staging_part_collision": 48,
+            "remainder_unstable": 24
+          },
+          "retained": 8,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.04915039998013526
+        },
+        {
+          "depth": 3,
+          "parents": 8,
+          "structure_attempts": 32,
+          "placement_attempts": 375,
+          "accepted": 302,
+          "rejected": {
+            "staging_part_collision": 73,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 0.097026800038293
+        },
+        {
+          "depth": 4,
+          "parents": 8,
+          "structure_attempts": 24,
+          "placement_attempts": 184,
+          "accepted": 116,
+          "rejected": {
+            "staging_part_collision": 68,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 0.12204719998408109
+        },
+        {
+          "depth": 5,
+          "parents": 8,
+          "structure_attempts": 16,
+          "placement_attempts": 392,
+          "accepted": 256,
+          "rejected": {
+            "staging_part_collision": 136
+          },
+          "retained": 8,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 0.16957210004329681
+        },
+        {
+          "depth": 6,
+          "parents": 8,
+          "structure_attempts": 8,
+          "placement_attempts": 176,
+          "accepted": 84,
+          "rejected": {
+            "staging_part_collision": 92
+          },
+          "retained": 8,
+          "best_score_m": 2.8209186725853455,
+          "elapsed_s": 0.1925271999789402
+        }
+      ],
+      "counters": {
+        "calls": 1564,
+        "fixed_base": 0,
+        "selected_part": 0,
+        "base_collision": 0,
+        "part_collision": 417,
+        "domain_scans": 0,
+        "domain_candidates_examined": 0,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.8209186725853455,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.195,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.245,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "forward_check",
+      "beam_width": 1,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 0.4063803000608459,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.1278674000641331
+        },
+        {
+          "depth": 2,
+          "parents": 1,
+          "structure_attempts": 5,
+          "placement_attempts": 46,
+          "accepted": 40,
+          "rejected": {
+            "staging_part_collision": 6,
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.4566404640201909,
+          "elapsed_s": 0.2329409000230953
+        },
+        {
+          "depth": 3,
+          "parents": 1,
+          "structure_attempts": 4,
+          "placement_attempts": 45,
+          "accepted": 36,
+          "rejected": {
+            "staging_part_collision": 9,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.5768585251030107,
+          "elapsed_s": 0.3214029000373557
+        },
+        {
+          "depth": 4,
+          "parents": 1,
+          "structure_attempts": 3,
+          "placement_attempts": 23,
+          "accepted": 15,
+          "rejected": {
+            "staging_part_collision": 8,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.8732154547432807,
+          "elapsed_s": 0.3588379001012072
+        },
+        {
+          "depth": 5,
+          "parents": 1,
+          "structure_attempts": 2,
+          "placement_attempts": 49,
+          "accepted": 33,
+          "rejected": {
+            "staging_part_collision": 16
+          },
+          "retained": 1,
+          "best_score_m": 2.160978939019291,
+          "elapsed_s": 0.40215980005450547
+        },
+        {
+          "depth": 6,
+          "parents": 1,
+          "structure_attempts": 1,
+          "placement_attempts": 22,
+          "accepted": 12,
+          "rejected": {
+            "staging_part_collision": 10
+          },
+          "retained": 1,
+          "best_score_m": 2.833840976387269,
+          "elapsed_s": 0.4063719999976456
+        }
+      ],
+      "counters": {
+        "calls": 254,
+        "fixed_base": 0,
+        "selected_part": 49,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 193,
+        "domain_candidates_examined": 15939,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.833840976387269,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_CA",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "forward_check",
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 1.2950624000513926,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 4,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.13450340006966144
+        },
+        {
+          "depth": 2,
+          "parents": 4,
+          "structure_attempts": 20,
+          "placement_attempts": 184,
+          "accepted": 160,
+          "rejected": {
+            "staging_part_collision": 24,
+            "remainder_unstable": 12
+          },
+          "retained": 4,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.5714311000192538
+        },
+        {
+          "depth": 3,
+          "parents": 4,
+          "structure_attempts": 16,
+          "placement_attempts": 185,
+          "accepted": 148,
+          "rejected": {
+            "staging_part_collision": 37,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 0.9572033999720588
+        },
+        {
+          "depth": 4,
+          "parents": 4,
+          "structure_attempts": 12,
+          "placement_attempts": 92,
+          "accepted": 60,
+          "rejected": {
+            "staging_part_collision": 32,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 1.0962007000343874
+        },
+        {
+          "depth": 5,
+          "parents": 4,
+          "structure_attempts": 8,
+          "placement_attempts": 196,
+          "accepted": 128,
+          "rejected": {
+            "staging_part_collision": 68
+          },
+          "retained": 4,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 1.2791655000764877
+        },
+        {
+          "depth": 6,
+          "parents": 4,
+          "structure_attempts": 4,
+          "placement_attempts": 88,
+          "accepted": 44,
+          "rejected": {
+            "staging_part_collision": 44
+          },
+          "retained": 4,
+          "best_score_m": 2.829242095803438,
+          "elapsed_s": 1.2950521999737248
+        }
+      ],
+      "counters": {
+        "calls": 814,
+        "fixed_base": 0,
+        "selected_part": 205,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 565,
+        "domain_candidates_examined": 39607,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.829242095803438,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "forward_check",
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 2.4150551999919116,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 8,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.13326879998203367
+        },
+        {
+          "depth": 2,
+          "parents": 8,
+          "structure_attempts": 40,
+          "placement_attempts": 368,
+          "accepted": 320,
+          "rejected": {
+            "staging_part_collision": 48,
+            "remainder_unstable": 24
+          },
+          "retained": 8,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.9753095000050962
+        },
+        {
+          "depth": 3,
+          "parents": 8,
+          "structure_attempts": 32,
+          "placement_attempts": 375,
+          "accepted": 302,
+          "rejected": {
+            "staging_part_collision": 73,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 1.7675846000202
+        },
+        {
+          "depth": 4,
+          "parents": 8,
+          "structure_attempts": 24,
+          "placement_attempts": 184,
+          "accepted": 116,
+          "rejected": {
+            "staging_part_collision": 68,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 2.047814599936828
+        },
+        {
+          "depth": 5,
+          "parents": 8,
+          "structure_attempts": 16,
+          "placement_attempts": 392,
+          "accepted": 256,
+          "rejected": {
+            "staging_part_collision": 136
+          },
+          "retained": 8,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 2.3847711000125855
+        },
+        {
+          "depth": 6,
+          "parents": 8,
+          "structure_attempts": 8,
+          "placement_attempts": 176,
+          "accepted": 84,
+          "rejected": {
+            "staging_part_collision": 92
+          },
+          "retained": 8,
+          "best_score_m": 2.8209186725853455,
+          "elapsed_s": 2.4150415000040084
+        }
+      ],
+      "counters": {
+        "calls": 1564,
+        "fixed_base": 0,
+        "selected_part": 417,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 1063,
+        "domain_candidates_examined": 71257,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.8209186725853455,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.195,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.245,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "hall",
+      "beam_width": 1,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 0.39927019993774593,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.12458099995274097
+        },
+        {
+          "depth": 2,
+          "parents": 1,
+          "structure_attempts": 5,
+          "placement_attempts": 46,
+          "accepted": 40,
+          "rejected": {
+            "staging_part_collision": 6,
+            "remainder_unstable": 3
+          },
+          "retained": 1,
+          "best_score_m": 1.4566404640201909,
+          "elapsed_s": 0.22415009990800172
+        },
+        {
+          "depth": 3,
+          "parents": 1,
+          "structure_attempts": 4,
+          "placement_attempts": 45,
+          "accepted": 36,
+          "rejected": {
+            "staging_part_collision": 9,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.5768585251030107,
+          "elapsed_s": 0.3186234999448061
+        },
+        {
+          "depth": 4,
+          "parents": 1,
+          "structure_attempts": 3,
+          "placement_attempts": 23,
+          "accepted": 15,
+          "rejected": {
+            "staging_part_collision": 8,
+            "remainder_unstable": 2
+          },
+          "retained": 1,
+          "best_score_m": 1.8732154547432807,
+          "elapsed_s": 0.35499109991360456
+        },
+        {
+          "depth": 5,
+          "parents": 1,
+          "structure_attempts": 2,
+          "placement_attempts": 49,
+          "accepted": 33,
+          "rejected": {
+            "staging_part_collision": 16
+          },
+          "retained": 1,
+          "best_score_m": 2.160978939019291,
+          "elapsed_s": 0.3968541999347508
+        },
+        {
+          "depth": 6,
+          "parents": 1,
+          "structure_attempts": 1,
+          "placement_attempts": 22,
+          "accepted": 12,
+          "rejected": {
+            "staging_part_collision": 10
+          },
+          "retained": 1,
+          "best_score_m": 2.833840976387269,
+          "elapsed_s": 0.39926089998334646
+        }
+      ],
+      "counters": {
+        "calls": 254,
+        "fixed_base": 0,
+        "selected_part": 49,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 193,
+        "domain_candidates_examined": 15939,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.833840976387269,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_CA",
+        "beam_AB"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "hall",
+      "beam_width": 4,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 1.2680800000671297,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 4,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.11346030002459884
+        },
+        {
+          "depth": 2,
+          "parents": 4,
+          "structure_attempts": 20,
+          "placement_attempts": 184,
+          "accepted": 160,
+          "rejected": {
+            "staging_part_collision": 24,
+            "remainder_unstable": 12
+          },
+          "retained": 4,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.5367231001146138
+        },
+        {
+          "depth": 3,
+          "parents": 4,
+          "structure_attempts": 16,
+          "placement_attempts": 185,
+          "accepted": 148,
+          "rejected": {
+            "staging_part_collision": 37,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 0.9222421000013128
+        },
+        {
+          "depth": 4,
+          "parents": 4,
+          "structure_attempts": 12,
+          "placement_attempts": 92,
+          "accepted": 60,
+          "rejected": {
+            "staging_part_collision": 32,
+            "remainder_unstable": 8
+          },
+          "retained": 4,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 1.0718350000679493
+        },
+        {
+          "depth": 5,
+          "parents": 4,
+          "structure_attempts": 8,
+          "placement_attempts": 196,
+          "accepted": 128,
+          "rejected": {
+            "staging_part_collision": 68
+          },
+          "retained": 4,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 1.2538064001128078
+        },
+        {
+          "depth": 6,
+          "parents": 4,
+          "structure_attempts": 4,
+          "placement_attempts": 88,
+          "accepted": 44,
+          "rejected": {
+            "staging_part_collision": 44
+          },
+          "retained": 4,
+          "best_score_m": 2.829242095803438,
+          "elapsed_s": 1.268069100100547
+        }
+      ],
+      "counters": {
+        "calls": 814,
+        "fixed_base": 0,
+        "selected_part": 205,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 565,
+        "domain_candidates_examined": 39607,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.829242095803438,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.245,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.195,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    },
+    {
+      "mode": "hall",
+      "beam_width": 8,
+      "domain_counts": {
+        "post_A": 22,
+        "post_B": 27,
+        "post_C": 22,
+        "beam_AB": 23,
+        "beam_BC": 23,
+        "beam_CA": 23
+      },
+      "status": "candidates_found",
+      "wall_s": 2.43491680000443,
+      "layers": [
+        {
+          "depth": 1,
+          "parents": 1,
+          "structure_attempts": 6,
+          "placement_attempts": 69,
+          "accepted": 69,
+          "rejected": {
+            "remainder_unstable": 3
+          },
+          "retained": 8,
+          "best_score_m": 1.2427076474632162,
+          "elapsed_s": 0.13560859998688102
+        },
+        {
+          "depth": 2,
+          "parents": 8,
+          "structure_attempts": 40,
+          "placement_attempts": 368,
+          "accepted": 320,
+          "rejected": {
+            "staging_part_collision": 48,
+            "remainder_unstable": 24
+          },
+          "retained": 8,
+          "best_score_m": 1.4560553683322244,
+          "elapsed_s": 0.9658542999532074
+        },
+        {
+          "depth": 3,
+          "parents": 8,
+          "structure_attempts": 32,
+          "placement_attempts": 375,
+          "accepted": 302,
+          "rejected": {
+            "staging_part_collision": 73,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.5722596445191792,
+          "elapsed_s": 1.7684634999604896
+        },
+        {
+          "depth": 4,
+          "parents": 8,
+          "structure_attempts": 24,
+          "placement_attempts": 184,
+          "accepted": 116,
+          "rejected": {
+            "staging_part_collision": 68,
+            "remainder_unstable": 16
+          },
+          "retained": 8,
+          "best_score_m": 1.8686165741594494,
+          "elapsed_s": 2.04257059993688
+        },
+        {
+          "depth": 5,
+          "parents": 8,
+          "structure_attempts": 16,
+          "placement_attempts": 392,
+          "accepted": 256,
+          "rejected": {
+            "staging_part_collision": 136
+          },
+          "retained": 8,
+          "best_score_m": 2.1563800584354595,
+          "elapsed_s": 2.404973499942571
+        },
+        {
+          "depth": 6,
+          "parents": 8,
+          "structure_attempts": 8,
+          "placement_attempts": 176,
+          "accepted": 84,
+          "rejected": {
+            "staging_part_collision": 92
+          },
+          "retained": 8,
+          "best_score_m": 2.8209186725853455,
+          "elapsed_s": 2.4349024000111967
+        }
+      ],
+      "counters": {
+        "calls": 1564,
+        "fixed_base": 0,
+        "selected_part": 417,
+        "base_collision": 0,
+        "part_collision": 0,
+        "domain_scans": 1063,
+        "domain_candidates_examined": 71257,
+        "domain_wipeout": 0,
+        "hall_wipeout": 0
+      },
+      "best_cost_proxy_m": 2.8209186725853455,
+      "best_order": [
+        "post_C",
+        "post_B",
+        "beam_BC",
+        "post_A",
+        "beam_AB",
+        "beam_CA"
+      ],
+      "best_layout": {
+        "post_C": [
+          0.065,
+          -0.04500000000000004,
+          0.05
+        ],
+        "post_B": [
+          0.215,
+          -0.195,
+          0.05
+        ],
+        "beam_BC": [
+          0.215,
+          -0.245,
+          0.01
+        ],
+        "post_A": [
+          0.165,
+          -0.09500000000000003,
+          0.05
+        ],
+        "beam_AB": [
+          0.215,
+          -0.14500000000000002,
+          0.01
+        ],
+        "beam_CA": [
+          0.165,
+          -0.04500000000000004,
+          0.01
+        ]
+      }
+    }
+  ]
+}

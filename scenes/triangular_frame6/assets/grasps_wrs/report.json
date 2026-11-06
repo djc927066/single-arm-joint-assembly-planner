@@ -1,0 +1,54 @@
+{
+  "params": {
+    "model": "triangular_frame6",
+    "only": null,
+    "max_samples": 100,
+    "rotation_deg": 15.0,
+    "normal_angle_deg": 175.0,
+    "seed": 0
+  },
+  "parts": {
+    "beam_AB": {
+      "grasps": 1630,
+      "top_down": 306,
+      "width_min": 0.03999999977648259,
+      "width_max": 0.0419999999403954,
+      "seconds": 0.3
+    },
+    "beam_BC": {
+      "grasps": 1560,
+      "top_down": 360,
+      "width_min": 0.03999999791383743,
+      "width_max": 0.0399999979138375,
+      "seconds": 0.3
+    },
+    "beam_CA": {
+      "grasps": 1756,
+      "top_down": 360,
+      "width_min": 0.03799999961256981,
+      "width_max": 0.03999999977648262,
+      "seconds": 0.3
+    },
+    "post_A": {
+      "grasps": 1928,
+      "top_down": 710,
+      "width_min": 0.07400000256299973,
+      "width_max": 0.0800000049173832,
+      "seconds": 0.4
+    },
+    "post_B": {
+      "grasps": 2188,
+      "top_down": 798,
+      "width_min": 0.07799999357759953,
+      "width_max": 0.08199999390542509,
+      "seconds": 0.4
+    },
+    "post_C": {
+      "grasps": 2510,
+      "top_down": 924,
+      "width_min": 0.07599999713897705,
+      "width_max": 0.0819999976307154,
+      "seconds": 0.5
+    }
+  }
+}

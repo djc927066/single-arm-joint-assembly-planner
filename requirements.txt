@@ -1,0 +1,10 @@
+# Versions of the tested environment. PyTorch and cuRobo are installed separately (see README).
+numpy==1.26.4
+scipy==1.17.1
+trimesh==5.0.0
+shapely==1.8.5.post1
+networkx==3.6.1
+matplotlib==3.7.5
+open3d==0.19.0
+panda3d==1.10.16
+pytest==9.1.1

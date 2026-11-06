@@ -1,0 +1,62 @@
+# ==============================================================
+# SEALP Sample Configuration
+# ==============================================================
+# This is a sample config that demonstrates all supported fields.
+# Paths are relative to this file's directory.
+
+project_name: "SampleAssembly"
+
+# ------------------------------------------------------------------
+# Robot configuration
+# ------------------------------------------------------------------
+# Supported types: piper, cobotta, nova2_wg, xarmlite6_wg, panthera_ht
+# Custom types can be registered via ROBOT_REGISTRY at runtime.
+robot:
+  type: "panthera_ht"
+  # mode: dual | single
+  mode: "single"
+  pos: [0.0, 0.0, 0.0]
+  rotmat: [[1,0,0],[0,1,0],[0,0,1]]
+  enable_cc: true
+  name: "panthera_ht_arm"
+  dual_arm_y_offset: 0.62
+
+# ------------------------------------------------------------------
+# Assembly sequence
+# ------------------------------------------------------------------
+# Path to the assembly sequence YAML file (relative to this config).
+# Leave empty or omit to skip sequence loading.
+assembly_sequence:
+  file: ""
+  validate_on_load: true
+
+# ------------------------------------------------------------------
+# Static environment obstacles
+# ------------------------------------------------------------------
+# Each obstacle has: name, type ("box" or "stl"), and geometry.
+environment:
+  obstacles:
+    - name: "work_table"
+      type: "box"
+      # 原桌面 0.6 x 1.2 m 的一半；单臂场景放在基座前方 +x/-y 象限
+      extent: [0.6, 0.6, 0.02]
+      pos: [0.2335, 0, -0.01]
+      rgba: [0.55, 0.45, 0.35, 0.8]
+
+#    - name: "back_wall"
+#      type: "box"
+#      extent: [0.02, 1.2, 0.5]
+#      pos: [-0.35, -0.35, 0.25]
+#      rgba: [0.75, 0.75, 0.78, 0.4]
+
+#    - name: "left_wall"
+#      type: "box"
+#      extent: [0.8, 0.02, 0.5 ]
+#      pos: [ 0.34, 0.6, 0.25 ]
+#      rgba: [ 0.75, 0.75, 0.78, 0.4 ]
+#
+#    - name: "right_wall"
+#      type: "box"
+#      extent: [ 0.8, 0.02, 0.5 ]
+#      pos: [ 0.34, -0.6, 0.25 ]
+#      rgba: [ 0.75, 0.75, 0.78, 0.4 ]

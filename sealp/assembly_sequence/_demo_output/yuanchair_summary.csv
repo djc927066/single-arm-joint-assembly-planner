@@ -1,0 +1,6 @@
+step_id,part_id,part_name,parent_part_id,primitive_type,dependencies,assembly_pos,model_path,notes
+0,seat,Seat,fixture,single_arm_transport,,"[0.3000, 0.0000, 0.0000]",D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part1.stl,Place the seat at the assembly station.
+1,leg_fl,Front-Left Leg,seat,single_arm_transport,0,"[0.1900, 0.1100, 0.0200]",D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl,Insert Front-Left Leg into the seat.
+2,leg_fr,Front-Right Leg,seat,single_arm_transport,0,"[0.1900, -0.1100, 0.0200]",D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl,Insert Front-Right Leg into the seat.
+3,leg_bl,Back-Left Leg,seat,single_arm_transport,0,"[0.4100, -0.1100, 0.0200]",D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl,Insert Back-Left Leg into the seat.
+4,leg_br,Back-Right Leg,seat,single_arm_transport,0,"[0.4100, 0.1100, 0.0200]",D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl,Insert Back-Right Leg into the seat.

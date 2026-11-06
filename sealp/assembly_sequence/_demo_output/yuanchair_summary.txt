@@ -1,0 +1,14 @@
+Assembly: YuanChair
+Description: Round chair assembly: 1 seat + 4 identical legs. Legs share the same 3D model (yuanchair-part2.stl).
+Parts (5):
+  • seat: Seat  [D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part1.stl]
+  • leg_fl: Front-Left Leg  [D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl]
+  • leg_fr: Front-Right Leg  [D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl]
+  • leg_bl: Back-Left Leg  [D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl]
+  • leg_br: Back-Right Leg  [D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl]
+Steps (5):
+  0. Assemble 'seat' onto 'fixture'  (deps: none, type: single_arm_transport)
+  1. Assemble 'leg_fl' onto 'seat'  (deps: 0, type: single_arm_transport)
+  2. Assemble 'leg_fr' onto 'seat'  (deps: 0, type: single_arm_transport)
+  3. Assemble 'leg_bl' onto 'seat'  (deps: 0, type: single_arm_transport)
+  4. Assemble 'leg_br' onto 'seat'  (deps: 0, type: single_arm_transport)

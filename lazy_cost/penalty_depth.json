@@ -1,0 +1,6 @@
+{
+  "form": "additive",
+  "c": 4.7,
+  "feature": "depth",
+  "note": "estimate = lower bound + c * max penetration depth (m) of the blocked joint line; c from eval_slack (4.60 / 4.79 s/m fitted on rack10 / triangular_frame6, parts only, de-taxed reference)"
+}

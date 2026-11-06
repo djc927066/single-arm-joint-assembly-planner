@@ -1,0 +1,255 @@
+<title>惰性排序回放</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* layout: top-down table map on the left, the step's time budget and candidate costs on the right, full table below */
+:root {
+  --bg: #f3f5f6; --surface: #ffffff; --ink: #18212b; --muted: #5a6573; --line: #d4dbe1; --faint: #e8ecef;
+  --settled: #0e7c86; --topk: #08525a; --bound: #8b97a4; --pruned: #c4521b; --ref: #a3245a;
+  --installed: #3a4552; --placed: #a9b3bd; --box: #a27a52; --table: #ece6da; --site: #cbd2d9;
+  --font-sans: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161c; --surface: #19212a; --ink: #e4e9ee; --muted: #9aa6b3; --line: #2e3a46; --faint: #222c36;
+  --settled: #3fb7c1; --topk: #7fdbe2; --bound: #6f7c89; --pruned: #f07a43; --ref: #f06b9f;
+  --installed: #c3ccd5; --placed: #56626e; --box: #b98d62; --table: #2a2722; --site: #3b4652; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #19212a; --ink: #e4e9ee; --muted: #9aa6b3; --line: #2e3a46; --faint: #222c36;
+  --settled: #3fb7c1; --topk: #7fdbe2; --bound: #6f7c89; --pruned: #f07a43; --ref: #f06b9f;
+  --installed: #c3ccd5; --placed: #56626e; --box: #b98d62; --table: #2a2722; --site: #3b4652; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 14px; line-height: 1.55; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; padding-block: 24px 48px; display: grid; gap: 20px; }
+h1 { font-size: 1.6rem; font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: .01em; }
+h2 { font-size: 1rem; font-weight: 600; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 4px 0 0; max-width: 72ch; }
+.note { color: var(--muted); font-size: .86rem; margin: 0; max-width: 70ch; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button { font: inherit; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { border-color: var(--settled); box-shadow: inset 0 0 0 1px var(--settled); }
+.tabs button:focus-visible, td:focus-visible { outline: 2px solid var(--settled); outline-offset: 2px; }
+.funnel { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.funnel > div { flex: 1 1 140px; padding: 12px 16px; border-right: 1px solid var(--faint); min-width: 0; }
+.funnel > div:last-child { border-right: 0; }
+.funnel .n { font-family: var(--font-mono); font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.funnel .l { color: var(--muted); font-size: .82rem; }
+.grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px; }
+@media (max-width: 900px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px; min-width: 0; display: grid; gap: 10px; align-content: start; }
+svg { display: block; width: 100%; height: auto; }
+svg text { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--faint); white-space: nowrap; }
+th { color: var(--muted); font-weight: 500; font-size: .78rem; letter-spacing: .03em; }
+td.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+tr.hl td { background: var(--faint); }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: .76rem; border: 1px solid currentColor; }
+.p-top { color: var(--topk); } .p-settled { color: var(--settled); } .p-bound { color: var(--bound); } .p-pruned { color: var(--pruned); }
+#tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: .8rem; box-shadow: 0 4px 16px rgb(0 0 0 / .15); max-width: 300px; z-index: 5; }
+#tip b { font-weight: 600; }
+.mono { font-family: var(--font-mono); }
+@media (prefers-reduced-motion: no-preference) { .cand { transition: opacity .15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>惰性排序回放</h1>
+    <p class="sub">rack10 双层置物架，密集杂乱场景。正在给最后一根立柱选初始摆放位置：一步内对所有候选一起算 cost，选出前 K = 3 名。灰色的"只算下界"表示已经证明它进不了前 3，不用再花时间。</p>
+  </header>
+  <div class="tabs" id="tabs" role="group" aria-label="选择场景"></div>
+  <div class="funnel" id="funnel"></div>
+  <div class="grid">
+    <section class="panel">
+      <h2>桌面俯视图</h2>
+      <p class="note" id="mapnote"></p>
+      <svg id="map" role="img" aria-label="桌面俯视图：候选位置与障碍物"></svg>
+      <div class="legend" id="maplegend"></div>
+    </section>
+    <div style="display:grid; gap:20px; min-width:0; align-content:start;">
+      <section class="panel">
+        <h2>这一步的时间花在哪</h2>
+        <p class="note">上面一行是惰性排序，每个色块是一次计算；下面一行是把所有候选都用 cuRobo 规划一遍的时间。</p>
+        <svg id="timeline" role="img" aria-label="时间分配"></svg>
+        <div class="legend" id="tllegend"></div>
+      </section>
+      <section class="panel">
+        <h2>每个候选的 cost（秒）</h2>
+        <p class="note">空心圆是下界（关节最少要转多久）；实心点是惰性排序的结果；竖线是 cuRobo 全部规划的参照。虚线 τ 是第 3 名的值，下界在 τ 右边的候选不用精算。</p>
+        <svg id="bars" role="img" aria-label="候选 cost 对比"></svg>
+        <div class="legend" id="barlegend"></div>
+      </section>
+    </div>
+  </div>
+  <section class="panel">
+    <h2>全部候选</h2>
+    <div class="tablewrap"><table id="tbl"></table></div>
+  </section>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const DATA = __DATA__;
+const NS = "http://www.w3.org/2000/svg";
+const PRUNE = { prepick_collides: "准备抓取姿态撞障碍", pick_collides: "抓取姿态撞障碍", lift_collides: "抬起姿态撞障碍",
+  preins_collides: "插入前姿态撞已装零件", no_ik: "无 IK 解", no_grasp: "无可用抓法", unstable_or_blocked_insertion: "不稳定或插入受阻" };
+const KIND = { installed: "已装零件", placed: "待装零件", box: "箱子 / 墙", site: "装配底座" };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const f2 = v => v == null ? "—" : v.toFixed(2);
+const tip = document.getElementById("tip");
+function showTip(ev, html) { tip.innerHTML = html; tip.hidden = false; const x = Math.min(ev.clientX + 14, innerWidth - 310); tip.style.left = x + "px"; tip.style.top = (ev.clientY + 14) + "px"; }
+function hideTip() { tip.hidden = true; }
+
+function prep(s) {
+  const K = s.K;
+  s.candidates.forEach((c, i) => {
+    c.id = c.lazy_rank != null ? "#" + c.lazy_rank : "×" + (i + 1 - s.candidates.filter(d => d.lazy_rank != null).length);
+    const [x, y] = c.xy; c.label = `x ${Math.round(x * 1000)}  y ${Math.round(y * 1000)} mm  ${c.yaw}°`;
+    if (c.status.startsWith("pruned")) { c.kind = "pruned"; c.why = PRUNE[c.status.split(":")[1]] || c.status; return; }
+    if (c.status === "bound") { c.kind = "bound"; c.why = "下界已 ≥ τ，证明进不了前 " + K; return; }
+    c.kind = c.lazy_rank <= K ? "top" : "settled";
+    let how = "直线可走，下界就是准确值";
+    for (const g in c.segments) { const sg = c.segments[g]; const sum = (sg.transit[0] ?? 1e9) + (sg.transfer[0] ?? 1e9);
+      if (Math.abs(sum - c.cost) < 1e-6) { if (sg.transit[1] === "planned" || sg.transfer[1] === "planned") how = "直线被挡，cuRobo 精算"; } }
+    c.why = how;
+  });
+  const settled = s.candidates.filter(c => c.kind === "top" || c.kind === "settled").map(c => c.cost).sort((a, b) => a - b);
+  s.tau = settled.length >= K ? settled[K - 1] : null;
+}
+DATA.scenes.forEach(prep);
+
+function color(kind) { return { top: css("--topk"), settled: css("--settled"), bound: css("--bound"), pruned: css("--pruned") }[kind]; }
+
+function renderFunnel(s) {
+  const n = s.candidates.length, pr = s.candidates.filter(c => c.kind === "pruned").length;
+  const bound = s.candidates.filter(c => c.kind === "bound").length;
+  const planned = s.trace.filter(e => e.stage === "refine").length;
+  const sp = (s.reference_ms / s.lazy_ms).toFixed(1);
+  const items = [
+    [n, "个候选位置"], [pr, "个被硬剔除（姿态碰撞）"], [n - pr - bound, "个得到确定 cost"], [bound, "个只算下界就排除"],
+    [planned, `次 cuRobo 精算（共 ${s.stats.refined_segments} 段运动）`], [(s.lazy_ms / 1000).toFixed(2) + " s", `惰性排序用时（全部规划 ${(s.reference_ms / 1000).toFixed(1)} s，快 ${sp} 倍）`]];
+  document.getElementById("funnel").innerHTML = items.map(([v, l]) => `<div><div class="n">${v}</div><div class="l">${l}</div></div>`).join("");
+}
+
+function renderMap(s) {
+  const svg = document.getElementById("map"); svg.innerHTML = "";
+  // top view: world x points up the screen, world y points left (mm)
+  const P = ([x, y]) => [-y * 1000, -x * 1000];
+  svg.setAttribute("viewBox", "-330 -575 660 680");
+  const t = s.table, x0 = t.center[0] - t.size[0] / 2, x1 = t.center[0] + t.size[0] / 2, y0 = t.center[1] - t.size[1] / 2, y1 = t.center[1] + t.size[1] / 2;
+  const [ax, ay] = P([x1, y1]); el("rect", { x: ax, y: ay, width: (y1 - y0) * 1000, height: (x1 - x0) * 1000, fill: css("--table"), stroke: css("--line") }, svg);
+  for (let gx = -300; gx <= 300; gx += 100) el("line", { x1: gx, x2: gx, y1: -x1 * 1000, y2: -x0 * 1000, stroke: css("--line"), "stroke-width": .5, "stroke-dasharray": "2 4" }, svg);
+  el("circle", { cx: 0, cy: 0, r: 55, fill: css("--site"), stroke: css("--muted"), "stroke-width": 1 }, svg);
+  el("text", { x: 0, y: 4, "text-anchor": "middle" }, svg).textContent = "机械臂";
+  const poly = pts => pts.map(p => P(p).join(",")).join(" ");
+  const order = { site: 0, box: 1, placed: 2, installed: 3 };
+  [...s.obstacles].sort((a, b) => order[a.kind] - order[b.kind]).forEach(o => {
+    const fill = { installed: css("--installed"), placed: css("--placed"), box: css("--box"), site: css("--site") }[o.kind];
+    const e = el("polygon", { points: poly(o.poly), fill, stroke: css("--surface"), "stroke-width": 1, opacity: o.kind === "site" ? 1 : .92 }, svg);
+    e.addEventListener("mousemove", ev => showTip(ev, `<b>${KIND[o.kind]}</b> ${o.kind === "box" ? "" : o.name}<br>高 ${Math.round(o.h * 1000)} mm`));
+    e.addEventListener("mouseleave", hideTip);
+  });
+  s.candidates.forEach(c => {
+    const col = color(c.kind);
+    const g = el("g", { class: "cand", tabindex: 0 }, svg);
+    el("polygon", { points: poly(c.poly), fill: c.kind === "pruned" ? "none" : col, "fill-opacity": c.kind === "top" ? .9 : c.kind === "settled" ? .45 : .18,
+      stroke: col, "stroke-width": c.kind === "top" ? 2 : 1.2, "stroke-dasharray": c.kind === "bound" ? "4 3" : c.kind === "pruned" ? "2 2" : "" }, g);
+    const [cx, cy] = P(c.xy);
+    if (c.kind === "top") { el("circle", { cx, cy: cy - 26, r: 11, fill: col }, g); const tx = el("text", { x: cx, y: cy - 22, "text-anchor": "middle" }, g); tx.textContent = c.lazy_rank; tx.style.fill = css("--surface"); tx.style.fontWeight = 600; }
+    if (c.kind === "pruned") { el("path", { d: `M${cx - 6} ${cy - 6}L${cx + 6} ${cy + 6}M${cx + 6} ${cy - 6}L${cx - 6} ${cy + 6}`, stroke: col, "stroke-width": 1.6 }, g); }
+    const html = `<b>${c.id}</b> <span class="mono">${c.label}</span><br>${c.why}` + (c.kind === "pruned" ? "" :
+      `<br>下界 <span class="mono">${f2(c.lb)} s</span>${c.kind === "bound" ? "" : `，惰性结果 <span class="mono">${f2(c.cost)} s</span>`}<br>cuRobo 参照 <span class="mono">${f2(c.truth)} s</span>（第 ${c.truth_rank} 名）`);
+    g.addEventListener("mousemove", ev => showTip(ev, html)); g.addEventListener("mouseleave", hideTip);
+  });
+  [[-300, "y +300"], [300, "y −300"]].forEach(([x, l]) => { el("text", { x, y: 92, "text-anchor": x < 0 ? "start" : "end" }, svg).textContent = l; });
+  el("text", { x: 0, y: 92, "text-anchor": "middle" }, svg).textContent = "俯视，机械臂在下方，单位 mm";
+  const pr = s.candidates.filter(c => c.kind === "pruned").length;
+  document.getElementById("mapnote").textContent = `零件 ${s.part}（装配顺序第 ${s.k + 1}/${s.n_parts} 步，之后只剩顶层隔板）。${s.installed.length} 个零件已装好，${s.obstacles.filter(o => o.kind === "box").length} 个箱子 / 墙。${pr} 个候选被剔除。鼠标移到色块上看详情。`;
+  document.getElementById("maplegend").innerHTML = [
+    ["--topk", "前 3 名（数字是名次）", 1], ["--settled", "确定了 cost，排第 4 名以后", .45], ["--bound", "只算下界（证明进不了前 3）", .18],
+    ["--pruned", "剔除：姿态碰撞", 0], ["--installed", "已装零件", 1], ["--placed", "其余待装零件", 1], ["--box", "箱子 / 墙", 1]]
+    .map(([v, l, o]) => `<span><i class="sw" style="background:${o ? `color-mix(in srgb, var(${v}) ${o * 100}%, transparent)` : "transparent"};border:1.5px ${o ? "solid" : "dashed"} var(${v})"></i>${l}</span>`).join("");
+}
+
+function renderTimeline(s) {
+  const svg = document.getElementById("timeline"); svg.innerHTML = "";
+  const W = 720, L = 92, R = 16, H = 128, maxT = Math.max(s.reference_ms, s.lazy_ms);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const X = t => L + (t / maxT) * (W - L - R);
+  const rank = Object.fromEntries(s.candidates.map(c => [c.key, c]));
+  for (let t = 0; t <= maxT; t += 1000) { el("line", { x1: X(t), x2: X(t), y1: 10, y2: 96, stroke: css("--faint") }, svg); el("text", { x: X(t), y: 112, "text-anchor": "middle" }, svg).textContent = (t / 1000) + " s"; }
+  el("text", { x: 0, y: 36 }, svg).textContent = "惰性排序"; el("text", { x: 0, y: 78 }, svg).textContent = "全部规划";
+  let prev = 0;
+  const cheap = s.trace.filter(e => e.stage !== "refine").map(e => e.ms);
+  const cheapEnd = Math.max(...cheap);
+  const r0 = el("rect", { x: X(0), y: 20, width: Math.max(2, X(cheapEnd) - X(0)), height: 24, fill: css("--settled") }, svg);
+  r0.addEventListener("mousemove", ev => showTip(ev, `<b>剔除 + 下界 + 直线检查</b><br>${s.candidates.length} 个候选一起算：<span class="mono">${Math.round(cheapEnd)} ms</span>`)); r0.addEventListener("mouseleave", hideTip);
+  prev = cheapEnd;
+  s.trace.filter(e => e.stage === "refine").forEach((e, i) => {
+    const [key, g, lb0] = e.items[0], c = rank[key];
+    const r = el("rect", { x: X(prev) + 1, y: 20, width: Math.max(2, X(e.ms) - X(prev) - 1), height: 24, fill: css("--ref"), "fill-opacity": .78 }, svg);
+    const t = el("text", { x: (X(prev) + X(e.ms)) / 2, y: 36, "text-anchor": "middle" }, svg); t.textContent = c.id; t.style.fill = css("--surface");
+    r.addEventListener("mousemove", ev => showTip(ev, `<b>cuRobo 精算 ${c.id}</b>（抓法 ${g}）<br>下界 <span class="mono">${f2(lb0)} s</span> → 精算 <span class="mono">${f2(e.items[0][3])} s</span><br>当时的门槛 τ：<span class="mono">${e.tau === Infinity || e.tau == null || e.tau > 1e9 ? "还没有 3 个确定值" : f2(e.tau) + " s"}</span><br>用时 <span class="mono">${Math.round(e.ms - prev)} ms</span>`));
+    r.addEventListener("mouseleave", hideTip);
+    prev = e.ms;
+  });
+  el("text", { x: X(s.lazy_ms) + 6, y: 36 }, svg).textContent = (s.lazy_ms / 1000).toFixed(2) + " s";
+  el("rect", { x: X(0), y: 62, width: X(s.reference_ms) - X(0), height: 24, fill: css("--bound"), "fill-opacity": .55 }, svg);
+  const tr = el("text", { x: Math.min(X(s.reference_ms) - 6, W - R), y: 78, "text-anchor": "end" }, svg); tr.textContent = (s.reference_ms / 1000).toFixed(1) + " s"; tr.style.fill = css("--ink");
+  document.getElementById("tllegend").innerHTML = `<span><i class="sw" style="background:var(--settled)"></i>剔除 + 下界 + 直线检查（所有候选一起，GPU 批量）</span><span><i class="sw" style="background:var(--ref)"></i>一次 cuRobo 精算（标签是候选名次）</span><span><i class="sw" style="background:var(--bound)"></i>全部候选逐个规划</span>`;
+}
+
+function renderBars(s) {
+  const svg = document.getElementById("bars"); svg.innerHTML = "";
+  const rows = s.candidates.filter(c => c.kind !== "pruned");
+  const W = 720, L = 70, R = 24, top = 22, rh = 26, H = top + rows.length * rh + 30;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const vals = rows.flatMap(c => [c.lb, c.cost, c.truth]).filter(v => v != null);
+  const lo = Math.floor(Math.min(...vals) * 10) / 10 - .1, hi = Math.ceil(Math.max(...vals) * 10) / 10 + .1;
+  const X = v => L + (v - lo) / (hi - lo) * (W - L - R);
+  for (let v = Math.ceil(lo * 4) / 4; v <= hi + 1e-9; v += .25) {
+    el("line", { x1: X(v), x2: X(v), y1: top - 6, y2: H - 26, stroke: css("--faint") }, svg);
+    el("text", { x: X(v), y: H - 10, "text-anchor": "middle" }, svg).textContent = v.toFixed(2);
+  }
+  if (s.tau != null) {
+    el("line", { x1: X(s.tau), x2: X(s.tau), y1: top - 10, y2: H - 26, stroke: css("--topk"), "stroke-dasharray": "5 4", "stroke-width": 1.5 }, svg);
+    el("text", { x: X(s.tau) + 4, y: top - 10 }, svg).textContent = "τ = " + f2(s.tau) + " s（第 3 名）";
+  }
+  rows.forEach((c, i) => {
+    const y = top + i * rh + rh / 2, col = color(c.kind);
+    if (c.kind === "top") el("rect", { x: 0, y: y - rh / 2 + 1, width: W, height: rh - 2, fill: css("--faint") }, svg);
+    const lab = el("text", { x: 8, y: y + 4 }, svg); lab.textContent = c.id; lab.style.fill = css("--ink");
+    if (c.kind === "bound") el("line", { x1: X(c.lb), x2: X(hi) - 2, y1: y, y2: y, stroke: col, "stroke-dasharray": "3 3" }, svg);
+    else if (c.cost > c.lb + 1e-6) el("line", { x1: X(c.lb), x2: X(c.cost), y1: y, y2: y, stroke: col, "stroke-width": 2 }, svg);
+    el("circle", { cx: X(c.lb), cy: y, r: 5, fill: css("--surface"), stroke: col, "stroke-width": 1.6 }, svg);
+    if (c.kind !== "bound") el("circle", { cx: X(c.cost), cy: y, r: 5, fill: col, stroke: css("--surface"), "stroke-width": 2 }, svg);
+    if (c.truth != null) el("line", { x1: X(c.truth), x2: X(c.truth), y1: y - 8, y2: y + 8, stroke: css("--ref"), "stroke-width": 2 }, svg);
+    const hit = el("rect", { x: 0, y: y - rh / 2, width: W, height: rh, fill: "transparent" }, svg);
+    hit.addEventListener("mousemove", ev => showTip(ev, `<b>${c.id}</b> <span class="mono">${c.label}</span><br>${c.why}<br>下界 <span class="mono">${f2(c.lb)}</span>，惰性 <span class="mono">${c.kind === "bound" ? "≥ " + f2(c.cost) : f2(c.cost)}</span>，参照 <span class="mono">${f2(c.truth)}</span> s（第 ${c.truth_rank} 名）`));
+    hit.addEventListener("mouseleave", hideTip);
+  });
+  document.getElementById("barlegend").innerHTML = `<span><i class="sw" style="border:1.6px solid var(--settled);border-radius:50%"></i>下界</span><span><i class="sw" style="background:var(--settled);border-radius:50%"></i>惰性排序结果</span><span><i class="sw" style="background:var(--ref);width:3px"></i>cuRobo 全部规划参照</span><span><i class="sw" style="border-top:1.5px dashed var(--bound);height:0;width:16px;border-radius:0"></i>只算下界，真实值在右边某处</span>`;
+}
+
+function renderTable(s) {
+  const rows = s.candidates;
+  const head = `<tr><th>名次</th><th>位置与朝向</th><th>状态</th><th>原因</th><th style="text-align:right">下界 s</th><th style="text-align:right">惰性结果 s</th><th style="text-align:right">cuRobo 参照 s</th><th style="text-align:right">参照名次</th></tr>`;
+  const pill = c => ({ top: ["p-top", "前 3"], settled: ["p-settled", "已确定"], bound: ["p-bound", "只算下界"], pruned: ["p-pruned", "剔除"] }[c.kind]);
+  document.getElementById("tbl").innerHTML = head + rows.map(c => { const [cl, t] = pill(c);
+    return `<tr class="${c.kind === "top" ? "hl" : ""}"><td class="mono">${c.id}</td><td class="mono">${c.label}</td><td><span class="pill ${cl}">${t}</span></td><td>${c.why}</td>
+      <td class="num">${f2(c.lb)}</td><td class="num">${c.kind === "bound" ? "≥ " + f2(c.cost) : c.kind === "pruned" ? "—" : f2(c.cost)}</td><td class="num">${f2(c.truth)}</td><td class="num">${c.truth_rank ?? "—"}</td></tr>`; }).join("");
+}
+
+let cur = 0;
+function render() { const s = DATA.scenes[cur]; renderFunnel(s); renderMap(s); renderTimeline(s); renderBars(s); renderTable(s);
+  document.querySelectorAll("#tabs button").forEach((b, i) => b.setAttribute("aria-pressed", i === cur)); }
+document.getElementById("tabs").innerHTML = DATA.scenes.map((s, i) => `<button id="tab${i}" type="button">场景 ${"ABC"[i] ?? i + 1} · ${s.candidates.length} 个候选</button>`).join("");
+document.querySelectorAll("#tabs button").forEach((b, i) => b.addEventListener("click", () => { cur = i; render(); }));
+cur = DATA.scenes.length - 1;      // open on the scene with the most candidates
+render();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>

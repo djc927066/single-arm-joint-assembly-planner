@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>装配体预览</title>
+<style>
+:root{--ink:#1d2b3a;--muted:#5f6f80;--line:#dde4ec;--bg:#eef2f6;--card:#fff;--accent:#2563c9;--warn:#b4541a;--ok:#16794f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+header{padding:18px 24px 6px}h1{margin:0;font-size:22px}header p{margin:4px 0;color:var(--muted)}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:16px;padding:12px 24px 28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.card h2{font-size:15px;margin:0 0 8px}#view{position:relative;height:calc(100vh - 140px);min-height:520px;padding:0;overflow:hidden}
+#canvas{width:100%;height:100%;display:block}
+.toolbar{position:absolute;left:12px;top:12px;display:flex;flex-wrap:wrap;gap:6px;z-index:2}
+button,select{font:inherit;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;cursor:pointer}
+button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.stepbar{position:absolute;left:12px;right:12px;bottom:12px;background:#ffffffee;border:1px solid var(--line);border-radius:10px;padding:8px 12px;z-index:2}
+.stepbar input[type=range]{width:100%}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 12px}.kv span:nth-child(odd){color:var(--muted)}
+.tag{display:inline-block;border-radius:6px;padding:0 6px;font-size:12px;margin:1px 2px}
+.tag.s{background:#e8f0fb;color:#24508f}.tag.o{background:#fdeee3;color:var(--warn)}
+ul{margin:4px 0 0 18px;padding:0}li{margin:1px 0}
+.legend div{display:flex;align-items:center;gap:8px;margin:2px 0}.sw{width:14px;height:14px;border-radius:3px;border:1px solid #0002;flex:none}
+.muted{color:var(--muted)}#stepinfo b{color:var(--accent)}.warn{color:var(--warn)}.ok{color:var(--ok)}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}#view{height:70vh}}
+</style>
+</head>
+<body>
+<header><h1 id="title"></h1><div id="desc"></div></header>
+<div class="wrap">
+  <div class="card" id="view">
+    <div class="toolbar">
+      <button data-mode="assembled" class="on">完成态</button>
+      <button data-mode="layout">初始布局</button>
+      <button data-mode="steps">按顺序安装</button>
+      <button data-mode="exploded">爆炸图</button>
+      <select id="order"></select>
+      <label style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 8px"><input type="checkbox" id="robot" checked> 机械臂</label>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div class="stepbar"><input type="range" id="step" min="0" value="0"><div id="stepinfo" class="muted"></div></div>
+  </div>
+  <div>
+    <div class="card"><h2>可行性统计（自动计算）</h2><div id="stats"></div></div>
+    <div class="card"><h2>必须先后的约束</h2><div id="prec"></div></div>
+    <div class="card"><h2>遮挡统计</h2><div id="occl"></div></div>
+    <div class="card"><h2>零件</h2><div class="legend" id="legend"></div></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const nm = p => (D.names[p] || p);
+const hex = c => '#' + c.map(v => Math.round(v * 255).toString(16).padStart(2, '0')).join('');
+function b64(s, T){const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return new T(u.buffer)}
+function mat(m){const M=new THREE.Matrix4();M.set(...m.flat());return M}
+
+$('title').textContent = D.title;
+$('desc').innerHTML = D.description.map(s => '<p>' + s + '</p>').join('');
+const S = D.stats, L = S.levels;
+$('stats').innerHTML = `<div class="kv">
+<span>可动零件</span><span>${S.parts} 件（底座固定，不计入）</span>
+<span>仅静力约束</span><span>${L.static.orders.toLocaleString()} 种顺序 · ${L.static.states} 个稳定状态</span>
+<span>+ 插入通道</span><span>${L.insertion.orders.toLocaleString()} 种顺序</span>
+<span>+ 抓取遮挡/IK</span><span><b>${L.full.orders.toLocaleString()}</b> 种顺序 · ${L.full.states} 个状态</span>
+<span>静力 LP 复核</span><span>${S.equilibrium_check ? (S.equilibrium_check.infeasible===0 ? '<span class=ok>'+S.equilibrium_check.checked+' 个状态全部平衡</span>' : '<span class=warn>'+S.equilibrium_check.infeasible+' 个不平衡</span>') : '未运行'}</span>
+</div><p class="muted" style="margin-top:8px">${S.scope}</p>`;
+const occSet = new Set(S.precedence_from_occlusion.map(p => p.join('>')));
+$('prec').innerHTML = '<p class="muted">传递约简后的“a 必须早于 b”。橙色 = 静力不要求、由插入通道或抓取遮挡产生。</p><ul>' +
+  S.precedence_full.map(([a,b]) => `<li><span class="tag ${occSet.has(a+'>'+b)?'o':'s'}">${nm(a)} → ${nm(b)}</span></li>`).join('') + '</ul>' +
+  (S.precedence_from_occlusion.length ? '<p class="muted">全部由遮挡产生的先后关系（未约简）：</p><ul>' +
+  S.precedence_from_occlusion.map(([a,b]) => `<li>${nm(a)} 早于 ${nm(b)}</li>`).join('') + '</ul>' : '');
+const G = S.grasp_occlusion;
+$('occl').innerHTML = `<div class="kv"><span>检查的安装步</span><span>${G.transitions_checked}</span>
+<span>抓取部分被挡</span><span>${G.partially_occluded} 步</span><span>抓取全部被挡</span><span>${G.fully_blocked} 步</span></div>
+<p class="muted" style="margin:8px 0 2px">谁挡谁的抓取（次数）：</p><ul>${Object.entries(G.blocker_pairs).map(([k,v])=>{const [a,b]=k.split(' -> ');return `<li>${nm(a)} 挡 ${nm(b)}：${v}</li>`}).join('')||'<li>无</li>'}</ul>
+<p class="muted" style="margin:8px 0 2px">谁挡谁的竖直插入（次数）：</p><ul>${Object.entries(S.insertion_cover).map(([k,v])=>{const [a,b]=k.split(' covers ');return `<li>${nm(a)} 盖住 ${nm(b)}：${v}</li>`}).join('')||'<li>无</li>'}</ul>`;
+$('legend').innerHTML = D.parts.map(p => `<div><span class="sw" style="background:${hex(p.color)}"></span><span><b>${p.name}</b> <span class="muted">${p.pid} · ${p.size_mm.join('×')} mm · ${p.mass_g} g${p.supports.length?' · 支撑: '+p.supports.map(nm).join('、'):''}</span></span></div>`).join('');
+D.orders.forEach((o, i) => { const op = document.createElement('option'); op.value = i; op.textContent = `顺序 ${i+1}：` + o.map(nm).join(' → '); $('order').appendChild(op); });
+
+// ---- three.js scene ----------------------------------------------------------------------
+const canvas = $('canvas');
+const renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+renderer.setPixelRatio(window.devicePixelRatio);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xf4f6f9);
+const camera = new THREE.PerspectiveCamera(38, 1, 0.01, 10); camera.up.set(0, 0, 1);
+camera.position.set(0.95, -0.85, 0.75);
+const controls = new THREE.OrbitControls(camera, canvas); controls.target.set(D.site[0] - 0.05, 0, 0.05); controls.update();
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8899aa, 0.75));
+const sun = new THREE.DirectionalLight(0xffffff, 0.65); sun.position.set(-0.6, -0.9, 1.4); scene.add(sun);
+const tbl = new THREE.Mesh(new THREE.BoxGeometry(...D.table.size), new THREE.MeshLambertMaterial({color: 0xe9dfcf}));
+tbl.position.set(...D.table.center); scene.add(tbl);
+const grid = new THREE.GridHelper(0.6, 12, 0xc9bda7, 0xd8cdb9); grid.rotation.x = Math.PI / 2;
+grid.position.set(D.table.center[0], D.table.center[1], 0.0005); scene.add(grid);
+function geom(v, f){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(b64(v,Float32Array),3));g.setIndex(new THREE.BufferAttribute(b64(f,Uint32Array),1));const n=g.toNonIndexed();n.computeVertexNormals();return n}
+const robot = new THREE.Group(); scene.add(robot);
+D.robot.forEach(r => robot.add(new THREE.Mesh(geom(r.v, r.f), new THREE.MeshLambertMaterial({color: 0x9aa4ae}))));
+$('robot').onchange = e => { robot.visible = e.target.checked; };
+const meshes = {};
+D.parts.forEach(p => {
+  const m = new THREE.Mesh(geom(p.v, p.f), new THREE.MeshLambertMaterial({color: new THREE.Color(...p.color)}));
+  m.matrixAutoUpdate = false; m.userData = p; scene.add(m); meshes[p.pid] = m;
+  const e = new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry, 20), new THREE.LineBasicMaterial({color: 0x000000, transparent: true, opacity: .28}));
+  m.add(e);
+});
+const movable = D.parts.filter(p => p.pid !== 'base');
+const rank = {}; [...movable].sort((a,b) => a.goal[2][3] - b.goal[2][3]).forEach((p,i) => rank[p.pid] = i);
+function place(pid, M, highlight){const m=meshes[pid];m.matrix.copy(M);m.matrixWorldNeedsUpdate=true;m.material.emissive=new THREE.Color(highlight?0x553300:0x000000);m.material.opacity=1;m.material.transparent=false}
+let mode = 'assembled';
+function update(){
+  const o = D.orders[+$('order').value] || [], k = +$('step').value;
+  $('step').max = o.length; $('step').disabled = mode !== 'steps';
+  let info = '';
+  for (const p of movable){
+    let M = mat(p.goal), hl = false;
+    if (mode === 'layout') M = mat(p.stage);
+    if (mode === 'exploded') { M = mat(p.goal); M.elements[14] += 0.03 + 0.022 * rank[p.pid]; }
+    if (mode === 'steps') { const idx = o.indexOf(p.pid); M = idx < k ? mat(p.goal) : mat(p.stage); hl = idx === k - 1; }
+    place(p.pid, M, hl);
+  }
+  place('base', mat(D.parts.find(p => p.pid === 'base').goal), false);
+  if (mode === 'steps') {
+    if (k === 0) info = '第 0 步：全部零件在初始布局上。拖动滑块逐件安装。';
+    else {
+      const r = D.steps[$('order').value][k-1], p = D.parts.find(q => q.pid === r.part);
+      info = `第 ${k}/${o.length} 步：安装 <b>${p.name}</b>` + (p.supports.length ? `（需要 ${p.supports.map(nm).join('、')} 已装）` : '') +
+        ` · 可用抓取 <b>${r.grasps}</b> / ${r.grasps_alone}` + (r.blockers.length ? ` · <span class="warn">被 ${r.blockers.map(nm).join('、')} 挡住部分抓取</span>` : '');
+    }
+  } else info = {assembled:'完成态：所有零件在目标位置。', layout:'示例初始布局（自动排布，零件间距 ≥15 mm，避开机器人和装配位），未做优化。', exploded:'爆炸图：按高度把零件抬起，看清层次。'}[mode];
+  $('stepinfo').innerHTML = info;
+}
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => {
+  mode = b.dataset.mode; document.querySelectorAll('[data-mode]').forEach(x => x.classList.toggle('on', x === b));
+  if (mode === 'steps') $('step').value = 0; update(); });
+$('order').onchange = () => { $('step').value = 0; update(); };
+$('step').oninput = update;
+function resize(){const r=canvas.parentElement.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix()}
+window.addEventListener('resize', resize); resize(); update();
+(function loop(){requestAnimationFrame(loop);renderer.render(scene,camera)})();
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+# SEALP Assembly Definition v1.0
+# ShelfUnit
+
+format_version: '1.0'
+name: ShelfUnit
+description: '4-part compact shelf unit without bottom board. Side panel local z∈[0.000,0.300]
+  m (bottom at z=0 in mesh frame). Assembly order: side_l -> shelf_m -> shelf_t ->
+  side_r.'
+models:
+  shelf_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\shelf_unit\shelf.stl
+  side_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\shelf_unit\side_panel.stl
+parts:
+  side_l:
+    name: Left Side Panel
+    model: side_model
+    mass: 0.5
+  shelf_m:
+    name: Middle Shelf
+    model: shelf_model
+    mass: !!float '1'
+  shelf_t:
+    name: Top Shelf
+    model: shelf_model
+    mass: !!float '1'
+  side_r:
+    name: Right Side Panel
+    model: side_model
+    mass: 0.5
+assembly:
+- step: 0
+  part: side_l
+  parent: fixture
+  rel_pos:
+  - !!float '0'
+  - 0.084
+  - !!float '0'
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps: []
+  notes: Install left side panel; mesh bottom (local z=0) on fixture support.
+- step: 1
+  part: shelf_m
+  parent: fixture
+  rel_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.15
+  rel_rotmat:
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  deps:
+  - 0
+  notes: Insert middle shelf at mid height between side panels.
+- step: 2
+  part: shelf_t
+  parent: fixture
+  rel_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.345
+  rel_rotmat:
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  deps:
+  - 0
+  - 1
+  notes: Place top shelf flush on side panel tops.
+- step: 3
+  part: side_r
+  parent: fixture
+  rel_pos:
+  - !!float '0'
+  - -0.084
+  - !!float '0'
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  - 1
+  - 2
+  notes: Install right side panel last.
+symmetry_groups:
+  sides:
+  - side_l
+  - side_r
+  shelves:
+  - shelf_m
+  - shelf_t

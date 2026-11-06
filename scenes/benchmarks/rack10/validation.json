@@ -1,0 +1,127 @@
+{
+  "parts": 10,
+  "grasp_catalogue": {
+    "lp_1": 28,
+    "lp_2": 28,
+    "lp_3": 28,
+    "lp_4": 28,
+    "shelf_1": 14,
+    "up_1": 28,
+    "up_2": 28,
+    "up_3": 28,
+    "up_4": 28,
+    "shelf_2": 14
+  },
+  "goal_ik_grasps": {
+    "lp_1": 8,
+    "lp_2": 8,
+    "lp_3": 7,
+    "lp_4": 7,
+    "shelf_1": 3,
+    "up_1": 1,
+    "up_2": 1,
+    "up_3": 2,
+    "up_4": 2,
+    "shelf_2": 2
+  },
+  "grasps_alone": {
+    "lp_1": 8,
+    "lp_2": 8,
+    "lp_3": 7,
+    "lp_4": 7,
+    "shelf_1": 3,
+    "up_1": 1,
+    "up_2": 1,
+    "up_3": 2,
+    "up_4": 2,
+    "shelf_2": 2
+  },
+  "levels": {
+    "static": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 0.00047419999827980064
+    },
+    "insertion": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 0.016816100000141887
+    },
+    "full": {
+      "states": 33,
+      "transitions": 66,
+      "orders": 576,
+      "seconds": 9.67041860000245
+    }
+  },
+  "precedence_full": [
+    [
+      "lp_1",
+      "shelf_1"
+    ],
+    [
+      "lp_2",
+      "shelf_1"
+    ],
+    [
+      "lp_3",
+      "shelf_1"
+    ],
+    [
+      "lp_4",
+      "shelf_1"
+    ],
+    [
+      "shelf_1",
+      "up_1"
+    ],
+    [
+      "shelf_1",
+      "up_2"
+    ],
+    [
+      "shelf_1",
+      "up_3"
+    ],
+    [
+      "shelf_1",
+      "up_4"
+    ],
+    [
+      "up_1",
+      "shelf_2"
+    ],
+    [
+      "up_2",
+      "shelf_2"
+    ],
+    [
+      "up_3",
+      "shelf_2"
+    ],
+    [
+      "up_4",
+      "shelf_2"
+    ]
+  ],
+  "precedence_from_occlusion": [],
+  "grasp_occlusion": {
+    "transitions_checked": 66,
+    "partially_occluded": 0,
+    "fully_blocked": 0,
+    "blocker_pairs": {}
+  },
+  "insertion_cover": {},
+  "equilibrium_check": {
+    "checked": 33,
+    "infeasible": 0,
+    "examples": [],
+    "seconds": 14.770655799999076,
+    "total_states": 33
+  },
+  "ik_s": 7.766461999999592,
+  "total_s": 32.654227700000774,
+  "scope": "static rule + asmcore equilibrium cross-check; box-cell insertion sweep; Panthera palm/finger boxes + cuRobo goal IK. No transport motion, no staging-side IK."
+}

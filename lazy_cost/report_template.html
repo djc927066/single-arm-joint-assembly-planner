@@ -1,0 +1,232 @@
+<title>下界修正实验分析</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* layout: a findings column at the top, then one chart per question, each with its own reading line */
+:root {
+  --bg: #f4f6f7; --surface: #ffffff; --ink: #17212b; --muted: #5b6672; --line: #d6dce1; --faint: #e9edf0;
+  --c1: #0f7a83; --c2: #c7671d; --c3: #3b5bb5; --c4: #9a3a6b; --neutral: #9aa4ae; --good: #2f8f4e; --bad: #b8432f;
+  --font-sans: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "Microsoft YaHei", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12171c; --surface: #1a2129; --ink: #e3e8ec; --muted: #9aa5b1; --line: #2f3a45; --faint: #232c35;
+  --c1: #3cb7c0; --c2: #f0954c; --c3: #7f9cf0; --c4: #d77aa8; --neutral: #6d7884; --good: #5cc07c; --bad: #ec7b63; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12171c; --surface: #1a2129; --ink: #e3e8ec; --muted: #9aa5b1; --line: #2f3a45; --faint: #232c35;
+  --c1: #3cb7c0; --c2: #f0954c; --c3: #7f9cf0; --c4: #d77aa8; --neutral: #6d7884; --good: #5cc07c; --bad: #ec7b63; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 14px; line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 22px; }
+h1 { font-size: 1.55rem; margin: 0; font-weight: 600; text-wrap: balance; }
+h2 { font-size: 1.05rem; margin: 0; font-weight: 600; text-wrap: balance; }
+p { margin: 0; max-width: 72ch; }
+.muted { color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.finding { border-left: 3px solid var(--c1); padding: 4px 0 4px 12px; }
+.finding b { display: block; font-weight: 600; margin-bottom: 2px; }
+svg { display: block; width: 100%; height: auto; }
+svg text { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--faint); text-align: left; white-space: nowrap; }
+th { color: var(--muted); font-weight: 500; font-size: .78rem; }
+td.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.read { font-size: .88rem; color: var(--ink); background: var(--faint); border-radius: 6px; padding: 8px 12px; }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:6px">
+    <h1>下界修正实验分析</h1>
+    <p class="muted">两个装配体 × 两种场景（只有零件 / 加 6–10 个箱子和墙），各 30 组，每组 12 个候选，K = 3。参照为对每个存活（候选, 抓法）用 cuRobo 规划两段运动。2026-10-16。</p>
+  </header>
+
+  <section class="panel">
+    <h2>主要结论</h2>
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <section class="panel">
+    <h2>1. 直线没被挡时，下界就是准确值；被挡时，穿透越深越慢</h2>
+    <p class="muted">被挡的段按"直线上最大穿透深度"分组，纵轴是 cuRobo 实际时间 / 下界。实线为中位，虚线为 p90。</p>
+    <svg id="depth" role="img" aria-label="穿透深度与实际时间比下界"></svg>
+    <div class="legend" id="lg-scene"></div>
+    <p class="read" id="read-depth"></p>
+  </section>
+
+  <section class="panel">
+    <h2>2. 被挡的比例：场景越密，被挡越多</h2>
+    <svg id="blocked" role="img" aria-label="各场景直线被挡比例"></svg>
+    <div class="legend"><span><i class="sw" style="background:var(--c1)"></i>空手段（上一件 → 悬停点）</span><span><i class="sw" style="background:var(--c2)"></i>携物段（抬起 → 插入前）</span><span><i class="sw" style="background:var(--neutral)"></i>候选被剔除比例（关键姿态撞了）</span></div>
+  </section>
+
+  <section class="panel">
+    <h2>3. 排序误差：修正能减少平均误差，但精算才能消除大错</h2>
+    <p class="muted">平均遗憾 = 选中的候选比真正最优多花的时间比例，越低越好。</p>
+    <svg id="regret" role="img" aria-label="各排序方式平均遗憾"></svg>
+    <div class="legend" id="lg-method"></div>
+    <div class="tablewrap"><table id="tbl-rank"></table></div>
+  </section>
+
+  <section class="panel">
+    <h2>4. 每组 30 次排序里，有几次选错、错多少</h2>
+    <svg id="buckets" role="img" aria-label="遗憾分布"></svg>
+    <div class="legend"><span><i class="sw" style="background:var(--good)"></i>完全选对</span><span><i class="sw" style="background:var(--c3)"></i>误差 &lt; 1%</span><span><i class="sw" style="background:var(--c2)"></i>1–5%</span><span><i class="sw" style="background:var(--bad)"></i>&gt; 5%</span></div>
+  </section>
+
+  <section class="panel">
+    <h2>5. 时间：每次给 12 个候选排序</h2>
+    <svg id="timing" role="img" aria-label="每组排序用时"></svg>
+    <div class="legend"><span><i class="sw" style="background:var(--c1)"></i>只用下界（含修正，不调规划器）</span><span><i class="sw" style="background:var(--c3)"></i>惰性精算</span><span><i class="sw" style="background:var(--neutral)"></i>全部用 cuRobo 规划（参照）</span></div>
+  </section>
+
+  <section class="panel">
+    <h2>6. 最坏的几段：下界低估最多的是拿着零件绕障碍</h2>
+    <div class="tablewrap"><table id="tbl-worst"></table></div>
+  </section>
+</div>
+
+<script>
+const D = __DATA__;
+const NS = "http://www.w3.org/2000/svg";
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const tip = (e, s) => { const t = el("title", {}, e); t.textContent = s; };
+const ORDER = ["rack10·只有零件", "三角框架·只有零件", "rack10·密集", "三角框架·密集"];
+const RKEY = { "rack10·只有零件": "rack10/parts", "三角框架·只有零件": "triangular_frame6/parts", "rack10·密集": "rack10/dense", "三角框架·密集": "triangular_frame6/dense" };
+const SC = ["--c1", "--c3", "--c2", "--c4"];
+const pct = v => (100 * v).toFixed(v < 0.1 ? 1 : 0) + "%";
+
+function findings() {
+  const s = D.scenes;
+  const items = [
+    ["直线可走 = 准确", `直线没被挡的段，实际时间 / 下界的 p10–p90 在 ${s["rack10·只有零件"].free_ratio_q[0].toFixed(3)}–${s["三角框架·密集"].free_ratio_q[2].toFixed(3)} 之间。`],
+    ["穿透深度是最好的指标", "穿透 < 1 cm 时几乎不变慢；> 2 cm 后中位慢 6–27%，p90 慢 18–48%。秩相关 0.50–0.75。"],
+    ["只用下界：大多数时候选对", `完全选对的比例：只有零件 ${pct(s["rack10·只有零件"].regret.lower_bound.exact)}（rack10）/ ${pct(s["三角框架·只有零件"].regret.lower_bound.exact)}（三角框架），密集 ${pct(s["rack10·密集"].regret.lower_bound.exact)} / ${pct(s["三角框架·密集"].regret.lower_bound.exact)}。`],
+    ["修正：平均误差减半，大错仍在", "密集场景平均遗憾 3.3% → 0.8%（rack10）、2.2% → 1.0%（三角框架），最大遗憾仍有 12–15%。"],
+    ["精算兜底", "惰性精算平均遗憾 0.1–0.3%，最大 1.3–5.1%，每次排序 0.3–1 s，比全部规划快 7–90 倍。"],
+    ["最坏情况：拿着零件翻越障碍", "rack10 和三角框架密集场景里，低估最多的都是携物段且手持零件参与碰撞：下界 0.5–0.9 s，实际慢 50–90%。"]];
+  document.getElementById("findings").innerHTML = items.map(([b, t]) => `<div class="finding"><b>${b}</b>${t}</div>`).join("");
+}
+
+function depthChart() {
+  const svg = document.getElementById("depth"); svg.innerHTML = "";
+  const W = 760, H = 300, L = 54, R = 16, T = 14, B = 40;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const bins = [[0, 2], [2, 5], [5, 10], [10, 20], [20, 40], [40, 1000]];
+  const lab = ["< 2", "2–5", "5–10", "10–20", "20–40", "> 40"];
+  const X = i => L + (i + 0.5) * (W - L - R) / bins.length;
+  const ymin = 1.0, ymax = 1.5, Y = v => T + (1 - (Math.min(v, ymax) - ymin) / (ymax - ymin)) * (H - T - B);
+  for (let v = 1.0; v <= ymax + 1e-9; v += 0.1) { el("line", { x1: L, x2: W - R, y1: Y(v), y2: Y(v), stroke: css("--faint") }, svg); el("text", { x: L - 8, y: Y(v) + 4, "text-anchor": "end" }, svg).textContent = "×" + v.toFixed(1); }
+  lab.forEach((t, i) => { el("text", { x: X(i), y: H - 20, "text-anchor": "middle" }, svg).textContent = t; });
+  el("text", { x: (L + W - R) / 2, y: H - 4, "text-anchor": "middle" }, svg).textContent = "直线上最大穿透深度（mm）";
+  ORDER.forEach((k, si) => {
+    const bs = D.scenes[k].depth_bins; const col = css(SC[si]);
+    const pts = bs.map(b => [bins.findIndex(x => x[0] === b.lo), b]);
+    const path = key => pts.map(([i, b], j) => `${j ? "L" : "M"}${X(i)},${Y(b[key])}`).join("");
+    el("path", { d: path("p50"), fill: "none", stroke: col, "stroke-width": 2 }, svg);
+    el("path", { d: path("p90"), fill: "none", stroke: col, "stroke-width": 1.5, "stroke-dasharray": "4 4" }, svg);
+    pts.forEach(([i, b]) => { const c = el("circle", { cx: X(i), cy: Y(b.p50), r: 4, fill: col, stroke: css("--surface"), "stroke-width": 1.5 }, svg);
+      tip(c, `${k}，穿透 ${lab[i]} mm（${b.n} 段）：中位 ×${b.p50.toFixed(3)}，p90 ×${b.p90.toFixed(3)}`); });
+  });
+  document.getElementById("lg-scene").innerHTML = ORDER.map((k, i) => `<span><i class="sw" style="background:var(${SC[i]})"></i>${k}</span>`).join("") + `<span>实线中位 · 虚线 p90 · 鼠标悬停看数值</span>`;
+  document.getElementById("read-depth").textContent = "穿透小于约 1 cm 时，实际时间基本等于下界，可以当作没被挡；超过 2 cm 后，越深越慢，而且同样的深度下分散很大（p90 比中位高 10–30%），这就是单靠穿透深度修正消除不了最坏情况的原因。";
+}
+
+function blockedChart() {
+  const svg = document.getElementById("blocked"); svg.innerHTML = "";
+  const W = 760, rowH = 54, L = 150, R = 50, T = 8, H = T + ORDER.length * rowH + 20;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const X = v => L + v * (W - L - R);
+  [0, .25, .5, .75, 1].forEach(v => { el("line", { x1: X(v), x2: X(v), y1: T, y2: H - 20, stroke: css("--faint") }, svg); el("text", { x: X(v), y: H - 4, "text-anchor": "middle" }, svg).textContent = pct(v); });
+  ORDER.forEach((k, i) => {
+    const s = D.scenes[k], y = T + i * rowH;
+    const t = el("text", { x: 0, y: y + 22 }, svg); t.textContent = k; t.style.fill = css("--ink");
+    [["transit", "--c1", 0], ["transfer", "--c2", 1]].forEach(([kind, c, j]) => {
+      const v = s.segments.by_kind[kind].blocked;
+      const r = el("rect", { x: X(0), y: y + 4 + j * 15, width: X(v) - X(0), height: 12, fill: css(c), rx: 2 }, svg);
+      tip(r, `${k} ${kind === "transit" ? "空手段" : "携物段"}被挡 ${pct(v)}`);
+      el("text", { x: X(v) + 4, y: y + 14 + j * 15 }, svg).textContent = pct(v);
+    });
+    const r = el("rect", { x: X(0), y: y + 34, width: X(s.pruned) - X(0), height: 10, fill: css("--neutral"), rx: 2 }, svg);
+    tip(r, `${k} 候选被剔除 ${pct(s.pruned)}`);
+    el("text", { x: X(s.pruned) + 4, y: y + 43 }, svg).textContent = pct(s.pruned);
+  });
+}
+
+const METHODS = [["lower bound only", "只用下界", "--neutral"], ["bound x const (in-sample)", "下界 × 常数", "--c2"],
+                 ["bound + linear (in-sample)", "下界 + 指标修正", "--c1"], ["bound + linear (fit on OTHER assembly)", "修正（另一装配体拟合）", "--c4"],
+                 ["lazy refinement (reference)", "惰性精算", "--c3"]];
+function regretChart() {
+  const svg = document.getElementById("regret"); svg.innerHTML = "";
+  const W = 760, H = 300, L = 46, R = 10, T = 14, B = 34;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const ymax = 0.035, Y = v => T + (1 - v / ymax) * (H - T - B);
+  for (let v = 0; v <= ymax + 1e-9; v += 0.005) { el("line", { x1: L, x2: W - R, y1: Y(v), y2: Y(v), stroke: css("--faint") }, svg); el("text", { x: L - 6, y: Y(v) + 4, "text-anchor": "end" }, svg).textContent = (100 * v).toFixed(1) + "%"; }
+  const gw = (W - L - R) / ORDER.length, bw = (gw - 24) / METHODS.length;
+  ORDER.forEach((k, gi) => {
+    const rk = D.ranking[RKEY[k]];
+    METHODS.forEach(([m, name, c], mi) => {
+      const v = rk[m].regret, x = L + gi * gw + 12 + mi * bw;
+      const r = el("rect", { x: x + 1, y: Y(v), width: bw - 2, height: Y(0) - Y(v), fill: css(c), rx: 2 }, svg);
+      tip(r, `${k} · ${name}：平均遗憾 ${(100 * v).toFixed(2)}%，最大 ${(100 * rk[m].max_regret).toFixed(1)}%`);
+    });
+    el("text", { x: L + gi * gw + gw / 2, y: H - 10, "text-anchor": "middle" }, svg).textContent = k;
+  });
+  document.getElementById("lg-method").innerHTML = METHODS.map(([, n, c]) => `<span><i class="sw" style="background:var(${c})"></i>${n}</span>`).join("");
+  document.getElementById("tbl-rank").innerHTML = `<tr><th>场景</th>${METHODS.map(m => `<th style="text-align:right">${m[1]}</th>`).join("")}</tr>` +
+    ORDER.map(k => `<tr><td>${k}</td>${METHODS.map(([m]) => { const v = D.ranking[RKEY[k]][m]; return `<td class="num">${(100 * v.regret).toFixed(2)}% / ${(100 * v.max_regret).toFixed(1)}%</td>`; }).join("")}</tr>`).join("") +
+    `<tr><td class="muted" colspan="6">格式：平均遗憾 / 最大遗憾</td></tr>`;
+}
+
+function bucketChart() {
+  const svg = document.getElementById("buckets"); svg.innerHTML = "";
+  const W = 760, rowH = 40, L = 230, R = 30, T = 6, H = T + ORDER.length * 2 * rowH + 10;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const cols = ["--good", "--c3", "--c2", "--bad"];
+  let y = T;
+  ORDER.forEach(k => {
+    [["lower_bound", "只用下界"], ["lazy", "惰性精算"]].forEach(([m, name]) => {
+      const b = D.scenes[k].regret_buckets[m], n = b.reduce((a, c) => a + c, 0);
+      const t = el("text", { x: 0, y: y + 22 }, svg); t.textContent = `${k} · ${name}`; t.style.fill = css("--ink");
+      let x = L;
+      b.forEach((c, i) => { if (!c) return; const w = c / n * (W - L - R);
+        const r = el("rect", { x: x + 1, y: y + 8, width: Math.max(w - 2, 1), height: 22, fill: css(cols[i]), rx: 2 }, svg);
+        tip(r, `${["完全选对", "< 1%", "1–5%", "> 5%"][i]}：${c} / ${n} 组`);
+        if (w > 18) { const tt = el("text", { x: x + w / 2, y: y + 23, "text-anchor": "middle" }, svg); tt.textContent = c; tt.style.fill = css("--surface"); }
+        x += w; });
+      y += rowH;
+    });
+  });
+}
+
+function timingChart() {
+  const svg = document.getElementById("timing"); svg.innerHTML = "";
+  const W = 760, rowH = 60, L = 150, R = 70, T = 6, H = T + ORDER.length * rowH + 22;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const lo = Math.log10(20), hi = Math.log10(40000), X = v => L + (Math.log10(v) - lo) / (hi - lo) * (W - L - R);
+  [30, 100, 300, 1000, 3000, 10000, 30000].forEach(v => { el("line", { x1: X(v), x2: X(v), y1: T, y2: H - 22, stroke: css("--faint") }, svg); el("text", { x: X(v), y: H - 6, "text-anchor": "middle" }, svg).textContent = v >= 1000 ? (v / 1000) + " s" : v + " ms"; });
+  ORDER.forEach((k, i) => {
+    const t = D.scenes[k].timing, y = T + i * rowH;
+    const tx = el("text", { x: 0, y: y + 26 }, svg); tx.textContent = k; tx.style.fill = css("--ink");
+    [[t.bounds_ms, "--c1"], [t.lazy_ms, "--c3"], [t.ref_ms, "--neutral"]].forEach(([v, c], j) => {
+      const r = el("rect", { x: X(20), y: y + 4 + j * 16, width: X(v) - X(20), height: 12, fill: css(c), rx: 2 }, svg);
+      tip(r, `${k}：${v >= 1000 ? (v / 1000).toFixed(2) + " s" : v.toFixed(0) + " ms"}（中位）`);
+      el("text", { x: X(v) + 4, y: y + 14 + j * 16 }, svg).textContent = v >= 1000 ? (v / 1000).toFixed(1) + " s" : v.toFixed(0) + " ms";
+    });
+  });
+}
+
+function worstTable() {
+  const rows = ORDER.flatMap(k => D.scenes[k].worst.slice(0, 3).map(w => ({ k, ...w })));
+  document.getElementById("tbl-worst").innerHTML = `<tr><th>场景</th><th>哪一段</th><th style="text-align:right">下界</th><th style="text-align:right">实际</th><th style="text-align:right">慢了</th><th style="text-align:right">最大穿透</th><th style="text-align:right">碰撞比例</th><th>手持零件参与碰撞</th></tr>` +
+    rows.map(w => `<tr><td>${w.k}</td><td>${w.kind === "transit" ? "空手段" : "携物段"}</td><td class="num">${w.lb.toFixed(2)} s</td><td class="num">${w.ref.toFixed(2)} s</td><td class="num">+${(100 * (w.ratio - 1)).toFixed(0)}%</td><td class="num">${w.depth_mm.toFixed(0)} mm</td><td class="num">${pct(w.frac)}</td><td>${w.held ? "是" : "否"}</td></tr>`).join("");
+}
+
+function render() { findings(); depthChart(); blockedChart(); regretChart(); bucketChart(); timingChart(); worstTable(); }
+render();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>

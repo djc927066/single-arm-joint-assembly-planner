@@ -1,0 +1,69 @@
+options: post_A 145 poses / 1058 (pose, grasp) / 123 grasps, post_B 133 poses / 1048 (pose, grasp) / 66 grasps, post_C 103 poses / 816 (pose, grasp) / 80 grasps, beam_AB 219 poses / 1669 (pose, grasp) / 102 grasps, beam_BC 245 poses / 1779 (pose, grasp) / 131 grasps, beam_CA 164 poses / 1015 (pose, grasp) / 84 grasps
+setup 18s; options + footprints + row AABBs 5s
+[1/48] bls 3.8341 chain 3.2393 = exhaustive  nodes 151/34  (27.1s; total gpu 24s, pairs 55151, cached 4352 pose + 327 goal, 6 (S,p))
+[2/48] bls 3.8676 chain 3.4287 = exhaustive  nodes 16/14  (1.5s; total gpu 25s, pairs 56340, cached 4638 pose + 349 goal, 8 (S,p))
+[3/48] bls 3.8341 chain 3.0779 = exhaustive  nodes 130/6  (7.2s; total gpu 31s, pairs 69049, cached 6072 pose + 445 goal, 10 (S,p))
+[4/48] bls 3.8713 chain 3.1686 = exhaustive  nodes 233/17  (14.7s; total gpu 45s, pairs 96022, cached 9367 pose + 658 goal, 12 (S,p))
+[5/48] bls 3.9130 chain 3.3793 = exhaustive  nodes 46/46  (3.4s; total gpu 47s, pairs 99248, cached 10046 pose + 688 goal, 14 (S,p))
+[6/48] bls 3.9130 chain 3.3135 = exhaustive  nodes 63/30  (1.6s; total gpu 48s, pairs 100814, cached 10401 pose + 696 goal, 15 (S,p))
+[7/48] bls 3.8341 chain 3.0509 = exhaustive  nodes 215/7  (13.4s; total gpu 61s, pairs 117780, cached 11453 pose + 735 goal, 17 (S,p))
+[8/48] bls 3.8676 chain 3.3063 = exhaustive  nodes 16/6  (0.1s; total gpu 61s, pairs 117945, cached 11481 pose + 735 goal, 17 (S,p))
+[9/48] bls 3.8341 chain 3.1704 = exhaustive  nodes 153/22  (3.0s; total gpu 63s, pairs 120622, cached 11677 pose + 742 goal, 19 (S,p))
+[10/48] bls 3.8676 chain 3.4251 = exhaustive  nodes 16/50  (0.7s; total gpu 63s, pairs 121604, cached 11925 pose + 750 goal, 19 (S,p))
+[11/48] bls 3.8341 chain 3.2062 = exhaustive  nodes 132/34  (0.9s; total gpu 64s, pairs 122769, cached 11995 pose + 751 goal, 19 (S,p))
+[12/48] bls 3.8713 chain 3.2620 = exhaustive  nodes 238/240  (2.7s; total gpu 66s, pairs 125944, cached 12364 pose + 754 goal, 19 (S,p))
+[13/48] bls 3.9130 chain 3.4914 = exhaustive  nodes 46/77  (1.1s; total gpu 67s, pairs 126769, cached 12509 pose + 754 goal, 19 (S,p))
+[14/48] bls 3.9130 chain 3.4210 = exhaustive  nodes 63/33  (0.1s; total gpu 67s, pairs 126777, cached 12510 pose + 754 goal, 19 (S,p))
+[15/48] bls 3.9130 chain 3.3951 = exhaustive  nodes 71/102  (3.8s; total gpu 70s, pairs 129623, cached 12848 pose + 762 goal, 21 (S,p))
+[16/48] bls 3.9130 chain 3.4431 = exhaustive  nodes 102/76  (4.7s; total gpu 74s, pairs 135809, cached 13078 pose + 776 goal, 21 (S,p))
+[17/48] bls 3.8341 chain 3.3920 = exhaustive  nodes 151/63  (5.3s; total gpu 78s, pairs 142077, cached 13694 pose + 781 goal, 23 (S,p))
+[18/48] bls 3.8676 chain 3.5817 = exhaustive  nodes 16/128  (3.2s; total gpu 81s, pairs 146546, cached 14126 pose + 784 goal, 23 (S,p))
+[19/48] bls 3.8341 chain 3.2559 = exhaustive  nodes 130/38  (1.2s; total gpu 83s, pairs 147867, cached 14298 pose + 784 goal, 23 (S,p))
+[20/48] bls 3.8713 chain 3.3609 = exhaustive  nodes 233/183  (6.4s; total gpu 88s, pairs 156331, cached 15258 pose + 801 goal, 23 (S,p))
+[21/48] bls 3.9130 chain 3.5331 = exhaustive  nodes 46/93  (0.6s; total gpu 89s, pairs 156683, cached 15385 pose + 801 goal, 23 (S,p))
+[22/48] bls 3.9130 chain 3.4596 = exhaustive  nodes 63/54  (1.3s; total gpu 90s, pairs 157772, cached 15453 pose + 805 goal, 23 (S,p))
+[23/48] bls 3.8341 chain 3.1839 = exhaustive  nodes 215/12  (0.6s; total gpu 91s, pairs 158296, cached 15515 pose + 806 goal, 23 (S,p))
+[24/48] bls 3.8676 chain 3.4392 = exhaustive  nodes 16/17  (0.0s; total gpu 91s, pairs 158296, cached 15516 pose + 806 goal, 23 (S,p))
+[25/48] bls 3.8341 chain 3.2746 = exhaustive  nodes 151/21  (3.9s; total gpu 93s, pairs 162688, cached 15715 pose + 811 goal, 25 (S,p))
+[26/48] bls 3.8676 chain 3.5316 = exhaustive  nodes 16/41  (2.2s; total gpu 96s, pairs 165422, cached 15880 pose + 817 goal, 25 (S,p))
+[27/48] bls 3.8341 chain 3.3526 = exhaustive  nodes 130/20  (1.2s; total gpu 97s, pairs 166934, cached 15974 pose + 817 goal, 25 (S,p))
+[28/48] bls 3.8713 chain 3.4152 = exhaustive  nodes 227/121  (2.4s; total gpu 99s, pairs 169327, cached 16246 pose + 823 goal, 25 (S,p))
+[29/48] bls 3.9130 chain 3.5862 = exhaustive  nodes 46/23  (0.2s; total gpu 99s, pairs 169355, cached 16269 pose + 823 goal, 25 (S,p))
+[30/48] bls 3.9130 chain 3.5338 = exhaustive  nodes 63/50  (0.5s; total gpu 99s, pairs 169893, cached 16341 pose + 823 goal, 25 (S,p))
+[31/48] bls 3.8341 chain 3.1995 = exhaustive  nodes 136/21  (9.6s; total gpu 108s, pairs 181080, cached 16970 pose + 845 goal, 27 (S,p))
+[32/48] bls 3.8713 chain 3.2842 = exhaustive  nodes 268/19  (8.9s; total gpu 116s, pairs 190863, cached 17731 pose + 876 goal, 27 (S,p))
+[33/48] bls 3.8341 chain 3.2340 = exhaustive  nodes 153/29  (1.4s; total gpu 116s, pairs 191269, cached 17792 pose + 876 goal, 29 (S,p))
+[34/48] bls 3.8676 chain 3.4334 = exhaustive  nodes 16/19  (0.1s; total gpu 117s, pairs 191342, cached 17811 pose + 876 goal, 29 (S,p))
+[35/48] bls 3.8341 chain 3.2699 = exhaustive  nodes 132/38  (0.5s; total gpu 117s, pairs 192110, cached 17866 pose + 876 goal, 29 (S,p))
+[36/48] bls 3.8713 chain 3.3045 = exhaustive  nodes 239/199  (0.3s; total gpu 117s, pairs 192118, cached 17915 pose + 876 goal, 29 (S,p))
+[37/48] bls 3.9130 chain 3.5511 = exhaustive  nodes 46/83  (0.4s; total gpu 117s, pairs 192325, cached 18024 pose + 876 goal, 29 (S,p))
+[38/48] bls 3.9130 chain 3.4818 = exhaustive  nodes 63/35  (0.1s; total gpu 117s, pairs 192325, cached 18024 pose + 876 goal, 29 (S,p))
+[39/48] bls 3.9130 chain 3.5091 = exhaustive  nodes 71/87  (0.7s; total gpu 118s, pairs 193024, cached 18111 pose + 876 goal, 29 (S,p))
+[40/48] bls 3.9130 chain 3.5911 = exhaustive  nodes 102/201  (5.8s; total gpu 123s, pairs 199508, cached 18634 pose + 909 goal, 29 (S,p))
+[41/48] bls 3.8341 chain 3.2019 = exhaustive  nodes 151/18  (0.8s; total gpu 123s, pairs 199628, cached 18657 pose + 910 goal, 30 (S,p))
+[42/48] bls 3.8676 chain 3.4068 = exhaustive  nodes 16/14  (0.0s; total gpu 123s, pairs 199628, cached 18668 pose + 910 goal, 30 (S,p))
+[43/48] bls 3.8341 chain 3.2795 = exhaustive  nodes 130/34  (0.5s; total gpu 124s, pairs 200333, cached 18692 pose + 910 goal, 30 (S,p))
+[44/48] bls 3.8713 chain 3.3050 = exhaustive  nodes 227/22  (0.3s; total gpu 124s, pairs 200333, cached 18696 pose + 910 goal, 30 (S,p))
+[45/48] bls 3.9130 chain 3.4742 = exhaustive  nodes 46/23  (0.1s; total gpu 124s, pairs 200501, cached 18720 pose + 910 goal, 30 (S,p))
+[46/48] bls 3.9130 chain 3.4218 = exhaustive  nodes 63/60  (0.3s; total gpu 124s, pairs 200629, cached 18760 pose + 910 goal, 30 (S,p))
+[47/48] bls 3.8341 chain 3.2487 = exhaustive  nodes 136/78  (2.0s; total gpu 126s, pairs 203868, cached 18904 pose + 910 goal, 30 (S,p))
+[48/48] bls 3.8713 chain 3.3156 = exhaustive  nodes 268/93  (0.9s; total gpu 126s, pairs 205214, cached 18975 pose + 910 goal, 30 (S,p))
+{
+ "total_s": 171.36127880000276,
+ "setup_s": 18.448409100004937,
+ "prep_s": 5.26768719998654,
+ "search_s": 147.63881969999056,
+ "gpu_calls": 1951,
+ "pairs": 205214,
+ "pick_queries": 18975,
+ "goal_queries": 910,
+ "gpu_s": 126.36585599978571,
+ "cached_pose_queries": 18975,
+ "all_pose_queries": 833876,
+ "cached_goal_queries": 910,
+ "all_goal_queries": 5045,
+ "placed_obstacles": 230,
+ "obstacles": 1009,
+ "all_match": true
+}
+-> E:\Projects\single-arm-joint-assembly-planner\idea\bls_all_orders_20261031\_out\lazy_triangular_frame6_k8.json

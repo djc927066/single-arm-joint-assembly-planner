@@ -1,0 +1,199 @@
+# SEALP Assembly Definition v1.0
+# TopDownTower
+
+format_version: '1.0'
+name: TopDownTower
+description: TopDownTower generated for 0.75x meshes with 2x tall posts. No roof_plate.
+  Four posts insert into base pockets; top_cross vertically inserts into middle_plate
+  square socket.
+models:
+  base_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\Toy\model\base_plate.stl
+  post_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\Toy\model\post.stl
+  middle_plate_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\Toy\model\middle_plate.stl
+  top_cross_model:
+    path: D:\Project\wrs-sealp\sealp\assets\models\Toy\model\top_cross.stl
+parts:
+  base_plate:
+    name: Base Plate with Square Pockets
+    model: base_model
+    mass: 0.189844
+  post_bl:
+    name: Back-Left Post
+    model: post_model
+    mass: 0.0675
+  post_fl:
+    name: Front-Left Post
+    model: post_model
+    mass: 0.0675
+  post_br:
+    name: Back-Right Post
+    model: post_model
+    mass: 0.0675
+  post_fr:
+    name: Front-Right Post
+    model: post_model
+    mass: 0.0675
+  middle_plate:
+    name: Middle Plate with Center Square Socket
+    model: middle_plate_model
+    mass: 0.135
+  top_cross:
+    name: Vertical Top Cross
+    model: top_cross_model
+    mass: 0.050625
+assembly:
+- step: 0
+  part: base_plate
+  parent: fixture
+  rel_pos:
+  - !!float '0'
+  - !!float '0'
+  - !!float '0'
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps: []
+  notes: Place base_plate on fixture. Its real bottom touches fixture z=0. This part
+    can be treated as preassembled in layout search.
+- step: 1
+  part: post_br
+  parent: base_plate
+  rel_pos:
+  - 0.06375
+  - 0.04875
+  - 0.01215
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  notes: Insert post_br into the matching square pocket. post_bottom_rel=0.012150,
+    base_socket_depth=0.012150.
+- step: 2
+  part: post_fr
+  parent: base_plate
+  rel_pos:
+  - 0.06375
+  - -0.04875
+  - 0.01215
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 1
+  notes: Insert post_fr into the matching square pocket. post_bottom_rel=0.012150,
+    base_socket_depth=0.012150.
+- step: 3
+  part: post_bl
+  parent: base_plate
+  rel_pos:
+  - -0.06375
+  - 0.04875
+  - 0.01215
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 2
+  notes: Insert post_bl into the matching square pocket. post_bottom_rel=0.012150,
+    base_socket_depth=0.012150.
+- step: 4
+  part: post_fl
+  parent: base_plate
+  rel_pos:
+  - -0.06375
+  - -0.04875
+  - 0.01215
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 3
+  notes: Insert post_fl into the matching square pocket. post_bottom_rel=0.012150,
+    base_socket_depth=0.012150.
+- step: 5
+  part: middle_plate
+  parent: base_plate
+  rel_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.14715
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 4
+  notes: Place middle_plate on top of all four posts. No roof_plate in the latest
+    structure.
+- step: 6
+  part: top_cross
+  parent: base_plate
+  rel_pos:
+  - !!float '0'
+  - !!float '0'
+  - 0.15795
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 5
+  notes: Insert vertical top_cross into middle_plate center square socket. cross_bottom_rel=0.157950,
+    middle_socket_depth=0.010800.
+symmetry_groups:
+  posts:
+  - post_bl
+  - post_fl
+  - post_br
+  - post_fr

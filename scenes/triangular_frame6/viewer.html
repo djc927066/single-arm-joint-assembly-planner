@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bridge · 单桌装配场景</title>
+<style>
+:root{color-scheme:light;--ink:#192d42;--muted:#617488;--line:#dce5ee;--blue:#245ccc;--teal:#128269;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:var(--ink);font:14px/1.6 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}main{max-width:1580px;margin:auto;padding:26px 28px 48px}header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:20px}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--blue);font-weight:750}h1{font-size:28px;line-height:1.3;margin:5px 0 6px;letter-spacing:.02em}h2{font-size:17px;margin:0}h3{font-size:13px;margin:0 0 10px;color:var(--muted)}p{margin:5px 0}.muted,small{color:var(--muted)}.scope{padding:9px 14px;border:1px solid #d2dfe9;border-radius:9px;background:#f8fbfd;font-size:12px;max-width:490px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 3px 15px #18314705;overflow:hidden}.card-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 19px;border-bottom:1px solid var(--line)}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:20px;padding:3px 9px;background:#e9f4f1;color:#187664;font-size:11px;font-weight:700}.pill:before{content:"";height:6px;width:6px;border-radius:50%;background:currentColor}.toolbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:11px 16px;border-bottom:1px solid var(--line);background:#fafcfe}button,select{font:inherit;color:var(--ink);border:1px solid #cfdbe6;border-radius:7px;background:white;padding:6px 10px;cursor:pointer}button:hover{background:#f0f5fa;border-color:#9ab3c9}button:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid #4e8fff;outline-offset:2px}button:disabled,input:disabled,select:disabled{opacity:.45;cursor:default}button.primary{background:var(--blue);border-color:var(--blue);color:white}.toolbar button{font-size:12px}.toolbar .check{margin-left:auto;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px}input[type=checkbox]{accent-color:var(--blue)}.viewport{height:650px;min-height:410px;position:relative;background:radial-gradient(ellipse at 50% 35%,#f8fbfe 10%,#e0e9f1 100%)}canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}canvas.dragging{cursor:grabbing}.overlay{position:absolute;inset:0;pointer-events:none;overflow:hidden}.scene-label{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;color:#253e53;font-size:11px;padding:2px 6px;border-radius:4px;background:#ffffffe3;box-shadow:0 1px 5px #17344c18;border-left:3px solid var(--label-color,#667);line-height:1.5}.scene-label.subtle{font-size:10px;color:#64768a}.scene-caption{position:absolute;left:17px;bottom:14px;right:17px;display:flex;justify-content:space-between;gap:16px;pointer-events:none;font-size:11px;color:#5d7287}.scene-caption span{background:#f9fcfedc;border-radius:5px;padding:4px 7px}.error{position:absolute;inset:20px;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:#f8fbffeb;padding:25px;border-radius:10px;color:#6d5260}.error.visible{display:flex}.error strong{font-size:18px;margin-bottom:9px}.scene-status{display:flex;align-items:center;gap:14px;padding:11px 18px;font-size:12px;border-top:1px solid var(--line)}.dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:middle}.sidebar{display:flex;flex-direction:column;gap:15px}.control-body{padding:18px}label.block{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:7px}select{width:100%;padding:9px 10px}.metric{font-size:31px;line-height:1.2;font-weight:750;letter-spacing:-1px;margin:14px 0 3px}.metric small{font-size:13px;font-weight:500;letter-spacing:0}.description{font-size:12px;color:var(--muted)}.divider{border-top:1px solid var(--line);margin:17px 0}.step-heading{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px}.step-heading b{font-size:17px}.step-heading span{font-size:12px;color:var(--muted)}input[type=range]{width:100%;accent-color:var(--blue);margin:6px 0 12px}.step-controls{display:grid;grid-template-columns:1fr 1fr;gap:7px}.step-controls button{font-size:12px}.order{list-style:none;margin:14px 0 0;padding:0}.order li{display:flex;align-items:center;gap:9px;padding:9px 4px;color:#63768a;border-top:1px solid #edf1f5;font-size:12px}.order .number{width:24px;height:24px;border-radius:50%;background:#edf2f7;text-align:center;line-height:24px;font-size:11px}.order li.done{color:#1a4a42}.order li.done .number{background:#e4f4ec;color:#137e61}.order li.next{color:var(--ink);font-weight:700}.order li.next .number{background:#e8efff;color:var(--blue)}.order .state{margin-left:auto;font-size:11px;font-weight:400}.note{padding:14px 17px;font-size:12px;color:#597083;background:#f7fafc}.facts{display:grid;grid-template-columns:auto 1fr;gap:7px 15px;margin:12px 0 0;font-size:12px}.facts dt{color:var(--muted)}.facts dd{margin:0;text-align:right}.bottom{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:18px;margin-top:18px}.plan-wrap{padding:8px 13px 0}svg#plan{width:100%;height:auto;display:block;max-height:430px}.plan-legend{font-size:11px;color:var(--muted);padding:3px 17px 15px;display:flex;gap:17px;flex-wrap:wrap}.plan-legend span:before{content:"";display:inline-block;width:22px;border-top:2px solid #6e8799;margin-right:6px;vertical-align:middle}.plan-legend .dashed:before{border-top-style:dashed}.plan-legend .goal:before{border-top:2px dashed #4d82a3;opacity:.5}.table-wrap{overflow:auto;padding:0 17px}table{width:100%;border-collapse:collapse;font-size:12px}th{font-weight:600;color:var(--muted);padding:13px 5px;text-align:right;white-space:nowrap}td{padding:13px 5px;text-align:right;border-top:1px solid #e7edf2;font-variant-numeric:tabular-nums}td:first-child,th:first-child{text-align:left}tr.installed td{background:#f0f8f4}tfoot td{font-weight:750;color:var(--ink)}.footnote{font-size:11px;color:var(--muted);padding:14px 19px}footer{font-size:11px;color:var(--muted);margin-top:17px}.notice{display:none;border:1px solid #ead29d;background:#fff8e8;color:#8c6924;padding:12px 16px;border-radius:9px;margin-bottom:15px}.notice.visible{display:block}@media(max-width:1100px){main{padding:20px 16px}.layout{grid-template-columns:minmax(0,1fr) 285px}.viewport{height:590px}.bottom{grid-template-columns:1fr}.scope{max-width:350px}}@media(max-width:790px){header{display:block}.scope{margin-top:12px;max-width:none}.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr}.viewport{height:520px}.card-head{padding:13px}h1{font-size:24px}}@media(max-width:520px){main{padding:14px 10px}.sidebar{display:flex}.viewport{height:440px}.toolbar .check{margin-left:0}.scene-caption{left:9px;right:9px;gap:5px;font-size:10px}.scene-status{gap:8px;flex-wrap:wrap}.card-head{align-items:flex-start}.pill{white-space:nowrap}}
+.bottom{grid-template-columns:1fr}.bottom>.card:nth-child(2){display:none}.plan-legend{display:none}</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">CASE / TRIANGULAR FRAME 6</div><h1>六零件 · 三角支撑框架</h1><p class="muted">3 根立柱＋3 根横梁 / 固定底座 / 60 cm 单桌</p></div><div class="scope"><b>模型与名义静力顺序示意</b><br><span id="robot-explanation">各步显示已验证撤离构型，切换为离散状态，没有连接运动。</span></div></header>
+<div id="notice" class="notice" role="status"></div>
+<div class="layout">
+<section class="card"><div class="card-head"><h2>真实网格 · 3D 场景</h2><span class="pill">完全离线</span></div>
+<div class="toolbar"><button data-camera="orbit">全景</button><button data-camera="table">桌面特写</button><button data-camera="top">俯视</button><button data-camera="side">侧视</button><label class="check"><input type="checkbox" id="labels" checked>显示标注</label></div>
+<div class="viewport" id="viewport"><canvas id="scene" tabindex="0" aria-label="单桌装配三维场景。鼠标拖动旋转，滚轮缩放，Shift 拖动平移，方向键旋转。"></canvas><div class="overlay" id="overlay"></div><div class="scene-caption"><span>拖动旋转 · 滚轮缩放 · Shift 拖动平移</span><span id="frame-caption">世界坐标 · 米</span></div><div class="error" id="webgl-error" role="alert"></div></div>
+<div class="scene-status"><span><i class="dot" style="background:#889cad"></i><span id="robot-state">机械臂 HOME</span></span><span><i class="dot" style="background:#b5c4d0"></i>原始桌体网格</span><span id="scene-state"></span></div></section>
+<aside class="sidebar"><section class="card"><div class="control-body"><label class="block" for="candidate">静力合格顺序示例</label><select id="candidate"></select><div class="metric" id="metric">— <small>m</small></div><p class="description">布局为手工几何示意，未运行联合优化</p><div class="divider"></div><div class="step-heading"><b id="step-title">已安装 0 件</b><span id="step-count"></span></div><p class="description" id="step-description"></p><label class="block" for="step" style="margin-top:12px">离散安装步骤</label><input id="step" type="range" min="0" max="4" step="1" value="0"><div class="step-controls"><button id="previous">← 上一步</button><button id="next">下一步 →</button><button id="initial">初始布局</button><button id="complete" class="primary">完成结构</button></div><ol class="order" id="order"></ol></div><div class="note" id="step-note">每次切换直接显示该状态，无运动插值。安装顺序来自所选候选。</div></section>
+<section class="card"><div class="control-body"><h3>场景信息</h3><dl class="facts" id="facts"></dl></div><div class="note" id="scene-note"></div></section></aside>
+</div>
+<div class="bottom"><section class="card"><div class="card-head"><h2>俯视布局 · 同步状态</h2><label class="check" style="font-size:12px"><input type="checkbox" id="routes" checked>代价参考连线</label></div><div class="plan-wrap"><svg id="plan" viewBox="0 0 1000 620" role="img" aria-label="根据实际桌尺寸自动缩放的俯视布局"></svg></div><div class="plan-legend"><span class="dashed">空手距离</span><span>携物距离</span><span class="goal">目标轮廓</span></div></section>
+<section class="card"><div class="card-head"><h2>逐段代价</h2><span class="muted" style="font-size:12px">单位：米</span></div><div class="table-wrap"><table id="segments"></table></div><div class="footnote">空手：Home / 前件目标 → 初始位置；携物：初始 → 目标位置。连线仅用于说明代价，可能穿过障碍。距离按三维坐标计算，未计入绕障、旋转、抓取、抬升、插入及回 Home。</div></section></div>
+<footer id="summary"></footer>
+</main>
+<script type="application/json" id="report-data">{"candidates": [{"order": ["post_A", "post_B", "post_C", "beam_BC", "beam_CA", "beam_AB"], "layout": {"post_A": [[1.0, 0.0, 0.0, -0.005], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_B": [[1.0, 0.0, 0.0, 0.095], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_C": [[1.0, 0.0, 0.0, 0.195], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "beam_AB": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, -0.075], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_BC": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.055], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_CA": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.195], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]]}, "cost_m": 0.0, "segments": []}, {"order": ["post_A", "post_B", "post_C", "beam_AB", "beam_CA", "beam_BC"], "layout": {"post_A": [[1.0, 0.0, 0.0, -0.005], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_B": [[1.0, 0.0, 0.0, 0.095], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_C": [[1.0, 0.0, 0.0, 0.195], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "beam_AB": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, -0.075], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_BC": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.055], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_CA": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.195], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]]}, "cost_m": 0.0, "segments": []}, {"order": ["post_A", "post_B", "post_C", "beam_AB", "beam_BC", "beam_CA"], "layout": {"post_A": [[1.0, 0.0, 0.0, -0.005], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_B": [[1.0, 0.0, 0.0, 0.095], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "post_C": [[1.0, 0.0, 0.0, 0.195], [0.0, 1.0, 0.0, -0.22], [0.0, 0.0, 1.0, 0.05], [0.0, 0.0, 0.0, 1.0]], "beam_AB": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, -0.075], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_BC": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.055], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]], "beam_CA": [[1.0, 0.0, 0.0, 0.06], [0.0, 1.0, 0.0, 0.195], [0.0, 0.0, 1.0, 0.01], [0.0, 0.0, 0.0, 1.0]]}, "cost_m": 0.0, "segments": []}], "table_center": [0.2335, 0, -0.01], "table_size": [0.6, 0.6, 0.02], "site": [0.35, 0.0, 0.0], "goal_poses": {"post_A": [[1.0, 0.0, 0.0, 0.26999999999999996], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "post_B": [[1.0, 0.0, 0.0, 0.43], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "post_C": [[1.0, 0.0, 0.0, 0.365], [0.0, 1.0, 0.0, 0.08], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "beam_AB": [[1.0, -0.0, 0.0, 0.35], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]], "beam_BC": [[-0.4211113064546289, -0.9070089677484316, 0.0, 0.39749999999999996], [0.9070089677484316, -0.4211113064546289, 0.0, 0.010000000000000002], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]], "beam_CA": [[-0.5615014183372646, 0.8274757743917582, 0.0, 0.3175], [-0.8274757743917582, -0.5615014183372646, 0.0, 0.010000000000000002], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]]}, "sizes": {"post_A": [0.06, 0.054, 0.1], "post_B": [0.058, 0.062, 0.1], "post_C": [0.062, 0.056, 0.1], "beam_AB": [0.114, 0.022, 0.02], "beam_BC": [0.10835349040433133, 0.02, 0.02], "beam_CA": [0.12318924315688633, 0.018, 0.02]}, "assembly_parts": {"base": {"size_m": [0.24, 0.24, 0.014]}}, "parameters": {}, "scene_visual": {"meshes": [{"name": "table", "kind": "fixed", "v": "mpmZvpqZmb4K1yO8mpmZvpqZmb4K1yM8mpmZvpqZmT4K1yO8mpmZvpqZmT4K1yM8mpmZPpqZmb4K1yO8mpmZPpqZmb4K1yM8mpmZPpqZmT4K1yO8mpmZPpqZmT4K1yM8", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[1.0, 0.0, 0.0, 0.2335], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, -0.01], [0.0, 0.0, 0.0, 1.0]], "color": [0.88, 0.89, 0.91]}, {"name": "base", "kind": "fixed", "v": "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", "n": "8wQ1v/MENb8AAAAAAACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/Os0TvzrNE786zRO/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/Os0TvzrNE786zRM/8wQ1vwAAAADzBDU/AAAAAPMENb/zBDU/AAAAAAAAAAAAAIA/AACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/sl+aPrJfmj6Lj2c/AACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/Os0TPzrNEz86zRM/Os0TPzrNE786zRM/sl+aPrJfmr6Lj2c/AACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/AAAAAAAAAAAAAIA/AACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/AAAAAAAAAAAAAIA/AACAvwAAAAAAAAAA8wQ1vwAAAADzBDW/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/AAAAAAAAAAAAAIA/8wQ1v/MENT8AAAAAOs0TvzrNEz86zRO/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/Os0TvzrNEz86zRM/AAAAAPMENT/zBDU/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/AAAAAPMENb/zBDU/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/sl+avrJfmj6Lj2c/Os0TvzrNEz86zRM/AAAAAAAAAAAAAIC/Os0TvzrNE786zRM/AAAAAAAAAAAAAIC/sl+avrJfmr6Lj2c/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/AAAAAPMENT/zBDU/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/AAAAAPMENb/zBDU/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/sl+aPrJfmj6Lj2c/AAAAAAAAAAAAAIC/Os0TPzrNEz86zRM/Os0TPzrNE786zRM/sl+aPrJfmr6Lj2c/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/AAAAAPMENT/zBDU/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/AAAAAPMENb/zBDU/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/sl+avrJfmj6Lj2c/Os0TvzrNEz86zRM/AAAAAAAAAAAAAIC/Os0TvzrNE786zRM/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/sl+avrJfmr6Lj2c/AAAAAPMENT/zBDU/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/AAAAAPMENb/zBDU/sl+aPrJfmj6Lj2c/AAAAAAAAAAAAAIC/Os0TPzrNEz86zRM/8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDU/AAAAAAAAAAAAAIC/8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDU/AAAAAAAAAAAAAIC/Os0TPzrNE786zRM/sl+aPrJfmr6Lj2c/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/AAAAAPMENT/zBDU/AAAAAPMENb/zBDW/AAAAAAAAgL8AAAAAAAAAAAAAAAAAAIC/AAAAAPMENb/zBDU/sl+avrJfmj6Lj2c/Os0TvzrNEz86zRM/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/AAAAAAAAAAAAAIC/8wQ1vwAAAADzBDU/AAAAAAAAAAAAAIC/Os0TvzrNE786zRM/AAAAAAAAAAAAAIC/sl+avrJfmr6Lj2c/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAPMENT/zBDW/AAAAAPMENT/zBDU/Os0TPzrNE786zRO/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1P/MENb8AAAAA8wQ1PwAAAADzBDU/Os0TPzrNE786zRM/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1vwAAAADzBDU/8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1vwAAAADzBDU/8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1PwAAAADzBDU/8wQ1PwAAAADzBDW/AACAPwAAAAAAAAAA8wQ1PwAAAADzBDU/Os0TPzrNEz86zRO/8wQ1P/MENT8AAAAAOs0TPzrNEz86zRM/", "f": "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QQAAAFUAAABXAAAAQQAAAFcAAABDAAAAQwAAAFcAAABYAAAAQwAAAFgAAABEAAAARQAAAFkAAABWAAAARQAAAFYAAABCAAAARAAAAFgAAABaAAAARAAAAFoAAABGAAAARwAAAFsAAABZAAAARwAAAFkAAABFAAAARgAAAFoAAABcAAAARgAAAFwAAABIAAAASQAAAF0AAABbAAAASQAAAFsAAABHAAAASAAAAFwAAABeAAAASAAAAF4AAABKAAAASwAAAF8AAABdAAAASwAAAF0AAABJAAAATAAAAGAAAABhAAAATAAAAGEAAABOAAAASgAAAF4AAABgAAAASgAAAGAAAABMAAAATQAAAGIAAABfAAAATQAAAF8AAABLAAAATgAAAGEAAABjAAAATgAAAGMAAABPAAAAUQAAAGQAAABlAAAAUQAAAGUAAABSAAAAUgAAAGUAAABiAAAAUgAAAGIAAABNAAAATwAAAGMAAABmAAAATwAAAGYAAABQAAAAUwAAAGcAAABkAAAAUwAAAGQAAABRAAAAUAAAAGYAAABnAAAAUAAAAGcAAABTAAAAVAAAAGgAAABpAAAAVAAAAGkAAABVAAAAVgAAAGoAAABoAAAAVgAAAGgAAABUAAAAVQAAAGkAAABrAAAAVQAAAGsAAABXAAAAVwAAAGsAAABsAAAAVwAAAGwAAABYAAAAWQAAAG0AAABqAAAAWQAAAGoAAABWAAAAbgAAAG8AAABwAAAAbgAAAHAAAABsAAAAWAAAAGwAAABwAAAAWAAAAHAAAABaAAAAWwAAAHEAAABtAAAAWwAAAG0AAABZAAAAbwAAAHIAAABzAAAAbwAAAHMAAABwAAAAWgAAAHAAAABzAAAAWgAAAHMAAABcAAAAXQAAAHQAAABxAAAAXQAAAHEAAABbAAAAcgAAAHUAAAB2AAAAcgAAAHYAAABzAAAAXAAAAHMAAAB2AAAAXAAAAHYAAABeAAAAXwAAAHcAAAB0AAAAXwAAAHQAAABdAAAAXgAAAHYAAAB4AAAAXgAAAHgAAABgAAAAYgAAAHkAAAB3AAAAYgAAAHcAAABfAAAAYAAAAGYAAABjAAAAYAAAAGMAAABhAAAAYAAAAHgAAAB6AAAAYAAAAHoAAABmAAAAZAAAAHsAAAB8AAAAZAAAAHwAAABlAAAAZQAAAHwAAAB5AAAAZQAAAHkAAABiAAAAZwAAAH0AAAB7AAAAZwAAAHsAAABkAAAAZgAAAHoAAAB9AAAAZgAAAH0AAABnAAAAaAAAAH4AAAB/AAAAaAAAAH8AAABpAAAAagAAAIAAAAB+AAAAagAAAH4AAABoAAAAaQAAAH8AAACBAAAAaQAAAIEAAABrAAAAbAAAAIIAAACDAAAAbAAAAIMAAABuAAAAawAAAIEAAACCAAAAawAAAIIAAABsAAAAbQAAAIQAAACAAAAAbQAAAIAAAABqAAAAbgAAAIMAAACFAAAAbgAAAIUAAABvAAAAcQAAAIYAAACEAAAAcQAAAIQAAABtAAAAbwAAAIUAAACHAAAAbwAAAIcAAAByAAAAdAAAAIgAAACGAAAAdAAAAIYAAABxAAAAcgAAAIcAAACJAAAAcgAAAIkAAAB1AAAAdwAAAIoAAACIAAAAdwAAAIgAAAB0AAAAdQAAAIkAAACLAAAAdQAAAIsAAAB2AAAAdgAAAIsAAACMAAAAdgAAAIwAAAB4AAAAeQAAAI0AAACKAAAAeQAAAIoAAAB3AAAAeAAAAIwAAACOAAAAeAAAAI4AAAB6AAAAewAAAI8AAACQAAAAewAAAJAAAAB8AAAAfAAAAJAAAACNAAAAfAAAAI0AAAB5AAAAfQAAAJEAAACPAAAAfQAAAI8AAAB7AAAAegAAAI4AAACRAAAAegAAAJEAAAB9AAAAkgAAAJMAAACUAAAAkgAAAJQAAACVAAAAfgAAAJIAAACVAAAAfgAAAJUAAAB/AAAAgAAAAJMAAACSAAAAgAAAAJIAAAB+AAAAlQAAAJQAAACWAAAAlQAAAJYAAACXAAAAfwAAAJUAAACXAAAAfwAAAJcAAACBAAAAgQAAAJcAAACWAAAAgQAAAJYAAACCAAAAkwAAAJgAAACZAAAAkwAAAJkAAACUAAAAhAAAAJgAAACTAAAAhAAAAJMAAACAAAAAggAAAJoAAACFAAAAggAAAIUAAACDAAAAlAAAAJkAAACbAAAAlAAAAJsAAACWAAAAggAAAJYAAACbAAAAggAAAJsAAACaAAAAmAAAAJwAAACdAAAAmAAAAJ0AAACZAAAAhgAAAJwAAACYAAAAhgAAAJgAAACEAAAAmgAAAJ4AAACHAAAAmgAAAIcAAACFAAAAmQAAAJ0AAACfAAAAmQAAAJ8AAACbAAAAmgAAAJsAAACfAAAAmgAAAJ8AAACeAAAAnAAAAKAAAAChAAAAnAAAAKEAAACdAAAAiAAAAKAAAACcAAAAiAAAAJwAAACGAAAAngAAAIsAAACJAAAAngAAAIkAAACHAAAAnQAAAKEAAACiAAAAnQAAAKIAAACfAAAAngAAAJ8AAACiAAAAngAAAKIAAACLAAAAoAAAAKMAAACkAAAAoAAAAKQAAAChAAAAigAAAKMAAACgAAAAigAAAKAAAACIAAAAoQAAAKQAAAClAAAAoQAAAKUAAACiAAAAiwAAAKIAAAClAAAAiwAAAKUAAACMAAAAowAAAKYAAACnAAAAowAAAKcAAACkAAAAjQAAAKYAAACjAAAAjQAAAKMAAACKAAAApAAAAKcAAACoAAAApAAAAKgAAAClAAAAjAAAAKUAAACoAAAAjAAAAKgAAACOAAAApgAAAKkAAACqAAAApgAAAKoAAACnAAAAjwAAAKoAAACpAAAAjwAAAKkAAACQAAAAkAAAAKkAAACmAAAAkAAAAKYAAACNAAAApwAAAKoAAACrAAAApwAAAKsAAACoAAAAkQAAAKsAAACqAAAAkQAAAKoAAACPAAAAjgAAAKgAAACrAAAAjgAAAKsAAACRAAAA", "pose": [[1.0, 0.0, 0.0, 0.35], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]], "color": [0.65, 0.69, 0.73]}, {"name": "post_A", "kind": "part", "v": "j8L1vBsv3bzNzEy9j8L1vBsv3bzNzEw9j8L1vBsv3TzNzEy9j8L1vBsv3TzNzEw9j8L1PBsv3bzNzEy9j8L1PBsv3bzNzEw9j8L1PBsv3TzNzEy9j8L1PBsv3TzNzEw9", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[1.0, 0.0, 0.0, 0.26999999999999996], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "color": [0.1, 0.56, 0.48]}, {"name": "post_B", "kind": "part", "v": "aJHtvLbz/bzNzEy9aJHtvLbz/bzNzEw9aJHtvLbz/TzNzEy9aJHtvLbz/TzNzEw9aJHtPLbz/bzNzEy9aJHtPLbz/bzNzEw9aJHtPLbz/TzNzEy9aJHtPLbz/TzNzEw9", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[1.0, 0.0, 0.0, 0.43], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "color": [0.16, 0.43, 0.73]}, {"name": "post_C", "kind": "part", "v": "tvP9vEJg5bzNzEy9tvP9vEJg5bzNzEw9tvP9vEJg5TzNzEy9tvP9vEJg5TzNzEw9tvP9PEJg5bzNzEy9tvP9PEJg5bzNzEw9tvP9PEJg5TzNzEy9tvP9PEJg5TzNzEw9", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[1.0, 0.0, 0.0, 0.365], [0.0, 1.0, 0.0, 0.08], [0.0, 0.0, 1.0, 0.056], [0.0, 0.0, 0.0, 1.0]], "color": [0.53, 0.36, 0.73]}, {"name": "beam_AB", "kind": "part", "v": "1XhpvVg5NLwK1yO81XhpvVg5NLwK1yM81XhpvVg5NDwK1yO81XhpvVg5NDwK1yM81XhpPVg5NLwK1yO81XhpPVg5NLwK1yM81XhpPVg5NDwK1yO81XhpPVg5NDwK1yM8", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[1.0, -0.0, 0.0, 0.35], [0.0, 1.0, 0.0, -0.06], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]], "color": [0.94, 0.62, 0.17]}, {"name": "beam_BC", "kind": "part", "v": "b+hdvQrXI7wK1yO8b+hdvQrXI7wK1yM8b+hdvQrXIzwK1yO8b+hdvQrXIzwK1yM8b+hdPQrXI7wK1yO8b+hdPQrXI7wK1yM8b+hdPQrXIzwK1yO8b+hdPQrXIzwK1yM8", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[-0.4211113064546289, -0.9070089677484316, 0.0, 0.39749999999999996], [0.9070089677484316, -0.4211113064546289, 0.0, 0.010000000000000002], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]], "color": [0.87, 0.33, 0.27]}, {"name": "beam_CA", "kind": "part", "v": "pEp8vbx0E7wK1yO8pEp8vbx0E7wK1yM8pEp8vbx0EzwK1yO8pEp8vbx0EzwK1yM8pEp8Pbx0E7wK1yO8pEp8Pbx0E7wK1yM8pEp8Pbx0EzwK1yO8pEp8Pbx0EzwK1yM8", "n": "Os0TvzrNE786zRO/Os0TvzrNE786zRM/Os0TvzrNEz86zRO/Os0TvzrNEz86zRM/Os0TPzrNE786zRO/Os0TPzrNE786zRM/Os0TPzrNEz86zRO/Os0TPzrNEz86zRM/", "f": "AAAAAAEAAAADAAAAAAAAAAMAAAACAAAABAAAAAYAAAAHAAAABAAAAAcAAAAFAAAAAAAAAAQAAAAFAAAAAAAAAAUAAAABAAAAAgAAAAMAAAAHAAAAAgAAAAcAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAYAAAAEAAAAAQAAAAUAAAAHAAAAAQAAAAcAAAADAAAA", "pose": [[-0.5615014183372646, 0.8274757743917582, 0.0, 0.3175], [-0.8274757743917582, -0.5615014183372646, 0.0, 0.010000000000000002], [0.0, 0.0, 1.0, 0.116], [0.0, 0.0, 0.0, 1.0]], "color": [0.78, 0.47, 0.16]}], "note": "6个可动件＋固定底座。页面初始摆放为几何无重叠的手工示意，顺序通过名义静力检查；没有机器人IK、全臂避障或连续轨迹验证。"}}</script>
+<script>
+'use strict';
+const d = JSON.parse(document.getElementById('report-data').textContent);
+const $ = id => document.getElementById(id);
+const displayNames = {post_l:'左柱',post_r:'右柱',beam:'横梁',load:'负载',base:'装配基座'};
+const partColors = {post_l:'#148971',post_r:'#347dd0',beam:'#d79a31',load:'#b55593'};
+const nameOf = name => displayNames[name] || name;
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const number = (value, digits=4) => Number.isFinite(value) ? value.toFixed(digits) : '—';
+const candidates = Array.isArray(d.candidates) ? d.candidates : [];
+const visual = d.scene_visual || {};
+const rawMeshes = Array.isArray(visual.meshes) ? visual.meshes : [];
+const tableCenter = d.table_center || [.2335,0,-.01];
+const tableSize = d.table_size || [.6,.6,.02];
+const identity = () => [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+function poseArray(value) {
+  const flat = Array.isArray(value) ? value.flat() : [];
+  return flat.length === 16 && flat.every(Number.isFinite) ? flat : identity();
+}
+function translation(point) { const out=identity(); [out[3],out[7],out[11]]=point; return out; }
+function transform(T,p) { return [T[0]*p[0]+T[1]*p[1]+T[2]*p[2]+T[3],T[4]*p[0]+T[5]*p[1]+T[6]*p[2]+T[7],T[8]*p[0]+T[9]*p[1]+T[10]*p[2]+T[11]]; }
+const positions = T => [T[3],T[7],T[11]];
+const subtract = (a,b) => a.map((v,i)=>v-b[i]);
+const add = (a,b) => a.map((v,i)=>v+b[i]);
+const scale = (v,s) => v.map(x=>x*s);
+const cross = (a,b) => [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const dot = (a,b) => a.reduce((s,v,i)=>s+v*b[i],0);
+const normalized = v => scale(v,1/(Math.hypot(...v)||1));
+const toColumnMajor = a => new Float32Array([a[0],a[4],a[8],a[12],a[1],a[5],a[9],a[13],a[2],a[6],a[10],a[14],a[3],a[7],a[11],a[15]]);
+let candidateIndex=0, installedCount=0, meshes=[], renderer=null;
+const candidate = () => candidates[candidateIndex] || null;
+const allPartNames = [...new Set([...rawMeshes.filter(m=>m.kind==='part').map(m=>m.name),...Object.keys(d.goal_poses||d.goals||{})])];
+const order = () => candidate() ? candidate().order || [] : allPartNames;
+const isInstalled = name => !candidate() || order().slice(0,installedCount).includes(name);
+function goalPose(name, fallback) {
+  if (d.goal_poses && d.goal_poses[name]) return poseArray(d.goal_poses[name]);
+  const out=poseArray(fallback);
+  if(d.goals && d.goals[name]) [out[3],out[7],out[11]]=d.goals[name];
+  return out;
+}
+function currentPose(mesh) {
+  if(mesh.kind==='robot') {
+    const poses=candidate() && candidate().robot_poses_by_step;
+    const state=poses && poses[installedCount];
+    return state && state[mesh.name] ? poseArray(state[mesh.name]) : mesh.pose;
+  }
+  if(mesh.kind!=='part') return mesh.pose;
+  if(isInstalled(mesh.name)) return goalPose(mesh.name,mesh.pose);
+  const layout=candidate() && candidate().layout;
+  return layout && layout[mesh.name] ? poseArray(layout[mesh.name]) : mesh.pose;
+}
+function typedBase64(encoded, Type) {
+  if(Array.isArray(encoded)) return new Type(encoded.flat());
+  const binary=atob(encoded||'');
+  if(binary.length%4) throw new Error('网格字节长度无效');
+  const bytes=new Uint8Array(binary.length);
+  for(let i=0;i<binary.length;i++) bytes[i]=binary.charCodeAt(i);
+  const view=new DataView(bytes.buffer), result=new Type(bytes.length/4);
+  for(let i=0;i<result.length;i++) result[i]=Type===Float32Array?view.getFloat32(i*4,true):view.getUint32(i*4,true);
+  return result;
+}
+function vertexNormals(vertices,faces) {
+  const normals=new Float32Array(vertices.length);
+  for(let i=0;i<faces.length;i+=3) {
+    const a=faces[i]*3,b=faces[i+1]*3,c=faces[i+2]*3;
+    const n=cross([vertices[b]-vertices[a],vertices[b+1]-vertices[a+1],vertices[b+2]-vertices[a+2]],[vertices[c]-vertices[a],vertices[c+1]-vertices[a+1],vertices[c+2]-vertices[a+2]]);
+    for(const index of [a,b,c]) for(let k=0;k<3;k++) normals[index+k]+=n[k];
+  }
+  for(let i=0;i<normals.length;i+=3) {const len=Math.hypot(normals[i],normals[i+1],normals[i+2])||1; for(let k=0;k<3;k++) normals[i+k]/=len;}
+  return normals;
+}
+function boundsCorners(min,max) {return [0,1].flatMap(x=>[0,1].flatMap(y=>[0,1].map(z=>[x?max[0]:min[0],y?max[1]:min[1],z?max[2]:min[2]])));}
+function decodeMesh(raw) {
+  const v=typedBase64(raw.v,Float32Array), f=typedBase64(raw.f,Uint32Array);
+  if(!v.length||v.length%3||!f.length||f.length%3) throw new Error('网格顶点或三角面无效：'+raw.name);
+  const min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+  for(let i=0;i<v.length;i++) {if(!Number.isFinite(v[i])) throw new Error('网格坐标无效：'+raw.name);const k=i%3;min[k]=Math.min(min[k],v[i]);max[k]=Math.max(max[k],v[i]);}
+  for(const index of f) if(index>=v.length/3) throw new Error('网格索引越界：'+raw.name);
+  let n=raw.n?typedBase64(raw.n,Float32Array):null;
+  if(!n||n.length!==v.length) n=vertexNormals(v,f);
+  return {...raw,v,f,n,pose:poseArray(raw.pose),color:raw.color||[.6,.67,.73],corners:boundsCorners(min,max),center:min.map((v,i)=>(v+max[i])/2)};
+}
+function multiply4(a,b) {const r=new Array(16).fill(0);for(let row=0;row<4;row++)for(let col=0;col<4;col++)for(let k=0;k<4;k++)r[row*4+col]+=a[row*4+k]*b[k*4+col];return r;}
+function lookAt(eye,target) {
+  const z=normalized(subtract(eye,target)),x=normalized(cross([0,0,1],z)),y=cross(z,x);
+  return [x[0],x[1],x[2],-dot(x,eye),y[0],y[1],y[2],-dot(y,eye),z[0],z[1],z[2],-dot(z,eye),0,0,0,1];
+}
+function perspective(fov,aspect,near,far) {const f=1/Math.tan(fov/2);return [f/aspect,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),2*far*near/(near-far),0,0,-1,0];}
+function worldBounds() {
+  const points=[];
+  for(const mesh of meshes) for(const p of mesh.corners) points.push(transform(currentPose(mesh),p));
+  if(!points.length) return {min:[tableCenter[0]-.4,-.35,-.75],max:[tableCenter[0]+.4,.35,.65]};
+  return {min:[0,1,2].map(k=>Math.min(...points.map(p=>p[k]))),max:[0,1,2].map(k=>Math.max(...points.map(p=>p[k])))};
+}
+function holeData() {
+  const h=visual.table_holes||{};
+  const raw=h.centers||h.positions||[];
+  const z=h.top_z ?? (tableCenter[2]+tableSize[2]/2);
+  return {centers:raw.map(p=>[p[0],p[1],p[2]??z]),radius:h.radius ?? ((h.diameter||.006)/2)};
+}
+function createRenderer() {
+  const canvas=$('scene'),gl=canvas.getContext('webgl2',{alpha:true,antialias:true,preserveDrawingBuffer:false});
+  if(!gl) throw new Error('此浏览器无法启用 WebGL 2。请使用支持硬件加速的现代浏览器；下方俯视布局与代价仍可查看。');
+  const vertex=`#version 300 es
+  precision highp float;
+  layout(location=0) in vec3 aPosition;
+  layout(location=1) in vec3 aNormal;
+  uniform mat4 uModel; uniform mat4 uViewProjection;
+  out vec3 vNormal; out vec3 vWorld;
+  void main(){vec4 world=uModel*vec4(aPosition,1.0);vWorld=world.xyz;vNormal=mat3(uModel)*aNormal;gl_Position=uViewProjection*world;}`;
+  const fragment=`#version 300 es
+  precision highp float;
+  in vec3 vNormal;in vec3 vWorld;uniform vec3 uColor;uniform vec3 uEye;uniform float uUnlit;
+  out vec4 outColor;
+  void main(){vec3 n=normalize(vNormal);if(!gl_FrontFacing)n=-n;
+  vec3 light=normalize(vec3(0.1,-0.55,1.0));vec3 fill=normalize(vec3(-0.8,0.5,0.5));
+  float diffuse=max(dot(n,light),0.0);float back=max(dot(n,fill),0.0);
+  vec3 halfDirection=normalize(light+normalize(uEye-vWorld));float spec=pow(max(dot(n,halfDirection),0.0),40.0)*0.15;
+  vec3 lit=uColor*(0.39+0.51*diffuse+0.21*back)+vec3(spec);outColor=vec4(mix(lit,uColor,uUnlit),1.0);}`;
+  function shader(type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s;}
+  const program=gl.createProgram(),vs=shader(gl.VERTEX_SHADER,vertex),fs=shader(gl.FRAGMENT_SHADER,fragment);
+  gl.attachShader(program,vs);gl.attachShader(program,fs);gl.linkProgram(program);gl.deleteShader(vs);gl.deleteShader(fs);
+  if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(program));
+  gl.useProgram(program);gl.enable(gl.DEPTH_TEST);gl.disable(gl.CULL_FACE);gl.clearColor(0,0,0,0);
+  const uniforms=Object.fromEntries(['uModel','uViewProjection','uColor','uEye','uUnlit'].map(key=>[key,gl.getUniformLocation(program,key)]));
+  function upload(v,n,f) {
+    const vao=gl.createVertexArray();gl.bindVertexArray(vao);
+    for(const [location,array] of [[0,v],[1,n]]) {const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,array,gl.STATIC_DRAW);gl.enableVertexAttribArray(location);gl.vertexAttribPointer(location,3,gl.FLOAT,false,0,0);}
+    if(f){const b=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,b);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,f,gl.STATIC_DRAW);}
+    return {vao,count:f?f.length:v.length/3,indexed:!!f};
+  }
+  for(const mesh of meshes) mesh.gpu=upload(mesh.v,mesh.n,mesh.f);
+  const bounds=worldBounds(),floor=bounds.min[2]-.008,span=Math.max(1.0,tableSize[0]+.5,tableSize[1]+.5),grid=[];
+  for(let offset=-span;offset<=span+.0001;offset+=.1){grid.push(tableCenter[0]-span,tableCenter[1]+offset,floor,tableCenter[0]+span,tableCenter[1]+offset,floor,tableCenter[0]+offset,tableCenter[1]-span,floor,tableCenter[0]+offset,tableCenter[1]+span,floor);}
+  const gridGpu=upload(new Float32Array(grid),new Float32Array(grid.length).fill(1),null);
+  const axisGpu=upload(new Float32Array([0,0,.003,.09,0,.003,0,0,.003,0,.09,.003,0,0,.003,0,0,.093]),new Float32Array(18).fill(1),null);
+  const hole=holeData(),holeVertices=[],holeNormals=[];
+  // Hole markers are added only when supplied separately; the tabletop mesh remains intact.
+  if(!(visual.table_holes||{}).mesh_has_holes) for(const center of hole.centers) for(let j=0;j<20;j++) {
+    const a=j/20*Math.PI*2,b=(j+1)/20*Math.PI*2,r=hole.radius;
+    holeVertices.push(center[0],center[1],center[2]+.00015,center[0]+r*Math.cos(a),center[1]+r*Math.sin(a),center[2]+.00015,center[0]+r*Math.cos(b),center[1]+r*Math.sin(b),center[2]+.00015);
+    holeNormals.push(0,0,1,0,0,1,0,0,1);
+  }
+  const holeGpu=holeVertices.length?upload(new Float32Array(holeVertices),new Float32Array(holeNormals),null):null;
+  const camera={target:[0,0,0],distance:2,yaw:-Math.PI/3,pitch:.55};
+  let pending=false,viewProjection=identity(),eye=[1,-1,1],width=1,height=1;
+  function drawGpu(gpu,pose,color,unlit=false,mode=gl.TRIANGLES){gl.uniformMatrix4fv(uniforms.uModel,false,toColumnMajor(pose));gl.uniform3fv(uniforms.uColor,color.slice(0,3));gl.uniform1f(uniforms.uUnlit,unlit?1:0);gl.bindVertexArray(gpu.vao);if(gpu.indexed)gl.drawElements(mode,gpu.count,gl.UNSIGNED_INT,0);else gl.drawArrays(mode,0,gpu.count);}
+  const labelNodes=[];
+  for(const name of allPartNames){const node=document.createElement('span');node.className='scene-label';node.style.setProperty('--label-color',partColors[name]||'#5a7894');$('overlay').append(node);labelNodes.push({node,name});}
+  for(const [name,text,color] of [['home','初始 HOME TCP','#6d7c89'],['site','装配基座','#8c8165']]) {const node=document.createElement('span');node.className='scene-label subtle';node.textContent=text;node.style.setProperty('--label-color',color);$('overlay').append(node);labelNodes.push({node,name});}
+  function project(p) {const v=[...p,1],c=[0,1,2,3].map(r=>v.reduce((sum,x,k)=>sum+viewProjection[r*4+k]*x,0));return {x:(c[0]/c[3]+1)*width/2,y:(1-c[1]/c[3])*height/2,visible:c[3]>0&&c[2]/c[3]>=-1&&c[2]/c[3]<=1};}
+  function drawLabels() {
+    const visible=$('labels').checked;
+    for(const item of labelNodes){let point;if(item.name==='home')point=d.home_tcp;else if(item.name==='site')point=d.site;else{const mesh=meshes.find(m=>m.kind==='part'&&m.name===item.name);if(mesh){point=transform(currentPose(mesh),mesh.center);point[2]+=.025;}else point=d.goals&&d.goals[item.name];item.node.textContent=(isInstalled(item.name)?'✓ ':'')+nameOf(item.name);}
+      if(!visible||!point){item.node.style.display='none';continue;}const p=project(point);item.node.style.display=p.visible&&p.x>0&&p.x<width&&p.y>0&&p.y<height?'block':'none';item.node.style.left=p.x+'px';item.node.style.top=p.y+'px';}
+  }
+  function render(){pending=false;const rect=canvas.getBoundingClientRect(),ratio=Math.min(window.devicePixelRatio||1,2);width=Math.max(rect.width,1);height=Math.max(rect.height,1);const w=Math.round(width*ratio),h=Math.round(height*ratio);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}gl.viewport(0,0,w,h);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(program);
+    eye=add(camera.target,scale([Math.cos(camera.pitch)*Math.cos(camera.yaw),Math.cos(camera.pitch)*Math.sin(camera.yaw),Math.sin(camera.pitch)],camera.distance));viewProjection=multiply4(perspective(Math.PI/4,width/height,.008,50),lookAt(eye,camera.target));gl.uniformMatrix4fv(uniforms.uViewProjection,false,toColumnMajor(viewProjection));gl.uniform3fv(uniforms.uEye,eye);
+    drawGpu(gridGpu,identity(),[.79,.83,.87],true,gl.LINES);
+    for(const mesh of meshes) drawGpu(mesh.gpu,currentPose(mesh),mesh.color);
+    if(holeGpu)drawGpu(holeGpu,identity(),[.18,.24,.29],true);
+    gl.uniformMatrix4fv(uniforms.uModel,false,toColumnMajor(identity()));gl.uniform1f(uniforms.uUnlit,1);gl.bindVertexArray(axisGpu.vao);
+    for(let k=0;k<3;k++){gl.uniform3fv(uniforms.uColor,[[.82,.25,.28],[.19,.61,.36],[.19,.43,.81]][k]);gl.drawArrays(gl.LINES,k*2,2);}drawLabels();
+  }
+  function requestRender(){if(!pending){pending=true;requestAnimationFrame(render);}}
+  function preset(kind) {
+    const b=worldBounds(),center=b.min.map((v,i)=>(v+b.max[i])/2),radius=Math.hypot(...subtract(b.max,b.min))/2;
+    const aspect=Math.max(canvas.getBoundingClientRect().width/Math.max(canvas.getBoundingClientRect().height,1),.25),angle=Math.atan(Math.tan(Math.PI/8)*Math.min(aspect,1));
+    camera.target=center;camera.distance=radius/Math.sin(angle)*1.10;camera.yaw=-Math.PI/3;camera.pitch=.50;
+    if(kind==='table'||kind==='top'){camera.target=[tableCenter[0],tableCenter[1],tableCenter[2]+.13];camera.distance=Math.max(tableSize[0]/Math.max(aspect,.5),tableSize[1])/(2*Math.tan(Math.PI/8))*1.65;camera.pitch=.78;}
+    if(kind==='top'){camera.target=[tableCenter[0],tableCenter[1],0];camera.yaw=-Math.PI/2;camera.pitch=Math.PI/2-.0001;camera.distance=Math.max(tableSize[0]/Math.max(aspect,.5),tableSize[1])/(2*Math.tan(Math.PI/8))*1.4;}
+    if(kind==='side'){camera.yaw=-Math.PI/2;camera.pitch=.025;}
+    requestRender();
+  }
+  const pointers=new Map();let pinchDistance=0;
+  canvas.addEventListener('pointerdown',event=>{canvas.setPointerCapture(event.pointerId);pointers.set(event.pointerId,[event.clientX,event.clientY]);canvas.classList.add('dragging');pinchDistance=0;});
+  canvas.addEventListener('pointermove',event=>{const previous=pointers.get(event.pointerId);if(!previous)return;const dx=event.clientX-previous[0],dy=event.clientY-previous[1];pointers.set(event.pointerId,[event.clientX,event.clientY]);
+    if(pointers.size===2){const pts=[...pointers.values()],dist=Math.hypot(pts[0][0]-pts[1][0],pts[0][1]-pts[1][1]);if(pinchDistance)camera.distance=Math.max(.12,Math.min(15,camera.distance*pinchDistance/Math.max(dist,1)));pinchDistance=dist;}
+    else if(event.shiftKey||event.buttons===2){const forward=normalized(subtract(camera.target,eye)),right=normalized(cross(forward,[0,0,1])),up=cross(right,forward),factor=camera.distance*.0015;camera.target=add(camera.target,add(scale(right,-dx*factor),scale(up,dy*factor)));}
+    else{camera.yaw-=dx*.008;camera.pitch=Math.max(-1.40,Math.min(1.5706,camera.pitch+dy*.006));}requestRender();});
+  function endPointer(event){pointers.delete(event.pointerId);pinchDistance=0;if(!pointers.size)canvas.classList.remove('dragging');}
+  canvas.addEventListener('pointerup',endPointer);canvas.addEventListener('pointercancel',endPointer);canvas.addEventListener('lostpointercapture',endPointer);canvas.addEventListener('contextmenu',event=>event.preventDefault());
+  canvas.addEventListener('wheel',event=>{event.preventDefault();camera.distance=Math.max(.12,Math.min(15,camera.distance*Math.exp(Math.max(-200,Math.min(200,event.deltaY))*.001)));requestRender();},{passive:false});
+  canvas.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','=','Home'].includes(event.key))return;event.preventDefault();if(event.key==='Home'){preset('orbit');return;}if(event.key==='ArrowLeft')camera.yaw-=.12;if(event.key==='ArrowRight')camera.yaw+=.12;if(event.key==='ArrowUp')camera.pitch=Math.min(1.5706,camera.pitch+.10);if(event.key==='ArrowDown')camera.pitch=Math.max(-1.4,camera.pitch-.1);if(event.key==='+'||event.key==='=')camera.distance=Math.max(.12,camera.distance*.9);if(event.key==='-')camera.distance=Math.min(15,camera.distance*1.1);requestRender();});
+  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();showError('WebGL 场景上下文已丢失。请重新打开此页面；二维布局和代价仍可查看。');});
+  new ResizeObserver(requestRender).observe(canvas);
+  preset('orbit');return {requestRender,preset};
+}
+function showError(message){$('webgl-error').classList.add('visible');$('webgl-error').replaceChildren();const heading=document.createElement('strong');heading.textContent='三维视图暂不可用';const text=document.createElement('p');text.textContent=message;$('webgl-error').append(heading,text);}
+function hull(points) {
+  const sorted=[...points].sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+  const turn=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+  const lower=[],upper=[];
+  for(const p of sorted){while(lower.length>=2&&turn(lower[lower.length-2],lower[lower.length-1],p)<=0)lower.pop();lower.push(p);}
+  for(const p of sorted.reverse()){while(upper.length>=2&&turn(upper[upper.length-2],upper[upper.length-1],p)<=0)upper.pop();upper.push(p);}
+  return lower.slice(0,-1).concat(upper.slice(0,-1));
+}
+function partOutline(name,pose) {const mesh=meshes.find(m=>m.kind==='part'&&m.name===name);const size=(d.sizes||{})[name]||[.04,.04,.04];const corners=mesh?mesh.corners:boundsCorners(size.map(x=>-x/2),size.map(x=>x/2));return hull(corners.map(p=>transform(pose,p)));}
+function drawPlan() {
+  const c=candidate(),names=order(),tableBounds=[tableCenter[0]-tableSize[0]/2,tableCenter[1]-tableSize[1]/2,tableCenter[0]+tableSize[0]/2,tableCenter[1]+tableSize[1]/2];
+  const points=[[tableBounds[0],tableBounds[1]],[tableBounds[2],tableBounds[3]]];
+  for(const name of names){const mesh=meshes.find(m=>m.kind==='part'&&m.name===name),goal=goalPose(name,mesh&&mesh.pose),current=mesh?currentPose(mesh):c&&!isInstalled(name)?poseArray(c.layout[name]):goal;points.push(...partOutline(name,goal),...partOutline(name,current));}
+  if(d.home_tcp)points.push(d.home_tcp);if(d.site)points.push(d.site);
+  const min=[0,1].map(k=>Math.min(...points.map(p=>p[k]))),max=[0,1].map(k=>Math.max(...points.map(p=>p[k]))),zoom=Math.min(810/Math.max(max[0]-min[0],.05),470/Math.max(max[1]-min[1],.05));
+  const center=min.map((v,i)=>(v+max[i])/2),xy=p=>[500+(p[0]-center[0])*zoom,302-(p[1]-center[1])*zoom];
+  const polygon=(pts,color,opacity,dashed=false)=>`<polygon points="${pts.map(p=>xy(p).join(',')).join(' ')}" fill="${color}" fill-opacity="${opacity}" stroke="${color}" stroke-width="${dashed?1.5:2}" ${dashed?'stroke-dasharray="5 5"':''}/>`;
+  let svg='<defs><marker id="route-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#637d90"/></marker></defs>';
+  svg+=polygon([[tableBounds[0],tableBounds[1]],[tableBounds[2],tableBounds[1]],[tableBounds[2],tableBounds[3]],[tableBounds[0],tableBounds[3]]],'#b3c1cc',.14);
+  const holes=holeData();for(const p of holes.centers){const q=xy(p);svg+=`<circle cx="${q[0]}" cy="${q[1]}" r="${Math.max(.8,holes.radius*zoom)}" fill="#9babb7" opacity=".45"/>`;}
+  const baseMeshes=meshes.filter(m=>m.kind==='fixed'&&m.name==='base');
+  for(const base of baseMeshes)svg+=polygon(hull(base.corners.map(p=>transform(base.pose,p))),'#8a8171',.22);
+  for(const name of names){const mesh=meshes.find(m=>m.kind==='part'&&m.name===name);svg+=polygon(partOutline(name,goalPose(name,mesh&&mesh.pose)),partColors[name]||'#64839d',.045,true);}
+  if(c&&$('routes').checked)for(const [index,row] of (c.segments||[]).entries()){
+    const line=(a,b,dashed)=>{if(!a||!b)return '';const p=xy(a),q=xy(b);return `<line x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" stroke="${partColors[row.part]||'#637d90'}" stroke-width="2" opacity="${index<installedCount?.25:.65}" ${dashed?'stroke-dasharray="7 5"':''} marker-end="url(#route-arrow)"/>`;};
+    svg+=line(row.start,row.pick,true)+line(row.pick,row.goal,false);
+  }
+  for(const [index,name] of names.entries()){const mesh=meshes.find(m=>m.kind==='part'&&m.name===name),pose=mesh?currentPose(mesh):c&&!isInstalled(name)?poseArray(c.layout[name]):goalPose(name),color=partColors[name]||'#64839d';svg+=polygon(partOutline(name,pose),color,isInstalled(name)?.80:.56);const pos=xy(positions(pose));svg+=`<text x="${pos[0]+9}" y="${pos[1]-12}" font-size="16" fill="#263e52" paint-order="stroke" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">${isInstalled(name)?'✓ ':index+1+'. '}${esc(nameOf(name))}</text>`;}
+  for(const [point,label,color] of [[d.home_tcp,'HOME TCP','#5d7185'],[d.site,'装配基座','#7f7460'],[[0,0,0],'机器人原点','#607487']])if(point){const p=xy(point);svg+=`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="${color}"/><text x="${p[0]+8}" y="${p[1]+22}" font-size="14" fill="${color}" paint-order="stroke" stroke="#fff" stroke-width="3">${label}</text>`;}
+  const length=.1,x=76,y=561;svg+=`<line x1="${x}" y1="${y}" x2="${x+length*zoom}" y2="${y}" stroke="#526d83" stroke-width="2"/><line x1="${x}" y1="${y-5}" x2="${x}" y2="${y+5}" stroke="#526d83"/><line x1="${x+length*zoom}" y1="${y-5}" x2="${x+length*zoom}" y2="${y+5}" stroke="#526d83"/><text x="${x}" y="${y+25}" font-size="13" fill="#70869a">100 mm · +X 向右 / +Y 向上</text>`;
+  $('plan').innerHTML=svg;
+}
+function update() {
+  const c=candidate(),names=order(),n=names.length;
+  installedCount=c?Math.max(0,Math.min(n,installedCount)):n;
+  $('step').max=n;$('step').value=installedCount;$('step').disabled=!c;
+  $('step-title').textContent='已安装 '+installedCount+' 件';$('step-count').textContent=installedCount+' / '+n;
+  $('step-description').textContent=!c?'显示最终目标结构':installedCount===0?'所有待装零件处于候选初始布局':installedCount===n?'全部零件已切换至最终安装位姿':'下一件：'+nameOf(names[installedCount]);
+  $('metric').innerHTML=c?number(c.cost_m)+' <small>m</small>':'— <small>无完整候选</small>';
+  $('previous').disabled=!c||installedCount===0;$('initial').disabled=!c||installedCount===0;$('next').disabled=!c||installedCount===n;$('complete').disabled=!c||installedCount===n;
+  $('order').innerHTML=names.map((name,i)=>`<li class="${i<installedCount?'done':i===installedCount?'next':''}"><span class="number">${i<installedCount?'✓':i+1}</span><i class="dot" style="background:${partColors[name]||'#64839d'};margin:0"></i>${esc(nameOf(name))}<span class="state">${i<installedCount?'已安装':i===installedCount?'下一件':'待安装'}</span></li>`).join('');
+  $('scene-state').textContent=installedCount===n?'当前：完成结构':installedCount===0?'当前：初始布局':'当前：前 '+installedCount+' 件已安装';
+  const robotStates=c && c.robot_poses_by_step,hasRobotStates=robotStates && robotStates.length===n+1;
+  $('robot-state').textContent=hasRobotStates?(installedCount===0?'机械臂 HOME · 夹爪全开':'机械臂：第 '+installedCount+' 步撤离构型'):'机械臂 HOME（场景参考）';
+  $('robot-explanation').textContent=hasRobotStates?'各步显示已验证撤离构型，切换为离散状态，没有连接运动。':'机械臂处于 HOME 参考姿态；离散切换零件状态，没有连接运动。';
+  $('step-note').textContent=hasRobotStates?'初始显示 HOME；安装后显示对应步骤已验证的撤离构型。各状态之间没有连接运动规划。':'此报告未提供逐步机械臂构型，机械臂保持 HOME 场景参考。零件状态切换无运动插值。';
+  let table='<thead><tr><th>安装零件</th><th>空手</th><th>携物</th><th>合计</th></tr></thead><tbody>';
+  table+=c?(c.segments||[]).map((row,i)=>`<tr class="${i<installedCount?'installed':''}"><td>${i+1}. ${esc(nameOf(row.part))}</td><td>${number(row.empty_m)}</td><td>${number(row.loaded_m)}</td><td>${number(row.total_m)}</td></tr>`).join(''):'<tr><td colspan="4" style="text-align:center;color:#738699">未找到完整候选，暂无逐段代价。</td></tr>';
+  table+='</tbody>';if(c)table+=`<tfoot><tr><td>总计</td><td></td><td></td><td>${number(c.cost_m)}</td></tr></tfoot>`;$('segments').innerHTML=table;
+  drawPlan();if(renderer)renderer.requestRender();
+}
+for(const [i,c] of candidates.entries())$('candidate').add(new Option('方案 '+(i+1)+' · '+number(c.cost_m)+' m',i));
+if(!candidates.length){$('candidate').add(new Option('当前预算未找到完整候选',''));$('candidate').disabled=true;$('notice').classList.add('visible');$('notice').textContent='当前预算未找到完整候选。这里显示目标完成结构；机械臂 HOME 仅作场景参考，目标结构可能占据此姿态空间，不能据此判断存在可执行装配方案。';}
+$('candidate').addEventListener('change',()=>{candidateIndex=Number($('candidate').value);installedCount=0;update();});
+$('step').addEventListener('input',()=>{installedCount=Number($('step').value);update();});
+$('previous').addEventListener('click',()=>{installedCount--;update();});$('next').addEventListener('click',()=>{installedCount++;update();});
+$('initial').addEventListener('click',()=>{installedCount=0;update();});$('complete').addEventListener('click',()=>{installedCount=order().length;update();});
+$('routes').addEventListener('change',drawPlan);$('labels').addEventListener('change',()=>{if(renderer)renderer.requestRender();});
+document.querySelectorAll('[data-camera]').forEach(button=>button.addEventListener('click',()=>{if(renderer)renderer.preset(button.dataset.camera);}));
+const holeInfo=visual.table_holes||{};
+const factRows=[['桌面尺寸',tableSize.slice(0,2).map(v=>number(v*1000,0)).join(' × ')+' mm'],['桌面中心',tableCenter.slice(0,2).map(v=>number(v,4)).join(', ')+' m'],...(holeInfo.hole_count?[['桌面孔阵列',(holeInfo.nx&&holeInfo.ny?holeInfo.nx+' × '+holeInfo.ny+' · ':'')+holeInfo.hole_count+' 孔']]:[]),['目标机械臂','Panthera（本案例未验证）'],['顺序示例数量',candidates.length],['坐标单位','米（m）']];
+if(d.assembly_input){factRows.push(['装配体线性比例',number(d.assembly_input.linear_scale*100,2)+'%（孔及相对安装位置同步缩放）'],['固定底座位置',d.assembly_input.fixed_base_position.map(v=>number(v,4)).join(', ')+' m']);}
+if(d.assembly_parts&&d.assembly_parts.base){factRows.push(['底座尺寸',d.assembly_parts.base.size_m.map(v=>number(v*1000,2)).join(' × ')+' mm']);}
+const sealpGrid=d.candidate_generation?.method==='sealp_bsfs_beam_per_part_xy';
+if(sealpGrid){factRows.push(['位置候选方法','原 SEALP · 逐零件网格'],['中心点预算',d.candidate_generation.centre_cap==null?'全部可行中心':'每件最多 '+d.candidate_generation.centre_cap+' 个 XY 中心']);for(const [pid,s] of Object.entries(d.domain_stats||{})){factRows.push([displayNames[pid]||pid,s.retained_centres+' 个中心 / '+s.retained+' 种位姿（IK后）']);}}
+$('facts').innerHTML=factRows.map(([key,value])=>'<dt>'+esc(key)+'</dt><dd>'+esc(value)+'</dd>').join('');
+$('scene-note').textContent=visual.note||'场景几何随报告嵌入。固定物体保持原始位姿；活动零件使用候选布局或目标位姿。';
+const parameters=d.parameters||{};
+$('summary').textContent='Beam 宽度 '+(parameters.beam_width??'—')+' · '+(sealpGrid?'原 SEALP 网格，每件中心上限 '+(d.candidate_generation.centre_cap??'全部')+'，每中心试 0/90°':'每件候选上限 '+(parameters.candidates??'—'))+' · 搜索 '+number(d.wall_s,2)+' s · 预处理 '+number(d.setup_s,2)+' s。有限候选与 Beam 截断，不保证全局最优。';
+try{meshes=rawMeshes.map(decodeMesh);if(!meshes.length)throw new Error('此报告未附带 scene_visual 三维网格。下方保留俯视布局与代价信息。');renderer=createRenderer();}catch(error){console.error(error);showError(error.message||String(error));}
+update();
+
+Object.assign(displayNames, {"post_A": "立柱 A", "post_B": "立柱 B", "post_C": "立柱 C", "beam_AB": "横梁 AB", "beam_BC": "横梁 BC", "beam_CA": "横梁 CA", "base": "固定底座"});Object.assign(partColors,{"post_A": "#1a8f7a", "post_B": "#296eba", "post_C": "#875cba", "beam_AB": "#f09e2b", "beam_BC": "#de5445", "beam_CA": "#c77829", "base": "#a6b0ba"});
+const updateOriginal=update;
+update=function(){updateOriginal();$('metric').innerHTML='6 <small>可动零件</small>';
+$('robot-state').textContent='机器人尚未接入本案例';
+$('robot-explanation').textContent='STL模型与名义静力顺序；未验证抓取、IK和机器人连续运动。';
+$('step-note').textContent='手工初始布局＋名义静力合格顺序；切换直接改变位姿，不是运动轨迹。';
+$('summary').textContent='名义稳定子集 18/64；名义稳定顺序 48/720。固定底座不计入6个可动件。';};
+for(let i=0;i<candidates.length;i++)$('candidate').options[i].text='顺序示例 '+(i+1)+' · 最后安装 '+nameOf(candidates[i].order.at(-1));
+$('routes').checked=false;installedCount=6;update();if(renderer)renderer.preset('table');
+</script>
+</body>
+</html>

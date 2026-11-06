@@ -1,0 +1,57 @@
+{
+ "args": {
+  "model": "triangular_frame6",
+  "penalty": null,
+  "detax": false,
+  "grasps_per_pose": 8,
+  "sampler": "fps",
+  "placements": "sealp",
+  "grid": "fine",
+  "grid_step": 0.015,
+  "keepout": "sealp",
+  "goal_pos": "0.373,0.0,0.0",
+  "home_clear": 0.03,
+  "orient": "first",
+  "search": "lattice_joint"
+ },
+ "chosen": {
+  "steps": [
+   [
+    "post_A",
+    "0.203,0.000,yaw0,identity",
+    1067
+   ],
+   [
+    "post_B",
+    "0.371,-0.168,yaw0,identity",
+    1345
+   ],
+   [
+    "beam_AB",
+    "0.447,-0.198,yaw0,rot90_13",
+    459
+   ],
+   [
+    "post_C",
+    "0.264,0.168,yaw0,identity",
+    1295
+   ],
+   [
+    "beam_BC",
+    "0.371,0.153,yaw0,rot90_17",
+    1387
+   ],
+   [
+    "beam_CA",
+    "0.310,0.214,yaw0,fs_02",
+    1240
+   ]
+  ],
+  "time": 15.50046524400248,
+  "est": 14.388422807518412,
+  "lb": 14.388422807518412
+ },
+ "source": "lattice_joint validated plan",
+ "search_cost": 3.1739687710104882,
+ "validated_time": 15.50046524400248
+}

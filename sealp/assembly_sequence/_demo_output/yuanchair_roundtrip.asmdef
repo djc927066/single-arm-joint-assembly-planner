@@ -1,0 +1,138 @@
+# SEALP Assembly Definition v1.0
+# YuanChair
+
+format_version: '1.0'
+name: YuanChair
+description: 'Round chair assembly: 1 seat + 4 identical legs'
+models:
+  seat_model:
+    path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part1.stl
+  leg_model:
+    path: D:\code\layout_sq\wrs\sealp\assets\models\yuanchair\yuanchair-part2.stl
+parts:
+  seat:
+    name: Seat
+    model: seat_model
+    mass: 1.5
+  leg_fl:
+    name: Front-Left Leg
+    model: leg_model
+    mass: 0.3
+  leg_fr:
+    name: Front-Right Leg
+    model: leg_model
+    mass: 0.3
+  leg_bl:
+    name: Back-Left Leg
+    model: leg_model
+    mass: 0.3
+  leg_br:
+    name: Back-Right Leg
+    model: leg_model
+    mass: 0.3
+assembly:
+- step: 0
+  part: seat
+  parent: fixture
+  rel_pos:
+  - 0.3
+  - !!float '0'
+  - !!float '0'
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps: []
+  notes: Place the seat at the assembly station.
+- step: 1
+  part: leg_fl
+  parent: seat
+  rel_pos:
+  - -0.11
+  - 0.11
+  - 0.02
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  notes: Insert Front-Left Leg into the seat.
+- step: 2
+  part: leg_fr
+  parent: seat
+  rel_pos:
+  - -0.11
+  - -0.11
+  - 0.02
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  notes: Insert Front-Right Leg into the seat.
+- step: 3
+  part: leg_bl
+  parent: seat
+  rel_pos:
+  - 0.11
+  - -0.11
+  - 0.02
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  notes: Insert Back-Left Leg into the seat.
+- step: 4
+  part: leg_br
+  parent: seat
+  rel_pos:
+  - 0.11
+  - 0.11
+  - 0.02
+  rel_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+  deps:
+  - 0
+  notes: Insert Back-Right Leg into the seat.
+symmetry_groups:
+  legs:
+  - leg_fl
+  - leg_fr
+  - leg_bl
+  - leg_br

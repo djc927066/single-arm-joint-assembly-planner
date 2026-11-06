@@ -1,0 +1,374 @@
+<title>Bridge 装配规划对比</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --ground: #eef2f0;
+  --surface: #ffffff;
+  --ink: #15201d;
+  --muted: #5a6a65;
+  --rule: #d3dcd8;
+  --cu: #0b7a64;
+  --cu-soft: #bfe1d7;
+  --rrt: #b4531b;
+  --rrt-soft: #f0d2bf;
+  --lin: #a8b3af;
+  --grip: #43504c;
+  --good: #0b7a64;
+  --bad: #b3261e;
+  --viewport: #e4eae7;
+  --sans: "Instrument Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0e1412; --surface: #151d1a; --ink: #e5ede9; --muted: #93a29d; --rule: #29342f;
+    --cu: #3cc7a5; --cu-soft: #1d4a3f; --rrt: #e38a57; --rrt-soft: #4d2e1c;
+    --lin: #4f5b57; --grip: #b9c6c1; --good: #3cc7a5; --bad: #ff8a80; --viewport: #111916;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0e1412; --surface: #151d1a; --ink: #e5ede9; --muted: #93a29d; --rule: #29342f;
+  --cu: #3cc7a5; --cu-soft: #1d4a3f; --rrt: #e38a57; --rrt-soft: #4d2e1c;
+  --lin: #4f5b57; --grip: #b9c6c1; --good: #3cc7a5; --bad: #ff8a80; --viewport: #111916;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+h1 { font-size: clamp(24px, 3.2vw, 34px); line-height: 1.15; margin: 0; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+h2 { font-size: 18px; margin: 0 0 12px; font-weight: 600; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 68ch; margin: 8px 0 0; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; letter-spacing: .04em; color: var(--muted); }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.cu { color: var(--cu); } .rrt { color: var(--rrt); }
+
+/* headline metrics */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.metric { background: var(--surface); padding: 16px 18px; display: grid; gap: 6px; }
+.metric .label { font-size: 13px; color: var(--muted); }
+.metric .pair { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.metric .pair span { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 22px; font-weight: 600; }
+.metric .pair small { font-size: 12px; color: var(--muted); font-family: var(--sans); font-weight: 400; margin-left: 4px; }
+.metric .delta { font-size: 13px; font-family: var(--mono); }
+.delta.better { color: var(--good); } .delta.worse { color: var(--bad); } .delta.flat { color: var(--muted); }
+
+/* viewports */
+.stage { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 760px) { .stage { grid-template-columns: 1fr; } }
+.vp { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; display: grid; }
+.vp-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.vp-head strong { font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.vp-clock { font-family: var(--mono); font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.vp canvas { display: block; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; background: var(--viewport); }
+.vp-foot { padding: 8px 14px; font-size: 13px; color: var(--muted); min-height: 38px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.state { font-weight: 600; color: var(--ink); }
+.done { font-family: var(--mono); font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--cu-soft); color: var(--ink); }
+.done[data-p="rrt"] { background: var(--rrt-soft); }
+
+/* transport */
+.transport { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 14px; }
+button, select { font: 500 14px var(--sans); color: var(--ink); background: var(--ground); border: 1px solid var(--rule); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+button:hover, select:hover { border-color: var(--muted); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--cu); outline-offset: 2px; }
+input[type=range] { flex: 1 1 220px; accent-color: var(--cu); min-width: 0; }
+.transport .num { font-size: 14px; min-width: 9ch; text-align: right; }
+
+/* gantt */
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; }
+.gantt-wrap { overflow-x: auto; }
+.gantt { width: 100%; min-width: 640px; display: block; }
+.gantt text { font-family: var(--sans); fill: var(--muted); font-size: 12px; }
+.gantt .axis text { font-family: var(--mono); font-size: 11px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.legend i { display: inline-block; width: 18px; height: 10px; border-radius: 2px; vertical-align: -1px; margin-right: 6px; }
+
+/* table */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px; }
+th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font-weight: 600; font-size: 12px; letter-spacing: .03em; color: var(--muted); }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 600; border-top: 2px solid var(--ink); border-bottom: none; }
+.src { font-family: var(--sans); font-size: 12px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--rule); color: var(--muted); }
+.src.fallback { border-color: var(--rrt); color: var(--rrt); }
+.retry { color: var(--rrt); font-size: 12px; margin-left: 4px; font-family: var(--sans); }
+thead .grp th { color: var(--ink); font-size: 13px; border-bottom: none; padding-bottom: 0; }
+
+.notes { display: grid; gap: 10px; color: var(--ink); max-width: 80ch; }
+.notes p { margin: 0; }
+.notes b { font-weight: 600; }
+.foot { font-size: 12px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="tag">单臂 Panthera-HT · Bridge 按装配顺序全流程 · 共用抓取与关键位形</div>
+    <h1>同一布局、同一抓取：cuRobo 与 WRS RRT 装完整座桥</h1>
+    <p class="lede" id="lede"></p>
+  </header>
+
+  <section class="metrics" id="metrics" aria-label="核心对比"></section>
+
+  <section class="stage">
+    <div class="vp">
+      <div class="vp-head"><strong><span class="dot" style="background:var(--cu)"></span>cuRobo 分级规划器</strong><span class="vp-clock" id="clock-curobo">0.00 s</span></div>
+      <canvas id="cv-curobo" aria-label="cuRobo 装配回放"></canvas>
+      <div class="vp-foot" id="foot-curobo"></div>
+    </div>
+    <div class="vp">
+      <div class="vp-head"><strong><span class="dot" style="background:var(--rrt)"></span>WRS RRT-Connect</strong><span class="vp-clock" id="clock-wrs_rrt">0.00 s</span></div>
+      <canvas id="cv-wrs_rrt" aria-label="RRT 装配回放"></canvas>
+      <div class="vp-foot" id="foot-wrs_rrt"></div>
+    </div>
+  </section>
+
+  <section class="transport" aria-label="回放控制">
+    <button id="play" type="button">暂停</button>
+    <button id="restart" type="button">从头播放</button>
+    <label class="tag" for="speed">倍速</label>
+    <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+    <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="时间">
+    <span class="num" id="tnow">0.00 s</span>
+  </section>
+
+  <section class="panel">
+    <h2>执行时间线（同一时间轴）</h2>
+    <div class="gantt-wrap"><svg class="gantt" id="gantt" viewBox="0 0 1000 150" role="img" aria-label="两种规划器的执行时间线"></svg></div>
+    <div class="legend">
+      <span><i style="background:var(--cu-soft);outline:1px solid var(--cu)"></i>空手移动（去取件 / 回 HOME）</span>
+      <span><i style="background:var(--cu)"></i>持件搬运</span>
+      <span><i style="background:var(--lin)"></i>直线接近 / 抬升 / 插入 / 撤离</span>
+      <span><i style="background:var(--grip)"></i>夹爪开合</span>
+      <span><i style="background:transparent;outline:2px dashed var(--rrt)"></i>cuRobo 失败、由 RRT 兜底</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>逐段明细（规划器负责的 9 段）</h2>
+    <div class="table-wrap"><table id="table"></table></div>
+  </section>
+
+  <section class="panel notes" id="notes"></section>
+  <p class="foot" id="foot"></p>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+
+const D = JSON.parse(document.getElementById("data").textContent);
+const V = D.viz, S = D.summary;
+const RUNS = ["curobo", "wrs_rrt"];
+const NAME = { curobo: "cuRobo", wrs_rrt: "RRT" };
+const LEG = { A: "去取件", B: "搬运", home: "回 HOME" };
+const f2 = (x) => (x == null ? "—" : Number(x).toFixed(2));
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+// ---------- text ----------
+const cu = S.curobo, rr = S.wrs_rrt;
+document.getElementById("lede").textContent =
+  `装配顺序 ${D.order.slice(1).join(" → ")}（底座预装在 x=${D.site[0].toFixed(2)} m）。` +
+  `随机布局第 ${D.layout_attempts} 次合法；抓取与所有关键位形只筛一次、两边共用，` +
+  `两种规划器只负责"去取件 / 搬运 / 回 HOME"这 9 段，输出都经 WRS 三角网格逐点复核。`;
+
+function metric(label, a, b, unit, lowerBetter = true, note = "") {
+  const d = (b - a) / b * 100;
+  const cls = Math.abs(d) < 3 ? "flat" : ((lowerBetter ? a < b : a > b) ? "better" : "worse");
+  const txt = Math.abs(d) < 3 ? "基本持平" : `cuRobo ${a < b ? "少" : "多"} ${Math.abs(d).toFixed(0)}%`;
+  return `<div class="metric"><div class="label">${label}</div>
+    <div class="pair"><span class="cu">${f2(a)}<small>${unit} cuRobo</small></span><span class="rrt">${f2(b)}<small>${unit} RRT</small></span></div>
+    <div class="delta ${cls}">${txt}${note ? " · " + note : ""}</div></div>`;
+}
+document.getElementById("metrics").innerHTML =
+  metric("完整装配执行时间（同一时间参数化）", cu.total_exec_same_s, rr.total_exec_same_s, "s") +
+  metric("其中规划器负责的 9 段", cu.planned_exec_same_s, rr.planned_exec_same_s, "s") +
+  metric("规划耗时（9 段合计，含复核）", cu.plan_s, rr.plan_s, "s", true,
+         `cuRobo 有 ${cu.sources.wrs_rrt || 0} 段回退 RRT`) +
+  metric("关节路径总长", cu.joint_path_rad, rr.joint_path_rad, "rad", true,
+         `RRT 复核拒绝 ${rr.verification_rejections} 次`);
+
+// ---------- 3D ----------
+function b64(s, T) { const bin = atob(s); const u = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i); return new T(u.buffer); }
+const PART_COLOR = { base: 0x9aa39f, post_l: 0xc99a4b, post_r: 0xc99a4b, beam: 0x4f6d8f, load: 0x8b5a7a,
+                     middle_plate: 0x4f6d8f, top_cross: 0x8b5a7a, base_plate: 0x9aa39f };
+const geoms = V.bodies.map((b) => {
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(b64(b.v, Float32Array), 3));
+  g.setIndex(new THREE.BufferAttribute(b64(b.f, Uint32Array), 1));
+  const ng = g.toNonIndexed(); ng.computeVertexNormals(); return ng;
+});
+const tableSize = D.example === "bridge" ? [0.64, 0.80] : [0.64, 0.60];
+const poses = Object.fromEntries(RUNS.map((r) => [r, b64(V.runs[r].poses, Float32Array)]));
+const NB = V.bodies.length;
+const target = new THREE.Vector3(D.site[0] - 0.06, 0, 0.09);
+
+function makeView(run) {
+  const canvas = document.getElementById("cv-" + run);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(38, 4 / 3, 0.01, 20);
+  camera.up.set(0, 0, 1);
+  camera.position.set(target.x + 0.75, target.y - 0.95, 0.72);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x8a938f, 1.6));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(0.8, -0.6, 1.4); scene.add(sun);
+  const table = new THREE.Mesh(new THREE.BoxGeometry(tableSize[0], tableSize[1], 0.02),
+    new THREE.MeshStandardMaterial({ color: 0xd9dfdc, roughness: 0.95 }));
+  table.position.set(0.33, 0, -0.01); scene.add(table);
+  const meshes = V.bodies.map((b, i) => {
+    const robot = b.kind === "robot";
+    const grip = /gripper|finger/.test(b.name);
+    const mat = new THREE.MeshStandardMaterial({
+      color: robot ? (grip ? 0x3b4744 : 0xc4ccc9) : (PART_COLOR[b.name] ?? 0x888888),
+      roughness: robot ? 0.45 : 0.7, metalness: robot ? 0.35 : 0.05 });
+    const m = new THREE.Mesh(geoms[i], mat); m.matrixAutoUpdate = true; scene.add(m); return m;
+  });
+  const controls = new OrbitControls(camera, canvas);
+  controls.target.copy(target); controls.enableDamping = true; controls.update();
+  return { run, canvas, renderer, scene, camera, controls, meshes };
+}
+const views = RUNS.map(makeView);
+
+// keep the two cameras in lock-step
+let syncing = false;
+views.forEach((v) => v.controls.addEventListener("change", () => {
+  if (syncing) return; syncing = true;
+  views.forEach((o) => { if (o !== v) { o.camera.position.copy(v.camera.position); o.controls.target.copy(v.controls.target); o.controls.update(); } });
+  syncing = false;
+}));
+
+function resize() {
+  views.forEach((v) => {
+    const w = v.canvas.clientWidth, h = v.canvas.clientHeight;
+    if (v.canvas.width !== Math.round(w * v.renderer.getPixelRatio())) {
+      v.renderer.setSize(w, h, false); v.camera.aspect = w / h; v.camera.updateProjectionMatrix();
+    }
+  });
+}
+
+function setPose(v, t) {
+  const R = V.runs[v.run], P = poses[v.run];
+  const fi = Math.max(0, Math.min(R.frames - 1, Math.floor(t * R.fps)));
+  const base = fi * NB * 7;
+  v.meshes.forEach((m, j) => {
+    const o = base + j * 7;
+    m.position.set(P[o], P[o + 1], P[o + 2]);
+    m.quaternion.set(P[o + 3], P[o + 4], P[o + 5], P[o + 6]);
+  });
+}
+
+function currentEvent(run, t) {
+  const ev = V.runs[run].events;
+  for (const e of ev) if (t < e.t1) return e;
+  return null;
+}
+const partIdx = (p) => D.order.indexOf(p);
+function footText(run, t) {
+  const R = V.runs[run], e = currentEvent(run, t);
+  if (!e) return `<span class="done" data-p="${run === "curobo" ? "cu" : "rrt"}">装配完成 · ${R.duration.toFixed(2)} s</span>`;
+  const who = e.part === "-" ? "" : `第 ${partIdx(e.part)} 件 ${e.part} · `;
+  const src = (e.kind === "A" || e.kind === "B" || e.kind === "home")
+    ? ` · 由 ${e.source === "wrs_rrt" ? "RRT" : "cuRobo"} 规划` : "";
+  return `<span class="state">${who}${e.label}</span>${src}`;
+}
+
+// ---------- transport ----------
+const T_MAX = Math.max(...RUNS.map((r) => V.runs[r].duration));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let t = 0, playing = !reduce, speed = 1, last = performance.now();
+const playBtn = document.getElementById("play"), scrub = document.getElementById("scrub");
+const tnow = document.getElementById("tnow");
+playBtn.textContent = playing ? "暂停" : "播放";
+playBtn.onclick = () => { playing = !playing; playBtn.textContent = playing ? "暂停" : "播放"; if (playing && t >= T_MAX + 1) t = 0; };
+document.getElementById("restart").onclick = () => { t = 0; playing = true; playBtn.textContent = "暂停"; };
+document.getElementById("speed").onchange = (e) => { speed = Number(e.target.value); };
+scrub.oninput = () => { t = scrub.value / 1000 * T_MAX; };
+
+// ---------- gantt ----------
+const svg = document.getElementById("gantt");
+const X0 = 70, X1 = 985, rowY = { curobo: 30, wrs_rrt: 82 }, RH = 30;
+const sx = (x) => X0 + (x / T_MAX) * (X1 - X0);
+function drawGantt() {
+  const colors = { cu: css("--cu"), cuS: css("--cu-soft"), rr: css("--rrt"), rrS: css("--rrt-soft"),
+                   lin: css("--lin"), grip: css("--grip"), rule: css("--rule"), ink: css("--ink") };
+  let h = `<g class="axis">`;
+  for (let s = 0; s <= T_MAX; s += 5) h += `<line x1="${sx(s)}" x2="${sx(s)}" y1="20" y2="118" stroke="${colors.rule}"/><text x="${sx(s)}" y="138" text-anchor="middle">${s}s</text>`;
+  h += `</g>`;
+  for (const run of RUNS) {
+    const main = run === "curobo" ? colors.cu : colors.rr, soft = run === "curobo" ? colors.cuS : colors.rrS;
+    const y = rowY[run];
+    h += `<text x="${X0 - 8}" y="${y + RH / 2 + 4}" text-anchor="end" style="fill:${main};font-weight:600">${NAME[run]}</text>`;
+    for (const e of V.runs[run].events) {
+      const w = Math.max(0.6, sx(e.t1) - sx(e.t0));
+      let fill = colors.lin, stroke = "none", dash = "";
+      if (e.kind === "A" || e.kind === "home") fill = soft;
+      if (e.kind === "B") fill = main;
+      if (e.kind === "grip") fill = colors.grip;
+      if ((e.kind === "A" || e.kind === "B" || e.kind === "home") && run === "curobo" && e.source === "wrs_rrt") { stroke = colors.rr; dash = "4 3"; }
+      if (e.kind === "A" || e.kind === "B" || e.kind === "home") stroke = stroke === "none" ? main : stroke;
+      h += `<rect x="${sx(e.t0)}" y="${y}" width="${w}" height="${RH}" fill="${fill}" stroke="${stroke}" stroke-width="1.2" ${dash ? `stroke-dasharray="${dash}"` : ""}><title>${e.part} · ${e.label} · ${(e.t1 - e.t0).toFixed(2)} s</title></rect>`;
+    }
+    const dur = V.runs[run].duration;
+    h += `<text x="${Math.min(sx(dur) + 6, X1 - 2)}" y="${y + RH / 2 + 4}" text-anchor="${sx(dur) + 60 > X1 ? "end" : "start"}" style="font-family:var(--mono);fill:${colors.ink}">${dur.toFixed(2)} s</text>`;
+  }
+  h += `<line id="cursor" x1="${X0}" x2="${X0}" y1="20" y2="118" stroke="${colors.ink}" stroke-width="1.5"/>`;
+  svg.innerHTML = h;
+}
+drawGantt();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawGantt);
+new MutationObserver(drawGantt).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+// ---------- table ----------
+(function table() {
+  const a = D.segments.curobo, b = D.segments.wrs_rrt;
+  const tries = (s) => s.tiers.filter((x) => x[0] === "wrs_rrt").length;
+  let h = `<thead><tr class="grp"><th></th><th></th><th colspan="3" class="cu">cuRobo 分级规划器</th><th colspan="3" class="rrt">WRS RRT</th></tr>
+  <tr><th>零件</th><th>段</th><th>来源</th><th>规划 s</th><th>执行 s</th><th>尝试</th><th>规划 s</th><th>执行 s</th></tr></thead><tbody>`;
+  a.forEach((s, i) => {
+    const r = b[i];
+    const fb = s.source !== "curobo";
+    h += `<tr><td>${s.part === "-" ? "—" : s.part}</td><td>${LEG[s.leg] ?? s.leg}</td>
+      <td><span class="src ${fb ? "fallback" : ""}">${fb ? "RRT 兜底" : "cuRobo"}</span></td>
+      <td class="num">${f2(s.plan_s)}</td><td class="num">${f2(s.same_s)}</td>
+      <td class="num">${tries(r)}${tries(r) > 1 ? `<span class="retry">复核拒绝 ${tries(r) - 1}</span>` : ""}</td>
+      <td class="num">${f2(r.plan_s)}</td><td class="num">${f2(r.same_s)}</td></tr>`;
+  });
+  h += `<tr class="total"><td>合计</td><td></td><td></td><td class="num">${f2(cu.plan_s)}</td><td class="num">${f2(cu.planned_exec_same_s)}</td><td></td><td class="num">${f2(rr.plan_s)}</td><td class="num">${f2(rr.planned_exec_same_s)}</td></tr></tbody>`;
+  document.getElementById("table").innerHTML = h;
+})();
+
+// ---------- notes ----------
+const setup = D.setup || {};
+document.getElementById("notes").innerHTML = `
+  <h2>怎么读这些数字</h2>
+  <p><b>执行时间用同一把尺子量。</b>两种规划器的几何路径都用同一个数值时间最优参数化计时（关节速度取 URDF 上限、加速度 10 rad/s²），RRT 折线在每个路点处必须停住。直线段与夹爪动作两边完全相同（${f2(cu.fixed_exec_same_s)} s）。换成各自的原生计时：cuRobo 自己的带加加速度约束轨迹合计 ${f2(cu.total_exec_native_s)} s，RRT 逐路点梯形速度 ${f2(rr.total_exec_native_s)} s，结论同向。</p>
+  <p><b>规划耗时这次没有变快。</b>cuRobo 在"从 HOME 出发"和"回 HOME"两段失败，交给 RRT 兜底，光这两段就多花约 4 s：Panthera 的 HOME 是完全折叠姿态，TCP 在 (0.25, 0, 0.17)，正好悬在装配位上方、横梁两侧，cuRobo 的保守球模型判它贴碰。另外每次抓件要拟合持件球 1.2–2.4 s，这部分只与零件几何有关，应当预处理。去掉这两项后，cuRobo 每段规划约 0.9–1.6 s，与 RRT 在这个全是方块的简单场景里相当。</p>
+  <p><b>RRT 的路径离不开复核。</b>RRT 只在 0.3 rad 的采样点上查 WRS 包围盒，横梁的"去取件"段连续 4 次规划都被三角网格复核判出真实碰撞，第 5 次才通过；cuRobo 自己解出的 7 段全部一次通过复核。</p>
+  <p><b>一次性准备（不计入上表）：</b>抓取筛选 ${f2(D.screening_s)} s（cuRobo 批量 IK + WRS 网格复核，两边共用）；cuRobo 规划器构建与预热 ${f2((setup.curobo || 0) + (setup.curobo_relaxed || 0))} s。</p>`;
+document.getElementById("foot").textContent = `运行 ${D.created} · 布局随机种子 ${V.meta.seed} · 装配位 x=${D.site[0]} m · 回放帧率 ${V.runs.curobo.fps} fps`;
+
+// ---------- loop ----------
+function frame(now) {
+  const dt = (now - last) / 1000; last = now;
+  if (playing) { t += dt * speed; if (t > T_MAX + 1.5) t = 0; }
+  resize();
+  const tt = Math.min(t, T_MAX);
+  views.forEach((v) => {
+    setPose(v, tt);
+    document.getElementById("clock-" + v.run).textContent = Math.min(tt, V.runs[v.run].duration).toFixed(2) + " s";
+    document.getElementById("foot-" + v.run).innerHTML = footText(v.run, tt);
+    v.controls.update(); v.renderer.setClearColor(css("--viewport") || "#e4eae7"); v.renderer.render(v.scene, v.camera);
+  });
+  scrub.value = Math.round(tt / T_MAX * 1000);
+  tnow.textContent = tt.toFixed(2) + " s";
+  const c = document.getElementById("cursor"); if (c) { c.setAttribute("x1", sx(tt)); c.setAttribute("x2", sx(tt)); }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>

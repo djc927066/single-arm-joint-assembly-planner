@@ -1,0 +1,50 @@
+﻿present: post_A, post_B, post_C, beam_AB, beam_BC, beam_CA; removed so far: -; removable now: beam_AB, beam_BC, beam_CA
+current state: S = 0.0027
+python.exe : 
+At line:1 char:447
++ ... ython.exe'; & $py -X utf8 -m idea.bls_all_orders_20261031.beam_first  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+
+ODE Message 2: Trimesh-trimesh contach hash table bucket overflow - close contacts might not be culled (C:\Users\rdb\pa
+nda3d\thirdparty\build64\ode-prefix\src\ode\ode\src\collision_trimesh_trimesh_new.cpp:226)
+remove beam_AB next:
+   S of what is left = 0.0027   (current state 0.0027)
+   G = 330 of 1630 pickle grasps free at the goal with the other 5 parts installed   (base only: 1387)
+   with the arm: IK found for 78 of those 330, arm + gripper free of parts/base/table: 78
+   robot G (IK catalogue, insertion/retreat motions) = (13, 102)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (3s)
+remove beam_BC next:
+   S of what is left = 0.0027   (current state 0.0027)
+   G = 317 of 1560 pickle grasps free at the goal with the other 5 parts installed   (base only: 1266)
+   with the arm: IK found for 104 of those 317, arm + gripper free of parts/base/table: 104
+   robot G (IK catalogue, insertion/retreat motions) = (8, 131)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (4s)
+remove beam_CA next:
+   S of what is left = 0.0029   (current state 0.0027)
+   G = 347 of 1756 pickle grasps free at the goal with the other 5 parts installed   (base only: 1455)
+   with the arm: IK found for 127 of those 347, arm + gripper free of parts/base/table: 127
+   robot G (IK catalogue, insertion/retreat motions) = (13, 84)
+   A = 10 [a: area], removal direction [0.0, 0.0, 1.0]   (4s)

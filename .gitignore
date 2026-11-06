@@ -1,0 +1,36 @@
+# Python / tools
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+tmp/
+.idea/
+
+# generated: caches, run outputs (final results are copied to docs/results, figures to docs/figs)
+_cache*/
+_output/
+_out/
+*.bak_*
+*.cold_*
+
+# history kept on this machine only
+/archive/
+
+# wrs/ is vendored: only the Panthera-HT data is uploaded, other robots keep their code but not their assets
+/wrs/bench_mark/
+/wrs/drivers/
+/wrs/robot_sim/_data_files/*
+!/wrs/robot_sim/_data_files/__init__.py
+!/wrs/robot_sim/_data_files/*anthera*
+/wrs/robot_sim/**/*.[sS][tT][lL]
+/wrs/robot_sim/**/*.[dD][aA][eE]
+/wrs/robot_sim/**/*.[oO][bB][jJ]
+/wrs/robot_sim/**/*.[gG][lL][bB]
+/wrs/robot_sim/**/*.[pP][nN][gG]
+/wrs/robot_sim/**/*.[jJ][pP][gG]
+/wrs/robot_sim/**/*.zip
+/wrs/robot_sim/**/*.pkl
+!/wrs/robot_sim/_data_files/*anthera*.pkl
+!/wrs/robot_sim/manipulators/panthera_ht/**
+!/wrs/robot_sim/end_effectors/grippers/panthera_gripper/**
+!/wrs/robot_sim/robots/robot_panthera_ht/**

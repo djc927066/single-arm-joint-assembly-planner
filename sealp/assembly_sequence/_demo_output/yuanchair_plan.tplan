@@ -1,0 +1,125 @@
+# SEALP Task Plan v1.0
+# YuanChair Default Plan
+
+format_version: '1.0'
+name: YuanChair Default Plan
+description: Single-arm assembly plan with staging from pick_and_place_chair.py
+assembly_file: D:\code\layout_sq\wrs\sealp\assembly_sequence\_demo_output\yuanchair.asmdef
+fixture:
+  pos:
+  - !!float '0'
+  - !!float '0'
+  - !!float '0'
+  rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+robot:
+  robot_type: piper
+  base_pos:
+  - !!float '0'
+  - !!float '0'
+  - !!float '0'
+  base_rotmat:
+  - - !!float '1'
+    - !!float '0'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '1'
+    - !!float '0'
+  - - !!float '0'
+    - !!float '0'
+    - !!float '1'
+staging:
+  seat:
+    pos:
+    - 0.3
+    - !!float '0'
+    - !!float '0'
+    rotmat:
+    - - !!float '1'
+      - !!float '0'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '1'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '0'
+      - !!float '1'
+  leg_fl:
+    pos:
+    - 0.1
+    - 0.2
+    - !!float '0'
+    rotmat:
+    - - !!float '1'
+      - !!float '0'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '1'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '0'
+      - !!float '1'
+  leg_fr:
+    pos:
+    - 0.05
+    - -0.24
+    - !!float '0'
+    rotmat:
+    - - !!float '1'
+      - !!float '0'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '1'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '0'
+      - !!float '1'
+  leg_bl:
+    pos:
+    - 0.25
+    - 0.24
+    - !!float '0'
+    rotmat:
+    - - !!float '1'
+      - !!float '0'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '1'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '0'
+      - !!float '1'
+  leg_br:
+    pos:
+    - 0.25
+    - -0.24
+    - !!float '0'
+    rotmat:
+    - - !!float '1'
+      - !!float '0'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '1'
+      - !!float '0'
+    - - !!float '0'
+      - !!float '0'
+      - !!float '1'
+steps:
+- step: 0
+  primitive: single_arm_transport
+- step: 1
+  primitive: single_arm_transport
+- step: 2
+  primitive: single_arm_transport
+- step: 3
+  primitive: single_arm_transport
+- step: 4
+  primitive: single_arm_transport

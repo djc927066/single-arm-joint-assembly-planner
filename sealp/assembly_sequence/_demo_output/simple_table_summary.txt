@@ -1,0 +1,12 @@
+Assembly: SimpleTable
+Description: A small table with 2 legs and a cross-bar.
+Parts (4):
+  • table_top: Table Top  [models/table_top.stl]
+  • leg_a: Front-Left Leg  [models/leg.stl]
+  • leg_b: Front-Right Leg  [models/leg.stl]
+  • cross_bar: Cross Bar  [models/cross_bar.stl]
+Steps (4):
+  0. Assemble 'table_top' onto 'fixture'  (deps: none, type: single_arm_transport)
+  1. Assemble 'leg_a' onto 'table_top'  (deps: 0, type: single_arm_transport)
+  2. Assemble 'leg_b' onto 'table_top'  (deps: 0, type: single_arm_transport)
+  3. Assemble 'cross_bar' onto 'leg_a'  (deps: 1, 2, type: dual_arm_cooperative)

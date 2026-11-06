@@ -1,0 +1,840 @@
+{
+  "schema": "assembly_benchmark/1",
+  "name": "triangular_frame6",
+  "units": "metre",
+  "fixed_base_position_m": [
+    0.35,
+    0.0,
+    0.0
+  ],
+  "fixed_base_not_counted_in_six": true,
+  "movable_ids": [
+    "post_A",
+    "post_B",
+    "post_C",
+    "beam_AB",
+    "beam_BC",
+    "beam_CA"
+  ],
+  "friction": 0.5,
+  "table": {
+    "source_config": "E:\\Projects\\single-arm-joint-assembly-planner\\sealp\\config\\sample_config.yaml",
+    "source_sha256": "2f4eee4c2b7402450cd6ac163a39e44a8d04d675e32ee7234e020b36009d80a3",
+    "table_size": [
+      0.6,
+      0.6,
+      0.02
+    ],
+    "table_center": [
+      0.2335,
+      0.0,
+      -0.01
+    ],
+    "table_top_z": 0.0,
+    "robot_base_pos": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "robot_base_rotmat": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "home_joints": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "collision_table": "solid box from SEALP config",
+    "visual_table": "SEALP show_initial_layout_from_file perforated mesh and four legs"
+  },
+  "parts": {
+    "table": {
+      "fixed": true,
+      "mass_kg": 40.0,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.2335
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.01
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "base": {
+      "fixed": true,
+      "mass_kg": 2.0,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.007
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.35
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\base.stl",
+      "stl_sha256": "8c07ab672fc10dd49e167e43735d44fc7dddaf4c1ff8982e13b33e7a3c2cc3d8",
+      "geometry_id": "c74b61837591321fdbe7bb298035e36c730860eb5ffc0dd24a571deaddc20a6a",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused"
+    },
+    "post_A": {
+      "fixed": false,
+      "mass_kg": 0.2106,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.26999999999999996
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.06
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.056
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "立柱 A",
+      "size_m": [
+        0.06,
+        0.054,
+        0.1
+      ],
+      "required_supports": [
+        "base"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\post_A.stl",
+      "stl_sha256": "a9a51c0da37623ca6c3a7f0e2429c1aa14654630e9b0491ff70c63399973282b",
+      "geometry_id": "e48761a7416be4cc3e7345414977095b7af2760a912e43f5bba02b1efceae563",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\post_A_grasps.pickle",
+      "grasp_file_sha256": "0125e221c9a8a97c231dbec93367ec4b5442fe23d5fdea3fcee9e4550d454725",
+      "grasp_file_count": 28,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    },
+    "post_B": {
+      "fixed": false,
+      "mass_kg": 0.23374000000000003,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.43
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.06
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.056
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "立柱 B",
+      "size_m": [
+        0.058,
+        0.062,
+        0.1
+      ],
+      "required_supports": [
+        "base"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\post_B.stl",
+      "stl_sha256": "cd7c87b8e8f4eb418f3aedb7b3b7aabec3d796b361734169a702c0bb671ea938",
+      "geometry_id": "32a92377c7de7cc34a20079a9b9e53bea74fa12200f0e77fc60a1f960f38c7e1",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\post_B_grasps.pickle",
+      "grasp_file_sha256": "0e7e88839038f80acc4b93cc7298796451ed727586d00f123432ce4897ddaa7d",
+      "grasp_file_count": 28,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    },
+    "post_C": {
+      "fixed": false,
+      "mass_kg": 0.22568000000000002,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.365
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.08
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.056
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "立柱 C",
+      "size_m": [
+        0.062,
+        0.056,
+        0.1
+      ],
+      "required_supports": [
+        "base"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\post_C.stl",
+      "stl_sha256": "30f48302ae058dd254120acc2f7c8ea6d743d7feef850c17edf2f61f109f202e",
+      "geometry_id": "edb11c78e4a2e285636686d3f76d5f37bef8e4bf3aac24f19d3f3a956f53afe5",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\post_C_grasps.pickle",
+      "grasp_file_sha256": "ea729b232dcd1dff06ddcbedd2057e02e00d58e33831f60fb43ccb6f1408072b",
+      "grasp_file_count": 28,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    },
+    "beam_AB": {
+      "fixed": false,
+      "mass_kg": 0.032603999999999994,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          0.35
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.06
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.116
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "横梁 AB",
+      "size_m": [
+        0.114,
+        0.022,
+        0.02
+      ],
+      "required_supports": [
+        "post_A",
+        "post_B"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "goal_yaw_deg": 0.0,
+      "endpoint_trim_m": 0.023,
+      "connection": "gravity-supported planar contact; no latch/fastener",
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\beam_AB.stl",
+      "stl_sha256": "c4d3bdea8121f1227f71b1ad23bfb9add0f843d0a0f77a0c8fd75af56a899f5b",
+      "geometry_id": "cb0647ca5f19d935afd7006948dcb0ae9a0e24cfd7314fb03811264521b70a3e",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\beam_AB_grasps.pickle",
+      "grasp_file_sha256": "f6faf675dd6e04b46e1375344a8d4c512e4ef19c8779105f66f9e8f4bdceecf2",
+      "grasp_file_count": 14,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    },
+    "beam_BC": {
+      "fixed": false,
+      "mass_kg": 0.028171907505126145,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          -0.4211113064546289,
+          -0.9070089677484316,
+          0.0,
+          0.39749999999999996
+        ],
+        [
+          0.9070089677484316,
+          -0.4211113064546289,
+          0.0,
+          0.010000000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.116
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "横梁 BC",
+      "size_m": [
+        0.10835349040433133,
+        0.02,
+        0.02
+      ],
+      "required_supports": [
+        "post_B",
+        "post_C"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "goal_yaw_deg": 114.90476880809518,
+      "endpoint_trim_m": 0.023,
+      "connection": "gravity-supported planar contact; no latch/fastener",
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\beam_BC.stl",
+      "stl_sha256": "8d7fe276ccc3fe836c648466c69a65e225ba07bf94499d4ea148fefabc43f921",
+      "geometry_id": "6bb0d81fcac3019d4d6ccb9bae2f7a885408b5fb6e74ea86f3262376bc61b362",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\beam_BC_grasps.pickle",
+      "grasp_file_sha256": "8e79df7ac4806923fc7340ec9fe9609aa3ebe20f4f9e43b0159fd5a142548eda",
+      "grasp_file_count": 14,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    },
+    "beam_CA": {
+      "fixed": false,
+      "mass_kg": 0.028826282898711402,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "goal_tf": [
+        [
+          -0.5615014183372646,
+          0.8274757743917582,
+          0.0,
+          0.3175
+        ],
+        [
+          -0.8274757743917582,
+          -0.5615014183372646,
+          0.0,
+          0.010000000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.116
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "name": "横梁 CA",
+      "size_m": [
+        0.12318924315688633,
+        0.018,
+        0.02
+      ],
+      "required_supports": [
+        "post_C",
+        "post_A"
+      ],
+      "insertion_axis_world": [
+        0,
+        0,
+        -1
+      ],
+      "removal_axis_world": [
+        0,
+        0,
+        1
+      ],
+      "goal_yaw_deg": -124.15969454566944,
+      "endpoint_trim_m": 0.023,
+      "connection": "gravity-supported planar contact; no latch/fastener",
+      "stl": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\meshes\\beam_CA.stl",
+      "stl_sha256": "fff8d218779b4aa2b12d8c52a75e21e00b9f8a7908e39d6abc7bc4a443a10ed4",
+      "geometry_id": "b6079db1a19efb53dc1e75364d963eb309985f7e4485a3dc88a8aad40c5ec931",
+      "stl_encoding": "ascii_float64",
+      "stl_status": "reused",
+      "grasp_file": "E:\\Projects\\single-arm-joint-assembly-planner\\idea\\triangular_frame6\\assets\\grasps\\beam_CA_grasps.pickle",
+      "grasp_file_sha256": "024fd70424cb529762909e8135899559c07413ad89236d33c3a35877009f7428",
+      "grasp_file_count": 14,
+      "grasp_file_stage": "nominal_candidates",
+      "grasp_file_status": "generated"
+    }
+  },
+  "mating_relations": [
+    {
+      "part_a": "base",
+      "part_b": "post_A",
+      "kind": "rectangular_blind_pocket",
+      "parameters": {
+        "side_clearance_m": 0.0002,
+        "depth_m": 0.008,
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "base",
+      "part_b": "post_B",
+      "kind": "rectangular_blind_pocket",
+      "parameters": {
+        "side_clearance_m": 0.0002,
+        "depth_m": 0.008,
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "base",
+      "part_b": "post_C",
+      "kind": "rectangular_blind_pocket",
+      "parameters": {
+        "side_clearance_m": 0.0002,
+        "depth_m": 0.008,
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_A",
+      "part_b": "beam_AB",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_B",
+      "part_b": "beam_AB",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_B",
+      "part_b": "beam_BC",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_C",
+      "part_b": "beam_BC",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_C",
+      "part_b": "beam_CA",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "part_a": "post_A",
+      "part_b": "beam_CA",
+      "kind": "planar_support",
+      "parameters": {
+        "insertion_axis_world": [
+          0,
+          0,
+          -1
+        ]
+      }
+    }
+  ],
+  "initial_layout_example": {
+    "post_A": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.005
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.22
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "post_B": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.095
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.22
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "post_C": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.195
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.22
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "beam_AB": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.06
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.075
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.01
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "beam_BC": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.06
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.055
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.01
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "beam_CA": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.06
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.195
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.01
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "initial_layout_source": "hand-authored nonoverlapping geometry example, NOT optimized",
+  "initial_layout_pair_clearances_m": {
+    "post_A|post_B": 0.04100000000000001,
+    "post_A|post_C": 0.139,
+    "post_A|beam_AB": 0.107,
+    "post_A|beam_BC": 0.238,
+    "post_A|beam_CA": 0.37899999999999995,
+    "post_A|base": 0.21760974242896386,
+    "post_B|post_C": 0.040000000000000015,
+    "post_B|beam_AB": 0.10300000000000001,
+    "post_B|beam_BC": 0.23399999999999999,
+    "post_B|beam_CA": 0.375,
+    "post_B|base": 0.1264792473095883,
+    "post_C|beam_AB": 0.11595257651298657,
+    "post_C|beam_BC": 0.24218042183184404,
+    "post_C|beam_CA": 0.3803711557401211,
+    "post_C|base": 0.0721110255092798,
+    "beam_AB|beam_BC": 0.10900000000000001,
+    "beam_AB|beam_CA": 0.25,
+    "beam_AB|base": 0.11299999999999998,
+    "beam_BC|beam_CA": 0.121,
+    "beam_BC|base": 0.11582325479783431,
+    "beam_CA|base": 0.1269162167365579
+  },
+  "full_robot_motion_verified": false,
+  "safe_to_execute": false
+}

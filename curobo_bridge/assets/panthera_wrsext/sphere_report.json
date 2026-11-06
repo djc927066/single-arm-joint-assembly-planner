@@ -1,0 +1,200 @@
+[
+  {
+    "density": 0.5,
+    "yaml": "E:\\Projects\\single-arm-joint-assembly-planner\\curobo_bridge\\assets\\panthera_wrsext\\panthera_d0.5.yml",
+    "spheres": 52,
+    "fit_s": 151.01906589994906,
+    "matrix_s": 15.01564050000161,
+    "self_collision_ignore_pairs": 12,
+    "links": {
+      "link2": {
+        "spheres": 9,
+        "coverage": 0.9710999727249146,
+        "protrusion": 0.4811111092567444,
+        "protrusion_mm": 5.2925036288797855,
+        "surface_gap_mm": 0.42949209455400705,
+        "volume_ratio": 1.6089331665871176
+      },
+      "link3": {
+        "spheres": 11,
+        "coverage": 0.9365365505218506,
+        "protrusion": 0.6854545474052429,
+        "protrusion_mm": 6.119314581155777,
+        "surface_gap_mm": 0.4284384485799819,
+        "volume_ratio": 2.424136488089724
+      },
+      "link4": {
+        "spheres": 5,
+        "coverage": 0.9228922724723816,
+        "protrusion": 0.8410000205039978,
+        "protrusion_mm": 6.540932226926088,
+        "surface_gap_mm": 0.30145738855935633,
+        "volume_ratio": 2.2076407296287885
+      },
+      "link5": {
+        "spheres": 4,
+        "coverage": 0.9753999710083008,
+        "protrusion": 0.6549999713897705,
+        "protrusion_mm": 3.5513893235474825,
+        "surface_gap_mm": 0.12345272989477962,
+        "volume_ratio": 2.794791733016823
+      },
+      "gripper_palm": {
+        "spheres": 14,
+        "coverage": 0.9293455481529236,
+        "protrusion": 0.5028571486473083,
+        "protrusion_mm": 2.816086634993553,
+        "surface_gap_mm": 0.3370294871274382,
+        "volume_ratio": 1.8978107792999708
+      },
+      "finger_left": {
+        "spheres": 4,
+        "coverage": 0.9655866622924805,
+        "protrusion": 0.7049999833106995,
+        "protrusion_mm": 4.163610748946667,
+        "surface_gap_mm": 0.22796053963247687,
+        "volume_ratio": 2.2286802333340736
+      },
+      "finger_right": {
+        "spheres": 5,
+        "coverage": 0.972036600112915,
+        "protrusion": 0.6200000047683716,
+        "protrusion_mm": 3.7992619909346104,
+        "surface_gap_mm": 0.193338593817316,
+        "volume_ratio": 2.1308767178499526
+      }
+    }
+  },
+  {
+    "density": 1.0,
+    "yaml": "E:\\Projects\\single-arm-joint-assembly-planner\\curobo_bridge\\assets\\panthera_wrsext\\panthera_d1.yml",
+    "spheres": 58,
+    "fit_s": 149.74974479997763,
+    "matrix_s": 10.679330900020432,
+    "self_collision_ignore_pairs": 12,
+    "links": {
+      "link2": {
+        "spheres": 8,
+        "coverage": 0.964199960231781,
+        "protrusion": 0.4743749797344208,
+        "protrusion_mm": 5.347322206944227,
+        "surface_gap_mm": 0.4567478026729077,
+        "volume_ratio": 1.5746057402616582
+      },
+      "link3": {
+        "spheres": 14,
+        "coverage": 0.9310529828071594,
+        "protrusion": 0.5996428728103638,
+        "protrusion_mm": 6.114108953624964,
+        "surface_gap_mm": 0.437008187873289,
+        "volume_ratio": 2.516034002496512
+      },
+      "link4": {
+        "spheres": 9,
+        "coverage": 0.9525130987167358,
+        "protrusion": 0.5005555748939514,
+        "protrusion_mm": 6.798143032938242,
+        "surface_gap_mm": 0.21649536211043596,
+        "volume_ratio": 2.4736687464335523
+      },
+      "link5": {
+        "spheres": 4,
+        "coverage": 0.9775999784469604,
+        "protrusion": 0.5862500071525574,
+        "protrusion_mm": 3.271120600402355,
+        "surface_gap_mm": 0.11323465878376737,
+        "volume_ratio": 2.2760852827918043
+      },
+      "gripper_palm": {
+        "spheres": 13,
+        "coverage": 0.9494357705116272,
+        "protrusion": 0.5299999713897705,
+        "protrusion_mm": 3.1138614285737276,
+        "surface_gap_mm": 0.217238804907538,
+        "volume_ratio": 2.0805141318218063
+      },
+      "finger_left": {
+        "spheres": 7,
+        "coverage": 0.9549074769020081,
+        "protrusion": 0.5299999713897705,
+        "protrusion_mm": 2.754756947979331,
+        "surface_gap_mm": 0.29715787968598306,
+        "volume_ratio": 1.5966754628062663
+      },
+      "finger_right": {
+        "spheres": 3,
+        "coverage": 0.9839828014373779,
+        "protrusion": 0.8100000023841858,
+        "protrusion_mm": 5.434547550976276,
+        "surface_gap_mm": 0.11337552132317796,
+        "volume_ratio": 1.9661703612302492
+      }
+    }
+  },
+  {
+    "density": 2.0,
+    "yaml": "E:\\Projects\\single-arm-joint-assembly-planner\\curobo_bridge\\assets\\panthera_wrsext\\panthera_d2.yml",
+    "spheres": 67,
+    "fit_s": 155.05647540005157,
+    "matrix_s": 10.620088800031226,
+    "self_collision_ignore_pairs": 12,
+    "links": {
+      "link2": {
+        "spheres": 10,
+        "coverage": 0.9607999920845032,
+        "protrusion": 0.45350003242492676,
+        "protrusion_mm": 4.777580499649048,
+        "surface_gap_mm": 0.5286817904561758,
+        "volume_ratio": 1.6099226101952837
+      },
+      "link3": {
+        "spheres": 16,
+        "coverage": 0.9062992334365845,
+        "protrusion": 0.6640625,
+        "protrusion_mm": 4.525419324636459,
+        "surface_gap_mm": 0.528419332113117,
+        "volume_ratio": 2.111831693128189
+      },
+      "link4": {
+        "spheres": 21,
+        "coverage": 0.8992894887924194,
+        "protrusion": 0.5980952382087708,
+        "protrusion_mm": 3.3643823117017746,
+        "surface_gap_mm": 0.3228290588594973,
+        "volume_ratio": 2.3085054143675405
+      },
+      "link5": {
+        "spheres": 5,
+        "coverage": 0.9795999526977539,
+        "protrusion": 0.4610000252723694,
+        "protrusion_mm": 3.2990844920277596,
+        "surface_gap_mm": 0.09389281331095845,
+        "volume_ratio": 2.3165628353901244
+      },
+      "gripper_palm": {
+        "spheres": 9,
+        "coverage": 0.9670558571815491,
+        "protrusion": 0.5588889122009277,
+        "protrusion_mm": 4.319884814321995,
+        "surface_gap_mm": 0.13744014722760767,
+        "volume_ratio": 2.1741896739536264
+      },
+      "finger_left": {
+        "spheres": 3,
+        "coverage": 0.959911584854126,
+        "protrusion": 0.7433333396911621,
+        "protrusion_mm": 4.30429307743907,
+        "surface_gap_mm": 0.2744720841292292,
+        "volume_ratio": 1.709708308544706
+      },
+      "finger_right": {
+        "spheres": 3,
+        "coverage": 0.9571486711502075,
+        "protrusion": 0.721666693687439,
+        "protrusion_mm": 4.244757350534201,
+        "surface_gap_mm": 0.2920342958532274,
+        "volume_ratio": 1.6933083042025736
+      }
+    }
+  }
+]
