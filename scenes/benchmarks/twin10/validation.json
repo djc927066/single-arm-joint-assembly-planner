@@ -1,0 +1,371 @@
+{
+  "parts": 10,
+  "grasp_catalogue": {
+    "t_pedestal": 28,
+    "t_arm": 14,
+    "t_block": 28,
+    "t_bar": 14,
+    "t_cap": 28,
+    "g_post_W": 28,
+    "g_post_E": 28,
+    "g_beam": 14,
+    "g_block": 28,
+    "g_cap": 28
+  },
+  "goal_ik_grasps": {
+    "t_pedestal": 11,
+    "t_arm": 3,
+    "t_block": 7,
+    "t_bar": 2,
+    "t_cap": 2,
+    "g_post_W": 11,
+    "g_post_E": 7,
+    "g_beam": 3,
+    "g_block": 4,
+    "g_cap": 2
+  },
+  "grasps_alone": {
+    "t_pedestal": 11,
+    "t_arm": 3,
+    "t_block": 7,
+    "t_bar": 2,
+    "t_cap": 2,
+    "g_post_W": 11,
+    "g_post_E": 7,
+    "g_beam": 3,
+    "g_block": 4,
+    "g_cap": 2
+  },
+  "levels": {
+    "static": {
+      "states": 42,
+      "transitions": 77,
+      "orders": 504,
+      "seconds": 0.000547399977222085
+    },
+    "insertion": {
+      "states": 42,
+      "transitions": 77,
+      "orders": 504,
+      "seconds": 0.017006300040520728
+    },
+    "full": {
+      "states": 0,
+      "transitions": 0,
+      "orders": 0,
+      "seconds": 8.029770700028166
+    }
+  },
+  "precedence_full": [],
+  "precedence_from_occlusion": [
+    [
+      "g_beam",
+      "g_post_E"
+    ],
+    [
+      "g_beam",
+      "g_post_W"
+    ],
+    [
+      "g_beam",
+      "t_arm"
+    ],
+    [
+      "g_beam",
+      "t_bar"
+    ],
+    [
+      "g_beam",
+      "t_block"
+    ],
+    [
+      "g_beam",
+      "t_cap"
+    ],
+    [
+      "g_beam",
+      "t_pedestal"
+    ],
+    [
+      "g_block",
+      "g_beam"
+    ],
+    [
+      "g_block",
+      "g_post_E"
+    ],
+    [
+      "g_block",
+      "g_post_W"
+    ],
+    [
+      "g_block",
+      "t_arm"
+    ],
+    [
+      "g_block",
+      "t_bar"
+    ],
+    [
+      "g_block",
+      "t_block"
+    ],
+    [
+      "g_block",
+      "t_cap"
+    ],
+    [
+      "g_block",
+      "t_pedestal"
+    ],
+    [
+      "g_cap",
+      "g_beam"
+    ],
+    [
+      "g_cap",
+      "g_block"
+    ],
+    [
+      "g_cap",
+      "g_post_E"
+    ],
+    [
+      "g_cap",
+      "g_post_W"
+    ],
+    [
+      "g_cap",
+      "t_arm"
+    ],
+    [
+      "g_cap",
+      "t_bar"
+    ],
+    [
+      "g_cap",
+      "t_block"
+    ],
+    [
+      "g_cap",
+      "t_cap"
+    ],
+    [
+      "g_cap",
+      "t_pedestal"
+    ],
+    [
+      "g_post_E",
+      "g_post_W"
+    ],
+    [
+      "g_post_E",
+      "t_arm"
+    ],
+    [
+      "g_post_E",
+      "t_bar"
+    ],
+    [
+      "g_post_E",
+      "t_block"
+    ],
+    [
+      "g_post_E",
+      "t_cap"
+    ],
+    [
+      "g_post_E",
+      "t_pedestal"
+    ],
+    [
+      "g_post_W",
+      "g_post_E"
+    ],
+    [
+      "g_post_W",
+      "t_arm"
+    ],
+    [
+      "g_post_W",
+      "t_bar"
+    ],
+    [
+      "g_post_W",
+      "t_block"
+    ],
+    [
+      "g_post_W",
+      "t_cap"
+    ],
+    [
+      "g_post_W",
+      "t_pedestal"
+    ],
+    [
+      "t_arm",
+      "g_beam"
+    ],
+    [
+      "t_arm",
+      "g_block"
+    ],
+    [
+      "t_arm",
+      "g_cap"
+    ],
+    [
+      "t_arm",
+      "g_post_E"
+    ],
+    [
+      "t_arm",
+      "g_post_W"
+    ],
+    [
+      "t_arm",
+      "t_pedestal"
+    ],
+    [
+      "t_bar",
+      "g_beam"
+    ],
+    [
+      "t_bar",
+      "g_block"
+    ],
+    [
+      "t_bar",
+      "g_cap"
+    ],
+    [
+      "t_bar",
+      "g_post_E"
+    ],
+    [
+      "t_bar",
+      "g_post_W"
+    ],
+    [
+      "t_bar",
+      "t_arm"
+    ],
+    [
+      "t_bar",
+      "t_block"
+    ],
+    [
+      "t_bar",
+      "t_pedestal"
+    ],
+    [
+      "t_block",
+      "g_beam"
+    ],
+    [
+      "t_block",
+      "g_block"
+    ],
+    [
+      "t_block",
+      "g_cap"
+    ],
+    [
+      "t_block",
+      "g_post_E"
+    ],
+    [
+      "t_block",
+      "g_post_W"
+    ],
+    [
+      "t_block",
+      "t_arm"
+    ],
+    [
+      "t_block",
+      "t_pedestal"
+    ],
+    [
+      "t_cap",
+      "g_beam"
+    ],
+    [
+      "t_cap",
+      "g_block"
+    ],
+    [
+      "t_cap",
+      "g_cap"
+    ],
+    [
+      "t_cap",
+      "g_post_E"
+    ],
+    [
+      "t_cap",
+      "g_post_W"
+    ],
+    [
+      "t_cap",
+      "t_arm"
+    ],
+    [
+      "t_cap",
+      "t_bar"
+    ],
+    [
+      "t_cap",
+      "t_block"
+    ],
+    [
+      "t_cap",
+      "t_pedestal"
+    ],
+    [
+      "t_pedestal",
+      "g_beam"
+    ],
+    [
+      "t_pedestal",
+      "g_block"
+    ],
+    [
+      "t_pedestal",
+      "g_cap"
+    ],
+    [
+      "t_pedestal",
+      "g_post_E"
+    ],
+    [
+      "t_pedestal",
+      "g_post_W"
+    ]
+  ],
+  "grasp_occlusion": {
+    "transitions_checked": 52,
+    "partially_occluded": 12,
+    "fully_blocked": 10,
+    "blocker_pairs": {
+      "t_pedestal -> t_arm": 6,
+      "t_block -> t_bar": 6,
+      "g_block -> g_cap": 4,
+      "t_arm -> g_post_W": 4,
+      "g_beam -> t_pedestal": 2,
+      "t_block -> g_post_W": 2,
+      "g_block -> t_pedestal": 1
+    }
+  },
+  "insertion_cover": {},
+  "equilibrium_check": {
+    "checked": 42,
+    "infeasible": 0,
+    "examples": [],
+    "seconds": 22.942076200037263,
+    "total_states": 42
+  },
+  "ik_s": 6.7537818000419065,
+  "total_s": 39.11197070009075,
+  "scope": "static rule + asmcore equilibrium cross-check; box-cell insertion sweep; Panthera palm/finger boxes + cuRobo goal IK. No transport motion, no staging-side IK."
+}

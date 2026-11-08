@@ -1,0 +1,493 @@
+<title>反向搜索逐步演示</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@700&display=swap">
+<style>
+/* Layout: header with scenario tabs; a two-column board (story + table top view, then search tree + queue), one column on phones. */
+:root {
+  --bg: #f3f5f8; --panel: #ffffff; --ink: #141a22; --ink2: #475061; --mute: #858d99; --line: #dde2e9;
+  --accent: #2456c8; --accent-soft: #e5ecfa;
+  --ok: #10813a; --ok-soft: #e2f3e7; --bad: #c43636; --bad-soft: #fbe6e6; --warn: #9a6200; --warn-soft: #fbefd9;
+  --p1: #2a78d6; --p2: #eb6834; --p3: #1baf7a; --p4: #eda100; --p5: #e87ba4; --p6: #6250d6;
+  --table: #eef1f5; --slot: #c9d0da;
+  --f-display: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --f-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1318; --panel: #171c23; --ink: #e9edf2; --ink2: #b4bcc8; --mute: #7d8693; --line: #2a313b;
+  --accent: #6f9bf2; --accent-soft: #1d2a44;
+  --ok: #47c475; --ok-soft: #14301f; --bad: #ef7676; --bad-soft: #3a1a1a; --warn: #e2a640; --warn-soft: #362812;
+  --p1: #3987e5; --p2: #d95926; --p3: #199e70; --p4: #c98500; --p5: #d55181; --p6: #9085e9;
+  --table: #1d232b; --slot: #3b4450; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f1318; --panel: #171c23; --ink: #e9edf2; --ink2: #b4bcc8; --mute: #7d8693; --line: #2a313b;
+  --accent: #6f9bf2; --accent-soft: #1d2a44;
+  --ok: #47c475; --ok-soft: #14301f; --bad: #ef7676; --bad-soft: #3a1a1a; --warn: #e2a640; --warn-soft: #362812;
+  --p1: #3987e5; --p2: #d95926; --p3: #199e70; --p4: #c98500; --p5: #d55181; --p6: #9085e9;
+  --table: #1d232b; --slot: #3b4450; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 40px; }
+.wrap { max-width: 1240px; margin: 0 auto; display: grid; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; }
+h1 { font: 700 26px/1.25 var(--f-display); margin: 0; text-wrap: balance; }
+.sub { color: var(--ink2); margin: 4px 0 0; max-width: 62ch; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tabs button { font: 500 14px var(--f-body); border: 1px solid var(--line); background: var(--panel); color: var(--ink2);
+  padding: 7px 14px; border-radius: 999px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0; }
+.label { font: 600 12px var(--f-body); letter-spacing: .06em; color: var(--mute); margin: 0 0 8px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+.controls button { font: 500 14px var(--f-body); border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  padding: 7px 14px; border-radius: 8px; cursor: pointer; }
+.controls button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.controls button:disabled { opacity: .4; cursor: default; }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.count { margin-left: auto; font: 500 13px var(--f-mono); color: var(--mute); font-variant-numeric: tabular-nums; }
+.progress { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; margin-bottom: 14px; }
+.progress i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
+#stepTitle { font: 700 19px/1.4 var(--f-body); margin: 0 0 8px; text-wrap: balance; }
+#stepText p { margin: 0 0 8px; max-width: 64ch; }
+#stepText b { color: var(--ink); }
+.formula { font: 13px/1.7 var(--f-mono); background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; white-space: pre-wrap; overflow-x: auto; margin-top: 10px; font-variant-numeric: tabular-nums; }
+.formula:empty { display: none; }
+.mini { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; font-variant-numeric: tabular-nums; }
+.mini th, .mini td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line); }
+.mini th { color: var(--mute); font-weight: 600; }
+.mini td.num { font-family: var(--f-mono); }
+.tw { overflow-x: auto; }
+svg { display: block; width: 100%; height: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink2); margin-top: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.tree ul { list-style: none; margin: 0; padding-left: 18px; border-left: 1px dashed var(--line); }
+.tree > ul { padding-left: 0; border-left: 0; }
+.tree li { margin: 5px 0; }
+.chip { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; padding: 4px 10px; border-radius: 7px;
+  border: 1px solid var(--line); background: var(--panel); font-size: 14px; max-width: 100%; }
+.chip .f { font: 600 13px var(--f-mono); font-variant-numeric: tabular-nums; }
+.chip .tag { font-size: 12px; padding: 0 7px; border-radius: 999px; background: var(--bg); color: var(--ink2); }
+.chip.cur { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent-soft); }
+.chip.cur .tag { background: var(--accent); color: #fff; }
+.chip.shelved { border-style: dashed; color: var(--ink2); }
+.chip.shelved .tag { background: var(--warn-soft); color: var(--warn); }
+.chip.cut { color: var(--mute); text-decoration: line-through; text-decoration-color: var(--bad); }
+.chip.cut .tag { background: var(--bad-soft); color: var(--bad); text-decoration: none; }
+.chip.best { border-color: var(--ok); background: var(--ok-soft); }
+.chip.best .tag { background: var(--ok); color: #fff; }
+.chip.skip { color: var(--mute); }
+.chip.done .tag { background: var(--line); }
+.chip.new { animation: pop .45s ease-out; }
+@keyframes pop { from { transform: scale(.92); opacity: .2; } to { transform: none; opacity: 1; } }
+.queue { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.queue li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; align-items: center; padding: 6px 10px;
+  border: 1px solid var(--line); border-radius: 7px; font-size: 14px; }
+.queue li .f { font: 600 13px var(--f-mono); font-variant-numeric: tabular-nums; }
+.queue li.next { border-color: var(--accent); background: var(--accent-soft); }
+.queue li.done { border-color: var(--ok); background: var(--ok-soft); }
+.queue li.over { color: var(--mute); }
+.qnote { font-size: 12px; color: var(--mute); margin: 8px 0 0; }
+.ubar { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 500 13px var(--f-mono); color: var(--ink2); margin-bottom: 10px; }
+.ubar b { color: var(--ink); }
+.foot { font-size: 12px; color: var(--mute); max-width: 90ch; }
+@media (max-width: 860px) { .board { grid-template-columns: minmax(0, 1fr); } h1 { font-size: 22px; } }
+@media (prefers-reduced-motion: reduce) { .chip.new { animation: none; } .progress i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>反向搜索逐步演示</h1>
+      <p class="sub">每点一次“下一步”，看待处理列表取出哪一项、桌上放了什么、哪些位置被排除，最后布局是怎么定下来的。</p>
+    </div>
+    <div class="tabs" role="group" aria-label="选择例子">
+      <button id="tab-toy" type="button" aria-pressed="true">小例子：2 个零件</button>
+      <button id="tab-frame" type="button" aria-pressed="false">三角框架：6 个零件</button>
+    </div>
+  </header>
+
+  <div class="board">
+    <section class="panel" aria-live="polite">
+      <div class="controls">
+        <button id="prev" type="button">上一步</button>
+        <button id="next" type="button" class="primary">下一步</button>
+        <button id="play" type="button">自动播放</button>
+        <button id="reset" type="button">从头开始</button>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="progress"><i id="bar"></i></div>
+      <h2 id="stepTitle"></h2>
+      <div id="stepText"></div>
+      <div class="formula" id="formula"></div>
+    </section>
+
+    <section class="panel">
+      <p class="label">桌面俯视：已经决定的零件留在桌上</p>
+      <div id="tableView"></div>
+      <div class="legend" id="tableLegend"></div>
+    </section>
+
+    <section class="panel tree">
+      <p class="label">搜索树：每个分支是一种“后半段布局”</p>
+      <div id="tree"></div>
+    </section>
+
+    <section class="panel">
+      <p class="label">待处理列表：按 f 从小到大，每次取出最上面一项</p>
+      <div class="ubar" id="ubar"></div>
+      <ul class="queue" id="queue"></ul>
+      <p class="qnote" id="qnote"></p>
+    </section>
+  </div>
+
+  <p class="foot">f = 已经决定部分的真实代价 + 还没决定部分的乐观下界（来自正向 F 表）。三角框架的数值来自 lattice_joint 的实际运行，使用不加桌面定价的原始下界，共弹出 546 次；这里只展示关键的 15 步，列表也只列出关键几项。</p>
+</div>
+
+<script>
+const STATUS = { cur: "正在处理", open: "在列表里", done: "已展开", shelved: "变贵，排到后面", cut: "排除", best: "最终答案", skip: "不用看" };
+const PART_COLOR = { A: "--p1", B: "--p2", C: "--p3", AB: "--p4", BC: "--p5", CA: "--p6" };
+
+/* ---------- scenario 1: two parts, two positions each ---------- */
+const TOY_SLOTS = { a1: [40, 50], b1: [92, 78], a2: [250, 40], b2: [250, 130] };
+const toy = {
+  nodes: [
+    { id: "r", label: "起点：A、B 都没定", f: "1.7" },
+    { id: "b1", parent: "r", label: "B 最后装，放 b1", f: "1.7" },
+    { id: "b2", parent: "r", label: "B 最后装，放 b2", f: "2.0" },
+    { id: "a1L", parent: "r", label: "A 最后装，放 a1", f: "2.2" },
+    { id: "a2L", parent: "r", label: "A 最后装，放 a2", f: "2.3" },
+    { id: "b1a1", parent: "b1", label: "A 放 a1：和 b1 重叠", f: "" },
+    { id: "b1a2", parent: "b1", label: "A 放 a2", f: "2.3" },
+    { id: "b2a1", parent: "b2", label: "A 放 a1 → 完整方案", f: "2.0" },
+    { id: "b2a2", parent: "b2", label: "A 放 a2", f: "2.6" },
+  ],
+  steps: [
+    { title: "准备：正向 F 表先给出下界",
+      text: ["两个零件 A、B，可以 A→B 装，也可以 B→A 装。A 有位置 a1、a2，B 有位置 b1、b2，<b>a1 和 b1 会重叠</b>。",
+             "正向动态规划忽略重叠，每步取最便宜：F({A},A) = 1.0，F({B},B) = 1.1。完整的下界是 1.7。",
+             "搜索从“两个都没定”的起点开始，它的 f 就是下界 1.7。"],
+      formula: "代价表\n第一件装 A：a1 = 1.0   a2 = 1.6\n第一件装 B：b1 = 1.1   b2 = 1.2\nA 装好后装 B：b1 = 0.5   b2 = 0.8\nB 装好后装 A：a1 = 0.8   a2 = 0.9\n最后回 HOME：最后是 B 0.2，最后是 A 0.3\n\n下界 = min( F({A},A) 1.0 + 0.5 + 0.2 ,  F({B},B) 1.1 + 0.8 + 0.3 )\n     = min( 1.7 , 2.2 ) = 1.7",
+      tree: { r: "cur" }, queue: [["1.7", "起点：都没定"]], U: null, table: {} },
+    { title: "第 1 次取出起点：列出“最后装哪个、放哪里”",
+      text: ["反向搜索先决定<b>最后一件</b>。四种选择各算一个 f，全部放进待处理列表。",
+             "注意：这里<b>一个位置都没有定下来</b>，只是排好队。"],
+      formula: "f = 最后一件的真实代价 + 前面那件的 F\nB 放 b1：(0.5 + 0.2) + F({A},A) 1.0 = 1.7\nB 放 b2：(0.8 + 0.2) + 1.0 = 2.0\nA 放 a1：(0.8 + 0.3) + F({B},B) 1.1 = 2.2\nA 放 a2：(0.9 + 0.3) + 1.1 = 2.3",
+      tree: { r: "done", b1: "open", b2: "open", a1L: "open", a2L: "open" },
+      queue: [["1.7", "B 最后，放 b1"], ["2.0", "B 最后，放 b2"], ["2.2", "A 最后，放 a1"], ["2.3", "A 最后，放 a2"]], U: null, table: {} },
+    { title: "取出 f 最小的“B 放 b1”",
+      text: ["列表最上面是 1.7，于是先试“B 最后装，放 b1”。桌上还没有别的零件，检查通过。",
+             "B 最后才装，所以在 A 被抓走之前，<b>B 一直放在桌上的 b1</b>。但 B 的位置还<b>没有最终确定</b>，其他三项仍在列表里。"],
+      formula: "",
+      tree: { r: "done", b1: "cur", b2: "open", a1L: "open", a2L: "open" },
+      queue: [["1.7", "B 最后，放 b1", "next"], ["2.0", "B 最后，放 b2"], ["2.2", "A 最后，放 a1"], ["2.3", "A 最后，放 a2"]], U: null,
+      table: { placed: [["B", "b1"]] } },
+    { title: "在“B 放 b1”下面，给 A 选位置",
+      text: ["B 已经在 b1，现在决定 A 放哪里。",
+             "A 放 a1：<b>和桌上的 B 重叠，排除</b>。这一步只有反向才查得出来，因为 B 的位置已经知道了。",
+             "A 放 a2 可以，但 f 从 1.7 升到 2.3。这个分支变贵了，排到列表后面，<b>不删除</b>。"],
+      formula: "A 放 a2 的 f = 已定的 B (0.5 + 0.2) + A 作为第一件放 a2 的 1.6\n           = 0.7 + 1.6 = 2.3",
+      tree: { r: "done", b1: "shelved", b2: "open", a1L: "open", a2L: "open", b1a1: "cut", b1a2: "open" },
+      queue: [["2.0", "B 最后，放 b2"], ["2.2", "A 最后，放 a1"], ["2.3", "A 放 a2，B 放 b1"], ["2.3", "A 最后，放 a2"]], U: null,
+      table: { placed: [["B", "b1"]], blocked: [["A", "a1"]] } },
+    { title: "现在最小的是 2.0：转去“B 放 b2”",
+      text: ["上一个分支变贵后，列表最上面变成“B 放 b2”。搜索<b>自动换到这个分支</b>，B 改放在 b2。"],
+      formula: "",
+      tree: { r: "done", b1: "shelved", b2: "cur", a1L: "open", a2L: "open", b1a1: "cut", b1a2: "open" },
+      queue: [["2.0", "B 最后，放 b2", "next"], ["2.2", "A 最后，放 a1"], ["2.3", "A 放 a2，B 放 b1"], ["2.3", "A 最后，放 a2"]], U: null,
+      table: { placed: [["B", "b2"]] } },
+    { title: "在“B 放 b2”下面，给 A 选位置",
+      text: ["B 在 b2，不挡 a1，所以 <b>A 可以放最便宜的 a1</b>，f = 2.0。",
+             "A 和 B 都定了，这已经是一个完整方案。"],
+      formula: "A 放 a1 的 f = 已定的 B (0.8 + 0.2) + A 作为第一件放 a1 的 1.0\n           = 1.0 + 1.0 = 2.0  （这就是完整方案的真实代价）\nA 放 a2 的 f = 1.0 + 1.6 = 2.6",
+      tree: { r: "done", b1: "shelved", b2: "done", a1L: "open", a2L: "open", b1a1: "cut", b1a2: "open", b2a1: "open", b2a2: "open" },
+      queue: [["2.0", "A 放 a1，B 放 b2（完整）"], ["2.2", "A 最后，放 a1"], ["2.3", "A 放 a2，B 放 b1"], ["2.3", "A 最后，放 a2"], ["2.6", "A 放 a2，B 放 b2"]], U: null,
+      table: { placed: [["B", "b2"], ["A", "a1"]] } },
+    { title: "取出完整方案：当前最好 U = 2.0",
+      text: ["列表最上面是完整方案 2.0，取出后记为当前最好方案 U。"],
+      formula: "",
+      tree: { r: "done", b1: "shelved", b2: "done", a1L: "open", a2L: "open", b1a1: "cut", b1a2: "open", b2a1: "best", b2a2: "open" },
+      queue: [["2.0", "A 放 a1，B 放 b2（完整）", "done"], ["2.2", "A 最后，放 a1"], ["2.3", "A 放 a2，B 放 b1"], ["2.3", "A 最后，放 a2"], ["2.6", "A 放 a2，B 放 b2"]], U: "2.0",
+      table: { placed: [["B", "b2"], ["A", "a1"]] } },
+    { title: "停止：剩下的都不可能更便宜",
+      text: ["列表里剩下的最小 f 是 2.2，比 U = 2.0 大。f 是下界，所以这些分支<b>最好也要 2.2</b>，不可能更便宜，不用再看。",
+             "最终布局就是答案那条路径上的选择：<b>B 放 b2，A 放 a1</b>，顺序 A → B，代价 2.0。",
+             "注意 B 一开始先试的是 b1，最后用的是 b2。<b>位置是在最后才确定的</b>。8 个方案穷举的最优也是这个。"],
+      formula: "",
+      tree: { r: "done", b1: "skip", b2: "done", a1L: "skip", a2L: "skip", b1a1: "cut", b1a2: "skip", b2a1: "best", b2a2: "skip" },
+      queue: [["2.2", "A 最后，放 a1", "over"], ["2.3", "A 放 a2，B 放 b1", "over"], ["2.3", "A 最后，放 a2", "over"], ["2.6", "A 放 a2，B 放 b2", "over"]], U: "2.0",
+      table: { placed: [["B", "b2"], ["A", "a1"]] },
+      extra: { head: ["顺序", "A 位置", "B 位置", "代价", "能否实现"],
+        rows: [["A→B", "a1", "b1", "1.7", "✗ 重叠"], ["A→B", "a1", "b2", "2.0", "✓ 最优"], ["A→B", "a2", "b1", "2.3", "✓"], ["A→B", "a2", "b2", "2.6", "✓"],
+               ["B→A", "a1", "b1", "2.2", "✗ 重叠"], ["B→A", "a2", "b1", "2.3", "✓"], ["B→A", "a1", "b2", "2.3", "✓"], ["B→A", "a2", "b2", "2.4", "✓"]] } },
+  ],
+};
+
+/* ---------- scenario 2: triangular frame, real numbers (plain bound) ---------- */
+const GOALS = { A: [0.293, -0.060], B: [0.453, -0.060], C: [0.388, 0.080] };
+const frame = {
+  nodes: [
+    { id: "r", label: "起点：6 个零件都没定", f: "3.0198" },
+    { id: "ca63", parent: "r", label: "CA 最后装，放 63", f: "3.0198" },
+    { id: "ca64", parent: "r", label: "CA 最后装，放 64（同点换朝向）", f: "3.0198" },
+    { id: "ca69", parent: "r", label: "CA 最后装，放 69", f: "3.0205" },
+    { id: "ca41", parent: "r", label: "CA 最后装，放 41", f: "3.0289" },
+    { id: "ca42", parent: "r", label: "CA 最后装，放 42（同点换朝向）", f: "3.0289" },
+    { id: "ab47", parent: "r", label: "AB 最后装，放 47", f: "3.0975" },
+    { id: "bc68", parent: "r", label: "BC 最后装，放 68", f: "3.2496" },
+    { id: "ca63c", parent: "ca63", label: "BC 放 24 → 选 C：最便宜的位置被 CA 挡住", f: "3.0570" },
+    { id: "ca64c", parent: "ca64", label: "同上，被挡后变贵", f: "3.0570" },
+    { id: "ca69c", parent: "ca69", label: "往前走也遇到冲突", f: "3.0577" },
+    { id: "ab23", parent: "ca41", label: "AB 放 23", f: "3.0289" },
+    { id: "bc24", parent: "ab23", label: "BC 放 24", f: "3.0289" },
+    { id: "c30", parent: "bc24", label: "C 放 30：被桌上零件挡住", f: "" },
+    { id: "c31", parent: "bc24", label: "C 放 31：被挡住", f: "" },
+    { id: "c33", parent: "bc24", label: "C 放 33（占了 B 最好的位置）", f: "3.0545" },
+    { id: "c34", parent: "bc24", label: "C 放 34：被挡住", f: "" },
+    { id: "c76", parent: "bc24", label: "C 放 76：被挡住", f: "" },
+    { id: "c77", parent: "bc24", label: "C 放 77", f: "3.1002" },
+    { id: "b52", parent: "c77", label: "B 放 52", f: "3.1407" },
+    { id: "a0", parent: "b52", label: "A 放 0 → 完整方案", f: "3.1407" },
+  ],
+  steps: [],
+};
+const P = {
+  CA63: ["CA", 0.310, 0.214], CA69: ["CA", 0.172, 0.076], CA41: ["CA", 0.295, -0.198], BC24: ["BC", 0.371, 0.153],
+  AB23: ["AB", 0.371, -0.153], C19: ["C", 0.356, 0.168], C30: ["C", 0.462, 0.168], C33: ["C", 0.462, -0.168],
+  C76: ["C", 0.417, 0.214], C77: ["C", 0.417, 0.214], B52: ["B", 0.462, -0.168], A0: ["A", 0.203, 0.000],
+};
+const T0 = { r: "done", ca63: "open", ca64: "open", ca69: "open", ca41: "open", ca42: "open", ab47: "open", bc68: "open" };
+const mk = (base, over) => Object.assign({}, base, over);
+const S41 = mk(T0, { ca63: "shelved", ca64: "shelved", ca69: "shelved", ca63c: "shelved", ca64c: "shelved", ca69c: "shelved" });
+frame.steps = [
+  { title: "准备：正向 F 表给出起点的下界 3.0198",
+    text: ["6 个零件：立柱 A、B、C，横梁 AB、BC、CA。每个零件有 103 到 145 个候选位置。",
+           "正向 F 表算出：不考虑桌上冲突时，最便宜也要 3.0198。搜索从“全部都没定”的起点开始。"],
+    formula: "根下界 = F({A,B,C,AB,BC,CA}, CA) 2.9187 + CA 目标上方回 HOME 0.1011\n       = 3.0198",
+    tree: { r: "cur" }, queue: [["3.0198", "起点：都没定"]], U: null, table: {} },
+  { title: "取出起点：列出“最后装哪个、放哪里”",
+    text: ["最后一件只能是 AB、BC 或 CA。代码给每个零件的每个可用位置算 f，并排好队。",
+           "CA 的 23 个位置里，最便宜的是 63、64、69，<b>最终答案用的 41 排第 4</b>。现在一个位置都没定。"],
+    formula: "f = g + own + link + prefix\nCA 放 63：0 + 0.4316 + 0.1011 + [F({A,B,C,AB,BC},BC) 2.2323 + 0.2548] = 3.0198\nCA 放 41：0 + 0.4382 + 0.1011 + [F({A,B,C,AB,BC},AB) 2.2985 + 0.1911] = 3.0289",
+    tree: T0, queue: [["3.0198", "CA 最后，放 63"], ["3.0198", "CA 最后，放 64"], ["3.0205", "CA 最后，放 69"], ["3.0289", "CA 最后，放 41"], ["3.0289", "CA 最后，放 42"], ["3.0975", "AB 最后，放 47"], ["3.2496", "BC 最后，放 68"]],
+    U: null, table: {} },
+  { title: "先试 f 最小的“CA 放 63”",
+    text: ["取出列表最上面的“CA 放 63”。CA 最后才装，所以在前面 5 个零件装完之前，<b>CA 一直放在桌上的 63</b>。",
+           "这只是一个分支，CA 的位置还没有最终确定。"],
+    formula: "",
+    tree: mk(T0, { ca63: "cur" }),
+    queue: [["3.0198", "CA 最后，放 63", "next"], ["3.0198", "CA 最后，放 64"], ["3.0205", "CA 最后，放 69"], ["3.0289", "CA 最后，放 41"], ["3.0289", "CA 最后，放 42"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA63] } },
+  { title: "沿着“CA 放 63”往前走，遇到冲突",
+    text: ["倒数第二件选 BC 放 24，f 还是 3.0198。再往前选 C 时，C 最便宜的位置 (0.356, 0.168) <b>被桌上的 CA 挡住</b>。",
+           "C 只能用更贵的位置，这个分支的 f 升到 3.0570，排到后面。CA 放 64 是同一点换朝向，结果一样。"],
+    formula: "C 的最低 f：不考虑桌上零件时 3.0198 → 考虑 CA 在桌上后 3.0570",
+    tree: mk(T0, { ca63: "shelved", ca63c: "shelved", ca64: "shelved", ca64c: "shelved" }),
+    queue: [["3.0205", "CA 最后，放 69"], ["3.0289", "CA 最后，放 41"], ["3.0289", "CA 最后，放 42"], ["3.0570", "CA 放 63 的分支（变贵）"], ["3.0570", "CA 放 64 的分支（变贵）"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA63, P.BC24], blocked: [P.C19] } },
+  { title: "转去“CA 放 69”，也遇到冲突",
+    text: ["列表最上面变成 3.0205 的“CA 放 69”。往前走同样遇到冲突，f 升到 3.0577，也排到后面。"],
+    formula: "",
+    tree: mk(T0, { ca63: "shelved", ca63c: "shelved", ca64: "shelved", ca64c: "shelved", ca69: "shelved", ca69c: "shelved" }),
+    queue: [["3.0289", "CA 最后，放 41"], ["3.0289", "CA 最后，放 42"], ["3.0570", "CA 放 63 的分支"], ["3.0570", "CA 放 64 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA69] } },
+  { title: "现在最小的是 3.0289：转去“CA 放 41”",
+    text: ["前三个分支都变贵后，“CA 放 41”成为列表最上面的一项。搜索<b>自动换到这个分支</b>。",
+           "之前的分支没有删除，只是排在后面，以后 f 够低时还会继续看。"],
+    formula: "CA 放 41：g 0 + own 0.4382 + link 0.1011 + prefix 2.4896 = 3.0289\n选完后 g = 0.4382 + 0.1011 = 0.5394",
+    tree: mk(S41, { ca41: "cur" }),
+    queue: [["3.0289", "CA 最后，放 41", "next"], ["3.0289", "CA 最后，放 42"], ["3.0570", "CA 放 63 的分支"], ["3.0570", "CA 放 64 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA41] } },
+  { title: "倒数第二件：AB 放 23",
+    text: ["CA 在桌上的 41。倒数第二件可以是 AB 或 BC，AB 放 23 的 f 最小，检查也通过。",
+           "CA 放 42 是同一点换朝向，它的分支和 41 几乎同步推进，后面不再单独画。"],
+    formula: "f = g 0.5394 + own 0.3097 + link 0.1911 + prefix [F({A,B,C,BC},BC) 1.8088 + 0.1799]\n  = 3.0289\n选完后 g = 0.5394 + 0.3097 + 0.1911 = 1.0402",
+    tree: mk(S41, { ca41: "done", ab23: "cur" }),
+    queue: [["3.0289", "AB 放 23，CA 放 41", "next"], ["3.0372", "BC 放 24，CA 放 41"], ["3.0570", "CA 放 63 的分支"], ["3.0570", "CA 放 64 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA41, P.AB23] } },
+  { title: "倒数第三件：BC 放 24",
+    text: ["AB、CA 都在桌上。BC 放 24 不和它们冲突，f 仍是 3.0289。"],
+    formula: "f = g 1.0402 + own 0.3631 + link 0.1799 + prefix [F({A,B,C},C) 1.3711 + 0.0746]\n  = 3.0289\n选完后 g = 1.0402 + 0.3631 + 0.1799 = 1.5832",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "cur" }),
+    queue: [["3.0289", "BC 放 24，AB 放 23，CA 放 41", "next"], ["3.0372", "BC 放 24，CA 放 41"], ["3.0570", "CA 放 63 的分支"], ["3.0570", "CA 放 64 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24] } },
+  { title: "倒数第四件：C 最便宜的两个位置被挡住",
+    text: ["现在选 C。C 的位置按 f 排队，轮到哪个查哪个。",
+           "位置 30、31（f 3.0307、3.0354）都<b>被桌上的 BC、AB、CA 挡住</b>，直接排除。"],
+    formula: "",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut" }),
+    queue: [["3.0372", "BC 放 24，CA 放 41"], ["3.0545", "C 的下一个位置 33"], ["3.0570", "CA 放 63 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24], blocked: [P.C30] } },
+  { title: "C 放 33 能放，但占了 B 最好的位置",
+    text: ["位置 33 (0.462, -0.168) 检查通过，成为一个分支，f 3.0545。",
+           "可是 B 最便宜的位置正好也在这里。C 放 33 后，B 只能去更远的地方，这个分支后来越走越贵。"],
+    formula: "",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "shelved" }),
+    queue: [["3.0545", "C 放 33 的分支（之后变贵）"], ["3.0570", "CA 放 63 的分支"], ["3.0577", "CA 放 69 的分支"], ["3.0593", "C 的下一个位置 34"], ["3.0975", "AB 最后，放 47"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24, P.C33] } },
+  { title: "其他分支轮流推进，f 都在升高",
+    text: ["C 的位置 34、76 也被挡住。列表里 f 在 3.05 到 3.10 之间的分支轮流被取出：CA 放 63、64、69 的分支，C 放 33 的分支，AB 最后装的分支。",
+           "它们往前走时 f 不断升高，<b>没有一个变成完整方案</b>。这部分日志里有很多次弹出，这里合成一步。"],
+    formula: "",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "shelved", c34: "cut", c76: "cut", ab47: "shelved" }),
+    queue: [["3.1002", "C 放 77", "next"], ["3.1013", "CA 最后装的另一个分支"], ["3.1036", "AB 最后，放 111 的分支"], ["更高", "其他分支"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24], blocked: [P.C76] } },
+  { title: "C 放 77：让开 B 最想要的位置",
+    text: ["取出 3.1002 的“C 放 77”，检查通过。",
+           "再往前选 B：B 放 52 的 f 是 3.1407。它比列表里其他分支（3.1013、3.1036 等）都高，所以<b>要先等那些分支处理完</b>。"],
+    formula: "C 放 77：f = g 1.5832 + own 0.3368 + link 0.0746 + prefix [F({A,B},B) 0.8293 + 0.2761] = 3.1002\n选完后 g = 1.5832 + 0.3368 + 0.0746 = 1.9947\nB 放 52：f = 1.9947 + 0.3085 + 0.2761 + [F({A},A) 0.3604 + 0.2010] = 3.1407",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "shelved", c34: "cut", c76: "cut", ab47: "shelved", c77: "done", b52: "open" }),
+    queue: [["3.1013", "CA 最后装的另一个分支"], ["3.1036", "AB 最后，放 111 的分支"], ["3.1407", "B 放 52（C 放 77 的分支）"], ["更高", "其他分支"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24, P.C77] } },
+  { title: "其他分支都升到 3.1407 以上，轮到 B 放 52",
+    text: ["3.1013、3.1036 这些分支继续往前走，f 都升高了，<b>没有一个在 3.1407 之前完成</b>。",
+           "现在列表最小的就是“B 放 52”。检查通过：C 已经让开，B 能用最便宜的位置。"],
+    formula: "选完后 g = 1.9947 + 0.3085 + 0.2761 = 2.5793",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "shelved", c34: "cut", c76: "cut", ab47: "shelved", c77: "done", b52: "cur" }),
+    queue: [["3.1407", "B 放 52（C 放 77 的分支）", "next"], ["≥ 3.1407", "其他所有分支"]],
+    U: null, table: { placed: [P.CA41, P.AB23, P.BC24, P.C77, P.B52] } },
+  { title: "第一件：A 放 0，得到完整方案",
+    text: ["只剩 A，放最便宜的位置 0。6 个零件都定了，这是第一个完整方案，代价 3.1407，记为 U。"],
+    formula: "f = g 2.5793 + own 0.3083 + link 0.2010 + HOME 到 A 0.0521\n  = 3.1407  （已经全部是真实代价）",
+    tree: mk(S41, { ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "shelved", c34: "cut", c76: "cut", ab47: "shelved", c77: "done", b52: "done", a0: "best" }),
+    queue: [["3.1407", "完整方案", "done"], ["≥ 3.1407", "其他所有分支"]],
+    U: "3.1407", table: { placed: [P.CA41, P.AB23, P.BC24, P.C77, P.B52, P.A0] } },
+  { title: "停止：剩下的分支都不可能更便宜",
+    text: ["列表里剩下的 f 都不低于 3.1407。f 是下界，所以 CA 放 63、69，C 放 33 这些分支都不可能更好。BC 最后装的 3.2496 从来没被展开。",
+           "最终布局就是答案路径上的选择。正向顺序：<b>A → B → C → BC → AB → CA</b>，代价 3.1407。",
+           "下表是我另外把某些零件固定在某个位置后算出的“这个分支最好能到多少”，用来说明为什么最后选 41。搜索本身不需要算它。"],
+    formula: "",
+    tree: mk(S41, { ca63: "skip", ca64: "skip", ca69: "skip", ca63c: "skip", ca64c: "skip", ca69c: "skip", ca42: "skip", ab47: "skip", bc68: "skip",
+      ca41: "done", ab23: "done", bc24: "done", c30: "cut", c31: "cut", c33: "skip", c34: "cut", c76: "cut", c77: "done", b52: "done", a0: "best" }),
+    queue: [["≥ 3.1407", "其他所有分支（共 425 项，没有一项更低）", "over"]],
+    U: "3.1407", table: { placed: [P.CA41, P.AB23, P.BC24, P.C77, P.B52, P.A0] },
+    extra: { head: ["分支", "第一步 f", "这个分支最好能到"],
+      rows: [["CA 放 63", "3.0198", "3.1584"], ["CA 放 64", "3.0198", "3.1418"], ["CA 放 69", "3.0205", "3.2243"], ["CA 放 41", "3.0289", "3.1407 ✓"], ["CA 放 42", "3.0289", "3.1407（并列）"], ["CA 41 下，C 放 33", "3.0545", "3.1528"]] } },
+];
+
+/* ---------- rendering ---------- */
+const S = { toy, frame };
+let sc = "toy", i = 0, timer = null, prevTree = {}, prevPlaced = new Set();
+const $ = (id) => document.getElementById(id);
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function renderTree(scn, st) {
+  const kids = {};
+  scn.nodes.forEach((n) => { (kids[n.parent || "_"] = kids[n.parent || "_"] || []).push(n); });
+  const rec = (pid) => {
+    const items = (kids[pid] || []).filter((n) => st.tree[n.id]);
+    if (!items.length) return "";
+    return "<ul>" + items.map((n) => {
+      const s = st.tree[n.id], isNew = !prevTree[n.id] || prevTree[n.id] !== s;
+      return `<li><span class="chip ${s}${isNew ? " new" : ""}"><span>${esc(n.label)}</span>` +
+        (n.f ? `<span class="f">f ${n.f}</span>` : "") + `<span class="tag">${STATUS[s]}</span></span>${rec(n.id)}</li>`;
+    }).join("") + "</ul>";
+  };
+  $("tree").innerHTML = rec("_");
+  prevTree = st.tree;
+}
+
+function renderQueue(st) {
+  const q = st.queue || [];
+  $("queue").innerHTML = q.map((e, k) => {
+    const cls = e[2] || (k === 0 && !q.some((x) => x[2]) ? "next" : "");
+    return `<li class="${cls}"><span class="f">${e[0]}</span><span>${esc(e[1])}${cls === "next" ? "　← 下一个取出" : ""}${cls === "done" ? "　← 完整方案" : ""}</span></li>`;
+  }).join("");
+  $("ubar").innerHTML = `<span>当前最好方案 U：<b>${st.U || "还没有"}</b></span><span>列表最小 f：<b>${q.length ? q[0][0] : "-"}</b></span>`;
+  $("qnote").textContent = sc === "toy" ? "小例子里列出了全部候选。实际代码中，每个零件先只放最便宜的一个位置，取出后再放下一个。"
+    : "只列出关键几项；实际列表里同时有上百项。";
+}
+
+function partRect(color, x, y, w, h, label, cls) {
+  return `<g class="${cls || ""}"><rect x="${x - w / 2}" y="${y - h / 2}" width="${w}" height="${h}" rx="5" fill="${color}" fill-opacity=".9" stroke="${css("--panel")}" stroke-width="2"/>` +
+    `<text x="${x}" y="${y + 4}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="var(--f-body)">${label}</text></g>`;
+}
+function cross(x, y) {
+  const c = css("--bad");
+  return `<g stroke="${c}" stroke-width="3" stroke-linecap="round"><line x1="${x - 9}" y1="${y - 9}" x2="${x + 9}" y2="${y + 9}"/><line x1="${x - 9}" y1="${y + 9}" x2="${x + 9}" y2="${y - 9}"/></g>`;
+}
+
+function renderToyTable(st) {
+  const ink2 = css("--ink2"), slot = css("--slot"), tbl = css("--table");
+  let s = `<svg viewBox="0 0 360 200" role="img" aria-label="桌面上的四个候选位置"><rect x="4" y="4" width="352" height="192" rx="10" fill="${tbl}"/>`;
+  for (const [k, [x, y]] of Object.entries(TOY_SLOTS)) {
+    s += `<rect x="${x}" y="${y}" width="90" height="46" rx="6" fill="none" stroke="${slot}" stroke-width="2" stroke-dasharray="5 4"/>` +
+      `<text x="${x + 45}" y="${y + 62}" text-anchor="middle" font-size="12" fill="${ink2}">${k}${k === "a1" || k === "b1" ? "" : ""}</text>`;
+  }
+  s += `<text x="112" y="192" text-anchor="middle" font-size="11" fill="${ink2}">a1 和 b1 有重叠，不能同时放</text>`;
+  const placed = st.table.placed || [];
+  placed.forEach(([p, k]) => { const [x, y] = TOY_SLOTS[k]; s += partRect(css(PART_COLOR[p]), x + 45, y + 23, 84, 40, `${p} 在 ${k}`); });
+  (st.table.blocked || []).forEach(([p, k]) => { const [x, y] = TOY_SLOTS[k]; s += cross(x + 22, y + 14); });
+  $("tableView").innerHTML = s + "</svg>";
+  $("tableLegend").innerHTML = `<span><i style="background:var(--p1)"></i>A</span><span><i style="background:var(--p2)"></i>B</span><span><i style="background:var(--bad)"></i>✕ 被挡住，排除</span>`;
+}
+
+function renderFrameTable(st) {
+  const ink2 = css("--ink2"), mute = css("--mute"), tbl = css("--table");
+  const X = (x) => 20 + (x - 0.14) / 0.40 * 400, Y = (y) => 20 + (0.26 - y) / 0.52 * 300;
+  let s = `<svg viewBox="0 0 440 360" role="img" aria-label="三角框架桌面俯视图"><rect x="10" y="10" width="420" height="320" rx="10" fill="${tbl}"/>`;
+  s += `<text x="20" y="352" font-size="11" fill="${mute}">x：0.14 → 0.54 m（远离机器人）　y：-0.26 → 0.26 m</text>`;
+  for (const [k, [x, y]] of Object.entries(GOALS)) {
+    s += `<circle cx="${X(x)}" cy="${Y(y)}" r="5" fill="none" stroke="${ink2}" stroke-width="1.5"/><text x="${X(x) + 8}" y="${Y(y) + 4}" font-size="11" fill="${ink2}">${k} 装配处</text>`;
+  }
+  (st.table.placed || []).forEach(([p, x, y]) => { s += partRect(css(PART_COLOR[p]), X(x), Y(y), 42, 26, p); });
+  (st.table.blocked || []).forEach(([p, x, y]) => {
+    s += `<rect x="${X(x) - 21}" y="${Y(y) - 13}" width="42" height="26" rx="5" fill="none" stroke="${css("--bad")}" stroke-width="1.5" stroke-dasharray="4 3"/>` + cross(X(x), Y(y)) +
+      `<text x="${X(x)}" y="${Y(y) + 28}" text-anchor="middle" font-size="11" fill="${css("--bad")}">${p} 被挡</text>`;
+  });
+  $("tableView").innerHTML = s + "</svg>";
+  $("tableLegend").innerHTML = Object.entries(PART_COLOR).map(([p, v]) => `<span><i style="background:var(${v})"></i>${p}</span>`).join("") +
+    `<span><i style="background:var(--bad)"></i>✕ 被挡住</span><span>○ 立柱的装配位置</span>`;
+}
+
+function render() {
+  const scn = S[sc], st = scn.steps[i], n = scn.steps.length;
+  $("count").textContent = `第 ${i + 1} / ${n} 步`;
+  $("bar").style.width = `${((i + 1) / n) * 100}%`;
+  $("stepTitle").textContent = st.title;
+  let html = st.text.map((t) => `<p>${t}</p>`).join("");
+  if (st.extra) {
+    html += `<div class="tw"><table class="mini"><thead><tr>${st.extra.head.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>` +
+      st.extra.rows.map((r) => `<tr>${r.map((c, k) => `<td class="${/^[\d.]/.test(c) ? "num" : ""}">${c}</td>`).join("")}</tr>`).join("") + "</tbody></table></div>";
+  }
+  $("stepText").innerHTML = html;
+  $("formula").textContent = st.formula || "";
+  renderTree(scn, st);
+  renderQueue(st);
+  (sc === "toy" ? renderToyTable : renderFrameTable)(st);
+  $("prev").disabled = i === 0;
+  $("next").disabled = i === n - 1;
+}
+
+function go(k) { const n = S[sc].steps.length; i = Math.max(0, Math.min(n - 1, k)); render(); }
+function stop() { if (timer) { clearInterval(timer); timer = null; $("play").textContent = "自动播放"; } }
+$("prev").onclick = () => { stop(); go(i - 1); };
+$("next").onclick = () => { stop(); go(i + 1); };
+$("reset").onclick = () => { stop(); prevTree = {}; go(0); };
+$("play").onclick = () => {
+  if (timer) return stop();
+  if (i === S[sc].steps.length - 1) { prevTree = {}; go(0); }
+  $("play").textContent = "暂停";
+  timer = setInterval(() => { if (i >= S[sc].steps.length - 1) return stop(); go(i + 1); }, 3200);
+};
+function setScenario(name) {
+  stop(); sc = name; prevTree = {}; i = 0;
+  $("tab-toy").setAttribute("aria-pressed", String(name === "toy"));
+  $("tab-frame").setAttribute("aria-pressed", String(name === "frame"));
+  render();
+}
+$("tab-toy").onclick = () => setScenario("toy");
+$("tab-frame").onclick = () => setScenario("frame");
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") { stop(); go(i + 1); }
+  if (e.key === "ArrowLeft") { stop(); go(i - 1); }
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+render();
+</script>

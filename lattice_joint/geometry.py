@@ -188,6 +188,48 @@ def low_aabb(chk, A, B, cfg, H, J, held_bank, zcut, step=0.02, chunk=40_000):
     return lo.cpu().numpy(), hi.cpu().numpy()
 
 
+def mesh_seat_checks(pb, orders, keep, cache_dir=None):
+    """Gripper vs the base and the parts that always come before p, with the meshes, as the final
+    validation checks it: insert preins -> ins (jaw closed, holding p), release at ins and retreat
+    ins -> retreat (open). The finger tips pass within millimetres of the part below, where the sphere
+    model is too coarse. These parts are installed in every plan, so a failing grasp is never usable.
+    -> {(p, g): free} for the grasps keep allows and stats; cached like mesh_self_checks."""
+    import pickle
+    sc, cat = pb.scene, pb.cat
+    center = getattr(sc, "center", None)
+    key = (sc.name, None if center is None else tuple(np.round(center, 4).tolist()),
+           sum(len(gs) for p in pb.ids for gs in cat["pick"][p].values()), sum(len(cat["goal"][p]) for p in pb.ids))
+    f = None
+    if cache_dir is not None:
+        cache_dir.mkdir(exist_ok=True)
+        f = cache_dir / f"seatmesh_{sc.name}_{key[2]}_{key[3]}.pkl"
+        if f.exists():
+            d = pickle.loads(f.read_bytes())
+            if d["key"] == key:
+                return d["ok"], dict(d["stats"], cached=True)
+    from joint_search.wrs_check import MeshWorld
+    t0 = perf_counter()
+    W, G, ok = MeshWorld(pb), sc.grasps(), {}
+    before = {p: set(pb.ids) for p in pb.ids}
+    for o in orders:
+        for i, p in enumerate(o):
+            before[p] &= set(o[:i])
+    for p in pb.ids:
+        inst = sorted(before[p])
+        for g in sorted({g for x, gs in cat["pick"][p].items() for g in gs if g in cat["goal"][p] and keep(p, x, g)}):
+            v = cat["goal"][p][g]
+            W.set(inst, {}, (p, G[p][g][0], v["preins"]), pb.jaw[p][g] if pb.close_fingers else None, ("installed",))
+            free = W.free(np.stack([v["preins"], v["ins"]]))[0]
+            if free:
+                W.set(inst + [p], {}, None, None)
+                free = W.free(np.stack([v["ins"]]))[0] and W.free(np.stack([v["ins"], v["retreat"]]))[0]
+            ok[p, g] = free
+    st = dict(checked=len(ok), rejected=sum(not v for v in ok.values()), seconds=perf_counter() - t0, cached=False)
+    if f is not None:
+        f.write_bytes(pickle.dumps(dict(key=key, ok=ok, stats=st)))
+    return ok, st
+
+
 def build_options(pb, k, keep=None):
     """Options (pose, k grasps), held bank and collision rows per part. keep(p, x, g): grasps allowed
     (mesh_self_checks), applied before the k cheapest grasps of a pose are chosen."""

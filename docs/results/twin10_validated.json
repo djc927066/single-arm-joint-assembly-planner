@@ -1,0 +1,1031 @@
+{
+ "model": "twin10",
+ "search_cost": 5.228736729097391,
+ "order": [
+  "t_pedestal",
+  "t_arm",
+  "t_block",
+  "t_bar",
+  "t_cap",
+  "g_post_W",
+  "g_post_E",
+  "g_beam",
+  "g_block",
+  "g_cap"
+ ],
+ "layout": [
+  "0.218,0.000,yaw0,identity",
+  "0.371,0.153,yaw0,rot90_14",
+  "0.234,0.137,yaw0,fs_02",
+  "0.432,0.214,yaw0,rot90_14",
+  "0.493,0.153,yaw0,identity",
+  "0.203,-0.076,yaw0,identity",
+  "0.493,-0.153,yaw0,identity",
+  "0.356,-0.214,yaw0,rot90_13",
+  "0.295,-0.198,yaw0,identity",
+  "0.371,-0.153,yaw0,fs_02"
+ ],
+ "usable_grasps": [
+  [
+   204,
+   228,
+   205,
+   696
+  ],
+  [
+   1315,
+   1314,
+   13,
+   1294,
+   105,
+   14,
+   106,
+   12
+  ],
+  [
+   1081,
+   1561,
+   985,
+   539,
+   1082,
+   121,
+   1562,
+   1849
+  ],
+  [
+   826,
+   60
+  ],
+  [
+   767,
+   671,
+   1295,
+   685
+  ],
+  [
+   1343,
+   1342,
+   1320,
+   1295,
+   1070,
+   1294,
+   1271,
+   1069
+  ],
+  [
+   1452,
+   1453,
+   696,
+   719
+  ],
+  [
+   2113,
+   2112,
+   2092,
+   1790,
+   2093,
+   1789,
+   1769
+  ],
+  [
+   1390,
+   862,
+   1726,
+   863,
+   1391,
+   1870,
+   734,
+   1966
+  ],
+  [
+   411,
+   297
+  ]
+ ],
+ "passed": true,
+ "tries": [
+  {
+   "grasps": [
+    228,
+    13,
+    1081,
+    826,
+    767,
+    1342,
+    1453,
+    2113,
+    862,
+    411
+   ],
+   "lb": 23.765368490898467,
+   "ok": true,
+   "time": 25.528451139020497,
+   "validate_s": 8.721614400001272,
+   "rows": [
+    {
+     "kind": "transit",
+     "part": "t_pedestal",
+     "value": 1.0783716129026295,
+     "planned": 1.0783716129026295,
+     "how": "planned",
+     "lb": 0.8321740256295526
+    },
+    {
+     "kind": "fixed",
+     "part": "t_pedestal",
+     "value": 0.9912774630035195,
+     "planned": 0.9912774630035195,
+     "how": "fixed",
+     "lb": 0.9912774630035195
+    },
+    {
+     "kind": "transfer",
+     "part": "t_pedestal",
+     "value": 0.5172178230731387,
+     "planned": 0.5807833614783833,
+     "how": "straight",
+     "lb": 0.5172178230731387
+    },
+    {
+     "kind": "transit",
+     "part": "t_arm",
+     "value": 0.33075250658395966,
+     "planned": 0.37283816266881303,
+     "how": "straight",
+     "lb": 0.33075250658395966
+    },
+    {
+     "kind": "fixed",
+     "part": "t_arm",
+     "value": 1.0783066766688854,
+     "planned": 1.0783066766688854,
+     "how": "fixed",
+     "lb": 1.0783066766688854
+    },
+    {
+     "kind": "transfer",
+     "part": "t_arm",
+     "value": 1.02662585291699,
+     "planned": 1.02662585291699,
+     "how": "planned",
+     "lb": 0.705247325091612
+    },
+    {
+     "kind": "transit",
+     "part": "t_block",
+     "value": 0.5491140035096563,
+     "planned": 0.6181442750258316,
+     "how": "straight",
+     "lb": 0.5491140035096563
+    },
+    {
+     "kind": "fixed",
+     "part": "t_block",
+     "value": 1.136825953229284,
+     "planned": 1.136825953229284,
+     "how": "fixed",
+     "lb": 1.136825953229284
+    },
+    {
+     "kind": "transfer",
+     "part": "t_block",
+     "value": 1.0903015039334736,
+     "planned": 1.0903015039334736,
+     "how": "planned",
+     "lb": 0.7549889977155582
+    },
+    {
+     "kind": "transit",
+     "part": "t_bar",
+     "value": 1.2386279123526622,
+     "planned": 1.2386279123526622,
+     "how": "planned",
+     "lb": 0.811598831801801
+    },
+    {
+     "kind": "fixed",
+     "part": "t_bar",
+     "value": 1.1850604337993413,
+     "planned": 1.1850604337993413,
+     "how": "fixed",
+     "lb": 1.1850604337993413
+    },
+    {
+     "kind": "transfer",
+     "part": "t_bar",
+     "value": 0.8047281802344967,
+     "planned": 1.2638805936110515,
+     "how": "straight",
+     "lb": 0.8047281802344967
+    },
+    {
+     "kind": "transit",
+     "part": "t_cap",
+     "value": 0.6369821644145514,
+     "planned": 0.6369821644145514,
+     "how": "planned",
+     "lb": 0.5833703528873658
+    },
+    {
+     "kind": "fixed",
+     "part": "t_cap",
+     "value": 1.0057839140280178,
+     "planned": 1.0057839140280178,
+     "how": "fixed",
+     "lb": 1.0057839140280178
+    },
+    {
+     "kind": "transfer",
+     "part": "t_cap",
+     "value": 0.5195698098361831,
+     "planned": 0.5195698098361831,
+     "how": "planned",
+     "lb": 0.46264884203307577
+    },
+    {
+     "kind": "transit",
+     "part": "g_post_W",
+     "value": 0.5112231759586837,
+     "planned": 0.555216449378598,
+     "how": "straight",
+     "lb": 0.5112231759586837
+    },
+    {
+     "kind": "fixed",
+     "part": "g_post_W",
+     "value": 1.0139939639475788,
+     "planned": 1.0139939639475788,
+     "how": "fixed",
+     "lb": 1.0139939639475788
+    },
+    {
+     "kind": "transfer",
+     "part": "g_post_W",
+     "value": 0.4370635989630962,
+     "planned": 0.49309448041124215,
+     "how": "straight",
+     "lb": 0.4370635989630962
+    },
+    {
+     "kind": "transit",
+     "part": "g_post_E",
+     "value": 0.40079384945701607,
+     "planned": 0.45500007181423474,
+     "how": "straight",
+     "lb": 0.40079384945701607
+    },
+    {
+     "kind": "fixed",
+     "part": "g_post_E",
+     "value": 0.9652998669841633,
+     "planned": 0.9652998669841633,
+     "how": "fixed",
+     "lb": 0.9652998669841633
+    },
+    {
+     "kind": "transfer",
+     "part": "g_post_E",
+     "value": 0.4159117089808345,
+     "planned": 0.43579013967957736,
+     "how": "straight",
+     "lb": 0.4159117089808345
+    },
+    {
+     "kind": "transit",
+     "part": "g_beam",
+     "value": 0.8093267349616902,
+     "planned": 1.008955380944373,
+     "how": "straight",
+     "lb": 0.8093267349616902
+    },
+    {
+     "kind": "fixed",
+     "part": "g_beam",
+     "value": 1.0564370443313278,
+     "planned": 1.0564370443313278,
+     "how": "fixed",
+     "lb": 1.0564370443313278
+    },
+    {
+     "kind": "transfer",
+     "part": "g_beam",
+     "value": 0.967099098862059,
+     "planned": 0.967099098862059,
+     "how": "planned",
+     "lb": 0.7914341455214733
+    },
+    {
+     "kind": "transit",
+     "part": "g_block",
+     "value": 0.4160185764548326,
+     "planned": 0.46028995342662715,
+     "how": "straight",
+     "lb": 0.4160185764548326
+    },
+    {
+     "kind": "fixed",
+     "part": "g_block",
+     "value": 1.047918041651218,
+     "planned": 1.047918041651218,
+     "how": "fixed",
+     "lb": 1.047918041651218
+    },
+    {
+     "kind": "transfer",
+     "part": "g_block",
+     "value": 0.5297073326517333,
+     "planned": 0.5297073326517333,
+     "how": "planned",
+     "lb": 0.4500874222502187
+    },
+    {
+     "kind": "transit",
+     "part": "g_cap",
+     "value": 0.5454559059361596,
+     "planned": 0.5454559059361596,
+     "how": "planned",
+     "lb": 0.4781086027537524
+    },
+    {
+     "kind": "fixed",
+     "part": "g_cap",
+     "value": 1.5302890795219617,
+     "planned": 1.5302890795219617,
+     "how": "fixed",
+     "lb": 1.5302890795219617
+    },
+    {
+     "kind": "transfer",
+     "part": "g_cap",
+     "value": 1.0110434467451914,
+     "planned": 1.1951217980627036,
+     "how": "straight",
+     "lb": 1.0110434467451914
+    },
+    {
+     "kind": "return",
+     "part": null,
+     "value": 0.6813239031261631,
+     "planned": 0.8408630101611803,
+     "how": "straight",
+     "lb": 0.6813239031261631
+    }
+   ],
+   "check_rows": [
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "transit",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "transfer",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 1,
+     "part": "t_pedestal",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 2,
+     "part": "t_arm",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 3,
+     "part": "t_block",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "transit",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "transfer",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 4,
+     "part": "t_bar",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "transit",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "t_cap",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "transfer",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 6,
+     "part": "g_post_W",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "transfer",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 7,
+     "part": "g_post_E",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 8,
+     "part": "g_beam",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 9,
+     "part": "g_block",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "transit",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "transfer",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 10,
+     "part": "g_cap",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 11,
+     "part": null,
+     "motion": "return",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "planned": 21,
+  "plan_s": 2.933374799997182,
+  "cache_hits": 0
+ }
+}

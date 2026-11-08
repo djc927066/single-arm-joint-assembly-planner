@@ -45,6 +45,7 @@ import numpy as np
 
 REPO = Path(__file__).resolve().parents[1]
 FRAME_DIR = REPO / "scenes" / "triangular_frame6"
+FRAME_DIRS = {"triangular_frame6": FRAME_DIR, "triangular_frame8": REPO / "scenes" / "triangular_frame8"}
 
 
 def _rz(deg):
@@ -54,15 +55,15 @@ def _rz(deg):
 
 def model_files(name):
     """(STL directory in the part frame, WRS grasp directory) of a model."""
-    if name == "triangular_frame6":
-        return FRAME_DIR / "assets" / "meshes", FRAME_DIR / "assets" / "grasps_wrs"
+    if name in FRAME_DIRS:
+        return FRAME_DIRS[name] / "assets" / "meshes", FRAME_DIRS[name] / "assets" / "grasps_wrs"
     root = REPO / "scenes" / "benchmarks" / name
     return root / "stl_m", root / "grasps"
 
 
 def load_scene(name, **kw):
-    if name == "triangular_frame6":
-        return FrameScene(**kw)
+    if name in FRAME_DIRS:
+        return FrameScene(name=name, **kw)
     import importlib
     return AssemblyScene(importlib.import_module(f"scenes.benchmarks.{name}").spec(), **kw)
 
@@ -364,19 +365,20 @@ class FrameScene(_SceneBase):
     REMOVAL_TRAVEL = 0.15     # m swept along the removal axis (+z) for the insertion check
     REMOVAL_STEP = 0.005
 
-    def __init__(self, *, n_cand=40, yaws=(0, 45, 90, 135), step=0.04, seed=0, sampler="random", pool=2,
-                 placements="goal", grid="shared", keepout="box", center=None,
+    def __init__(self, *, name="triangular_frame6", n_cand=40, yaws=(0, 45, 90, 135), step=0.04, seed=0,
+                 sampler="random", pool=2, placements="goal", grid="shared", keepout="box", center=None,
                  grid_step=0.015):
         import trimesh
-        task = json.loads((FRAME_DIR / "task.json").read_text(encoding="utf-8"))
-        val = json.loads((FRAME_DIR / "validation.json").read_text(encoding="utf-8"))
-        self.name = "triangular_frame6"
+        self.dir = FRAME_DIRS[name]
+        task = json.loads((self.dir / "task.json").read_text(encoding="utf-8"))
+        val = json.loads((self.dir / "validation.json").read_text(encoding="utf-8"))
+        self.name = name
         self.ids = tuple(task["movable_ids"])
         self.table_center = np.array(task["table"]["table_center"], float)
         self.table_size = np.array(task["table"]["table_size"], float)
         self.meshes, self.goal = {}, {}
         for pid in ("base",) + self.ids:
-            self.meshes[pid] = trimesh.load(FRAME_DIR / "assets" / "meshes" / f"{pid}.stl", process=False)
+            self.meshes[pid] = trimesh.load(self.dir / "assets" / "meshes" / f"{pid}.stl", process=False)
             self.goal[pid] = np.array(task["parts"][pid]["goal_tf"], float)
         self.removal_axis = {p: np.array(task["parts"][p].get("removal_axis_world", [0, 0, 1]), float) for p in self.ids}
         self.orders = [tuple(o) for o in val["nominal_static_orders"]]
@@ -395,7 +397,8 @@ class FrameScene(_SceneBase):
             from time import perf_counter
             from asmcore.model import AssemblyState
             if self._eq is None:
-                import scenes.triangular_frame6.build_model as bm
+                import importlib
+                bm = importlib.import_module(f"scenes.{self.name}.build_model")
                 from asmcore.planning.sequence import SequenceConfig, SequenceEvaluator
                 asm, _, _ = bm.build_assembly()
                 self._eq = (SequenceEvaluator(asm, SequenceConfig(max_auxiliary_resources=0)),

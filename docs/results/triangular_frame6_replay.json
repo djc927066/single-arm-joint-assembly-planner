@@ -12,29 +12,24 @@
   "goal_pos": "0.373,0.0,0.0",
   "home_clear": 0.03,
   "orient": "first",
-  "search": "lattice_joint"
+  "search": "joint search (lattice_joint, table prices)"
  },
  "chosen": {
   "steps": [
    [
     "post_A",
     "0.203,0.000,yaw0,identity",
-    1067
+    1068
    ],
    [
     "post_B",
-    "0.371,-0.168,yaw0,identity",
+    "0.462,-0.168,yaw0,identity",
     1345
    ],
    [
-    "beam_AB",
-    "0.447,-0.198,yaw0,rot90_13",
-    459
-   ],
-   [
     "post_C",
-    "0.264,0.168,yaw0,identity",
-    1295
+    "0.417,0.214,yaw0,fs_03",
+    1148
    ],
    [
     "beam_BC",
@@ -42,16 +37,18 @@
     1387
    ],
    [
+    "beam_AB",
+    "0.371,-0.153,yaw0,rot90_13",
+    438
+   ],
+   [
     "beam_CA",
-    "0.310,0.214,yaw0,fs_02",
-    1240
+    "0.295,-0.198,yaw0,identity",
+    528
    ]
   ],
-  "time": 15.50046524400248,
-  "est": 14.388422807518412,
-  "lb": 14.388422807518412
- },
- "source": "lattice_joint validated plan",
- "search_cost": 3.1739687710104882,
- "validated_time": 15.50046524400248
+  "time": 15.478585127922194,
+  "est": 14.29253232252928,
+  "lb": 14.29253232252928
+ }
 }

@@ -1,0 +1,82 @@
+{
+  "params": {
+    "model": "twin10",
+    "only": null,
+    "max_samples": 100,
+    "rotation_deg": 15.0,
+    "normal_angle_deg": 175.0,
+    "seed": 0
+  },
+  "parts": {
+    "g_beam": {
+      "grasps": 2252,
+      "top_down": 396,
+      "width_min": 0.03999999769032002,
+      "width_max": 0.044000000208616316,
+      "seconds": 0.5
+    },
+    "g_block": {
+      "grasps": 2256,
+      "top_down": 540,
+      "width_min": 0.053999996259808544,
+      "width_max": 0.07000000633299351,
+      "seconds": 0.4
+    },
+    "g_cap": {
+      "grasps": 1104,
+      "top_down": 216,
+      "width_min": 0.03999999955296517,
+      "width_max": 0.04200000174343588,
+      "seconds": 0.2
+    },
+    "g_post_E": {
+      "grasps": 1968,
+      "top_down": 558,
+      "width_min": 0.04999999932944775,
+      "width_max": 0.07999999679625035,
+      "seconds": 0.3
+    },
+    "g_post_W": {
+      "grasps": 1920,
+      "top_down": 594,
+      "width_min": 0.046000002399086956,
+      "width_max": 0.08000000424683094,
+      "seconds": 0.3
+    },
+    "t_arm": {
+      "grasps": 1735,
+      "top_down": 342,
+      "width_min": 0.03999999769032002,
+      "width_max": 0.04600000053644186,
+      "seconds": 0.3
+    },
+    "t_bar": {
+      "grasps": 1342,
+      "top_down": 180,
+      "width_min": 0.035999998897314076,
+      "width_max": 0.04200000174343593,
+      "seconds": 0.2
+    },
+    "t_block": {
+      "grasps": 2112,
+      "top_down": 468,
+      "width_min": 0.0499999974668026,
+      "width_max": 0.07999999307096005,
+      "seconds": 0.3
+    },
+    "t_cap": {
+      "grasps": 1728,
+      "top_down": 396,
+      "width_min": 0.04999999932944775,
+      "width_max": 0.058000000640749935,
+      "seconds": 0.3
+    },
+    "t_pedestal": {
+      "grasps": 2496,
+      "top_down": 666,
+      "width_min": 0.05999999724328518,
+      "width_max": 0.07999999679625035,
+      "seconds": 0.4
+    }
+  }
+}

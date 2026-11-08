@@ -1,0 +1,74 @@
+{
+ "args": {
+  "model": "twin10",
+  "penalty": null,
+  "detax": false,
+  "grasps_per_pose": 8,
+  "sampler": "fps",
+  "placements": "sealp",
+  "grid": "fine",
+  "grid_step": 0.015,
+  "keepout": "sealp",
+  "goal_pos": "0.373,0.0,0.007",
+  "home_clear": 0.03,
+  "orient": "first",
+  "search": "joint search (lattice_joint, table prices)"
+ },
+ "chosen": {
+  "steps": [
+   [
+    "t_pedestal",
+    "0.218,0.000,yaw0,identity",
+    228
+   ],
+   [
+    "t_arm",
+    "0.371,0.153,yaw0,rot90_14",
+    13
+   ],
+   [
+    "t_block",
+    "0.234,0.137,yaw0,fs_02",
+    1081
+   ],
+   [
+    "t_bar",
+    "0.432,0.214,yaw0,rot90_14",
+    826
+   ],
+   [
+    "t_cap",
+    "0.493,0.153,yaw0,identity",
+    767
+   ],
+   [
+    "g_post_W",
+    "0.203,-0.076,yaw0,identity",
+    1342
+   ],
+   [
+    "g_post_E",
+    "0.493,-0.153,yaw0,identity",
+    1453
+   ],
+   [
+    "g_beam",
+    "0.356,-0.214,yaw0,rot90_13",
+    2113
+   ],
+   [
+    "g_block",
+    "0.295,-0.198,yaw0,identity",
+    862
+   ],
+   [
+    "g_cap",
+    "0.371,-0.153,yaw0,fs_02",
+    411
+   ]
+  ],
+  "time": 25.528451139020497,
+  "est": 23.765368490898467,
+  "lb": 23.765368490898467
+ }
+}

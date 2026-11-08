@@ -1,0 +1,5812 @@
+{
+ "model": "triangular_frame8",
+ "U": 4.471578233542468,
+ "order": [
+  "post_A",
+  "post_B",
+  "beam_AB",
+  "post_C",
+  "beam_BC",
+  "beam_CA",
+  "cap_BC",
+  "cap_AB"
+ ],
+ "layout": [
+  [
+   "post_A",
+   0,
+   "0.203,0.000,yaw0,identity"
+  ],
+  [
+   "post_B",
+   48,
+   "0.279,-0.168,yaw0,identity"
+  ],
+  [
+   "beam_AB",
+   23,
+   "0.371,-0.153,yaw0,rot90_13"
+  ],
+  [
+   "post_C",
+   35,
+   "0.264,0.168,yaw0,identity"
+  ],
+  [
+   "beam_BC",
+   24,
+   "0.371,0.153,yaw0,rot90_17"
+  ],
+  [
+   "beam_CA",
+   64,
+   "0.310,0.214,yaw0,fs_02"
+  ],
+  [
+   "cap_BC",
+   176,
+   "0.218,0.061,yaw0,identity"
+  ],
+  [
+   "cap_AB",
+   34,
+   "0.432,-0.214,yaw0,identity"
+  ]
+ ],
+ "root": 4.239015362844787,
+ "root_plain": 4.239015362844787,
+ "optimal": true,
+ "lower": 4.471578233542468,
+ "stats": {
+  "pops": 85436,
+  "expanded": 34812,
+  "empty_domain": 36,
+  "generators": 73044,
+  "gpu_rounds": 22418,
+  "pose_checks": 50624,
+  "pose_blocked": 11793,
+  "pruned_at_push": 19572,
+  "merged": 4019,
+  "complete": 1,
+  "stopped_at_f": 4.471582865539132,
+  "n_left": 53472
+ },
+ "seconds": {
+  "problem_s": 23.25405150000006,
+  "prep_s": 7.485749699990265,
+  "self_mesh": {
+   "goal_checked": 1552,
+   "goal_rejected": 397,
+   "pick_checked": 4136,
+   "pick_rejected": 5,
+   "seconds": 36.54961380001623,
+   "cached": true
+  },
+  "lattice_s": 23.064382400014438,
+  "bound_s": 2.409226299962029,
+  "search_s": 93.9891286001075,
+  "total_s": 150.31220129993744
+ },
+ "n_orders": 252,
+ "n_arrows": 55,
+ "n_sets": 30,
+ "n_poses": 949,
+ "left": [
+  {
+   "f": 4.471582865539132,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 38,
+   "n": 146,
+   "suffix": [
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47158657951069,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 9,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.47158657951069,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 10,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471587450396033,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 79,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587450396033,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587450396033,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 79,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587450396033,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587617273011,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587617273011,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587617273011,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471587617273011,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471588375138411,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 80,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471588375138411,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 80,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 100,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 100,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 100,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471590320968052,
+   "kind": "pose",
+   "R": [
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 100,
+   "suffix": [
+    "beam_BC",
+    "post_A",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471597921053805,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471597921053805,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471597921053805,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471597921053805,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471598315561416,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B"
+   ],
+   "p": "post_B",
+   "i": 1,
+   "n": 87,
+   "suffix": [
+    "beam_AB",
+    "post_C",
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471602132502584,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 5,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47160476436014,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 0,
+   "n": 89,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471605069576066,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471605135714059,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716064089642105,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 34,
+   "n": 147,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716064089642105,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 38,
+   "n": 143,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471608119429197,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 5,
+   "n": 139,
+   "suffix": [
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471608119429197,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 6,
+   "n": 142,
+   "suffix": [
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716106116828005,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471612083056836,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471612083056836,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471615355621086,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 61,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471615355621086,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 61,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471615355621086,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471615355621086,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.4716176145435504,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_AB",
+   "i": 9,
+   "n": 54,
+   "suffix": [
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.4716176906737015,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716176906737015,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716176906737015,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716176906737015,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471622252220973,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471622252220973,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471622252220973,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471622252220973,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471630949586514,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 6,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471630949586514,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 6,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716312172831145,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 11,
+   "n": 140,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716312172831145,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 11,
+   "n": 148,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471633210625871,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 2,
+   "n": 94,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471633210625871,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 2,
+   "n": 94,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471633242395491,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471633242395491,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471635016578363,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 99,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471635016578363,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 100,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471635090011126,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 6,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471635090011126,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 8,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471641157653366,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471642014123393,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 91,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471642014123393,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 91,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471643453484152,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471643453484152,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471645744032266,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471645744032266,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471653500753772,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 37,
+   "n": 154,
+   "suffix": [
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471654138708251,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_AB",
+   "i": 2,
+   "n": 53,
+   "suffix": [
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471663901905746,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471663901905746,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471665139407085,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 97,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471665139407085,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471669371912929,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471669371912929,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 93,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471672035937731,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 98,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471672035937731,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 98,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471672035937731,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 98,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471672035937731,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 98,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471675537359495,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471675537359495,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471676042318332,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 16,
+   "n": 142,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471676042318332,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 16,
+   "n": 150,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471676042318332,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 16,
+   "n": 142,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471676042318332,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 16,
+   "n": 150,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471680398615945,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 5,
+   "n": 94,
+   "suffix": [
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471680398615945,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 5,
+   "n": 94,
+   "suffix": [
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471682707462939,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 36,
+   "n": 152,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471682707462939,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 36,
+   "n": 152,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 86,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 86,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 86,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 86,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471683827509259,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_B",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47168501133252,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 24,
+   "n": 145,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471686756565658,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471686756565658,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716872144780195,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 75,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4716872144780195,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471695226047562,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471695226047562,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 5,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471698420659175,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 6,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471698420659175,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 8,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471703052352137,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471704047594466,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471705962710407,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 6,
+   "n": 36,
+   "suffix": [
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471707028335869,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471711321968341,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 90,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471711321968341,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 90,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471717859835838,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471717859835838,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471729216104274,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471729216104274,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 98,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47173335814716,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 94,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47173335814716,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 1,
+   "n": 95,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471740516077199,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 7,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471740516077199,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 7,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47174068513719,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.47174068513719,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.47174068513719,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.47174068513719,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.471742725940402,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 1,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471742725940402,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 1,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471748452041294,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 91,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471748452041294,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 2,
+   "n": 93,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471749163974293,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 1,
+   "n": 97,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471749163974293,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_AB",
+   "i": 1,
+   "n": 101,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471751170815065,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 80,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471751170815065,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 79,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471751504351789,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471751504351789,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471753736528405,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 7,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471753736528405,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 7,
+   "n": 77,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471755649231416,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 7,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471755649231416,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 9,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47175571688465,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 79,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47175571688465,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 79,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471756177845796,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471756177845796,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471765536746934,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 11,
+   "n": 152,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471765900169407,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471765900169407,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 60,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 65,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 60,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 65,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 60,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 65,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 59,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 59,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471769974311719,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4717751967583,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 23,
+   "suffix": [
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471780997588141,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 92,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471782134970979,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471782134970979,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471786374791979,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 92,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471786374791979,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "beam_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 96,
+   "suffix": [
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471788636953718,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 92,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471788636953718,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 92,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471789512508088,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 1,
+   "n": 133,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471789512508088,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 1,
+   "n": 134,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471789512508088,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 1,
+   "n": 133,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471789512508088,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 1,
+   "n": 134,
+   "suffix": [
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471797283211244,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471797283211244,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471798385825704,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471804857996829,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B"
+   ],
+   "p": "post_B",
+   "i": 1,
+   "n": 87,
+   "suffix": [
+    "beam_AB",
+    "post_C",
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471806518744765,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 97,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471806518744765,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 3,
+   "n": 97,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471815327311347,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 145,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471815327311347,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 145,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471817097207363,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 75,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471817097207363,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471821898056499,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 61,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471821898056499,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 2,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471825663485184,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471825663485184,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 3,
+   "n": 78,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47183073804328,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 8,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.47183073804328,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 10,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_AB",
+    "cap_BC"
+   ]
+  },
+  {
+   "f": 4.4718359171010515,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4718359171010515,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4718359171010515,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 65,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.4718359171010515,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471837545628958,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 5,
+   "n": 97,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471837545628958,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 5,
+   "n": 97,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471840846957679,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471840846957679,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471840846957679,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 5,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471840846957679,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 5,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471845937164675,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 2,
+   "n": 138,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471845937164675,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 2,
+   "n": 146,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471846412669347,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471846457926624,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471846457926624,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471846457926624,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471846457926624,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471848702028421,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471848702028421,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849284679578,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 64,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 63,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 63,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471849920474096,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 68,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471851404957179,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471851404957179,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 5,
+   "n": 77,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471861825445677,
+   "kind": "pose",
+   "R": [
+    "beam_AB",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471864502055842,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471867163884266,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 74,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471867163884266,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 71,
+   "suffix": [
+    "beam_BC",
+    "beam_AB",
+    "cap_BC",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471877478178323,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 14,
+   "n": 94,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471877478178323,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 14,
+   "n": 94,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471880229906791,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 66,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471880630568107,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 129,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471880630568107,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 130,
+   "suffix": [
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471888790252395,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 137,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471888790252395,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 141,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471890580233243,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 8,
+   "n": 143,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471890580233243,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 8,
+   "n": 147,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.47189083076748,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 5,
+   "n": 95,
+   "suffix": [
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471895630078677,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_BC",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "cap_BC",
+    "post_A",
+    "beam_CA",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471901177008007,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471901177008007,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 4,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471907966867513,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 0,
+   "n": 86,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471907966867513,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 0,
+   "n": 88,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471909811418161,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 0,
+   "n": 92,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471909811418161,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "beam_CA",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "beam_CA",
+   "i": 0,
+   "n": 92,
+   "suffix": [
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910089089802,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 2,
+   "n": 145,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910089089802,
+   "kind": "pose",
+   "R": [
+    "beam_BC",
+    "cap_BC",
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "cap_BC",
+   "i": 4,
+   "n": 149,
+   "suffix": [
+    "beam_AB",
+    "beam_CA",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910988725155,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 69,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910988725155,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 72,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910988725156,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 70,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471910988725156,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 1,
+   "n": 73,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "beam_AB",
+    "cap_BC",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471915642106613,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471915642106613,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  },
+  {
+   "f": 4.471915642106613,
+   "kind": "pose",
+   "R": [
+    "post_A",
+    "post_B",
+    "post_C"
+   ],
+   "p": "post_C",
+   "i": 0,
+   "n": 76,
+   "suffix": [
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "beam_AB",
+    "cap_AB"
+   ]
+  }
+ ],
+ "trace": [
+  {
+   "kind": "U",
+   "U": 4.471578233542468,
+   "order": [
+    "post_A",
+    "post_B",
+    "beam_AB",
+    "post_C",
+    "beam_BC",
+    "beam_CA",
+    "cap_BC",
+    "cap_AB"
+   ]
+  }
+ ]
+}

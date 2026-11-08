@@ -21,7 +21,7 @@ import numpy as np
 GRIP_S = 0.5            # s shown for closing / opening the gripper (not part of the plan time)
 JAW_OPEN = 0.085        # fully open jaw of the render meshes (= lazy_cost.checker.GpuChecker.JAW_OPEN)
 CONTACT_OFFSET = 0.01   # WRS grasp planning contact_offset (lazy_cost.gen_grasps): jaw = contact width + 2x
-COLORS = ["#e15759", "#4e79a7", "#f28e2b", "#59a14f", "#b07aa1", "#edc948", "#76b7b2", "#ff9da7"]
+COLORS = ["#e15759", "#4e79a7", "#f28e2b", "#59a14f", "#b07aa1", "#edc948", "#76b7b2", "#ff9da7", "#9c755f", "#2f4b7c"]
 
 
 def _b64(a, dtype):
@@ -32,7 +32,7 @@ def _mesh(v, f):
     return dict(v=_b64(np.asarray(v), "<f4"), f=_b64(np.asarray(f), "<u4"))
 
 
-def build(run_path: Path, fps=30, fingers_view="plan"):
+def build(run_path: Path, fps=30, fingers_view="plan", rrt=False):
     from curobo_bridge.runtime import ASSET_DIR, prepare
     prepare()
     import trimesh
@@ -54,13 +54,37 @@ def build(run_path: Path, fps=30, fingers_view="plan"):
     sc, cat, chk = pb.scene, pb.cat, pb.chk
     steps = [tuple(s) for s in run["chosen"]["steps"]]
     node = Node(R=frozenset(), suffix=tuple(steps))
-    ref = CuroboRefiner(chk, detax=bool(a.get("detax")))
-    for p in pb.ids:
+    ref = None if rrt else CuroboRefiner(chk, detax=bool(a.get("detax")))
+    for p in () if rrt else pb.ids:
         ref.fit(p)
     val = Validator(pb, ref)
+    W = None
+    if rrt:
+        from lazy_cost.detour import blend
+        from .wrs_check import RRT_SEEDS, MeshWorld
+        W = MeshWorld(pb)
+
+    def rrt_path(s):
+        """RRT-Connect + mesh re-check + shortcut + corner blend, as wrs_check --rrt-all."""
+        table = {q: sc.pose[q][x] for q, x in s["table"].items()}
+        if s["kind"] == "transit":
+            table[s["part"]] = sc.pose[s["part"]][s["x"]]
+        held = (s["part"], sc.grasps()[s["part"]][s["g"]][0], s["a"]) if s["kind"] == "transfer" else None
+        W.set(s["installed"], table, held, jaw=pb.jaw[s["part"]][s["g"]] if held and pb.close_fingers else None)
+        for seed in range(RRT_SEEDS):
+            P, _ = W.planner._rrt(s["a"], s["b"], seed=seed)
+            if P is None or not W.free(P)[0]:
+                continue
+            S = W.shortcut(P)
+            if len(S) > 2 and W.free(blend(S))[0]:
+                S = blend(S)
+            return np.asarray(S, float), "planned" if len(S) > 2 else "straight"
+        return np.stack([s["a"], s["b"]]), "failed"
 
     def free_path(s):
-        """[a, b] when the straight line is free, else a cuRobo path (as the validation)."""
+        """[a, b] when the straight line is free, else a cuRobo path (as the validation); RRT with rrt."""
+        if rrt:
+            return rrt_path(s)
         if val._straight_free(s):
             return np.stack([s["a"], s["b"]]), "straight"
         world = chk.world_dict(s["installed"], pb.placed(s["table"]))
@@ -196,7 +220,9 @@ def build(run_path: Path, fps=30, fingers_view="plan"):
     if fingers_view == "contact":           # fingers shown on the part by default (the menu still switches)
         html = html.replace('<option value="plan" selected>', '<option value="plan">').replace(
             '<option value="contact">', '<option value="contact" selected>')
-    out = run_path.with_name(run_path.stem + "_viewer.html")
+    if rrt:
+        html = html.replace("按 cuRobo 规划的路径", "按 RRT 规划的路径")
+    out = run_path.with_name(run_path.stem + ("_rrt" if rrt else "") + "_viewer.html")
     out.write_text(html, encoding="utf-8")
     print(f"replay {t:.2f} s (plan pieces timed with TOPP, gripper {GRIP_S} s each shown extra), "
           f"{len(frames)} frames -> {out}", flush=True)
@@ -308,5 +334,6 @@ if __name__ == "__main__":
     ap.add_argument("--fps", type=int, default=30)
     ap.add_argument("--jaw", choices=("plan", "contact"), default="plan",
                     help="fingers shown at the planner's jaw width (part + 2 cm) or on the part, at start")
+    ap.add_argument("--rrt", action="store_true", help="every free segment by WRS RRT-Connect instead of cuRobo")
     a = ap.parse_args()
-    build(Path(a.run), a.fps, a.jaw)
+    build(Path(a.run), a.fps, a.jaw, a.rrt)

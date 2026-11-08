@@ -1,0 +1,6404 @@
+{
+ "model": "twin10",
+ "U": 5.464000003766226,
+ "order": [
+  "t_pedestal",
+  "t_arm",
+  "t_block",
+  "t_bar",
+  "g_post_E",
+  "g_post_W",
+  "g_beam",
+  "g_block",
+  "g_cap",
+  "t_cap"
+ ],
+ "layout": [
+  [
+   "t_pedestal",
+   132,
+   "0.203,0.076,yaw0,identity"
+  ],
+  [
+   "t_arm",
+   75,
+   "0.432,0.214,yaw0,rot90_14"
+  ],
+  [
+   "t_block",
+   69,
+   "0.310,0.214,yaw0,fs_02"
+  ],
+  [
+   "t_bar",
+   35,
+   "0.234,0.137,yaw0,rot90_15"
+  ],
+  [
+   "g_post_E",
+   57,
+   "0.493,0.153,yaw0,identity"
+  ],
+  [
+   "g_post_W",
+   59,
+   "0.493,-0.153,yaw0,identity"
+  ],
+  [
+   "g_beam",
+   0,
+   "0.218,0.000,yaw0,rot90_13"
+  ],
+  [
+   "g_block",
+   35,
+   "0.295,-0.198,yaw0,identity"
+  ],
+  [
+   "g_cap",
+   16,
+   "0.371,-0.153,yaw0,fs_02"
+  ],
+  [
+   "t_cap",
+   26,
+   "0.371,0.153,yaw0,rot90_13"
+  ]
+ ],
+ "root": 4.643366089690343,
+ "root_plain": 4.643366089690343,
+ "optimal": false,
+ "lower": 5.0853033165408075,
+ "stats": {
+  "pops": 1880000,
+  "expanded": 864145,
+  "generators": 1519461,
+  "gpu_rounds": 424664,
+  "pose_checks": 1015854,
+  "pose_blocked": 90966,
+  "merged": 60743,
+  "capped": true,
+  "out_of_memory": true,
+  "n_left": 1519462
+ },
+ "seconds": {
+  "problem_s": 26.418112099985592,
+  "prep_s": 7.575998799991794,
+  "self_mesh": {
+   "goal_checked": 1541,
+   "goal_rejected": 404,
+   "pick_checked": 3051,
+   "pick_rejected": 0,
+   "seconds": 26.618618699954823,
+   "cached": true
+  },
+  "lattice_s": 26.613541499944404,
+  "bound_s": 1.5329255999531597,
+  "search_s": 458.2528362000594,
+  "total_s": 523.5911224000156
+ },
+ "n_orders": 504,
+ "n_arrows": 77,
+ "n_sets": 42,
+ "n_poses": 1305,
+ "left": [
+  {
+   "f": 5.0853033165408075,
+   "kind": "node",
+   "R": [
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085303363198363,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 8,
+   "n": 50,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085303363198363,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 8,
+   "n": 50,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853035926679855,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 28,
+   "n": 118,
+   "suffix": [
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085303867061401,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 27,
+   "n": 167,
+   "suffix": [
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085303936075393,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 2,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085303936075393,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 2,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304107353861,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 13,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304256613371,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 2,
+   "n": 103,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304399984807,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 7,
+   "n": 120,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304560456205,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 15,
+   "n": 152,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085304560456205,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 15,
+   "n": 152,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085304560456205,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 15,
+   "n": 152,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085304912171117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085304912171117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08530505758916,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 3,
+   "n": 151,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530505758916,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 3,
+   "n": 151,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305155530879,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 21,
+   "n": 161,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305155530879,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 21,
+   "n": 161,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305196371438,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 10,
+   "n": 103,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305196371438,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 10,
+   "n": 103,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305382421211,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 52,
+   "n": 164,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305482713553,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 33,
+   "n": 119,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305482713553,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 33,
+   "n": 119,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305716532504,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 119,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305716532504,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 115,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305831259278,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 12,
+   "n": 153,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085305831259278,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 12,
+   "n": 153,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085306053459924,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 9,
+   "n": 104,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306053459924,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 9,
+   "n": 104,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 49,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 49,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 49,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 49,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306592081823,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 47,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085306654559817,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 65,
+   "n": 172,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530691140119,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 6,
+   "n": 113,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530691140119,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 6,
+   "n": 114,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530691140119,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 6,
+   "n": 114,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530691140119,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 6,
+   "n": 114,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085307162114887,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 5,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307162114887,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 5,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307189686986,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307190160298,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307709751216,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 52,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 48,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307877197927,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085307879321381,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 9,
+   "n": 99,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085307879321381,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 9,
+   "n": 99,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085307879321381,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 9,
+   "n": 99,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085307879321381,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 9,
+   "n": 99,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085308637194968,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 4,
+   "n": 112,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085308637194968,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 4,
+   "n": 112,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853086586241965,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 12,
+   "n": 163,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853086586241965,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 12,
+   "n": 163,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530899427935,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 26,
+   "n": 166,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530899427935,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 26,
+   "n": 166,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530899427935,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 26,
+   "n": 166,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530926857458,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 1,
+   "n": 111,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530926857458,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 1,
+   "n": 112,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530926857458,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 1,
+   "n": 111,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08530926857458,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 1,
+   "n": 112,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085309389850912,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 1,
+   "n": 96,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085309389850912,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 1,
+   "n": 96,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085309550414222,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085309550414222,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 0,
+   "n": 157,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085310828347928,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 15,
+   "n": 149,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085310828347928,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 17,
+   "n": 148,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085311034875025,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 5,
+   "n": 98,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085311395595593,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 52,
+   "suffix": [
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085311395595593,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 1,
+   "n": 52,
+   "suffix": [
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085311602514809,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 115,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085311602514809,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 115,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085311602514809,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 115,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312407475911,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 2,
+   "n": 98,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085312407475911,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 2,
+   "n": 99,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085312419321096,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 21,
+   "n": 104,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085312474530369,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 2,
+   "n": 109,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312474530369,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 2,
+   "n": 109,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312474530369,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 2,
+   "n": 109,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312474530369,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 2,
+   "n": 109,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 94,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853127450861155,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "t_arm",
+   "i": 0,
+   "n": 95,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085312797417272,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 2,
+   "n": 126,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312797417272,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 2,
+   "n": 130,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085312877050523,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 4,
+   "n": 113,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085312877050523,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 4,
+   "n": 113,
+   "suffix": [
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085313015473126,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 107,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085313015473126,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 107,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085313015473126,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 105,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085313015473126,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 0,
+   "n": 105,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085313272801022,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 140,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085313272801022,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 140,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "t_cap",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 114,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 114,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531359974719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 114,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.08531398353437,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 4,
+   "n": 128,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085314243104602,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 51,
+   "suffix": [
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085314243104602,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 51,
+   "suffix": [
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315068758117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315068758117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315068758117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315068758117,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 104,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315407252837,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 7,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315407252837,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 7,
+   "n": 106,
+   "suffix": [
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085315470038034,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 5,
+   "n": 101,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085315470038034,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 5,
+   "n": 101,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085315878833564,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 5,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316023578522,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 0,
+   "n": 161,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316023578522,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 0,
+   "n": 161,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316138589921,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316154518333,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 7,
+   "n": 107,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316166305551,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_cap",
+   "i": 0,
+   "n": 112,
+   "suffix": [
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316422664708,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316422664708,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316422664708,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316422664708,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W"
+   ],
+   "p": "g_block",
+   "i": 4,
+   "n": 46,
+   "suffix": [
+    "g_cap",
+    "t_pedestal",
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316448260368,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 3,
+   "n": 101,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316945223251,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085316945223251,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085317061332057,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 3,
+   "n": 98,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085317749623295,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_block",
+   "i": 0,
+   "n": 50,
+   "suffix": [
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085318065539209,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318065539209,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318065539209,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318065539209,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318343346346,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 32,
+   "n": 107,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318373853557,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 150,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318373853557,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 151,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318421071529,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 165,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318421071529,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 165,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318421071529,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 165,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318570510316,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 4,
+   "n": 112,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318570510316,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 4,
+   "n": 112,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318710739569,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 3,
+   "n": 157,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318822658871,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085318822658871,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 155,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085318852702705,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 3,
+   "n": 151,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318902229567,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 24,
+   "n": 138,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318902229567,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 24,
+   "n": 138,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318902229567,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 24,
+   "n": 138,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318902229567,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 24,
+   "n": 138,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085318976225635,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 2,
+   "n": 156,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085319372074862,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 101,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.0853194163915445,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 5,
+   "n": 166,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853194163915445,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 5,
+   "n": 166,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853203902627895,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853203902627895,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853203902627895,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853203902627895,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 0,
+   "n": 109,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085320458516719,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 1,
+   "n": 117,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085320853191479,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 4,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085320853191479,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 4,
+   "n": 97,
+   "suffix": [
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085321108879839,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 4,
+   "n": 105,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085321108879839,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_block",
+   "i": 4,
+   "n": 103,
+   "suffix": [
+    "t_bar",
+    "g_block",
+    "g_cap",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085321250447203,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 7,
+   "n": 112,
+   "suffix": [
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853216344086505,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 165,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853216344086505,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 165,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085321862172014,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 42,
+   "n": 165,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085321862172014,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 42,
+   "n": 165,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085322088551079,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085322088551079,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085322088551079,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085322088551079,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 0,
+   "n": 143,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085322225918184,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 162,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085322225918184,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 162,
+   "suffix": [
+    "g_post_E",
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323230402336,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 141,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323230402336,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 140,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 143,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.085323340469074,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_block",
+    "g_cap",
+    "g_post_E",
+    "g_post_W",
+    "t_pedestal"
+   ],
+   "p": "t_pedestal",
+   "i": 17,
+   "n": 141,
+   "suffix": [
+    "t_arm",
+    "t_block",
+    "t_bar",
+    "t_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.0853233885737525,
+   "kind": "pose",
+   "R": [
+    "g_beam",
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_beam",
+   "i": 0,
+   "n": 102,
+   "suffix": [
+    "t_bar",
+    "t_cap",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323441819073,
+   "kind": "pose",
+   "R": [
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 2,
+   "n": 159,
+   "suffix": [
+    "g_post_W",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323445413275,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "t_bar",
+   "i": 3,
+   "n": 114,
+   "suffix": [
+    "t_cap",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323483077477,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 5,
+   "n": 163,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085323483077477,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "t_cap",
+   "i": 5,
+   "n": 163,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08532379564495,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 21,
+   "n": 112,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08532379564495,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 21,
+   "n": 113,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08532379564495,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 21,
+   "n": 112,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.08532379564495,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 21,
+   "n": 113,
+   "suffix": [
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085324539307058,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_E",
+   "i": 1,
+   "n": 149,
+   "suffix": [
+    "g_post_W",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085325659680856,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 117,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085325659680856,
+   "kind": "pose",
+   "R": [
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 117,
+   "suffix": [
+    "t_cap",
+    "g_post_E",
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  },
+  {
+   "f": 5.085325686553792,
+   "kind": "pose",
+   "R": [
+    "g_post_E",
+    "g_post_W",
+    "t_arm",
+    "t_bar",
+    "t_block",
+    "t_cap",
+    "t_pedestal"
+   ],
+   "p": "g_post_W",
+   "i": 0,
+   "n": 117,
+   "suffix": [
+    "g_beam",
+    "g_block",
+    "g_cap"
+   ]
+  }
+ ],
+ "trace": []
+}

@@ -1,21 +1,21 @@
 {
  "model": "triangular_frame6",
- "search_cost": 3.1739687710104882,
+ "search_cost": 3.140673823940952,
  "order": [
   "post_A",
   "post_B",
-  "beam_AB",
   "post_C",
   "beam_BC",
+  "beam_AB",
   "beam_CA"
  ],
  "layout": [
   "0.203,0.000,yaw0,identity",
-  "0.371,-0.168,yaw0,identity",
-  "0.447,-0.198,yaw0,rot90_13",
-  "0.264,0.168,yaw0,identity",
+  "0.462,-0.168,yaw0,identity",
+  "0.417,0.214,yaw0,fs_03",
   "0.371,0.153,yaw0,rot90_17",
-  "0.310,0.214,yaw0,fs_02"
+  "0.371,-0.153,yaw0,rot90_13",
+  "0.295,-0.198,yaw0,identity"
  ],
  "usable_grasps": [
   [
@@ -29,24 +29,20 @@
    215
   ],
   [
-   1346,
    1345,
-   1649,
-   1920,
    1344,
-   1919,
    1648,
-   741
+   1649,
+   1919,
+   1918
   ],
   [
-   459,
-   187
-  ],
-  [
-   1178,
-   1295,
-   1294,
-   944
+   1167,
+   1148,
+   1673,
+   2477,
+   601,
+   1672
   ],
   [
    1387,
@@ -57,177 +53,179 @@
    1340
   ],
   [
-   1240,
-   1241
+   438
+  ],
+  [
+   528
   ]
  ],
  "passed": true,
  "tries": [
   {
    "grasps": [
-    1067,
+    1068,
     1345,
-    459,
-    1295,
+    1148,
     1387,
-    1240
+    438,
+    528
    ],
-   "lb": 14.388422807518412,
+   "lb": 14.29253232252928,
    "ok": true,
-   "time": 15.50046524400248,
-   "validate_s": 6.962550800002646,
+   "time": 15.478585127922194,
+   "validate_s": 6.141099400003441,
    "rows": [
     {
      "kind": "transit",
      "part": "post_A",
-     "value": 0.6332520641921263,
-     "planned": 0.6793423295374859,
+     "value": 0.6961912281701274,
+     "planned": 0.823424788237199,
      "how": "straight",
-     "lb": 0.6332520641921263
+     "lb": 0.6961912281701274
     },
     {
      "kind": "fixed",
      "part": "post_A",
-     "value": 1.019275842789584,
-     "planned": 1.019275842789584,
+     "value": 1.0278532771888027,
+     "planned": 1.0278532771888027,
      "how": "fixed",
-     "lb": 1.019275842789584
+     "lb": 1.0278532771888027
     },
     {
      "kind": "transfer",
      "part": "post_A",
-     "value": 0.4090356832854631,
-     "planned": 0.4670120890978533,
+     "value": 0.39337635780199537,
+     "planned": 0.41888281333166577,
      "how": "straight",
-     "lb": 0.4090356832854631
+     "lb": 0.39337635780199537
     },
     {
      "kind": "transit",
      "part": "post_B",
-     "value": 0.37097602984785916,
-     "planned": 0.40752550919567276,
+     "value": 0.4027295087340884,
+     "planned": 0.45219473824039597,
      "how": "straight",
-     "lb": 0.37097602984785916
+     "lb": 0.4027295087340884
     },
     {
      "kind": "fixed",
      "part": "post_B",
-     "value": 1.0195307038740988,
-     "planned": 1.0195307038740988,
+     "value": 1.0164053780470046,
+     "planned": 1.0164053780470046,
      "how": "fixed",
-     "lb": 1.0195307038740988
+     "lb": 1.0164053780470046
     },
     {
      "kind": "transfer",
      "part": "post_B",
-     "value": 0.40738823697875975,
-     "planned": 0.43342766596402643,
+     "value": 0.33417926478400994,
+     "planned": 0.36998624147141534,
      "how": "straight",
-     "lb": 0.40738823697875975
-    },
-    {
-     "kind": "transit",
-     "part": "beam_AB",
-     "value": 1.0059625057684507,
-     "planned": 1.0059625057684507,
-     "how": "planned",
-     "lb": 0.7782880511477186
-    },
-    {
-     "kind": "fixed",
-     "part": "beam_AB",
-     "value": 1.1384910887858384,
-     "planned": 1.1384910887858384,
-     "how": "fixed",
-     "lb": 1.1384910887858384
-    },
-    {
-     "kind": "transfer",
-     "part": "beam_AB",
-     "value": 0.7627987854222993,
-     "planned": 1.089015952420202,
-     "how": "straight",
-     "lb": 0.7627987854222993
+     "lb": 0.33417926478400994
     },
     {
      "kind": "transit",
      "part": "post_C",
-     "value": 0.6160507985524984,
-     "planned": 0.6908665164099461,
+     "value": 0.4694535760850369,
+     "planned": 0.5163705649381211,
      "how": "straight",
-     "lb": 0.6160507985524984
+     "lb": 0.4694535760850369
     },
     {
      "kind": "fixed",
      "part": "post_C",
-     "value": 1.0193815419649594,
-     "planned": 1.0193815419649594,
+     "value": 1.0000697015650966,
+     "planned": 1.0000697015650966,
      "how": "fixed",
-     "lb": 1.0193815419649594
+     "lb": 1.0000697015650966
     },
     {
      "kind": "transfer",
      "part": "post_C",
-     "value": 0.5226912203256865,
-     "planned": 0.5226912203256865,
+     "value": 0.9251571033302537,
+     "planned": 0.9251571033302537,
      "how": "planned",
-     "lb": 0.42899000256900327
+     "lb": 0.7513923532898361
     },
     {
      "kind": "transit",
      "part": "beam_BC",
-     "value": 1.1596491082135922,
-     "planned": 1.1596491082135922,
-     "how": "planned",
-     "lb": 0.8395844328081286
+     "value": 0.2743427224605483,
+     "planned": 0.2742928216125569,
+     "how": "straight",
+     "lb": 0.2743427224605483
     },
     {
      "kind": "fixed",
      "part": "beam_BC",
-     "value": 1.0744678807279846,
-     "planned": 1.0744678807279846,
+     "value": 1.0744674913405161,
+     "planned": 1.0744674913405161,
      "how": "fixed",
-     "lb": 1.0744678807279846
+     "lb": 1.0744674913405161
     },
     {
      "kind": "transfer",
      "part": "beam_BC",
-     "value": 1.056169949503505,
-     "planned": 1.056169949503505,
+     "value": 0.9802448317669896,
+     "planned": 0.9802448317669896,
      "how": "planned",
-     "lb": 0.794141932178188
+     "lb": 0.7941418999594612
+    },
+    {
+     "kind": "transit",
+     "part": "beam_AB",
+     "value": 0.4453280044667395,
+     "planned": 0.4926952151545277,
+     "how": "straight",
+     "lb": 0.4453280044667395
+    },
+    {
+     "kind": "fixed",
+     "part": "beam_AB",
+     "value": 1.1253308647004183,
+     "planned": 1.1253308647004183,
+     "how": "fixed",
+     "lb": 1.1253308647004183
+    },
+    {
+     "kind": "transfer",
+     "part": "beam_AB",
+     "value": 1.1303938620890424,
+     "planned": 1.1303938620890424,
+     "how": "planned",
+     "lb": 0.7446499725290247
     },
     {
      "kind": "transit",
      "part": "beam_CA",
-     "value": 0.7854227965831306,
-     "planned": 0.7854227965831306,
+     "value": 0.9584366763515759,
+     "planned": 0.9584366763515759,
      "how": "planned",
-     "lb": 0.6416522512633185
+     "lb": 0.6231802196771808
     },
     {
      "kind": "fixed",
      "part": "beam_CA",
-     "value": 1.023921896043009,
-     "planned": 1.023921896043009,
+     "value": 1.088456879590827,
+     "planned": 1.088456879590827,
      "how": "fixed",
-     "lb": 1.023921896043009
+     "lb": 1.088456879590827
     },
     {
      "kind": "transfer",
      "part": "beam_CA",
-     "value": 0.6374671368652497,
-     "planned": 0.6374671368652497,
+     "value": 1.191945692989456,
+     "planned": 1.191945692989456,
      "how": "planned",
-     "lb": 0.57266361080919
+     "lb": 1.0867609156789007
     },
     {
      "kind": "return",
      "part": null,
-     "value": 0.8385319742783856,
-     "planned": 1.053359586481624,
+     "value": 0.944222706459664,
+     "planned": 1.2585847391279084,
      "how": "straight",
-     "lb": 0.8385319742783856
+     "lb": 0.944222706459664
     }
    ],
    "check_rows": [
@@ -361,70 +359,6 @@
     },
     {
      "step": 3,
-     "part": "beam_AB",
-     "motion": "transit",
-     "path": "planned",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "descent",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "grasp",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "lift",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "transfer",
-     "path": "straight",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "insert",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "release",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 3,
-     "part": "beam_AB",
-     "motion": "retreat",
-     "path": "fixed",
-     "ok": true,
-     "collision": null
-    },
-    {
-     "step": 4,
      "part": "post_C",
      "motion": "transit",
      "path": "straight",
@@ -432,7 +366,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "descent",
      "path": "fixed",
@@ -440,7 +374,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "grasp",
      "path": "fixed",
@@ -448,7 +382,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "lift",
      "path": "fixed",
@@ -456,7 +390,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "transfer",
      "path": "planned",
@@ -464,7 +398,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "insert",
      "path": "fixed",
@@ -472,7 +406,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "release",
      "path": "fixed",
@@ -480,7 +414,7 @@
      "collision": null
     },
     {
-     "step": 4,
+     "step": 3,
      "part": "post_C",
      "motion": "retreat",
      "path": "fixed",
@@ -488,15 +422,15 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "transit",
-     "path": "planned",
+     "path": "straight",
      "ok": true,
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "descent",
      "path": "fixed",
@@ -504,7 +438,7 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "grasp",
      "path": "fixed",
@@ -512,7 +446,7 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "lift",
      "path": "fixed",
@@ -520,7 +454,7 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "transfer",
      "path": "planned",
@@ -528,7 +462,7 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "insert",
      "path": "fixed",
@@ -536,7 +470,7 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
      "motion": "release",
      "path": "fixed",
@@ -544,8 +478,72 @@
      "collision": null
     },
     {
-     "step": 5,
+     "step": 4,
      "part": "beam_BC",
+     "motion": "retreat",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "transit",
+     "path": "straight",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "descent",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "grasp",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "lift",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "transfer",
+     "path": "planned",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "insert",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
+     "motion": "release",
+     "path": "fixed",
+     "ok": true,
+     "collision": null
+    },
+    {
+     "step": 5,
+     "part": "beam_AB",
      "motion": "retreat",
      "path": "fixed",
      "ok": true,
@@ -628,7 +626,7 @@
  ],
  "stats": {
   "planned": 13,
-  "plan_s": 1.7126121001201682,
+  "plan_s": 1.1084822999546304,
   "cache_hits": 0
  }
 }

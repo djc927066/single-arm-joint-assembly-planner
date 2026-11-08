@@ -42,6 +42,7 @@ class Lattice:
                 if q != p:
                     self.tr[q, p] = np.linalg.norm(inst.start[p] + UP - (inst.goal[q] + UP), axis=1)
         self.F, self.lasts, self.root = {}, {}, np.inf
+        self.sub = {}                               # R -> table prices of the prefix R (prices.py)
 
     # ---- step 1 ---------------------------------------------------------------------------
     def domain(self, S, p):
@@ -94,3 +95,12 @@ class Lattice:
         if not qs:
             return np.full(len(xs), np.inf)
         return np.min(np.stack([self.F[R, q] + self.tr[q, p][xs] for q in qs]), axis=0)
+
+    def priced_prefix(self, R, p, xs, suffix):
+        """as prefix_bound, with the parts of R competing for the table (prices.py); the points under p
+        and the suffix are taken, so their prices are not given back."""
+        s = self.sub.get(R)
+        if s is None:
+            return np.full(len(xs), -np.inf)
+        b = np.min(np.stack([v + self.tr[q, p][xs] for q, v in s["F"].items()]), axis=0)
+        return b + s["price"][p][xs] + sum(s["price"][q][x] for q, x in suffix) - s["total"]

@@ -6,10 +6,13 @@ Per step (install p after the set S = remove p from S + {p}):
   G        pickle grasps of p at its goal: gripper (closed on p) free of the base and of S, Panthera-HT
            IK found, arm links 2-5 + palm + fingers free of S, the base and the table (triangle meshes)
   A        Chen assemblability of p in the contact graph of S + {p}
+Feasible states come from taking the assembly apart: start from all parts, remove p only if its path is free
+and S_after, S_left, G and A are all positive, go on from what is left. States no disassembly reaches are
+never evaluated; states that cannot be taken apart further are dropped.
 Orders:
   greedy, S_left : from the assembled frame remove the removable part with the largest S_left * G * A
   greedy, S_after: same with S_after (= the same for all candidates of one step, so G * A decides)
-  Chen Eq.(2)    : over all stable orders, max xi = min S_after * min G * min A (no support: single arm)
+  Chen Eq.(2)    : over all feasible orders, max xi = min S_after * min G * min A (no support: single arm)
 
     python -X utf8 -m experiments.bls_all_orders_20261031.sga_orders
 """
@@ -31,11 +34,11 @@ from .run import OUT, log  # noqa: E402
 def build_asm(sc, model):
     """asmcore assembly + fixed poses for the model (frame: build_model.py; benchmarks: as
     scenes.benchmarks.common.verify_equilibrium), table and robot base pose."""
-    if model == "triangular_frame6":
-        import scenes.triangular_frame6.build_model as bm
-        from lazy_cost.scene import FRAME_DIR
+    if model.startswith("triangular_frame"):
+        import importlib
+        bm = importlib.import_module(f"scenes.{model}.build_model")
         asm, _, _ = bm.build_assembly()
-        tb = json.loads((FRAME_DIR / "task.json").read_text(encoding="utf-8"))["table"]
+        tb = json.loads((sc.dir / "task.json").read_text(encoding="utf-8"))["table"]
         return asm, tb["table_center"], tb["table_size"], tb["robot_base_pos"], tb["robot_base_rotmat"]
     from asmcore.model import Assembly, Part
     from scenes.benchmarks.common import TABLE_CENTER, TABLE_SIZE
@@ -50,22 +53,6 @@ def build_asm(sc, model):
         parts.append(Part(p.pid, m.mesh(p.pid), m.goal[p.pid], mass_kg=m.mass(p.pid), com_local_m=com,
                           friction=0.5, fixed=p.pid == "base"))
     return Assembly(tuple(parts)), TABLE_CENTER.tolist(), TABLE_SIZE.tolist(), [0.0, 0.0, 0.0], np.eye(3).tolist()
-
-
-def stable_orders(sc):
-    if hasattr(sc, "orders"):
-        return [tuple(o) for o in sc.orders]
-    out = []
-
-    def rec(R, suf):                      # backward: remove a part that can be installed last
-        if not R:
-            out.append(tuple(suf))
-            return
-        for p in sorted(R):
-            if sc.step_ok(R - {p}, p):
-                rec(R - {p}, [p] + suf)
-    rec(frozenset(sc.ids), [])
-    return out
 
 
 def main():
@@ -146,15 +133,54 @@ def main():
             n += 1
         return n
 
-    orders = stable_orders(sc)
-    log(f"{a.model}: {len(sc.ids)} parts, {len(orders)} stable orders")
-    edges = sorted({(tuple(sorted(o[:k])), o[k]) for o in orders for k in range(len(o))}, key=lambda e: (len(e[0]), e))
-    E, t0 = {}, perf_counter()
-    for S, p in edges:
-        d = assembly_directions(seq.graph(state(S + (p,))), (p,), config=DirectionConfig())
-        E[S, p] = dict(S_after=S_of(S + (p,)), S_left=S_of(S), G=G_of(S, p), A=float(score_assemblability(d).score))
-        log(f"  {'+'.join(x.split('_')[1] for x in S) or '-':14s} + {p:8s} S_after {E[S, p]['S_after']:.4f}  "
-            f"S_left {E[S, p]['S_left']:.4f}  G {E[S, p]['G']:4d}  A {E[S, p]['A']:g}   ({perf_counter() - t0:.0f}s)")
+    stable = sc.stable if hasattr(sc, "stable") else sc.model.stable_rule
+    full = tuple(sorted(sc.ids))
+    E, removals, rejected, t0 = {}, {}, {}, perf_counter()
+    level = [full]
+    while level:                                       # take the assembly apart, one part per level
+        nxt = set()
+        for R in level:
+            removals[R] = []
+            for p in R:
+                S = tuple(q for q in R if q != p)
+                if not (sc.step_ok(frozenset(S), p) and stable(frozenset(S))):
+                    rejected[S, p] = "path or support"
+                    continue
+                d = assembly_directions(seq.graph(state(R)), (p,), config=DirectionConfig())
+                e = dict(S_after=S_of(R), S_left=S_of(S), G=G_of(S, p), A=float(score_assemblability(d).score))
+                log(f"  {'+'.join(x.split('_')[-1] for x in S) or '-':14s} + {p:8s} S_after {e['S_after']:.4f}  "
+                    f"S_left {e['S_left']:.4f}  G {e['G']:4d}  A {e['A']:g}   ({perf_counter() - t0:.0f}s)")
+                bad = [k for k, v in (("S", e["S_after"]), ("S", e["S_left"] if S else 1.0), ("G", e["G"]), ("A", e["A"])) if not v > 0]
+                if bad:
+                    rejected[S, p] = "+".join(sorted(set(bad)))
+                    continue
+                E[S, p] = e
+                removals[R].append(p)
+                nxt.add(S)
+        level = sorted(s for s in nxt if s)
+    paths = {(): 1}                                    # complete disassemblies from each reached state
+
+    def count(R):
+        if R not in paths:
+            paths[R] = sum(count(tuple(q for q in R if q != p)) for p in removals[R])
+        return paths[R]
+
+    n_orders = count(full)
+    dead = [R for R in removals if not paths[R]]
+    E = {(S, p): e for (S, p), e in E.items() if paths[S]}
+    orders = []
+
+    def rec(R, suf):
+        if not R:
+            orders.append(tuple(suf))
+        for p in removals.get(R, ()):
+            S = tuple(q for q in R if q != p)
+            if paths[S]:
+                rec(S, [p] + suf)
+    rec(full, [])
+    assert len(orders) == n_orders
+    log(f"{a.model}: disassembly reached {len(removals)} states, {len(dead)} of them dead ends; "
+        f"{len(E)} feasible removals, {len(rejected)} rejected; {n_orders} feasible orders ({perf_counter() - t0:.0f}s)")
 
     def xi(order):
         steps = [E[tuple(sorted(order[:k])), order[k]] for k in range(len(order))]
@@ -166,7 +192,7 @@ def main():
             cands = [p for p in R if (tuple(q for q in R if q != p), p) in E]
             sc_ = {p: key(E[tuple(q for q in R if q != p), p]) for p in cands}
             p = max(sc_, key=sc_.get)
-            log(f"    from {{{', '.join(x.split('_')[1] for x in R)}}}: " + ", ".join(f"{c} {v:.3f}" for c, v in sorted(sc_.items(), key=lambda t: -t[1]))
+            log(f"    from {{{', '.join(x.split('_')[-1] for x in R)}}}: " + ", ".join(f"{c} {v:.3f}" for c, v in sorted(sc_.items(), key=lambda t: -t[1]))
                 + f"  -> remove {p}")
             rev.append(p)
             R = tuple(q for q in R if q != p)

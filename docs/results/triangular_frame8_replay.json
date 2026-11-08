@@ -1,0 +1,64 @@
+{
+ "args": {
+  "model": "triangular_frame8",
+  "penalty": null,
+  "detax": false,
+  "grasps_per_pose": 8,
+  "sampler": "fps",
+  "placements": "sealp",
+  "grid": "fine",
+  "grid_step": 0.015,
+  "keepout": "sealp",
+  "goal_pos": "0.373,0.0,0.0",
+  "home_clear": 0.03,
+  "orient": "first",
+  "search": "joint search (lattice_joint, table prices)"
+ },
+ "chosen": {
+  "steps": [
+   [
+    "post_A",
+    "0.203,0.000,yaw0,identity",
+    1067
+   ],
+   [
+    "post_B",
+    "0.279,-0.168,yaw0,identity",
+    1649
+   ],
+   [
+    "beam_AB",
+    "0.371,-0.153,yaw0,rot90_13",
+    438
+   ],
+   [
+    "post_C",
+    "0.264,0.168,yaw0,identity",
+    1295
+   ],
+   [
+    "beam_BC",
+    "0.371,0.153,yaw0,rot90_17",
+    1387
+   ],
+   [
+    "beam_CA",
+    "0.310,0.214,yaw0,fs_02",
+    1240
+   ],
+   [
+    "cap_BC",
+    "0.218,0.061,yaw0,identity",
+    377
+   ],
+   [
+    "cap_AB",
+    "0.432,-0.214,yaw0,identity",
+    733
+   ]
+  ],
+  "time": 21.81483561370519,
+  "est": 19.82619126229918,
+  "lb": 19.82619126229918
+ }
+}

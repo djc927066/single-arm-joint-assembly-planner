@@ -89,6 +89,7 @@ def choose_grasps(pb, steps, cands, banned):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--model", default="triangular_frame6")
+    ap.add_argument("--goal-pos", default=None, help="assembly centre x,y,z (m), as run.py")
     ap.add_argument("--tries", type=int, default=5, help="plans (grasp choices) validated at most")
     ap.add_argument("--detax", action="store_true", help="time cuRobo paths after shortcut + corner blending")
     a = ap.parse_args(argv)
@@ -97,7 +98,7 @@ def main(argv=None):
     from .instance import Instance
     T0 = perf_counter()
     res = json.loads((OUT / f"{a.model}.json").read_text(encoding="utf-8"))
-    inst = Instance.build(a.model)
+    inst = Instance.build(a.model, None if a.goal_pos is None else tuple(float(v) for v in a.goal_pos.split(",")))
     pb, O = inst.pb, inst.O
     plan = [(q, int(xi)) for q, xi, _ in res["layout"]]
     for (q, xi, key) in res["layout"]:

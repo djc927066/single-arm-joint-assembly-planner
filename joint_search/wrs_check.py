@@ -190,6 +190,7 @@ def main(argv=None):
     ap.add_argument("result", nargs="?", default=None)
     ap.add_argument("--model", default="triangular_frame6")
     ap.add_argument("--rrt-all", action="store_true", help="RRT for every free segment (raw and shortcut times)")
+    ap.add_argument("--seed0", type=int, default=0, help="first RRT seed (repeated runs)")
     args = ap.parse_args(argv)
     res_path = Path(args.result) if args.result else Path(max(glob.glob(str(OUT / "frame*_2*.json")), key=lambda f: Path(f).stat().st_mtime))
     R = json.loads(res_path.read_text(encoding="utf-8"))
@@ -232,7 +233,7 @@ def main(argv=None):
         raw = None
         if args.rrt_all:
             t, how = np.inf, "RRT failed"
-            for seed in range(RRT_SEEDS):
+            for seed in range(args.seed0, args.seed0 + RRT_SEEDS):
                 P, dt = W.planner._rrt(s["a"], s["b"], seed=seed)
                 if P is None:
                     continue

@@ -1,0 +1,82 @@
+{
+  "params": {
+    "model": "viaduct10",
+    "only": null,
+    "max_samples": 100,
+    "rotation_deg": 15.0,
+    "normal_angle_deg": 175.0,
+    "seed": 0
+  },
+  "parts": {
+    "deck": {
+      "grasps": 2461,
+      "top_down": 252,
+      "width_min": 0.036000000759959225,
+      "width_max": 0.059999997243285294,
+      "seconds": 0.7
+    },
+    "pier_1": {
+      "grasps": 2106,
+      "top_down": 792,
+      "width_min": 0.0499999974668026,
+      "width_max": 0.07600000359117988,
+      "seconds": 0.3
+    },
+    "pier_2": {
+      "grasps": 2246,
+      "top_down": 844,
+      "width_min": 0.052000003382563595,
+      "width_max": 0.07999999679625037,
+      "seconds": 0.4
+    },
+    "pier_3": {
+      "grasps": 2250,
+      "top_down": 844,
+      "width_min": 0.053999996259808544,
+      "width_max": 0.07800000019371513,
+      "seconds": 0.4
+    },
+    "pier_4": {
+      "grasps": 2012,
+      "top_down": 752,
+      "width_min": 0.0480000027269125,
+      "width_max": 0.07400000326335433,
+      "seconds": 0.3
+    },
+    "span_1": {
+      "grasps": 1920,
+      "top_down": 378,
+      "width_min": 0.03999999955296517,
+      "width_max": 0.08300000101327897,
+      "seconds": 0.3
+    },
+    "span_2": {
+      "grasps": 1872,
+      "top_down": 342,
+      "width_min": 0.03999999955296517,
+      "width_max": 0.06799999482929707,
+      "seconds": 0.4
+    },
+    "span_3": {
+      "grasps": 1488,
+      "top_down": 288,
+      "width_min": 0.03999999769032002,
+      "width_max": 0.0819999933987856,
+      "seconds": 0.3
+    },
+    "tower_1": {
+      "grasps": 1632,
+      "top_down": 432,
+      "width_min": 0.052000003382563595,
+      "width_max": 0.06399999789893628,
+      "seconds": 0.3
+    },
+    "tower_2": {
+      "grasps": 1536,
+      "top_down": 432,
+      "width_min": 0.04999999932944775,
+      "width_max": 0.06399999789893628,
+      "seconds": 0.3
+    }
+  }
+}

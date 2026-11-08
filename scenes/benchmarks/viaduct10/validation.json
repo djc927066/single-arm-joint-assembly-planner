@@ -1,0 +1,157 @@
+{
+  "parts": 10,
+  "grasp_catalogue": {
+    "pier_1": 28,
+    "pier_2": 28,
+    "pier_3": 28,
+    "pier_4": 28,
+    "span_1": 28,
+    "span_2": 28,
+    "span_3": 28,
+    "deck": 14,
+    "tower_1": 28,
+    "tower_2": 28
+  },
+  "goal_ik_grasps": {
+    "pier_1": 8,
+    "pier_2": 9,
+    "pier_3": 9,
+    "pier_4": 5,
+    "span_1": 5,
+    "span_2": 5,
+    "span_3": 2,
+    "deck": 2,
+    "tower_1": 2,
+    "tower_2": 2
+  },
+  "grasps_alone": {
+    "pier_1": 8,
+    "pier_2": 9,
+    "pier_3": 9,
+    "pier_4": 5,
+    "span_1": 5,
+    "span_2": 5,
+    "span_3": 2,
+    "deck": 2,
+    "tower_1": 2,
+    "tower_2": 2
+  },
+  "levels": {
+    "static": {
+      "states": 42,
+      "transitions": 85,
+      "orders": 1024,
+      "seconds": 0.0005966000026091933
+    },
+    "insertion": {
+      "states": 38,
+      "transitions": 76,
+      "orders": 544,
+      "seconds": 0.016695800004526973
+    },
+    "full": {
+      "states": 38,
+      "transitions": 76,
+      "orders": 544,
+      "seconds": 9.800307500059716
+    }
+  },
+  "precedence_full": [
+    [
+      "pier_1",
+      "span_1"
+    ],
+    [
+      "pier_2",
+      "span_1"
+    ],
+    [
+      "pier_2",
+      "span_2"
+    ],
+    [
+      "pier_3",
+      "span_2"
+    ],
+    [
+      "pier_3",
+      "span_3"
+    ],
+    [
+      "pier_4",
+      "span_3"
+    ],
+    [
+      "span_1",
+      "deck"
+    ],
+    [
+      "span_2",
+      "deck"
+    ],
+    [
+      "span_3",
+      "deck"
+    ],
+    [
+      "deck",
+      "tower_1"
+    ],
+    [
+      "deck",
+      "tower_2"
+    ]
+  ],
+  "precedence_from_occlusion": [
+    [
+      "span_2",
+      "deck"
+    ],
+    [
+      "span_2",
+      "tower_1"
+    ],
+    [
+      "span_2",
+      "tower_2"
+    ]
+  ],
+  "grasp_occlusion": {
+    "transitions_checked": 81,
+    "partially_occluded": 56,
+    "fully_blocked": 0,
+    "blocker_pairs": {
+      "pier_2 -> span_2": 9,
+      "pier_2 -> pier_4": 9,
+      "pier_2 -> pier_1": 8,
+      "pier_1 -> span_1": 8,
+      "pier_3 -> pier_4": 8,
+      "pier_3 -> pier_2": 6,
+      "pier_2 -> pier_3": 6,
+      "pier_1 -> pier_3": 6,
+      "pier_4 -> pier_3": 5,
+      "pier_1 -> pier_2": 5,
+      "span_3 -> span_2": 3,
+      "span_2 -> span_1": 3,
+      "span_1 -> span_2": 3,
+      "span_2 -> span_3": 3,
+      "span_2 -> pier_4": 3,
+      "span_1 -> pier_4": 3,
+      "span_3 -> pier_2": 2,
+      "span_1 -> pier_3": 2
+    }
+  },
+  "insertion_cover": {
+    "deck covers span_2": 4
+  },
+  "equilibrium_check": {
+    "checked": 42,
+    "infeasible": 0,
+    "examples": [],
+    "seconds": 34.03013880003709,
+    "total_states": 42
+  },
+  "ik_s": 7.043523099971935,
+  "total_s": 51.12690329994075,
+  "scope": "static rule + asmcore equilibrium cross-check; box-cell insertion sweep; Panthera palm/finger boxes + cuRobo goal IK. No transport motion, no staging-side IK."
+}

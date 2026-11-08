@@ -14,7 +14,17 @@ from time import perf_counter
 
 import numpy as np
 
-from .geometry import Feasibility, Geo, build_options, footprints, log, mesh_self_checks, stable_orders
+from .geometry import Feasibility, Geo, build_options, footprints, log, mesh_seat_checks, mesh_self_checks, stable_orders
+
+
+def default_center(model):
+    """assembly centre with the base on the table: the frames have their base origin at its bottom,
+    the benchmark models at mid thickness."""
+    if model.startswith("triangular_frame"):
+        return (0.373, 0.0, 0.0)
+    import importlib
+    base = importlib.import_module(f"scenes.benchmarks.{model}").spec().base
+    return (0.373, 0.0, max(b[5] for b in base.solids))
 
 
 @dataclass
@@ -31,13 +41,13 @@ class Instance:
     timing: dict
 
     @classmethod
-    def build(cls, model="triangular_frame6", goal_pos=(0.373, 0.0, 0.0), k=8, self_mesh=True):
+    def build(cls, model="triangular_frame6", goal_pos=None, k=8, self_mesh=True):
         from curobo_bridge.runtime import prepare
         prepare()
         import torch
         from joint_search.problem import Problem
         t0 = perf_counter()
-        pb = Problem(model, center=tuple(goal_pos))
+        pb = Problem(model, center=tuple(default_center(model) if goal_pos is None else goal_pos))
         t1 = perf_counter()
         orders = stable_orders(pb)
         keep, self_st = (None, None)
@@ -48,6 +58,11 @@ class Instance:
             log(f"mesh check gripper vs handled part: goal side {self_st['goal_rejected']}/{self_st['goal_checked']}"
                 f" grasps rejected, pick side {self_st['pick_rejected']}/{self_st['pick_checked']}"
                 f" (part, orientation, grasp) rejected  ({took})")
+            self_ok = keep
+            seat, seat_st = mesh_seat_checks(pb, orders, self_ok, Path(__file__).resolve().parent / "_cache")
+            keep = lambda p, x, g: self_ok(p, x, g) and seat.get((p, g), False)
+            took = "cached" if seat_st["cached"] else f"{seat_st['seconds']:.0f}s"
+            log(f"mesh check gripper vs the parts always below: {seat_st['rejected']}/{seat_st['checked']} grasps rejected  ({took})")
         O = build_options(pb, k, keep)
         fp = footprints(pb, O["ids"], O["poses"])
         geo = Geo(pb, O)
